@@ -1,0 +1,169 @@
+/*======================================
+=            Your Main CSS            =
+======================================*/
+
+// Compass doesn't accept multiple files if u want variables & mixins :(
+
+// Your code will minify in /min
+
+@import 'compass/css3';
+
+/**
+ *
+ * if you need loader : https://codepen.io/Viclafouch/ or https://github.com/viclafouch/Loaders
+ *
+ */
+
+
+//=====  CHOOSE YOUR ICONS  ======\\
+
+// Do you need Material Icon ?
+$material_icon: false;
+
+@if $material_icon == true {
+   	@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+}
+
+// Do you need font Awesome ?
+$font_awesome: false;
+
+@if $font_awesome == true {
+   	@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+}
+
+
+// ----------  Variable  --------- \\
+
+$fonts: 'Arial'; // Fonts
+
+$primaryColor: #000; // Primary color
+$secondaryColor: #000; // Secondary color
+$tertiaryColor: #000; // Terciary color
+
+$primaryBackgroundColor: #000; // Primary background color
+$secondaryBackgroundColor: #000; // Secondary background color
+
+$textColor: #000; // Primary text color
+
+$colorBorder: rgba(0,0,0,1); // Primary border color
+
+$radiusBorder: 0; // Primary border radius
+
+$primaryBorder: 1px solid $colorBorder; // Primary border
+
+$navHeight: 0; // Height of the navbar
+$sideWidth: 0; // Width of the sidebar
+
+$primaryShadow: none; // Primary shadow
+$secondaryShadow: none; // Secondary shadow
+$terciaryShadow: none; // Terciary shadow
+
+// ----------  Mixins  ---------- \\
+
+// @Flex
+@mixin flex($flow, $justify, $align) {
+    @include display-flex();
+    @include flex-flow($flow);
+    @include justify-content($justify);
+    @include align-items($align);
+}
+
+// @Background
+@mixin back($background, $attachment, $size, $position, $repeat) {
+    background: $background;
+    background-attachment: $attachment;
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
+
+// @visibility
+@mixin visible($boolean) {
+    @if $boolean == false {
+        visibility: hidden;
+        @include opacity(0);
+    }
+    @if $boolean == true {
+        visibility: visible;
+        @include opacity(1);
+    }
+}
+
+// @DisableSelection
+@mixin noselect(){
+    -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+
+// ----------  Fonctions  ---------- \\
+
+// Rgba faster
+@function rgbaExpress($color, $force) {
+    $opacity: $force;
+    @if $color == 'black' {
+        $color: '0,0,0'
+    }
+    @if $color == 'white' {
+        $color: '255,255,255'
+    }
+    $rgba: rgba($color, $force);
+    @return $rgba;
+}
+
+ /* ----------  Classes  ---------- */
+
+.row, .col { @include display-flex; }
+
+.row { @include flex-direction(row); }
+.col { @include flex-direction(column); }
+
+.wrap { @include flex-wrap(wrap); }
+.nowrap { @include flex-wrap(nowrap); }
+
+.row-verti-center { @include align-items(center); }
+.col-verti-center { @include justify-content(center); }
+
+.row-hori-center { @include justify-content(center); }
+.col-hori-center { @include align-items(center); }
+
+.row-hori-between { @include justify-content(space-between); }
+.col-hori-between { @include align-items(space-between); }
+
+.row-verti-between { @include align-items(space-between); }
+.col-verti-between { @include justify-content(space-between); }
+
+.row-hori-around { @include justify-content(space-around); }
+.col-hori-around { @include align-items(space-around); }
+
+.row-verti-around { @include align-items(space-around); }
+.col-verti-around { @include justify-content(space-around); }
+
+/*----------  Bases  ----------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+html { line-height: 1; }
+ol, ul { list-style: none; }
+q, blockquote { quotes: none; }
+strong { font-weight: bold; color: $fonts; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+a img { border: none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+html, body { font-family: $fonts; }
+
+/*----------  Progress bar  ----------*/
+
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: $primaryColor;
+}

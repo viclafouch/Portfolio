@@ -1,0 +1,29 @@
+{
+  "name": "skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viclafouch/skeleton.git"
+  },
+  "keywords": [],
+  "author": "Victor de la Fouchardière",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viclafouch/skeleton/issues"
+  },
+  "homepage": "https://github.com/viclafouch/skeleton#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
