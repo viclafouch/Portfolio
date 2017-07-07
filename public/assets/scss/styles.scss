@@ -34,7 +34,7 @@ $font_awesome: false;
 
 // ----------  Variable  --------- \\
 
-$fonts: 'Arial'; // Fonts
+$fonts: 'Roboto', sans-serif;; // Fonts
 
 $primaryColor: #F05F40; // Primary color
 $secondaryColor: #000; // Secondary color
@@ -51,7 +51,7 @@ $radiusBorder: 0; // Primary border radius
 
 $primaryBorder: 1px solid $colorBorder; // Primary border
 
-$navHeight: 0; // Height of the navbar
+$navHeight: 70px; // Height of the navbar
 $sideWidth: 0; // Width of the sidebar
 
 $primaryShadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.2); // Primary shadow
@@ -159,44 +159,227 @@ q:before, q:after, blockquote:before, blockquote:after { content: ""; content: n
 a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-html, body { font-family: $fonts; }
+body {
+    color: $textColor;
+    font-family: $fonts;
+    background:  #f6f6f6;
+    &::-webkit-scrollbar { width: 12px; }
+    &::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); }
+    &::-webkit-scrollbar-thumb { border-radius: 5px; background: rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
+}
 
-/*----------  Progress bar  ----------*/
+h1, h3 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+h1 { font-size: 2.5em; }
+
+h2 { font-size: 50px; }
+
+h3 { font-size: 45px; }
+
+h4 { font-size: 40px; font-family: 'Roboto Slab', 'Roboto', sans-serif; }
+
+
+.button_default {
+    text-decoration: none;
+    border: none;
+    display: block;
+    margin: 10px 20px;
+    color: #f0f0f0;
+    font-family: $fonts;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px 15px;
+    background-color: #000;
+    @include border-radius(3px);
+    @include box-shadow($primaryShadow);
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    @include opacity(0.8);
+    @include single-transition(none, 0.3s, ease, 0s);
+    @include transition-property(box-shadow, opacity);
+
+    &:hover { @include box-shadow($terciaryShadow); @include opacity(1); }
+}
 
 .turbolinks-progress-bar {
   height: 5px;
   background-color: $primaryColor;
 }
 
-
-
-/*----------  Title  ----------*/
-
-h1 {
-    color: #fff;
+header[data-turbolinks-permanent] {
+    width: 100%; height: 300px;
+    @include back(image-url("keyboard.jpg"), scroll, cover, 0 0, no-repeat);
     position: relative;
-    text-transform: uppercase;
-    font-size: 2.5em;
-    text-align: center;
-    font-family: 'Roboto';
+
+    p.name { font-size: 2em; text-align: center; }
+
+    div.background {
+        width: 100%; height: 100%;
+        left: 0; right: 0; top: 0; bottom: 0;
+        position: absolute;
+        background-color: rgbaExpress(black, 0.3);
+    }
 }
 
-h2 {
-    font-size: 50px;
-    padding: 0px 0px 25px 10px;
-    font-family: 'Roboto';
+footer {
+    width: 100%;
+    padding: 15px;
+    @include box-sizing(border-box);
+    background-color: adjust-lightness(#444, 60);
+
+    ul li { display: inline-block;
+
+        a { display: block; margin: 35px;
+
+            & > img {
+                width: 70px; height: 70px;
+                @include single-transition(transform, 0.3s, ease, 0s);
+                &:hover { @include scale(1.1); }
+            }
+        }
+    }
 }
 
-h3 {
-    text-transform: uppercase;
-    font-size: 45px;
+nav[data-turbolinks-permanent] {
+    width: 100%; height: $navHeight;
+    background-color: $primaryColor;
     color: #fff;
+    @include box-shadow($secondaryShadow);
+
+    ul li {
+        line-height: $navHeight;
+        width: 130px;
+        margin: 0 10px;
+        text-align: center;
+        cursor: pointer; 
+        @include single-transition(background-color, 0.5s, ease, 0s);
+        &:hover, &.active { background-color: rgbaExpress(white, 0.3); }
+
+        a { display: block; height: 100%; width: 100%; color: inherit; text-decoration: none; }
+    }
 }
 
-h4 {
-    font-size: 40px;
-    color: #444;
-    font-family: 'Roboto Slab', 'Roboto';
+div#subheading[data-turbolinks-permanent] {
+    width: 100%; height: auto;
+    padding: 80px 10%;
+    @include box-sizing(border-box);
+
+    div.informations, div.avatar {
+
+        h2, p { padding: 10px 0; }
+
+        p { color: $textColor; line-height: 1.3em; font-size: 1.2em; max-width: 600px; }
+
+        a {
+            margin-left: 0;
+            &:first-child { background-color: #0479B8; }
+            &:last-child { background-color: #7c4dff; }
+        }
+
+        img {
+            width: 250px; height: 250px;
+            display: block; 
+            @include border-radius(50%); 
+            margin: 0 auto; 
+        }
+    }
+}
+
+section.container {
+    width: 100%;
+
+    & > header {
+        @include box-shadow($primaryShadow);
+        box-shadow: $primaryShadow;
+        width: 100%;
+        text-align: center;
+        height: 250px;
+        @include back(image-url("keyboard.jpg"), scroll, cover, 0 0, no-repeat);
+
+        h3 { line-height: 250px; }
+
+        &.competences { @include back(image-url("computer.jpg"), scroll, cover, normal, no-repeat); }
+    }
+
+    & > div {
+        width: 100%;
+        position: relative;
+    }
+}
+
+section.container_experiences,
+section.container_formations {
+    div.block { width: 100%; height: 400px;
+
+        &:nth-child(2) { & > div.thumbnail { order: 1 } }
+
+        & > div { width: 50%; height: 100%; }
+
+        & > div.thumbnail {
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        & > div.description {
+            padding: 30px 60px;
+            @include box-sizing(border-box);
+            @include align-items(flex-start);
+
+            & > p.date {
+                color: #444;
+                & > i { vertical-align: middle; margin-right: 7px; }
+                & > span { @include inline-block(middle); }
+            }
+
+            & > h4 { padding: 15px 0; color: #444; }
+
+            & > ul { color: #444; width: 100%; & > li { line-height: 22px; } }
+
+            & > a { margin: 0; margin-top: 20px; padding-left: 20px; padding-right: 20px; }
+        }
+    }
+}
+
+section.container_experiences {
+    #topContributor {
+        a.button_default { background-color: #00c853; }
+        div.thumbnail { background-image: image-url("top-contributor-google.jpg"); }
+    }
+
+    #hero {
+        a.button_default { background-color: #F44336; }
+        div.thumbnail { background-image: image-url("youtube-heroes.jpg"); }
+    }
+
+    #carrefour {
+        a.button_default { background-color: #3F51B5; }
+        div.thumbnail { background-image: image-url("stagaire-carrefour.jpg"); }
+    }
+}
+
+section.container_formations {
+    #eemi {
+        a.button_default { background-color: #3F51B5; }
+        div.thumbnail { background-image: image-url("ecole-eemi.jpg"); }
+    }
+
+    #digitalActive {
+        a.button_default { background-color: #00c853; }
+        div.thumbnail { background-image: image-url("certitication-digital-active.png"); }
+        div.thumbnail { background-size: auto!important; }
+    }
+
+    #bachelor {
+        a.button_default { background-color: #E91E63; }
+        div.thumbnail { background-image: image-url("lycee-saint-paul.jpg"); }
+    }
 }
 
 h5 {
@@ -215,16 +398,6 @@ h6 {
     text-transform: uppercase;
     color: #fff;
     font-family: 'Roboto Slab';
-}
-
-/*----------  Barre de scroll  ----------*/
-
-body {
-    &::-webkit-scrollbar { width: 12px; }
-
-    &::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); }
-
-    &::-webkit-scrollbar-thumb { border-radius: 5px; background: rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
 }
 
 /*----------  Barre de défilement experience/formations  ----------*/
@@ -269,265 +442,13 @@ span.haut {
 
 /*----------  Divers  ----------*/
 
-body {
-    width: 100%;
-    margin: auto;
-    color: #000;
-    font-family: 'Roboto';
-    font-size: 100%;
-    background:  #f6f6f6;
-}
-
 .p__default {
     font-size: 17px;
     line-height: 25px;
     font-family: 'Roboto';
 }
 
-.button {
-    text-decoration: none;
-    border: none;
-    @include border-radius(3px);
-    box-shadow: $primaryShadow;
-    text-align: center;
-    text-transform: uppercase;
-    outline: none;
-    opacity: 0.8;
-    transition: all 0.3s;
 
-
-    &:hover {
-        box-shadow: $terciaryShadow;
-        opacity: 1;
-    }
-}
-
-.block__title {
-    box-shadow: $primaryShadow;
-    width: 100%;
-    text-align: center;
-    height: 250px;
-    @include back(image-url("keyboard.jpg"), scroll, cover, normal, no-repeat);
-    @include flex(row wrap, center, center);
-
-    &.competences { @include back(image-url("computer.jpg"), scroll, cover, normal, no-repeat); }
-}
-
-/*==============================
-=            Header            =
-==============================*/
-
-header {
-    width: 100%;
-    height: 300px;
-    @include back(image-url("keyboard.jpg"), scroll, cover, normal, no-repeat);
-    @include flex(row nowrap, center, center);
-    position: relative;
-
-    div {
-        text-align: center;
-        position: relative;
-        height: 25%;
-        @include flex(column nowrap, space-between, center);
-
-        p { font-size: 2em; text-align: center; }
-    }
-
-    div.fond {
-        left: 0;
-        position: absolute;
-        background-color: rgba(0,0,0,0.3);
-        width: 100%;
-        height: 100%;
-    }
-}
-
-/*=====  End of Header  ======*/
-
-/*===========================
-=            Nav            =
-===========================*/
-
-nav {
-    width: 100%;
-    height: 70px;
-    background: $primaryColor;
-    color: #fff;
-    @include flex(row nowrap, center, center);
-    box-shadow: $secondaryShadow;
-
-    ul {
-        @include flex(row wrap, center, stretch); // a remettre en wrap;
-        width: 100%;
-        height: 100%;
-
-        li {
-            margin: 0 1%;
-            line-height: 70px;
-            width: 130px;
-            text-align: center;
-            cursor: pointer; 
-            @include single-transition(background-color, 0.5s, ease, 0s);
-            &:hover, &.active { background-color: rgbaExpress(white, 0.3); }
-
-            a { display: block; height: 100%; width: 100%; color: inherit; text-decoration: none; }
-        }
-    }
-}
-
-/*=====  End of Nav  ======*/
-
-/*=============================
-=            Resum            =
-=============================*/
-
-section.resum {
-    height: 380px;
-    width: 100%;
-    @include flex(row nowrap, center, stretch);
-
-    div.developer.left {
-        margin: auto;
-        width: 50%;
-
-        p.minidesc {
-            margin-left: 15px;
-            font-size: 1.2rem;
-            line-height: 1.6rem;
-            width: 90%;
-        }
-
-        p.button-row {
-            margin-top: 5%;
-            @include flex(row wrap, flex-start, center);
-            width: 80%;
-
-            a {
-                margin-left: 15px;
-                background: #fff;
-                color: #232323;
-                padding: 15px 29px;
-                display: block;
-                color: #fff;
-
-                &:first-child { background-color: #0479B8; }
-
-                &:last-child { background-color: #7c4dff; }
-            }
-        }
-    }
-
-    div.avatar.right {
-        margin: auto;
-
-        img {
-            @include border-radius(50%);
-            height: 250px;
-            width:  250px;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-    }
-}
-
-/*=====  End of Resum  ======*/
-
-/*=============================================
-=            Experience & Training            =
-=============================================*/
-
-section.experience, 
-section.formation {
-    width: 100%;
-    background: #f6f6f6;
-    position: relative;
-
-    div.block {
-        width: 100%;
-        height: 400px;
-        position: relative;
-        @include flex(row nowrap, space-between, center);
-
-        div.aside {
-            width: 50%;
-            height: 100%;
-            position: relative;
-        }
-    }
-}
-
-section.experience,
-section.formation {
-
-    div.oneside { /* Background Image */ }
-
-    div.overside {
-        @include flex(column wrap, center, flex-start);
-
-        div {
-            margin-left: 85px;
-
-            p { color: #444; }
-
-            p.date { margin-bottom: 15px; }
-
-            i { vertical-align: middle; margin-top: -2px; margin-right: 7px; }
-
-            h4 { display: inline-block; position: relative; white-space: nowrap; }
-
-            span.mini__img { width: 20px; height: 20px; position: absolute; right: -25px;}
-
-            p.description, ul.list { margin: 30px 0px; min-height: 100px; }
-
-            ul.list { font-size: 17px; line-height: 25px; color: #444; width: 100%; }
-
-            li { padding: 5px; } 
-
-            p.description, li { max-width: 90%; }
-
-            a.button { padding: 10px 38px; }
-        }
-    }   
-}
-
-section.experience {
-    .google__tc {
-        a.button { background-color: #00c853; color: #fff; }
-        div.oneside { @include back(image-url("top-contributor-google.jpg"), scroll, cover, center, no-repeat); }
-        span.mini__img { @include back(image-url("google-logo.png"), scroll, 100%, normal, no-repeat); }
-    }
-
-    .youtube {
-        a.button { background-color: #F44336; color: #fff; }
-        div.oneside { order: 1; @include back(image-url("youtube-heroes.jpg"), scroll, cover, normal, no-repeat); }
-        span.mini__img { @include back(image-url("youtube-logo.png"), scroll, 100%, normal, no-repeat); }
-    }
-
-    .carrefour {
-        a.button { background-color: #3F51B5; color: #fff; }
-        div.oneside { @include back(image-url("stagaire-carrefour.jpg"), scroll, 100%, top, no-repeat); }
-        span.mini__img { @include back(image-url("carrefour-logo.png"), scroll, 100%, normal, no-repeat); }
-    }
-}
-
-section.formation {
-    .eemi {
-        a.button { background-color: #3F51B5; color: #fff; }
-        div.oneside { @include back(image-url("ecole-eemi.jpg"), scroll, cover, center, no-repeat); }
-        span.mini__img { @include back(image-url("eemi-logo.png"), scroll, 100%, normal, no-repeat); }
-    }
-
-    .digital {
-        a.button { background-color: #00c853; color: #fff; }
-        div.oneside { order: 1; @include back(image-url("certitication-digital-active.png"), scroll, normal, center, no-repeat); }
-        span.mini__img { @include back(image-url("digitalactive-logo.png"), scroll, 100%, normal, no-repeat); }
-    }
-
-    .bac {
-        a.button { background-color: #E91E63; color: #fff; }
-        div.oneside { @include back(image-url("lycee-saint-paul.jpg"), scroll, cover, normal, no-repeat); }
-        span.mini__img { @include back(image-url("saintpaul-logo.png"), scroll, 100%, center, no-repeat); }
-    }
-}
 
 /*=====  End of Experience & Training  ======*/
 
@@ -941,26 +862,7 @@ form {
  =            Footer            =
  ==============================*/
  
- footer {
-    width: 100%;
-    min-height: 150px;
-    background-color: adjust-lightness(#444, 60);
-    @include flex(row wrap, center, center);
 
-    ul {
-        text-align: center;
-        li {
-            display: inline-block;
-            img {
-                margin: 35px;
-                width: 70px; height: 70px;
-                @include single-transition(transform, 0.3s, ease, 0s);
-
-                &:hover { @include scale(1.1); }
-            }
-        }
-    }
-}
  
 /*=====  End of Footer  ======*/
 

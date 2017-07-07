@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	$title_page = '';
 	$description_page = '';

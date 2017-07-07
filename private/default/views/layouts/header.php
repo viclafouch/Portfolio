@@ -53,36 +53,33 @@
 		<meta name="turbolinks-cache-control" content="no-cache">
 	</head>
 	<body>
-		<span class="haut"><i class="material-icons">expand_less</i></span>
-		<header>
-			<div class="fond"></div>
-			<div>
+		<header class="row row-hori-center row-verti-center nowrap" id="header" data-turbolinks-permanent>
+			<div class="background"></div>
+			<div class="col col-hori-center nowrap">
 				<h1>Portfolio</h1>
-				<p>Victor de la Fouchardière</p>
+				<p class="name">Victor de la Fouchardière</p>
 			</div>
 		</header>
-		<nav>
-			<ul class="menu">
+		<nav id="nav" data-turbolinks-permanent>
+			<ul class="row row-hori-center wrap">
 				<li><a href="./" title="">Expériences</a></li>
 				<li><a href="?module=default&action=formations" title="">Formations</a></li>
 				<li><a href="?module=default&action=productions" title="">Productions</a></li>
 				<li><a href="?module=default&action=competences" title="">Compétences</a></li>
-				<li><a href="#" title="">L'Ecole</a></li>
+				<li><a href="http://www.eemi.com/" data-turbolinks="false" target="_blank" title="">L'Ecole</a></li>
 				<li><a href="#" title="">Contact</a></li>
 			</ul>
 		</nav>
-		<section class="resum">
-			<div class="developer left">
-				<div>
-					<h2>Web Developer <sup>+</sup></h2>
-					<p class="p__default minidesc">Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.</p>
-					<p class="button-row">
-						<a class="button" target="_blank" href="https://www.linkedin.com/in/victordelafouchardiere" title="">Mon Linkedin</a>
-						<a class="button" target="_blank" href="CV-Victor_de_la_Fouchardière.pdf" title="">Télécharger / Imprimer le CV</a>
-					</p>
-				</div>
+		<div class="row row-verti-center row-hori-between nowrap" id="subheading" data-turbolinks-permanent>
+			<div class="informations">
+					<h2>Web Developer</h2>
+					<p>Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.</p>
+					<div class="row nowrap">
+						<a class="button_default" target="_blank" href="https://www.linkedin.com/in/victordelafouchardiere" title="">Mon Linkedin</a>
+						<a class="button_default" target="_blank" href="CV-Victor_de_la_Fouchardière.pdf" title="">Télécharger / Imprimer le CV</a>
+					</div>
 			</div>
-			<div class="avatar right">
+			<div class="avatar row">
 				<img src="./public/assets/imgComp/victor-de-la-fouchardiere-photo.jpg" title="Victor de la Fouchardière" alt="Image de profil Victor">
 			</div>
-		</section>
+		</div>
