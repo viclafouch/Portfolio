@@ -176,7 +176,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-h1, h3 {
+h1, h3, h6 {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -194,9 +194,16 @@ h3 {
   font-size: 45px;
 }
 
+h4, h6 {
+  font-family: 'Roboto Slab', 'Roboto', sans-serif;
+}
+
 h4 {
   font-size: 40px;
-  font-family: 'Roboto Slab', 'Roboto', sans-serif;
+}
+
+h6 {
+  font-size: 25px;
 }
 
 .button_default {
@@ -506,22 +513,142 @@ section.container_formations #bachelor div.thumbnail {
   background-image: url('../imgComp/lycee-saint-paul.jpg?1499431808');
 }
 
+section.container_portfolio div.goals {
+  padding: 30px 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+section.container_portfolio div.goals h3 {
+  color: #444;
+  margin-bottom: 25px;
+}
+section.container_portfolio div.goals div.block_goal > span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-attachment: scroll;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.container_portfolio div.goals div.block_goal#development > span {
+  background-image: url('../imgComp/done.svg?1499431807');
+}
+section.container_portfolio div.goals div.block_goal#cleaning > span {
+  background-image: url('../imgComp/build.svg?1499431806');
+}
+section.container_portfolio div.goals div.block_goal#responsive > span {
+  background-image: url('../imgComp/smartphone.svg?1499431807');
+}
+section.container_portfolio div.goals div.block_goal > h5 {
+  position: relative;
+  padding: 15px 10px;
+  margin: 10px 0;
+}
+section.container_portfolio div.goals div.block_goal > h5::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #F05F40;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+section.container_portfolio div.goals div.block_goal > p {
+  text-align: center;
+  color: #777;
+}
+section.container_portfolio div.portfolio {
+  width: 100%;
+  padding: 30px 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+section.container_portfolio div.portfolio h3 {
+  color: #444;
+  margin-bottom: 25px;
+}
+section.container_portfolio div.portfolio > div {
+  width: 100%;
+}
+section.container_portfolio div.portfolio > div > article {
+  width: calc(25% - 2%);
+  margin: 1%;
+  height: 250px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #444;
+  background-attachment: scroll;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+section.container_portfolio div.portfolio > div > article#beparis {
+  background-image: url('../imgComp/beparis.jpg?1499431806');
+}
+section.container_portfolio div.portfolio > div > article#tutobwim {
+  background-image: url('../imgComp/tutobwim.jpg?1499431808');
+}
+section.container_portfolio div.portfolio > div > article#codepen {
+  background-image: url('../imgComp/codepen.jpg?1499431807');
+}
+section.container_portfolio div.portfolio > div > article#ficheandtricks {
+  background-image: url('../imgComp/beparis.jpg?1499431806');
+}
+section.container_portfolio div.portfolio > div > article > div {
+  position: absolute;
+  top: -100%;
+  overflow: hidden;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  -moz-transition: top 0.5s ease-out 0s;
+  -o-transition: top 0.5s ease-out 0s;
+  -webkit-transition: top 0.5s ease-out;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: top 0.5s ease-out 0s;
+  transition: top 0.5s ease-out 0s;
+}
+section.container_portfolio div.portfolio > div > article > div p {
+  margin: 10px 0;
+  color: #fff;
+  text-align: center;
+  line-height: 22px;
+}
+section.container_portfolio div.portfolio > div > article > div a {
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+section.container_portfolio div.portfolio > div > article > div a i {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2em;
+}
+section.container_portfolio div.portfolio > div > article:hover div {
+  top: 0%;
+}
+
+/*=====  End of Portfolio  ======*/
 h5 {
   text-align: center;
   font-family: 'Roboto Slab';
   font-size: 1.5em;
   position: relative;
   color: #222;
-}
-
-h6 {
-  font-size: 25px;
-  letter-spacing: 1px;
-  height: 40px;
-  line-height: 40px;
-  text-transform: uppercase;
-  color: #fff;
-  font-family: 'Roboto Slab';
 }
 
 /*----------  Barre de d├®filement experience/formations  ----------*/
@@ -576,137 +703,6 @@ span.haut:hover {
 /*=================================
 =            Portfolio            =
 =================================*/
-div.block__goals {
-  width: 100%;
-  height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #fff;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-div.block__goals h3 {
-  color: #444;
-}
-div.block__goals .row {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 75%;
-}
-
-.goal {
-  margin: 0px 15px;
-  width: 25%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.goal .ico {
-  height: 50px;
-  width: 50px;
-}
-.goal .ico.creation, .goal .ico.validation, .goal .ico.responsive {
-  visibility: visible;
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
-  opacity: 0;
-}
-.goal .ico.creation.fadeIn, .goal .ico.validation.fadeIn, .goal .ico.responsive.fadeIn {
-  visibility: visible;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  -webkit-transition: opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-}
-.goal .ico.creation {
-  background: url('../imgComp/done.svg?1499431807');
-  background-attachment: scroll;
-  background-size: 100%;
-  background-position: normal;
-  background-repeat: no-repeat;
-}
-.goal .ico.creation.fadeIn {
-  -webkit-transition-delay: 0.00s;
-          transition-delay: 0.00s;
-}
-.goal .ico.validation {
-  background: url('../imgComp/build.svg?1499431806');
-  background-attachment: scroll;
-  background-size: 100%;
-  background-position: normal;
-  background-repeat: no-repeat;
-}
-.goal .ico.validation.fadeIn {
-  -webkit-transition-delay: 0.20s;
-          transition-delay: 0.20s;
-}
-.goal .ico.responsive {
-  background: url('../imgComp/smartphone.svg?1499431807');
-  background-attachment: scroll;
-  background-size: 100%;
-  background-position: normal;
-  background-repeat: no-repeat;
-}
-.goal .ico.responsive.fadeIn {
-  -webkit-transition-delay: 0.40s;
-          transition-delay: 0.40s;
-}
-.goal h5::after {
-  content: '';
-  position: absolute;
-  height: 3px;
-  border-radius: 5px;
-  width: 40px;
-  background: #F05F40;
-  bottom: -15px;
-  left: 50%;
-  -webkit-transform: TranslateX(-50%);
-  transform: TranslateX(-50%);
-}
-.goal p {
-  color: #777;
-  text-align: center;
-  height: 10%;
-}
-
 section.productions {
   width: 100%;
   display: -webkit-box;
@@ -744,62 +740,6 @@ section.productions .row {
   width: 100%;
 }
 
-.prod {
-  width: 31.1%;
-  height: 250px;
-  overflow: hidden;
-  margin: 15px 1%;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-}
-.prod img {
-  width: 100%;
-  height: 100%;
-}
-.prod span.tap img {
-  display: none;
-}
-.prod div {
-  position: absolute;
-  top: -100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  width: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.prod div p {
-  color: #fff;
-  width: 90%;
-}
-.prod div i {
-  font-size: 2.9em;
-  color: white;
-}
-.prod div i:hover {
-  color: #7986CB;
-}
-.prod:hover div {
-  top: 0%;
-}
-
-/*=====  End of Portfolio  ======*/
 /*==============================
 =            Skills            =
 ==============================*/

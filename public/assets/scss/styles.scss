@@ -168,7 +168,7 @@ body {
     &::-webkit-scrollbar-thumb { border-radius: 5px; background: rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
 }
 
-h1, h3 {
+h1, h3, h6 {
     text-transform: uppercase;
     text-align: center;
     color: #fff;
@@ -180,7 +180,11 @@ h2 { font-size: 50px; }
 
 h3 { font-size: 45px; }
 
-h4 { font-size: 40px; font-family: 'Roboto Slab', 'Roboto', sans-serif; }
+h4, h6, { font-family: 'Roboto Slab', 'Roboto', sans-serif; }
+
+h4 { font-size: 40px;  }
+
+h6 { font-size: 25px; }
 
 
 .button_default {
@@ -382,22 +386,131 @@ section.container_formations {
     }
 }
 
+
+
+section.container_portfolio {
+
+    div.goals {
+        padding: 30px 10px;
+        @include box-sizing(border-box);
+        @include box-shadow($primaryShadow);
+        background-color: #fff;
+        
+        h3 { color: #444; margin-bottom: 25px; }
+
+        div.block_goal {
+            & > span {
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-attachment: scroll;
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &#development > span { background-image: image-url("done.svg"); }
+            &#cleaning > span { background-image: image-url("build.svg"); }
+            &#responsive > span { background-image: image-url("smartphone.svg"); }
+
+            & > h5 { position: relative; padding: 15px 10px; margin: 10px 0;
+                &::after {
+                    content:'';
+                    position: absolute;
+                    width: 40px; height: 3px;
+                    @include border-radius(5px);
+                    background-color: $primaryColor;
+                    bottom: 0; left: 50%;
+                    @include translateX(-50%);
+                }
+            }
+            & > p { text-align: center; color: #777; }
+        }
+    }
+
+    div.portfolio {
+        width: 100%;
+        padding: 30px 10px;
+        @include box-sizing(border-box);
+
+        h3 { color: #444; margin-bottom: 25px; }
+
+        & > div { width: 100%;
+            & > article {
+                width: calc(25% - 2%);
+                margin: 1%;
+                height: 250px;
+                @include box-sizing(border-box);
+                position: relative;
+                border: 1px solid #444;
+                background-attachment: scroll;
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow: hidden;
+
+                &#beparis { background-image: image-url("beparis.jpg"); }
+                &#tutobwim { background-image: image-url("tutobwim.jpg"); }
+                &#codepen { background-image: image-url("codepen.jpg"); }
+                &#ficheandtricks { background-image: image-url("beparis.jpg"); }
+
+                & > div {
+                    position: absolute;
+                    top: -100%;
+                    overflow: hidden;
+                    padding: 20px;
+                    @include box-sizing(border-box);
+                    width: 100%; height: 100%;
+                    background-color: rgbaExpress(black, 0.75);
+                    @include single-transition(top, 0.5s, ease-out, 0s);
+
+                    p { margin: 10px 0; color: #fff; text-align: center; line-height: 22px; }
+                    
+                    a {
+                        display: block;
+                        @include border-radius(50%);
+                        background-color: rgbaExpress(white, 0.5);
+                        padding: 10px;
+                        @include rotate(-45deg);
+                        i { color: rgbaExpress(black, 0.6); font-size: 2em; }
+                    }
+                }
+
+                &:hover { div { top: 0%; }   }
+            }
+        }
+    }
+}
+
+/*=====  End of Portfolio  ======*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 h5 {
     text-align: center;
     font-family: 'Roboto Slab';
     font-size: 1.5em;
     position: relative;
     color: #222;
-}
-
-h6 {
-    font-size: 25px;
-    letter-spacing: 1px;
-    height: 40px;
-    line-height: 40px;
-    text-transform: uppercase;
-    color: #fff;
-    font-family: 'Roboto Slab';
 }
 
 /*----------  Barre de défilement experience/formations  ----------*/
@@ -456,78 +569,6 @@ span.haut {
 =            Portfolio            =
 =================================*/
 
-div.block__goals {
-    width: 100%;
-    height: 300px;
-    @include flex(column wrap, center, center);
-    background: #fff;
-    box-shadow: $primaryShadow;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-
-    h3 { color: #444; }
-
-    .row { width: 100%; @include flex(row wrap, center, center); height: 75%; }
-}
-
-.goal {
-    margin: 0px 15px;
-    width: 25%;
-    height: 100%;
-    @include flex(column nowrap, space-around, center);
-
-    .ico {
-        height: 50px;
-        width: 50px;
-
-        &.creation, 
-        &.validation, 
-        &.responsive {
-            visibility: visible;
-            transform: scale(0.3);
-            opacity:0;
-
-            &.fadeIn {
-                visibility: visible;  
-                transform: scale(1); 
-                opacity: 1;
-                transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; 
-            }
-        }
-
-        &.creation {
-            @include back(image-url("done.svg"), scroll, 100%, normal, no-repeat);
-            &.fadeIn { transition-delay: 0.00s; }
-        }
-
-        &.validation {
-            @include back(image-url("build.svg"), scroll, 100%, normal, no-repeat);
-            &.fadeIn { transition-delay: 0.20s; }
-        }
-        
-        &.responsive {
-            @include back(image-url("smartphone.svg"), scroll, 100%, normal, no-repeat);
-            &.fadeIn { transition-delay: 0.40s; }
-        }
-    }
-
-    h5 {
-        &::after {
-            content:'';
-            position: absolute;
-            height: 3px;
-            @include border-radius(5px);
-            width: 40px;
-            background: $primaryColor;
-            bottom: -15px;
-            left: 50%;
-            @include transform(TranslateX(-50%));
-        }
-    }
-    
-    p { color: #777; text-align: center; height: 10%; }
-}
-
 section.productions {
     width: 100%;
     @include flex(column nowrap, center, center);
@@ -539,45 +580,6 @@ section.productions {
         width: 100%;
     }
 }
-
-.prod {
-    width: 31.1%;
-    height: 250px;
-    overflow: hidden;
-    margin: 15px 1%; 
-    position: relative;
-    border: 1px solid rgba(0,0,0,0.3);
-
-    img { width: 100%; height: 100%; }
-
-    span.tap img { display: none; }
-
-    div {
-        position: absolute;
-        top: -100%;
-        height: 100%;
-        background: rgba(0,0,0,0.7);
-        text-align: center;
-        @include flex(column wrap, space-around, center);
-        transition: all 0.5s ease-out;
-        width: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-
-        p { color: #fff; width: 90%; }
-
-        i {
-            font-size: 2.9em;
-            color: white;
-
-            &:hover { color: #7986CB; }
-        }
-    }
-
-    &:hover { div { top: 0%; }   }
-}
-
-/*=====  End of Portfolio  ======*/
 
 /*==============================
 =            Skills            =
