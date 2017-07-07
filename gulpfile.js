@@ -16,13 +16,13 @@ gulp.task('styles', function() {
 		.pipe(compass({
 		 	css: 'public/assets/css',
 			sass: 'public/assets/scss',
-			image: 'public/assets/imgComp'
+			image: 'public/assets/imgComp/'
 		}))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     	.pipe(gulp.dest('public/assets/css'))
     	.pipe(rename({ suffix: '.min' }))
     	.pipe(cleanCSS({compatibility: 'ie8'}))
-    	.pipe(gulp.dest('public/assets/css/min'));
+    	.pipe(gulp.dest('public/assets/css'));
 });
 
 /*----------  Images  ----------*/

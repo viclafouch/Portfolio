@@ -7,6 +7,7 @@
  * if you need loader : https://codepen.io/Viclafouch/ or https://github.com/viclafouch/Loaders
  *
  */
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 /* ----------  Classes  ---------- */
 .row, .col {
   display: -webkit-box;
@@ -309,7 +310,7 @@ body {
   width: 100%;
   text-align: center;
   height: 250px;
-  background: url('../imgComp/keyboard.jpg?1499361907');
+  background: url('../imgComp/keyboard.jpg?1499417736');
   background-attachment: scroll;
   background-size: cover;
   background-position: normal;
@@ -329,7 +330,7 @@ body {
           align-items: center;
 }
 .block__title.competences {
-  background: url('../imgComp/computer.jpg?1499361906');
+  background: url('../imgComp/computer.jpg?1499417735');
   background-attachment: scroll;
   background-size: cover;
   background-position: normal;
@@ -342,7 +343,7 @@ body {
 header {
   width: 100%;
   height: 300px;
-  background: url('../imgComp/keyboard.jpg?1499361907');
+  background: url('../imgComp/keyboard.jpg?1499417736');
   background-attachment: scroll;
   background-size: cover;
   background-position: normal;
@@ -398,7 +399,7 @@ header div.fond {
 ===========================*/
 nav {
   width: 100%;
-  height: auto;
+  height: 70px;
   background: #F05F40;
   color: #fff;
   display: -webkit-box;
@@ -435,34 +436,27 @@ nav ul {
   height: 100%;
 }
 nav ul li {
-  margin: 0% 1% 0% 1%;
+  margin: 0 1%;
   line-height: 70px;
   width: 130px;
   text-align: center;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-nav ul li:hover {
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.3);
+  -moz-transition: background-color 0.5s ease 0s;
+  -o-transition: background-color 0.5s ease 0s;
+  -webkit-transition: background-color 0.5s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: background-color 0.5s ease 0s;
+  transition: background-color 0.5s ease 0s;
 }
-nav ul li.active {
-  background: rgba(255, 255, 255, 0.3);
+nav ul li:hover, nav ul li.active {
+  background-color: rgba(255, 255, 255, 0.3);
 }
-nav ul li::after {
+nav ul li a {
+  display: block;
   height: 100%;
-  position: absolute;
-  left: -35%;
-  top: 0;
-  -webkit-transform: skew(50deg);
-          transform: skew(50deg);
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  width: 0;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
 }
 
 /*=====  End of Nav  ======*/
@@ -519,14 +513,13 @@ section.resum div.developer.left p.button-row a {
   color: #232323;
   padding: 15px 29px;
   display: block;
+  color: #fff;
 }
 section.resum div.developer.left p.button-row a:first-child {
-  background: #0479B8;
-  color: #fff;
+  background-color: #0479B8;
 }
 section.resum div.developer.left p.button-row a:last-child {
-  background: #7c4dff;
-  color: #fff;
+  background-color: #7c4dff;
 }
 section.resum div.avatar.right {
   margin: auto;
@@ -657,14 +650,14 @@ section.experience .google__tc a.button {
   color: #fff;
 }
 section.experience .google__tc div.oneside {
-  background: url('../imgComp/top-contributor-google.jpg?1499361907');
+  background: url('../imgComp/top-contributor-google.jpg?1499417736');
   background-attachment: scroll;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 section.experience .google__tc span.mini__img {
-  background: url('../imgComp/google-logo.png?1499361907');
+  background: url('../imgComp/google-logo.png?1499417736');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -678,14 +671,14 @@ section.experience .youtube div.oneside {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  background: url('../imgComp/youtube-heroes.jpg?1499361907');
+  background: url('../imgComp/youtube-heroes.jpg?1499417736');
   background-attachment: scroll;
   background-size: cover;
   background-position: normal;
   background-repeat: no-repeat;
 }
 section.experience .youtube span.mini__img {
-  background: url('../imgComp/youtube-logo.png?1499361907');
+  background: url('../imgComp/youtube-logo.png?1499417736');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -696,14 +689,14 @@ section.experience .carrefour a.button {
   color: #fff;
 }
 section.experience .carrefour div.oneside {
-  background: url('../imgComp/stagaire-carrefour.jpg?1499361907');
+  background: url('../imgComp/stagaire-carrefour.jpg?1499417736');
   background-attachment: scroll;
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
 }
 section.experience .carrefour span.mini__img {
-  background: url('../imgComp/carrefour-logo.png?1499361906');
+  background: url('../imgComp/carrefour-logo.png?1499417735');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -715,14 +708,14 @@ section.formation .eemi a.button {
   color: #fff;
 }
 section.formation .eemi div.oneside {
-  background: url('../imgComp/ecole-eemi.jpg?1499361907');
+  background: url('../imgComp/ecole-eemi.jpg?1499417735');
   background-attachment: scroll;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 section.formation .eemi span.mini__img {
-  background: url('../imgComp/eemi-logo.png?1499361907');
+  background: url('../imgComp/eemi-logo.png?1499417736');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -736,14 +729,14 @@ section.formation .digital div.oneside {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  background: url('../imgComp/certitication-digital-active.png?1499361907');
+  background: url('../imgComp/certitication-digital-active.png?1499417736');
   background-attachment: scroll;
   background-size: normal;
   background-position: center;
   background-repeat: no-repeat;
 }
 section.formation .digital span.mini__img {
-  background: url('../imgComp/digitalactive-logo.png?1499361907');
+  background: url('../imgComp/digitalactive-logo.png?1499417735');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -754,14 +747,14 @@ section.formation .bac a.button {
   color: #fff;
 }
 section.formation .bac div.oneside {
-  background: url('../imgComp/lycee-saint-paul.jpg?1499361907');
+  background: url('../imgComp/lycee-saint-paul.jpg?1499417736');
   background-attachment: scroll;
   background-size: cover;
   background-position: normal;
   background-repeat: no-repeat;
 }
 section.formation .bac span.mini__img {
-  background: url('../imgComp/saintpaul-logo.png?1499361907');
+  background: url('../imgComp/saintpaul-logo.png?1499417736');
   background-attachment: scroll;
   background-size: 100%;
   background-position: center;
@@ -853,7 +846,7 @@ div.block__goals .row {
   transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 }
 .goal .ico.creation {
-  background: url('../imgComp/done.svg?1499361906');
+  background: url('../imgComp/done.svg?1499417735');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -864,7 +857,7 @@ div.block__goals .row {
           transition-delay: 0.00s;
 }
 .goal .ico.validation {
-  background: url('../imgComp/build.svg?1499361906');
+  background: url('../imgComp/build.svg?1499417734');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -875,7 +868,7 @@ div.block__goals .row {
           transition-delay: 0.20s;
 }
 .goal .ico.responsive {
-  background: url('../imgComp/smartphone.svg?1499361907');
+  background: url('../imgComp/smartphone.svg?1499417736');
   background-attachment: scroll;
   background-size: 100%;
   background-position: normal;
@@ -1232,7 +1225,7 @@ section.mais_aussi div.left p {
 }
 section.mais_aussi div.middle {
   width: 10%;
-  background: url('../imgComp/code.svg?1499361906');
+  background: url('../imgComp/code.svg?1499417734');
   background-attachment: scroll;
   background-size: 70%;
   background-position: center;
@@ -1286,7 +1279,7 @@ section.mais_aussi div.right ul li {
 ===============================*/
 section.contact {
   width: 100%;
-  background: url('../imgComp/keyboard.jpg?1499361907');
+  background: url('../imgComp/keyboard.jpg?1499417736');
   background-attachment: fixed;
   background-size: 100%;
   background-position: cover;
@@ -1474,14 +1467,18 @@ footer ul li img {
   margin: 35px;
   width: 70px;
   height: 70px;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s ease 0s;
+  -o-transition: -o-transform 0.3s ease 0s;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 footer ul li img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 
 /*=====  End of Footer  ======*/
@@ -1830,7 +1827,7 @@ footer ul li img:hover {
     background: transparent;
   }
   section.contact div.block__title {
-    background: url('../imgComp/keyboard.jpg?1499361907');
+    background: url('../imgComp/keyboard.jpg?1499417736');
     background-attachment: scroll;
     background-size: 100%;
     background-position: cover;
@@ -2023,7 +2020,7 @@ footer ul li img:hover {
     background: transparent;
   }
   section.contact div.block__title {
-    background: url('../imgComp/keyboard.jpg?1499361907');
+    background: url('../imgComp/keyboard.jpg?1499417736');
     background-attachment: scroll;
     background-size: 100%;
     background-position: cover;
