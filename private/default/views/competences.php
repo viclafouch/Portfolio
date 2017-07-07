@@ -110,6 +110,34 @@
 					</footer>
 				</article>
 			</div>
+			<h4>Technologies utilisées</h4>
+			<div class="row wrap row-verti-center row-hori-center">
+				<article class="techno col nowrap col-hori-center" id="sublimText">
+		 			<h5>Sublime Text</h5>
+		    		<span>Editeur</span>
+		    		<img src="./public/assets/imgComp/sublimeText.png" title="" alt="">
+				</article>
+				<article class="techno col nowrap col-hori-center" id="git">
+		 			<h5>Git</h5>
+		    		<span>Versioning</span>
+		    		<img src="./public/assets/imgComp/git.png" title="" alt="">
+				</article>
+				<article class="techno col nowrap col-hori-center" id="gulp">
+		 			<h5>Gulp</h5>
+		    		<span>Automatisation</span>
+		    		<img src="./public/assets/imgComp/gulp.png" title="" alt="">
+				</article>
+				<article class="techno col nowrap col-hori-center" id="windows">
+		 			<h5>Windows</h5>
+		    		<span>OS principal</span>
+		    		<img src="./public/assets/imgComp/windows.png" title="" alt="">
+				</article>
+				<article class="techno col nowrap col-hori-center" id="photoshop">
+		 			<h5>Photoshop</h5>
+		    		<span>Conception graphique</span>
+		    		<img src="./public/assets/imgComp/photoshop.png" title="" alt="">
+				</article>
+			</div>
 		</div>
 	</div>
 </section>

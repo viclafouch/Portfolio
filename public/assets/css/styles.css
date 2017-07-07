@@ -256,7 +256,7 @@ h6 {
 header[data-turbolinks-permanent] {
   width: 100%;
   height: 300px;
-  background: url('../imgComp/keyboard.jpg?1499445196');
+  background: url('../imgComp/keyboard.jpg?1499449818');
   background-attachment: scroll;
   background-size: cover;
   background-position: 0 0;
@@ -283,7 +283,8 @@ footer#footer {
   padding: 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #dddddd;
+  border-top: solid 5px #e1e5ea;
+  background-color: #ebeef1;
 }
 footer#footer ul li {
   display: inline-block;
@@ -384,7 +385,7 @@ section.container > header {
   width: 100%;
   text-align: center;
   height: 250px;
-  background: url('../imgComp/keyboard.jpg?1499445196');
+  background: url('../imgComp/keyboard.jpg?1499449818');
   background-attachment: scroll;
   background-size: cover;
   background-position: 0 0;
@@ -398,7 +399,7 @@ section.container > div {
   position: relative;
 }
 section.container.container_competences > header {
-  background-image: url('../imgComp/computer.jpg?1499445196');
+  background-image: url('../imgComp/computer.jpg?1499449817');
 }
 
 section.container_experiences div.block,
@@ -476,32 +477,32 @@ section.container_experiences #topContributor a.button_default {
   background-color: #00c853;
 }
 section.container_experiences #topContributor div.thumbnail {
-  background-image: url('../imgComp/top-contributor-google.jpg?1499445196');
+  background-image: url('../imgComp/top-contributor-google.jpg?1499449818');
 }
 section.container_experiences #hero a.button_default {
   background-color: #F44336;
 }
 section.container_experiences #hero div.thumbnail {
-  background-image: url('../imgComp/youtube-heroes.jpg?1499445196');
+  background-image: url('../imgComp/youtube-heroes.jpg?1499449818');
 }
 section.container_experiences #carrefour a.button_default {
   background-color: #3F51B5;
 }
 section.container_experiences #carrefour div.thumbnail {
-  background-image: url('../imgComp/stagaire-carrefour.jpg?1499445196');
+  background-image: url('../imgComp/stagaire-carrefour.jpg?1499449818');
 }
 
 section.container_formations #eemi a.button_default {
   background-color: #3F51B5;
 }
 section.container_formations #eemi div.thumbnail {
-  background-image: url('../imgComp/ecole-eemi.jpg?1499445196');
+  background-image: url('../imgComp/ecole-eemi.jpg?1499449817');
 }
 section.container_formations #digitalActive a.button_default {
   background-color: #00c853;
 }
 section.container_formations #digitalActive div.thumbnail {
-  background-image: url('../imgComp/certitication-digital-active.png?1499445196');
+  background-image: url('../imgComp/certitication-digital-active.png?1499449818');
 }
 section.container_formations #digitalActive div.thumbnail {
   background-size: auto !important;
@@ -510,7 +511,7 @@ section.container_formations #bachelor a.button_default {
   background-color: #E91E63;
 }
 section.container_formations #bachelor div.thumbnail {
-  background-image: url('../imgComp/lycee-saint-paul.jpg?1499445196');
+  background-image: url('../imgComp/lycee-saint-paul.jpg?1499449818');
 }
 
 section.container_portfolio div.goals {
@@ -535,13 +536,13 @@ section.container_portfolio div.goals div.block_goal > span {
   background-repeat: no-repeat;
 }
 section.container_portfolio div.goals div.block_goal#development > span {
-  background-image: url('../imgComp/done.svg?1499445196');
+  background-image: url('../imgComp/done.svg?1499449817');
 }
 section.container_portfolio div.goals div.block_goal#cleaning > span {
-  background-image: url('../imgComp/build.svg?1499445195');
+  background-image: url('../imgComp/build.svg?1499449816');
 }
 section.container_portfolio div.goals div.block_goal#responsive > span {
-  background-image: url('../imgComp/smartphone.svg?1499445196');
+  background-image: url('../imgComp/smartphone.svg?1499449818');
 }
 section.container_portfolio div.goals div.block_goal > h5 {
   position: relative;
@@ -592,16 +593,16 @@ section.container_portfolio div.portfolio > div > article {
   overflow: hidden;
 }
 section.container_portfolio div.portfolio > div > article#beparis {
-  background-image: url('../imgComp/beparis.jpg?1499445195');
+  background-image: url('../imgComp/beparis.jpg?1499449816');
 }
 section.container_portfolio div.portfolio > div > article#tutobwim {
-  background-image: url('../imgComp/tutobwim.jpg?1499445196');
+  background-image: url('../imgComp/tutobwim.jpg?1499449818');
 }
 section.container_portfolio div.portfolio > div > article#codepen {
-  background-image: url('../imgComp/codepen.jpg?1499445196');
+  background-image: url('../imgComp/codepen.jpg?1499449817');
 }
 section.container_portfolio div.portfolio > div > article#ficheandtricks {
-  background-image: url('../imgComp/beparis.jpg?1499445195');
+  background-image: url('../imgComp/beparis.jpg?1499449816');
 }
 section.container_portfolio div.portfolio > div > article > div {
   position: absolute;
@@ -647,7 +648,7 @@ section.container_competences div.skills h4 {
   padding: 20px;
   font-size: 25px;
   color: #444;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
 }
 section.container_competences div.skills article.skill_card {
   width: 250px;
@@ -787,6 +788,22 @@ section.container_competences div.skills article.skill_card:hover > footer > ul 
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
 }
+section.container_competences div.skills article.techno {
+  padding: 20px;
+  margin: 20px;
+}
+section.container_competences div.skills article.techno > h5 {
+  color: #444;
+  text-transform: capitalize;
+  font-size: 20px;
+  text-align: center;
+}
+section.container_competences div.skills article.techno > span {
+  color: #9E9E9E;
+  font-style: italic;
+  padding: 5px 3px;
+  text-align: center;
+}
 
 /*----------  Barre de d├®filement experience/formations  ----------*/
 .trait {
@@ -880,7 +897,7 @@ section.mais_aussi div.left p {
 }
 section.mais_aussi div.middle {
   width: 10%;
-  background: url('../imgComp/code.svg?1499445195');
+  background: url('../imgComp/code.svg?1499449817');
   background-attachment: scroll;
   background-size: 70%;
   background-position: center;
@@ -934,7 +951,7 @@ section.mais_aussi div.right ul li {
 ===============================*/
 section.contact {
   width: 100%;
-  background: url('../imgComp/keyboard.jpg?1499445196');
+  background: url('../imgComp/keyboard.jpg?1499449818');
   background-attachment: fixed;
   background-size: 100%;
   background-position: cover;
@@ -1440,7 +1457,7 @@ form button:focus {
     background: transparent;
   }
   section.contact div.block__title {
-    background: url('../imgComp/keyboard.jpg?1499445196');
+    background: url('../imgComp/keyboard.jpg?1499449818');
     background-attachment: scroll;
     background-size: 100%;
     background-position: cover;
@@ -1633,7 +1650,7 @@ form button:focus {
     background: transparent;
   }
   section.contact div.block__title {
-    background: url('../imgComp/keyboard.jpg?1499445196');
+    background: url('../imgComp/keyboard.jpg?1499449818');
     background-attachment: scroll;
     background-size: 100%;
     background-position: cover;
