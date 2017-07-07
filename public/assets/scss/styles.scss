@@ -54,8 +54,8 @@ $primaryBorder: 1px solid $colorBorder; // Primary border
 $navHeight: 70px; // Height of the navbar
 $sideWidth: 0; // Width of the sidebar
 
-$primaryShadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.2); // Primary shadow
-$secondaryShadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); // Secondary shadow
+$primaryShadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); // Primary shadow
+$secondaryShadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); // Secondary shadow
 $terciaryShadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); // Terciary shadow
 
 // ----------  Mixins  ---------- \\
@@ -180,9 +180,11 @@ h2 { font-size: 50px; }
 
 h3 { font-size: 45px; }
 
-h4, h6, { font-family: 'Roboto Slab', 'Roboto', sans-serif; }
+h4, h5, h6, { font-family: 'Roboto Slab', 'Roboto', sans-serif; }
 
 h4 { font-size: 40px;  }
+
+h5 { font-size: 30px; }
 
 h6 { font-size: 25px; }
 
@@ -207,7 +209,7 @@ h6 { font-size: 25px; }
     @include single-transition(none, 0.3s, ease, 0s);
     @include transition-property(box-shadow, opacity);
 
-    &:hover { @include box-shadow($terciaryShadow); @include opacity(1); }
+    &:hover { @include box-shadow($secondaryShadow); @include opacity(1); }
 }
 
 .turbolinks-progress-bar {
@@ -230,7 +232,7 @@ header[data-turbolinks-permanent] {
     }
 }
 
-footer {
+footer#footer {
     width: 100%;
     padding: 15px;
     @include box-sizing(border-box);
@@ -306,14 +308,14 @@ section.container {
         @include back(image-url("keyboard.jpg"), scroll, cover, 0 0, no-repeat);
 
         h3 { line-height: 250px; }
-
-        &.competences { @include back(image-url("computer.jpg"), scroll, cover, normal, no-repeat); }
     }
 
     & > div {
         width: 100%;
         position: relative;
     }
+
+    &.container_competences > header { background-image: image-url("computer.jpg"); }
 }
 
 section.container_experiences,
@@ -385,8 +387,6 @@ section.container_formations {
         div.thumbnail { background-image: image-url("lycee-saint-paul.jpg"); }
     }
 }
-
-
 
 section.container_portfolio {
 
@@ -482,36 +482,98 @@ section.container_portfolio {
     }
 }
 
-/*=====  End of Portfolio  ======*/
+section.container_competences {
+    div.skills {
+        h4 {
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+            color: #444;
+            border-bottom: 1px solid rgbaExpress(black, 0.2);
+        }
 
+        article.skill_card {
+            width: 250px;
+            margin: 20px;
+            @include box-shadow($primaryShadow);
+            @include single-transition(box-shadow, 0.3s, ease, 0s);
+            cursor: pointer;
+            overflow: hidden;
 
+            & > header, & > footer {
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                @include single-transition(height, 0.5s, ease, 0s);
+            }
 
+            & > header { height: 150px;
 
+                img {
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    @include translate(-50%, -50%);
+                    display: block;
+                    width: 115px; height: 115px;
+                    @include single-transition(transform, 0.5s, ease, 0s);
+                }
+            }
 
+            &#html { & > header { background-color: #eb6c3f; } }
+            &#css { background-color: #169ae7; }
+            &#js { background-color: #Ffbd2d; }
+            &#php { background-color: #89f11f; }
+            &#wordpress { background-color: #3F51B5; }
+            &#compass { background-color: #fff; }
+            &#jquery { background-color: #fff; }
+            &#bootstrap { background-color: #fff; }
 
+            & > footer { height: 50px; background-color: #fff;
+                & > h5 {
+                    font-size: 1.4em;
+                    padding: 15px 0px;
+                    color: #222;
+                    margin-left: 15px;
+                    text-transform: uppercase;
+                }
 
+                & > span {
+                    color: #9E9E9E;
+                    font-style: italic;
+                    margin-left: 15px;
+                }
 
+                & > ul {
+                    margin-top: 10px;
+                    color: #444;
+                    & > li {
+                        margin-top: 5px;
+                        margin-left: 15px;
+                        @include translateX(-100%);
+                        @include transition-duration(0s);
+                        @include transition-timing-function(cubic-bezier(0, 1.5, 1, 1));
 
+                        &:first-child { @include transition-delay(0.25s); }
+                        &:nth-child(2) { @include transition-delay(0.50s); }
+                        &:nth-child(3) { @include transition-delay(0.75s); }
+                        &:nth-child(4) { @include transition-delay(1.00s); }
+                    }
+                }
+            }
 
+             &:hover { 
+                @include box-shadow($secondaryShadow);
+            
+                & > header { height: 50px; }
+                & > header > img { @include transform(translate(-50%, -50%) scale(1.5)); }
 
-
-
-
-
-
-
-
-
-
-
-
-h5 {
-    text-align: center;
-    font-family: 'Roboto Slab';
-    font-size: 1.5em;
-    position: relative;
-    color: #222;
+                & > footer { height: 150px; }
+                & > footer > ul > li { @include transition-duration(0.5s); @include translateX(0%); }
+            }
+        }
+    }
 }
+
 
 /*----------  Barre de défilement experience/formations  ----------*/
 
@@ -555,151 +617,7 @@ span.haut {
 
 /*----------  Divers  ----------*/
 
-.p__default {
-    font-size: 17px;
-    line-height: 25px;
-    font-family: 'Roboto';
-}
-
-
-
 /*=====  End of Experience & Training  ======*/
-
-/*=================================
-=            Portfolio            =
-=================================*/
-
-section.productions {
-    width: 100%;
-    @include flex(column nowrap, center, center);
-
-    h3 { color: #444; line-height: 62.5px; }
-
-    .row {
-        @include flex(row wrap, flex-start, center);
-        width: 100%;
-    }
-}
-
-/*==============================
-=            Skills            =
-==============================*/
-
-.skills {
-    width: 100%;
-    @include flex(column nowrap, flex-start, strech);
-
-    .row {
-        width: 100%;
-        @include flex(row wrap, center, center);
-    }
-
-    h4 {
-        text-align: center;
-        padding: 20px;
-        font-size: 25px;
-        border-bottom: 1px solid rgba(0,0,0,0.2);
-    }
-}
-
-.skill-card {
-    min-width: 16%;
-    margin: 2% 2%;
-    background-color: #FFF;
-    box-shadow: $primaryShadow;
-    cursor: pointer;
-    transition: all 0.3s;
-    overflow: hidden;
-
-    span.tap img { display: none; }
-
-    &:hover { 
-        box-shadow: $terciaryShadow;
-
-        .skill-card__header { height: 50px; }
-        .skill-card__header img { transform: translateX(-50%) translateY(-50%) scale(1.5); }
-        .skill-card__body { height: 150px; }
-    }
-        
-    .skill-card__header {
-        position: relative;
-        height: 150px;
-        width: 100%;
-        overflow: hidden;
-        -webkit-transition: height 0.5s;
-        transition: height 0.5s;
-
-        &.html { background-color: #eb6c3f; }
-        &.css { background-color: #169ae7; }
-        &.js { background-color: #Ffbd2d; }
-        &.php { background-color: #89f11f; }
-        &.wordpress { background-color: #3F51B5; }
-        &.compass { background-color: #fff; }
-        &.jquery { background-color: #fff; }
-        &.bootstrap { background-color: #fff; }
-
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            @include flex(center row, center, center);
-            transform: translateY(-50%) translateX(-50%);
-            display: block;
-            width: 115px;
-            height: 115px;
-            transition: transform 0.5s;
-        }
-    }
-
-    .skill-card__body {
-        height: 50px;
-        transition: height 0.5s;
-        overflow: hidden;
-
-        .skill-card__title {
-            font-size: 1.4em;
-            font-weight: 600;
-            padding: 15px 0px!important;
-            margin-left: 15px!important;
-            text-transform: uppercase;
-        }
-        .skill-card__duration {
-            color: #9E9E9E;
-            font-style: italic;
-            margin-left: 15px;
-        }
-
-        .skill-card__knowledge {
-            margin-top: 10px;
-            color: #424242;
-
-            li {
-                margin-top: 5px;
-                margin-left: 15px;
-                transition-duration: 0;
-                transition-delay: 0.5s;
-                transform: translateX(-100%);
-            }
-        }
-    }
-}
-
-.skill-card:hover .skill-card__body .skill-card__knowledge li {
-    transform: translateX(0);
-    transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
-    transition-duration: 0.5s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(1) {
-    transition-delay: 0.25s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(2) {
-    transition-delay: 0.5s;
-}
-.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(3) {
-    transition-delay: 0.75s;
-}
-
-/*=====  End of Skills  ======*/
 
 /*===============================
 =            But too            =
