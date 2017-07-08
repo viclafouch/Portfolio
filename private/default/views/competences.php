@@ -1,12 +1,15 @@
 <?php include_once('/layouts/header.php'); ?>
 
-<section class="container container_competences">
+<section class="container_competences">
 	<header>
 		<h3>Compétences</h3>
+		<p>Ce que je sais faire</p>
 	</header>
 	<div class="content_block">
 		<div class="skills languages">
-			<h4>Langages utilisés</h4>
+			<div class="title_stripes">
+				<h4>Langages utilisés</h4>
+			</div>
 			<div class="row wrap row-verti-center row-hori-center">
 				<article class="skill_card" id="html">
 		 			<header>
@@ -16,9 +19,9 @@
 		    			<h5>html</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li>HTML5</li>
-							<li>Sémantique</li>
-							<li>SVG</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> HTML5</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Sémantique</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> SVG</li>
 					    </ul>
 					</footer>
 				</article>
@@ -30,9 +33,9 @@
 		    			<h5>css</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li>CSS3</li>
-		      				<li>Responsive</li>
-		      				<li>SASS</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i>  CSS3</li>
+		      				<li><i class="fa fa-bandcamp" aria-hidden="true"></i>  Responsive</li>
+		      				<li><i class="fa fa-bandcamp" aria-hidden="true"></i>  SASS</li>
 					    </ul>
 					</footer>
 				</article>
@@ -44,9 +47,9 @@
 		    			<h5>js</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li>Javascript</li>
-							<li>DOM</li>
-							<li>Ajax</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Javascript</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> DOM</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Ajax</li>
 					    </ul>
 					</footer>
 				</article>
@@ -58,14 +61,16 @@
 		    			<h5>php</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li>Objet</li>
-							<li>MVC</li>
-							<li>MYSQL</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Objet</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MVC</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MYSQL</li>
 					    </ul>
 					</footer>
 				</article>
 			</div>
-			<h4>Frameworks utilisés</h4>
+			<div class="title_stripes">
+				<h4>Frameworks utilisés</h4>
+			</div>
 			<div class="row wrap row-verti-center row-hori-center">
 				<article class="skill_card" id="compass">
 		 			<header>
@@ -75,9 +80,9 @@
 		    			<h5>compass</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li>SCSS</li>
-							<li>Nesting</li>
-							<li>@Mixins</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> SCSS</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Nesting</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> @Mixins</li>
 					    </ul>
 					</footer>
 				</article>
@@ -89,9 +94,9 @@
 		    			<h5>jquery</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li>SCSS</li>
-							<li>Nesting</li>
-							<li>@Mixins</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> SCSS</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Nesting</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> @Mixins</li>
 					    </ul>
 					</footer>
 				</article>
@@ -103,15 +108,17 @@
 		    			<h5>bootstrap</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li>SCSS</li>
-							<li>Nesting</li>
-							<li>@Mixins</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> SCSS</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Nesting</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> @Mixins</li>
 					    </ul>
 					</footer>
 				</article>
 			</div>
-			<h4>Technologies utilisées</h4>
-			<div class="row wrap row-verti-center row-hori-center">
+			<div class="title_stripes">
+				<h4>Technologies utilisées</h4>
+			</div>
+			<div class="row nowrap row-verti-center row-hori-center">
 				<article class="techno col nowrap col-hori-center" id="sublimText">
 		 			<h5>Sublime Text</h5>
 		    		<span>Editeur</span>

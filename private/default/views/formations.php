@@ -3,13 +3,14 @@
 <section class="container container_formations">
 	<header>
 		<h3>Formations</h3>
+		<p>Ce que j'apprends</p>
 	</header>
 	<div class="content_block">
-		<div class="block row nowrap" id="eemi">
-			<div class="thumbnail"></div>				
-			<div class="description col col-verti-center">
+		<div class="block col col-hori-center nowrap" id="eemi">
+			<img src="./public/assets/imgComp/eemi-logo.png" alt="">
+			<div class="description">
 				<p class="date">
-					<i class="material-icons">access_time</i>
+					<i class="fa fa-calendar" aria-hidden="true"></i>
 					<span>Depuis <u>Septembre 2015</u></span>
 				</p>
 				<h4>EEMI<span></span></h4>

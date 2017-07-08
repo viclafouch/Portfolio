@@ -1,3 +1,4 @@
+		</main>
 		<footer class="col col-hori-center nowrap" id="footer" data-turbolinks-permanent>
 			<ul>
 				<li>
