@@ -54,7 +54,6 @@
 	</head>
 	<body>
 		<header class="row row-hori-center row-verti-center nowrap" id="header" data-turbolinks-permanent>
-			<div class="background"></div>
 			<div class="col col-hori-center nowrap">
 				<h1>Portfolio</h1>
 				<p class="name">Victor de la Fouchardière</p>

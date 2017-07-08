@@ -256,26 +256,13 @@ h6 {
 header[data-turbolinks-permanent] {
   width: 100%;
   height: 300px;
-  background: url('../imgComp/keyboard.jpg?1499449818');
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  background-color: #2E2E2E;
   position: relative;
 }
 header[data-turbolinks-permanent] p.name {
   font-size: 2em;
   text-align: center;
-}
-header[data-turbolinks-permanent] div.background {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 footer#footer {
@@ -385,7 +372,7 @@ section.container > header {
   width: 100%;
   text-align: center;
   height: 250px;
-  background: url('../imgComp/keyboard.jpg?1499449818');
+  background: url('../imgComp/keyboard.jpg?1499505485');
   background-attachment: scroll;
   background-size: cover;
   background-position: 0 0;
@@ -399,7 +386,7 @@ section.container > div {
   position: relative;
 }
 section.container.container_competences > header {
-  background-image: url('../imgComp/computer.jpg?1499449817');
+  background-image: url('../imgComp/computer.jpg?1499460779');
 }
 
 section.container_experiences div.block,
@@ -477,32 +464,32 @@ section.container_experiences #topContributor a.button_default {
   background-color: #00c853;
 }
 section.container_experiences #topContributor div.thumbnail {
-  background-image: url('../imgComp/top-contributor-google.jpg?1499449818');
+  background-image: url('../imgComp/top-contributor-google.jpg?1499460780');
 }
 section.container_experiences #hero a.button_default {
   background-color: #F44336;
 }
 section.container_experiences #hero div.thumbnail {
-  background-image: url('../imgComp/youtube-heroes.jpg?1499449818');
+  background-image: url('../imgComp/youtube-heroes.jpg?1499460780');
 }
 section.container_experiences #carrefour a.button_default {
   background-color: #3F51B5;
 }
 section.container_experiences #carrefour div.thumbnail {
-  background-image: url('../imgComp/stagaire-carrefour.jpg?1499449818');
+  background-image: url('../imgComp/stagaire-carrefour.jpg?1499460780');
 }
 
 section.container_formations #eemi a.button_default {
   background-color: #3F51B5;
 }
 section.container_formations #eemi div.thumbnail {
-  background-image: url('../imgComp/ecole-eemi.jpg?1499449817');
+  background-image: url('../imgComp/ecole-eemi.jpg?1499460780');
 }
 section.container_formations #digitalActive a.button_default {
   background-color: #00c853;
 }
 section.container_formations #digitalActive div.thumbnail {
-  background-image: url('../imgComp/certitication-digital-active.png?1499449818');
+  background-image: url('../imgComp/certitication-digital-active.png?1499460780');
 }
 section.container_formations #digitalActive div.thumbnail {
   background-size: auto !important;
@@ -511,7 +498,7 @@ section.container_formations #bachelor a.button_default {
   background-color: #E91E63;
 }
 section.container_formations #bachelor div.thumbnail {
-  background-image: url('../imgComp/lycee-saint-paul.jpg?1499449818');
+  background-image: url('../imgComp/lycee-saint-paul.jpg?1499460780');
 }
 
 section.container_portfolio div.goals {
@@ -536,13 +523,13 @@ section.container_portfolio div.goals div.block_goal > span {
   background-repeat: no-repeat;
 }
 section.container_portfolio div.goals div.block_goal#development > span {
-  background-image: url('../imgComp/done.svg?1499449817');
+  background-image: url('../imgComp/done.svg?1499460779');
 }
 section.container_portfolio div.goals div.block_goal#cleaning > span {
-  background-image: url('../imgComp/build.svg?1499449816');
+  background-image: url('../imgComp/build.svg?1499460778');
 }
 section.container_portfolio div.goals div.block_goal#responsive > span {
-  background-image: url('../imgComp/smartphone.svg?1499449818');
+  background-image: url('../imgComp/smartphone.svg?1499460780');
 }
 section.container_portfolio div.goals div.block_goal > h5 {
   position: relative;
@@ -593,16 +580,16 @@ section.container_portfolio div.portfolio > div > article {
   overflow: hidden;
 }
 section.container_portfolio div.portfolio > div > article#beparis {
-  background-image: url('../imgComp/beparis.jpg?1499449816');
+  background-image: url('../imgComp/beparis.jpg?1499460778');
 }
 section.container_portfolio div.portfolio > div > article#tutobwim {
-  background-image: url('../imgComp/tutobwim.jpg?1499449818');
+  background-image: url('../imgComp/tutobwim.jpg?1499460780');
 }
 section.container_portfolio div.portfolio > div > article#codepen {
-  background-image: url('../imgComp/codepen.jpg?1499449817');
+  background-image: url('../imgComp/codepen.jpg?1499460779');
 }
 section.container_portfolio div.portfolio > div > article#ficheandtricks {
-  background-image: url('../imgComp/beparis.jpg?1499449816');
+  background-image: url('../imgComp/beparis.jpg?1499460778');
 }
 section.container_portfolio div.portfolio > div > article > div {
   position: absolute;
@@ -897,7 +884,7 @@ section.mais_aussi div.left p {
 }
 section.mais_aussi div.middle {
   width: 10%;
-  background: url('../imgComp/code.svg?1499449817');
+  background: url('../imgComp/code.svg?1499460779');
   background-attachment: scroll;
   background-size: 70%;
   background-position: center;
@@ -951,7 +938,7 @@ section.mais_aussi div.right ul li {
 ===============================*/
 section.contact {
   width: 100%;
-  background: url('../imgComp/keyboard.jpg?1499449818');
+  background: url('../imgComp/keyboard.jpg?1499505485');
   background-attachment: fixed;
   background-size: 100%;
   background-position: cover;
@@ -1457,7 +1444,7 @@ form button:focus {
     background: transparent;
   }
   section.contact div.block__title {
-    background: url('../imgComp/keyboard.jpg?1499449818');
+    background: url('../imgComp/keyboard.jpg?1499505485');
     background-attachment: scroll;
     background-size: 100%;
     background-position: cover;
@@ -1650,7 +1637,7 @@ form button:focus {
     background: transparent;
   }
   section.contact div.block__title {
-    background: url('../imgComp/keyboard.jpg?1499449818');
+    background: url('../imgComp/keyboard.jpg?1499505485');
     background-attachment: scroll;
     background-size: 100%;
     background-position: cover;
