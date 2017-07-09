@@ -398,22 +398,15 @@ section > header p {
 section.container_experiences div.block,
 section.container_formations div.block {
   width: 100%;
-}
-section.container_experiences div.block div.board,
-section.container_formations div.block div.board {
-  width: 100%;
-  height: 200px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 3px;
-  background-attachment: scroll;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 20px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
 }
 section.container_experiences div.block div.description,
 section.container_formations div.block div.description {
-  padding: 20px 10px;
+  margin-left: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 section.container_experiences div.block div.description p.date,
 section.container_formations div.block div.description p.date {
@@ -436,6 +429,19 @@ section.container_experiences div.block div.description h4,
 section.container_formations div.block div.description h4 {
   padding: 15px 0;
   color: #444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 section.container_experiences div.block div.description ul,
 section.container_formations div.block div.description ul {
@@ -449,50 +455,52 @@ section.container_formations div.block div.description ul > li {
 section.container_experiences div.block div.description a,
 section.container_formations div.block div.description a {
   margin: 0;
-  margin-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 section.container_experiences #topContributor a.button_default {
   background-color: #00c853;
 }
 section.container_experiences #topContributor div.thumbnail {
-  background-image: url('../imgComp/top-contributor-google.jpg?1499523098');
+  background-image: url('../imgComp/top-contributor-google.jpg?1499536053');
 }
 section.container_experiences #hero a.button_default {
   background-color: #F44336;
 }
 section.container_experiences #hero div.thumbnail {
-  background-image: url('../imgComp/youtube-heroes.jpg?1499523098');
+  background-image: url('../imgComp/youtube-heroes.jpg?1499536053');
 }
 section.container_experiences #carrefour a.button_default {
   background-color: #3F51B5;
 }
 section.container_experiences #carrefour div.thumbnail {
-  background-image: url('../imgComp/stagaire-carrefour.jpg?1499523098');
+  background-image: url('../imgComp/stagaire-carrefour.jpg?1499536053');
 }
 
 section.container_formations #eemi a.button_default {
   background-color: #3F51B5;
 }
-section.container_formations #eemi div.board {
-  background-image: url('../imgComp/eemi-logo.png?1499523098');
+section.container_formations #eemi a:hover {
+  background-color: #f6f6f6;
+  border-color: #3F51B5;
+  color: #3F51B5;
 }
 section.container_formations #digitalActive a.button_default {
   background-color: #00c853;
 }
-section.container_formations #digitalActive div.thumbnail {
-  background-image: url('../imgComp/certitication-digital-active.png?1499523098');
-}
-section.container_formations #digitalActive div.thumbnail {
-  background-size: auto !important;
+section.container_formations #digitalActive a:hover {
+  background-color: #f6f6f6;
+  border-color: #00c853;
+  color: #00c853;
 }
 section.container_formations #bachelor a.button_default {
   background-color: #E91E63;
 }
-section.container_formations #bachelor div.thumbnail {
-  background-image: url('../imgComp/lycee-saint-paul.jpg?1499523098');
+section.container_formations #bachelor a:hover {
+  background-color: #f6f6f6;
+  border-color: #E91E63;
+  color: #E91E63;
 }
 
 section.container_portfolio div.goals {
@@ -517,13 +525,13 @@ section.container_portfolio div.goals div.block_goal > span {
   background-repeat: no-repeat;
 }
 section.container_portfolio div.goals div.block_goal#development > span {
-  background-image: url('../imgComp/done.svg?1499523097');
+  background-image: url('../imgComp/done.svg?1499536051');
 }
 section.container_portfolio div.goals div.block_goal#cleaning > span {
-  background-image: url('../imgComp/build.svg?1499523097');
+  background-image: url('../imgComp/build.svg?1499536051');
 }
 section.container_portfolio div.goals div.block_goal#responsive > span {
-  background-image: url('../imgComp/smartphone.svg?1499523098');
+  background-image: url('../imgComp/smartphone.svg?1499536053');
 }
 section.container_portfolio div.goals div.block_goal > h5 {
   position: relative;
@@ -574,16 +582,16 @@ section.container_portfolio div.portfolio > div > article {
   overflow: hidden;
 }
 section.container_portfolio div.portfolio > div > article#beparis {
-  background-image: url('../imgComp/beparis.jpg?1499523097');
+  background-image: url('../imgComp/beparis.jpg?1499536051');
 }
 section.container_portfolio div.portfolio > div > article#tutobwim {
-  background-image: url('../imgComp/tutobwim.jpg?1499523098');
+  background-image: url('../imgComp/tutobwim.jpg?1499536053');
 }
 section.container_portfolio div.portfolio > div > article#codepen {
-  background-image: url('../imgComp/codepen.jpg?1499523097');
+  background-image: url('../imgComp/codepen.jpg?1499536051');
 }
 section.container_portfolio div.portfolio > div > article#ficheandtricks {
-  background-image: url('../imgComp/beparis.jpg?1499523097');
+  background-image: url('../imgComp/beparis.jpg?1499536051');
 }
 section.container_portfolio div.portfolio > div > article > div {
   position: absolute;
