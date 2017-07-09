@@ -374,95 +374,58 @@ section.container_formations {
 }
 
 section.container_portfolio {
-
-    div.goals {
-        padding: 30px 10px;
+    article.work {
+        width: 25%;
+        float: left;
+        margin-bottom: 30px;
+        padding: 10px;
         @include box-sizing(border-box);
-        @include box-shadow($primaryShadow);
-        background-color: #fff;
-        
-        h3 { color: #444; margin-bottom: 25px; }
 
-        div.block_goal {
-            & > span {
-                display: block;
-                width: 50px;
-                height: 50px;
-                background-attachment: scroll;
-                background-size: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
+        & > div { width: 100%; }
 
-            &#development > span { background-image: image-url("done.svg"); }
-            &#cleaning > span { background-image: image-url("build.svg"); }
-            &#responsive > span { background-image: image-url("smartphone.svg"); }
+        header {
+            position: relative;
+            width: 100%;
+            & > img { display: block; width: 100%; @include border-top-radius(10px); }
 
-            & > h5 { position: relative; padding: 15px 10px; margin: 10px 0;
-                &::after {
-                    content:'';
-                    position: absolute;
-                    width: 40px; height: 3px;
-                    @include border-radius(5px);
-                    background-color: $primaryColor;
-                    bottom: 0; left: 50%;
-                    @include translateX(-50%);
+            & > div.overlay {
+                position: absolute;
+                @include visible(false);
+                @include single-transition(none, 0.3s, ease, 0s);
+                @include transition-property(opacity, visibility);
+                width: 100%; height: 100%;
+                background-color: rgbaExpress(white, 0.4);
+                top: 0; left: 0; right: 0; bottom: 0;
+
+                & > span {
+                    position: absolute; 
+                    left: 50%; top: 50%;
+                    @include transform(translate(-50%, -50%) scale(0));
+                    padding: 10px;
+                    @include single-transition(transform, 0.3s, ease, 0s);
+                    background-color: rgbaExpress(black, 0.4);
+                    @include border-radius(50%);
+                    color: #fff;
+                    cursor: pointer;
                 }
             }
-            & > p { text-align: center; color: #777; }
         }
-    }
 
-    div.portfolio {
-        width: 100%;
-        padding: 30px 10px;
-        @include box-sizing(border-box);
+        footer {
+            border: 1px solid #dedede;
+            @include box-sizing(border-box);
+            border-top: none;
+            width: 100%;
+            text-align: center;
+            padding: 9px 0;
+            @include border-bottom-radius(10px);
+            & > h4 { font-size: 20px; font-weight: 600; margin-bottom: 0.5em; }
+            & > p { color: #9E9E9E; font-style: italic; }
+        }
 
-        h3 { color: #444; margin-bottom: 25px; }
-
-        & > div { width: 100%;
-            & > article {
-                width: calc(25% - 2%);
-                margin: 1%;
-                height: 250px;
-                @include box-sizing(border-box);
-                position: relative;
-                border: 1px solid #444;
-                background-attachment: scroll;
-                background-size: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                overflow: hidden;
-
-                &#beparis { background-image: image-url("beparis.jpg"); }
-                &#tutobwim { background-image: image-url("tutobwim.jpg"); }
-                &#codepen { background-image: image-url("codepen.jpg"); }
-                &#ficheandtricks { background-image: image-url("beparis.jpg"); }
-
-                & > div {
-                    position: absolute;
-                    top: -100%;
-                    overflow: hidden;
-                    padding: 20px;
-                    @include box-sizing(border-box);
-                    width: 100%; height: 100%;
-                    background-color: rgbaExpress(black, 0.75);
-                    @include single-transition(top, 0.5s, ease-out, 0s);
-
-                    p { margin: 10px 0; color: #fff; text-align: center; line-height: 22px; }
-                    
-                    a {
-                        display: block;
-                        @include border-radius(50%);
-                        background-color: rgbaExpress(white, 0.5);
-                        padding: 10px;
-                        @include rotate(-45deg);
-                        i { color: rgbaExpress(black, 0.6); font-size: 2em; }
-                    }
-                }
-
-                &:hover { div { top: 0%; }   }
-            }
+        &:hover {
+            div.overlay { @include visible(true); }
+            div.overlay span { @include transform(translate(-50%, -50%) scale(1)); }
         }
     }
 }

@@ -74,9 +74,9 @@
 		<nav id="nav" data-turbolinks-permanent>
 			<div class="container">
 				<ul class="row row-hori-around wrap">
-					<li><a href="./" title="">Expériences</a></li>
+					<li><a href="./" title="">Accueil</a></li>
 					<li><a href="?module=default&action=formations" title="">Formations</a></li>
-					<li><a href="?module=default&action=productions" title="">Productions</a></li>
+					<li><a href="?module=default&action=productions" title="">Portfolio</a></li>
 					<li><a href="?module=default&action=competences" title="">Compétences</a></li>
 					<li><a href="http://www.eemi.com/" data-turbolinks="false" target="_blank" title="">L'Ecole</a></li>
 					<li><a href="#" title="">Contact</a></li>

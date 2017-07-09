@@ -463,19 +463,19 @@ section.container_experiences #topContributor a.button_default {
   background-color: #00c853;
 }
 section.container_experiences #topContributor div.thumbnail {
-  background-image: url('../imgComp/top-contributor-google.jpg?1499536053');
+  background-image: url('../imgComp/top-contributor-google.jpg?1499606128');
 }
 section.container_experiences #hero a.button_default {
   background-color: #F44336;
 }
 section.container_experiences #hero div.thumbnail {
-  background-image: url('../imgComp/youtube-heroes.jpg?1499536053');
+  background-image: url('../imgComp/youtube-heroes.jpg?1499606128');
 }
 section.container_experiences #carrefour a.button_default {
   background-color: #3F51B5;
 }
 section.container_experiences #carrefour div.thumbnail {
-  background-image: url('../imgComp/stagaire-carrefour.jpg?1499536053');
+  background-image: url('../imgComp/stagaire-carrefour.jpg?1499606128');
 }
 
 section.container_formations #eemi a.button_default {
@@ -503,133 +503,96 @@ section.container_formations #bachelor a:hover {
   color: #E91E63;
 }
 
-section.container_portfolio div.goals {
-  padding: 30px 10px;
+section.container_portfolio article.work {
+  width: 25%;
+  float: left;
+  margin-bottom: 30px;
+  padding: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #fff;
 }
-section.container_portfolio div.goals h3 {
-  color: #444;
-  margin-bottom: 25px;
+section.container_portfolio article.work > div {
+  width: 100%;
 }
-section.container_portfolio div.goals div.block_goal > span {
+section.container_portfolio article.work header {
+  position: relative;
+  width: 100%;
+}
+section.container_portfolio article.work header > img {
   display: block;
-  width: 50px;
-  height: 50px;
-  background-attachment: scroll;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-section.container_portfolio div.goals div.block_goal#development > span {
-  background-image: url('../imgComp/done.svg?1499536051');
-}
-section.container_portfolio div.goals div.block_goal#cleaning > span {
-  background-image: url('../imgComp/build.svg?1499536051');
-}
-section.container_portfolio div.goals div.block_goal#responsive > span {
-  background-image: url('../imgComp/smartphone.svg?1499536053');
-}
-section.container_portfolio div.goals div.block_goal > h5 {
-  position: relative;
-  padding: 15px 10px;
-  margin: 10px 0;
-}
-section.container_portfolio div.goals div.block_goal > h5::after {
-  content: '';
-  position: absolute;
-  width: 40px;
-  height: 3px;
-  border-radius: 5px;
-  background-color: #F05F40;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-section.container_portfolio div.goals div.block_goal > p {
-  text-align: center;
-  color: #777;
-}
-section.container_portfolio div.portfolio {
   width: 100%;
-  padding: 30px 10px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-section.container_portfolio div.portfolio h3 {
-  color: #444;
-  margin-bottom: 25px;
-}
-section.container_portfolio div.portfolio > div {
-  width: 100%;
-}
-section.container_portfolio div.portfolio > div > article {
-  width: calc(25% - 2%);
-  margin: 1%;
-  height: 250px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  border: 1px solid #444;
-  background-attachment: scroll;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-section.container_portfolio div.portfolio > div > article#beparis {
-  background-image: url('../imgComp/beparis.jpg?1499536051');
-}
-section.container_portfolio div.portfolio > div > article#tutobwim {
-  background-image: url('../imgComp/tutobwim.jpg?1499536053');
-}
-section.container_portfolio div.portfolio > div > article#codepen {
-  background-image: url('../imgComp/codepen.jpg?1499536051');
-}
-section.container_portfolio div.portfolio > div > article#ficheandtricks {
-  background-image: url('../imgComp/beparis.jpg?1499536051');
-}
-section.container_portfolio div.portfolio > div > article > div {
+section.container_portfolio article.work header > div.overlay {
   position: absolute;
-  top: -100%;
-  overflow: hidden;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: none 0.3s ease 0s;
+  -o-transition: none 0.3s ease 0s;
+  -webkit-transition: none 0.3s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: none 0.3s ease 0s;
+  transition: none 0.3s ease 0s;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  -moz-transition: top 0.5s ease-out 0s;
-  -o-transition: top 0.5s ease-out 0s;
-  -webkit-transition: top 0.5s ease-out;
-  -webkit-transition-delay: 0s;
-  -webkit-transition: top 0.5s ease-out 0s;
-  transition: top 0.5s ease-out 0s;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-section.container_portfolio div.portfolio > div > article > div p {
-  margin: 10px 0;
-  color: #fff;
-  text-align: center;
-  line-height: 22px;
-}
-section.container_portfolio div.portfolio > div > article > div a {
-  display: block;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+section.container_portfolio article.work header > div.overlay > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
   padding: 10px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -moz-transition: -moz-transform 0.3s ease 0s;
+  -o-transition: -o-transform 0.3s ease 0s;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
 }
-section.container_portfolio div.portfolio > div > article > div a i {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 2em;
+section.container_portfolio article.work footer {
+  border: 1px solid #dedede;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: none;
+  width: 100%;
+  text-align: center;
+  padding: 9px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-section.container_portfolio div.portfolio > div > article:hover div {
-  top: 0%;
+section.container_portfolio article.work footer > h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+section.container_portfolio article.work footer > p {
+  color: #9E9E9E;
+  font-style: italic;
+}
+section.container_portfolio article.work:hover div.overlay {
+  visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+section.container_portfolio article.work:hover div.overlay span {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 section.container_competences div.skills div.title_stripes {
