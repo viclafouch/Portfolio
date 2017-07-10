@@ -372,7 +372,7 @@ section.container_formations {
 
 section.container_portfolio {
 
-    div.popup {
+    div.popup_work {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -382,7 +382,9 @@ section.container_portfolio {
         @include visible(false);
         @include single-transition(none, 0.3s, ease, 0s);
         @include transition-property(opacity, visibility);
-        &.active { @include visible(true); }
+        &.active { 
+            @include visible(true);
+        }
 
         & > div.popup_overlay {
             position: absolute;
@@ -402,50 +404,71 @@ section.container_portfolio {
             background: #fff;
         }
 
-        div.popup_container > div {
-            width: 100%;
+        div.popup_container {
 
-            & > h3 {
-                color: #444;
-                text-align: center;
-                font-size: 1.4em;
-                font-weight: 600;
-            }
-
-            img {
+            span.close {
                 padding: 10px;
-                display: block;
-                width: 100%;
-                @include box-sizing(border-box);
+                @include opacity(1);
+                @include single-transition(opacity, 0.3s, ease, 0s);
+                cursor: pointer;
+                color: #444;
+                font-size: 22px;
+                position: absolute;
+                top: 15px; right: 15px;
+                &:hover { @include opacity(0.8); }
             }
 
-            & > div.content {
+            & > div { width: 100%;
 
-                & > span.info {
-                    display: block;
-                    @include opacity(0.9);
-                    text-align: left;
-                    background-color: #95a5a6;
-                    @include box-sizing(border-box);
-                    padding: 10px 11px;
-                    color: #fff;
-                    @include border-radius(3px);
-                    margin: 10px 0;
-                }
-
-                & > p { padding: 10px 15px; }
-
-                & > a {
-                    font-size: 15px;
-                    background-color: #fff;
-                    border-color: $primaryColor;
-                    color: $primaryColor;
+                & > h3 {
+                    color: #444;
+                    text-align: center;
+                    font-size: 1.4em;
+                    font-weight: 600;
                     padding: 10px;
+                }
 
-                    &:hover { background-color: $primaryColor; border-color: #fff; color: #fff; }
+                & > div.screen {
+                    padding-top: 34px;
+                    padding-bottom: 15px;
+                    display: block;
+                    width: 100%;
+                    @include box-sizing(border-box);
+                    @include back(image-url('top-bar.png'), scroll, 100% 35px, top, no-repeat);
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                & > div.content {
+
+                    & > span.info {
+                        display: block;
+                        @include opacity(0.9);
+                        text-align: left;
+                        background-color: #95a5a6;
+                        @include box-sizing(border-box);
+                        padding: 10px 11px;
+                        color: #fff;
+                        @include border-radius(3px);
+                        margin: 10px 0;
+                    }
+
+                    & > p { padding: 10px 15px; }
+
+                    & > a {
+                        font-size: 15px;
+                        background-color: #fff;
+                        border-color: $primaryColor;
+                        color: $primaryColor;
+                        padding: 10px;
+
+                        &:hover { background-color: $primaryColor; border-color: #fff; color: #fff; }
+                    }
                 }
             }
-
         }
     }
 

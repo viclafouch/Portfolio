@@ -5,7 +5,10 @@ const gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	rename = require('gulp-rename'),
 	cleanCSS = require('gulp-clean-css'),
-	uglify = require('gulp-uglify');
+	uglify = require('gulp-uglify'),
+	sourcemaps = require('gulp-sourcemaps'),
+	babel = require('gulp-babel'),
+	print = require('gulp-print'),
 	imagemin = require('gulp-imagemin');
 
 /*----------  Styles  ----------*/
@@ -18,6 +21,13 @@ gulp.task('styles', function() {
 			sass: 'public/assets/scss',
 			image: 'public/assets/imgComp/'
 		}))
+		.on('error', function(error) {
+	      console.log(error);
+	      this.emit('end');
+	    })
+	    .pipe(print(function(filepath) {
+	      return "file created : " + filepath;
+	    }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     	.pipe(gulp.dest('public/assets/css'))
     	.pipe(rename({ suffix: '.min' }))
@@ -38,9 +48,18 @@ gulp.task('image', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src('public/assets/js/*.js')
-		.pipe(uglify())
+		.pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+		.pipe(uglify().on('error', function(e){
+	         console.log(e);
+	    }))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('public/assets/js/min'))
+		.pipe(print(function(filepath) {
+	      return "file created : " + filepath;
+	    }))
 });
 
 /*----------  Live  ----------*/

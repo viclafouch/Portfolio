@@ -6,13 +6,18 @@
 
 // Barre de loader verticale
 
-$(document).on('click', '.popup_overlay', function(){
+var popup = false;
+
+$(document).on('click', '.popup_overlay, [data-close-popup]', function(){
+    console.log('test');
     if (popup) {
-        $('.popup').removeClass('active');
+        $('.popup_work').removeClass('active');
+        popup = false;
     }
 });
 
 $(document).on('click', '[data-popup-work]', function(){
-    $('.popup').addClass('active');
-     popup = true;
+    let id = $(this).data('popup-work');
+    $('#'+id).addClass('active');
+    popup = true;
 });

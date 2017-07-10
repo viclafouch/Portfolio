@@ -463,19 +463,19 @@ section.container_experiences #topContributor a.button_default {
   background-color: #00c853;
 }
 section.container_experiences #topContributor div.thumbnail {
-  background-image: url('../imgComp/top-contributor-google.jpg?1499616241');
+  background-image: url('../imgComp/top-contributor-google.jpg');
 }
 section.container_experiences #hero a.button_default {
   background-color: #F44336;
 }
 section.container_experiences #hero div.thumbnail {
-  background-image: url('../imgComp/youtube-heroes.jpg?1499616241');
+  background-image: url('../imgComp/youtube-heroes.jpg');
 }
 section.container_experiences #carrefour a.button_default {
   background-color: #3F51B5;
 }
 section.container_experiences #carrefour div.thumbnail {
-  background-image: url('../imgComp/stagaire-carrefour.jpg?1499616241');
+  background-image: url('../imgComp/stagaire-carrefour.jpg');
 }
 
 section.container_formations #eemi a.button_default {
@@ -503,7 +503,7 @@ section.container_formations #bachelor a:hover {
   color: #E91E63;
 }
 
-section.container_portfolio div.popup {
+section.container_portfolio div.popup_work {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -525,12 +525,12 @@ section.container_portfolio div.popup {
   -webkit-transition-property: opacity, visibility;
   transition-property: opacity, visibility;
 }
-section.container_portfolio div.popup.active {
+section.container_portfolio div.popup_work.active {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-section.container_portfolio div.popup > div.popup_overlay {
+section.container_portfolio div.popup_work > div.popup_overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -539,7 +539,7 @@ section.container_portfolio div.popup > div.popup_overlay {
   width: 100%;
   height: 100%;
 }
-section.container_portfolio div.popup > div.popup_container {
+section.container_portfolio div.popup_work > div.popup_container {
   width: 50%;
   max-width: 600px;
   position: absolute;
@@ -553,23 +553,55 @@ section.container_portfolio div.popup > div.popup_container {
   padding: 22px;
   background: #fff;
 }
-section.container_portfolio div.popup div.popup_container > div {
+section.container_portfolio div.popup_work div.popup_container span.close {
+  padding: 10px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  cursor: pointer;
+  color: #444;
+  font-size: 22px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+section.container_portfolio div.popup_work div.popup_container span.close:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+section.container_portfolio div.popup_work div.popup_container > div {
   width: 100%;
 }
-section.container_portfolio div.popup div.popup_container > div > h3 {
+section.container_portfolio div.popup_work div.popup_container > div > h3 {
   color: #444;
   text-align: center;
   font-size: 1.4em;
   font-weight: 600;
-}
-section.container_portfolio div.popup div.popup_container > div img {
   padding: 10px;
+}
+section.container_portfolio div.popup_work div.popup_container > div > div.screen {
+  padding-top: 34px;
+  padding-bottom: 15px;
   display: block;
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background: url('../imgComp/top-bar.png?1499640883');
+  background-attachment: scroll;
+  background-size: 100% 35px;
+  background-position: top;
+  background-repeat: no-repeat;
 }
-section.container_portfolio div.popup div.popup_container > div > div.content > span.info {
+section.container_portfolio div.popup_work div.popup_container > div > div.screen img {
+  display: block;
+  width: 100%;
+}
+section.container_portfolio div.popup_work div.popup_container > div > div.content > span.info {
   display: block;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
@@ -582,17 +614,17 @@ section.container_portfolio div.popup div.popup_container > div > div.content > 
   border-radius: 3px;
   margin: 10px 0;
 }
-section.container_portfolio div.popup div.popup_container > div > div.content > p {
+section.container_portfolio div.popup_work div.popup_container > div > div.content > p {
   padding: 10px 15px;
 }
-section.container_portfolio div.popup div.popup_container > div > div.content > a {
+section.container_portfolio div.popup_work div.popup_container > div > div.content > a {
   font-size: 15px;
   background-color: #fff;
   border-color: #F05F40;
   color: #F05F40;
   padding: 10px;
 }
-section.container_portfolio div.popup div.popup_container > div > div.content > a:hover {
+section.container_portfolio div.popup_work div.popup_container > div > div.content > a:hover {
   background-color: #F05F40;
   border-color: #fff;
   color: #fff;
