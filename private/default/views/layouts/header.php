@@ -34,8 +34,7 @@
    		<!--====  Lib  ====-->
    		<link rel="stylesheet" type="text/css" href="public/lib/animate/animate.min.css">
 
-   		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-   		<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=ABeeZee|Karma" rel="stylesheet">
 
 		<!--====  Custom  ====-->
    		<link rel="stylesheet" type="text/css" href="public/assets/css/styles.min.css">
@@ -59,16 +58,16 @@
 		<header id="header" data-turbolinks-permanent>
 			<div class="container row row-hori-between nowrap">
 				<div class="heading_contact">
-					<a href="#"><span><i class="fa fa-envelope-o" aria-hidden="true"></i> victor.dlf@outlook.fr</span></a>
-					<a href="#"><span><i class="fa fa-phone" aria-hidden="true"></i> 06.26.92.26.35</span></a>
-					<a href="#"><span><i class="fa fa-skype" aria-hidden="true"></i> viclafouch</span></a>
+					<a href="mailto:victor.dlf@outlook.fr""><span><i class="fa fa-envelope-o" aria-hidden="true"></i> victor.dlf@outlook.fr</span></a>
+					<a href="tel:+33626922635"><span><i class="fa fa-phone" aria-hidden="true"></i> 06.26.92.26.35</span></a>
+					<a href="skype:victor.dlf?add"><span><i class="fa fa-skype" aria-hidden="true"></i> viclafouch</span></a>
 				</div>
 				<div class="heading_social">
-					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-codepen" aria-hidden="true"></i></i></a>
-					<a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-git" aria-hidden="true"></i></i></a>
-					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="https://www.linkedin.com/in/victordelafouchardiere/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<a href="https://codepen.io/Viclafouch/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></i></a>
+					<a href="https://topcontributor.withgoogle.com/profile/victor-de-la-fouchardiere-e5fded" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+					<a href="https://github.com/viclafouch" target="_blank"><i class="fa fa-git" aria-hidden="true"></i></i></a>
+					<a href="https://twitter.com/VicAndTips" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</header>
@@ -88,7 +87,7 @@
 			<div class="container col col-verti-center col-hori-center nowrap">
 				<h2>Besoin d'un développeur web ?</h2>
 				<p>Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.</p>
-				<a class="button_default" target="_blank" href="CV-Victor_de_la_Fouchardière.pdf" title="">Télécharger / Imprimer le CV</a>
+				<a class="button_default" target="_blank" download href="CV-Victor_de_la_Fouchardiere" title="">Télécharger / Imprimer le CV</a>
 			</div>
 		</div>
 		<main class="container">

@@ -11,7 +11,7 @@
 		</div>
 		<hr>
 		<div class="row_block" id="resum_row">
-			<p class="resum">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam id, cupiditate qui dolores beatae sit nam ullam error, veniam, harum repellat. Quaerat, doloribus eum eaque laboriosam fugiat, doloremque. Voluptas, animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam id, cupiditate qui dolores beatae sit nam ullam error, veniam, harum repellat. Quaerat, doloribus eum eaque laboriosam fugiat, doloremque. Voluptas, animi.</p>
+			<p class="resum">Developpeur web et étudiant depuis septembre 2015 à l'Ecole Européenne des Métiers de l'Internet, j'ai une vraie vocation pour la programmation web tout en ayant acquis des connaissances renforcées en marketing et en design.</p>
 		</div>
 		<hr>
 		<div class="row_block" id="skills_row">
@@ -19,22 +19,22 @@
 				<div class="item">
 					<div class="col col-hori-center nowrap">
 						<?php include_once('./public/assets/imgComp/settings.svg'); ?>
-						<span>Code propre et soigné</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit facilis adipisci quibusdam dolorem beatae, nisi vel asperiores similique.</p>
+						<span>Développement de A à Z</span>
+						<p>Créer des sites web complets coté utilisateur et coté serveur</p>
 					</div>
 				</div>
 				<div class="item">
 					<div class="col col-hori-center nowrap">
 						<?php include_once('./public/assets/imgComp/smartphone.svg'); ?>
-						<span>Code propre et soigné</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit facilis adipisci quibusdam dolorem beatae, nisi vel asperiores similique.</p>
+						<span>Responsive design adapté</span>
+						<p>Penser responsive quelque soit l'appareil (tablettes, smartphones, desktop...).</p>
 					</div>
 				</div>
 				<div class="item">
 					<div class="col col-hori-center nowrap">
 						<?php include_once('./public/assets/imgComp/checked.svg'); ?>
 						<span>Code propre et soigné</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit facilis adipisci quibusdam dolorem beatae, nisi vel asperiores similique.</p>
+						<p>Programmer avec un code (HTML5 ; CSS3 ; PHP ; JS) propre et valide.</p>
 					</div>
 				</div>
 			</div>
