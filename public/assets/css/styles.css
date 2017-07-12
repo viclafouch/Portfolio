@@ -163,6 +163,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   color: #444;
   font-family: "Indie Flower", cursive;
+  overflow-y: scroll;
   background: #f6f6f6;
 }
 
@@ -172,7 +173,7 @@ body {
     margin: 0 auto;
   }
 }
-h1, h3, h6 {
+h3, h6 {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -180,6 +181,7 @@ h1, h3, h6 {
 
 h1 {
   font-size: 2.5em;
+  font-family: "Raleway", sans-serif !important;
 }
 
 h2 {
@@ -214,9 +216,9 @@ h6 {
   color: #f0f0f0;
   font-family: "Indie Flower", cursive;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
-  padding: 15px 15px;
+  padding: 10px 10px;
   background-color: #000;
   border-radius: 5px;
   text-align: center;
@@ -314,7 +316,7 @@ nav[data-turbolinks-permanent] {
   color: #444;
 }
 nav[data-turbolinks-permanent] ul li {
-  margin: 0 10px;
+  width: calc(100% / 6);
   text-align: center;
   cursor: pointer;
   -moz-transition: color 0.5s ease 0s;
@@ -330,7 +332,6 @@ nav[data-turbolinks-permanent] ul li:hover a, nav[data-turbolinks-permanent] ul 
 nav[data-turbolinks-permanent] ul li a {
   color: #444;
   display: block;
-  padding: 0 10px;
   line-height: 70px;
   text-decoration: none;
   font-weight: bold;
@@ -395,29 +396,87 @@ section > header p {
   text-decoration: underline;
 }
 
-section.container_experiences div.block,
+section.container_index > div.content_block {
+  width: 100%;
+}
+section.container_index > div.content_block > div.row_block {
+  padding: 20px 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+section.container_index > div.content_block > div.row_block#profil_row > img {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+section.container_index > div.content_block > div.row_block#profil_row > div.heading_name_role {
+  padding: 20px;
+  text-align: center;
+}
+section.container_index > div.content_block > div.row_block#profil_row > div.heading_name_role > * {
+  padding: 5px;
+}
+section.container_index > div.content_block > div.row_block#resum_row > p.resum {
+  text-align: center;
+  font-size: 18px;
+  padding: 30px;
+  line-height: 21px;
+}
+section.container_index > div.content_block > div.row_block#skills_row div.item {
+  width: 33%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+section.container_index > div.content_block > div.row_block#skills_row div.item svg {
+  width: 75px;
+}
+section.container_index > div.content_block > div.row_block#skills_row div.item span {
+  display: block;
+  margin: 10px 0;
+  font-family: "Raleway", sans-serif !important;
+  padding: 15px 10px;
+  text-align: center;
+}
+section.container_index > div.content_block > div.row_block#skills_row div.item p {
+  text-align: center;
+}
+section.container_index > div.content_block hr {
+  width: 300px;
+  background: url("../imgComp/stripes.png") center left repeat-x;
+  height: 30px;
+  border: 0;
+}
+
 section.container_formations div.block {
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
 }
-section.container_experiences div.block div.description,
+section.container_formations div.block div.thumbnail img {
+  height: 170px;
+  width: 320px;
+  display: block;
+}
 section.container_formations div.block div.description {
   margin-left: 15px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-section.container_experiences div.block div.description p.date,
 section.container_formations div.block div.description p.date {
   color: #444;
 }
-section.container_experiences div.block div.description p.date > i,
 section.container_formations div.block div.description p.date > i {
   vertical-align: middle;
   margin-right: 7px;
 }
-section.container_experiences div.block div.description p.date > span,
 section.container_formations div.block div.description p.date > span {
   display: inline-block;
   vertical-align: middle;
@@ -425,7 +484,6 @@ section.container_formations div.block div.description p.date > span {
   *zoom: 1;
   *display: inline;
 }
-section.container_experiences div.block div.description h4,
 section.container_formations div.block div.description h4 {
   padding: 15px 0;
   color: #444;
@@ -443,64 +501,24 @@ section.container_formations div.block div.description h4 {
       -ms-flex-align: center;
           align-items: center;
 }
-section.container_experiences div.block div.description ul,
 section.container_formations div.block div.description ul {
   color: #444;
   width: 100%;
 }
-section.container_experiences div.block div.description ul > li,
 section.container_formations div.block div.description ul > li {
   line-height: 22px;
 }
-section.container_experiences div.block div.description a,
 section.container_formations div.block div.description a {
   margin: 0;
-  padding: 10px;
-  font-size: 16px;
+  padding: 7px;
+  background-color: #34495e;
+  border-color: #34495e;
+  color: #fff;
 }
-
-section.container_experiences #topContributor a.button_default {
-  background-color: #00c853;
-}
-section.container_experiences #topContributor div.thumbnail {
-  background-image: url('../imgComp/top-contributor-google.jpg');
-}
-section.container_experiences #hero a.button_default {
-  background-color: #F44336;
-}
-section.container_experiences #hero div.thumbnail {
-  background-image: url('../imgComp/youtube-heroes.jpg');
-}
-section.container_experiences #carrefour a.button_default {
-  background-color: #3F51B5;
-}
-section.container_experiences #carrefour div.thumbnail {
-  background-image: url('../imgComp/stagaire-carrefour.jpg');
-}
-
-section.container_formations #eemi a.button_default {
-  background-color: #3F51B5;
-}
-section.container_formations #eemi a:hover {
-  background-color: #f6f6f6;
-  border-color: #3F51B5;
-  color: #3F51B5;
-}
-section.container_formations #digitalActive a.button_default {
-  background-color: #00c853;
-}
-section.container_formations #digitalActive a:hover {
-  background-color: #f6f6f6;
-  border-color: #00c853;
-  color: #00c853;
-}
-section.container_formations #bachelor a.button_default {
-  background-color: #E91E63;
-}
-section.container_formations #bachelor a:hover {
-  background-color: #f6f6f6;
-  border-color: #E91E63;
-  color: #E91E63;
+section.container_formations div.block div.description a:hover {
+  background-color: #fff;
+  border-color: #34495e;
+  color: #34495e;
 }
 
 section.container_portfolio div.popup_work {
@@ -591,7 +609,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1499640883');
+  background: url('../imgComp/top-bar.png?1499863081');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -643,6 +661,7 @@ section.container_portfolio article.work > div {
 section.container_portfolio article.work header {
   position: relative;
   width: 100%;
+  height: 127px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border: 1px solid #dedede;
@@ -673,7 +692,7 @@ section.container_portfolio article.work header > div.overlay {
   -webkit-transition-property: opacity, visibility;
   transition-property: opacity, visibility;
   width: 100%;
-  height: 100%;
+  height: 127px;
   background-color: rgba(255, 255, 255, 0.4);
   top: 0;
   left: 0;
@@ -819,25 +838,6 @@ section.container_competences div.skills article.techno > span {
 }
 
 /*----------  Barre de d├®filement experience/formations  ----------*/
-.trait {
-  height: 100%;
-  z-index: 1;
-  position: absolute;
-  width: 12px;
-  background: #f6f6f6;
-  left: 50%;
-  top: 0;
-  margin-left: -6px;
-}
-.trait div.trait-actif {
-  position: relative;
-  width: 12px;
-  height: 0%;
-  background-color: #2196F3;
-  -webkit-transition: height 1s;
-  transition: height 1s;
-}
-
 /*----------  Retout en haut  ----------*/
 span.haut {
   height: 50px;

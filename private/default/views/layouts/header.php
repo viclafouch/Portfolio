@@ -35,7 +35,8 @@
    		<link rel="stylesheet" type="text/css" href="public/lib/animate/animate.min.css">
 
    		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-		
+   		<link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+
 		<!--====  Custom  ====-->
    		<link rel="stylesheet" type="text/css" href="public/assets/css/styles.min.css">
 
@@ -64,10 +65,10 @@
 				</div>
 				<div class="heading_social">
 					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-codepen" aria-hidden="true"></i></i></a>
+					<a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-git" aria-hidden="true"></i></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</header>
@@ -78,7 +79,7 @@
 					<li><a href="?module=default&action=formations" title="">Formations</a></li>
 					<li><a href="?module=default&action=productions" title="">Portfolio</a></li>
 					<li><a href="?module=default&action=competences" title="">Compétences</a></li>
-					<li><a href="http://www.eemi.com/" data-turbolinks="false" target="_blank" title="">L'Ecole</a></li>
+					<li><a href="#" target="_blank" title="">Google</a></li>
 					<li><a href="#" title="">Contact</a></li>
 				</ul>
 			</div>

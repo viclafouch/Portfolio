@@ -162,6 +162,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
     color: $textColor;
     font-family: $fonts;
+    overflow-y: scroll;
     background:  $primaryBackgroundColor;
 }
 
@@ -172,13 +173,13 @@ body {
     }
 }
 
-h1, h3, h6 {
+h3, h6 {
     text-transform: uppercase;
     text-align: center;
     color: #fff;
 }
 
-h1 { font-size: 2.5em; }
+h1 { font-size: 2.5em; font-family: 'Raleway', sans-serif!important; }
 
 h2 { font-size: 50px; }
 
@@ -201,9 +202,9 @@ h6 { font-size: 25px; }
     color: #f0f0f0;
     font-family: $fonts;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
-    padding: 15px 15px;
+    padding: 10px 10px;
     background-color: #000;
     @include border-radius(5px);
     text-align: center;
@@ -267,7 +268,7 @@ nav[data-turbolinks-permanent] {
     color: #444;
 
     ul li {
-        margin: 0 10px;
+        width: calc(100% / 6);
         text-align: center;
         cursor: pointer; 
         @include single-transition(color, 0.5s, ease, 0s);
@@ -275,7 +276,6 @@ nav[data-turbolinks-permanent] {
 
         a { color: #444; 
             display:block; 
-            padding: 0 10px; 
             line-height: $navHeight; 
             text-decoration: none; 
             font-weight: bold; 
@@ -312,10 +312,76 @@ section {
     }
 }
 
-section.container_experiences,
+
+section.container_index {
+    & > div.content_block { width: 100%;
+
+        & > div.row_block {
+            padding: 20px 10px;
+            @include box-sizing(border-box);
+            width: 100%;
+
+            &#profil_row {
+                & > img { 
+                    @include border-radius(50%); 
+                    width: 75px; height: 75px; 
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto; 
+                    @include box-shadow($primaryShadow); 
+                }
+
+                & > div.heading_name_role {
+                    padding: 20px;
+                    text-align: center;
+                    & > * { padding: 5px; }
+                }
+            }
+
+            &#resum_row {
+                & >  p.resum { 
+                    text-align: center; 
+                    font-size: 18px; 
+                    padding: 30px; 
+                    line-height: 21px; 
+                }
+            }
+
+            &#skills_row {
+                div.item {
+                    width: 33%;
+                    @include box-sizing(border-box);
+                    padding: 10px 15px;
+
+                    svg { width: 75px; }
+
+                    span { 
+                        display: block; 
+                        margin: 10px 0; 
+                        font-family: 'Raleway', sans-serif!important;
+                        padding: 15px 10px;
+                        text-align: center;
+                    }
+
+                    p { text-align: center; }
+                }
+            }
+        }
+
+        hr {
+            width: 300px;
+            background: url('../imgComp/stripes.png') center left repeat-x;
+            height: 30px;
+            border: 0;
+        }
+    }
+}
+
 section.container_formations {
     div.block { width: 100%; padding: 20px 0;
         border-bottom: 1px dashed rgbaExpress(black, 0.3);
+
+        div.thumbnail img { height: 170px; width: 320px; display: block; }
 
         div.description {
             margin-left: 15px;
@@ -331,42 +397,19 @@ section.container_formations {
 
             ul { color: #444; width: 100%; & > li { line-height: 22px; } }
 
-            a { margin: 0; padding: 10px; font-size: 16px; }
+            a { 
+                margin: 0; 
+                padding: 7px;
+                background-color: #34495e;
+                border-color: #34495e;
+                color: #fff;
+                &:hover {
+                    background-color: #fff;
+                    border-color: #34495e;
+                    color: #34495e; 
+                }
+            }
         }
-    }
-}
-
-section.container_experiences {
-    #topContributor {
-        a.button_default { background-color: #00c853; }
-        div.thumbnail { background-image: image-url("top-contributor-google.jpg"); }
-    }
-
-    #hero {
-        a.button_default { background-color: #F44336; }
-        div.thumbnail { background-image: image-url("youtube-heroes.jpg"); }
-    }
-
-    #carrefour {
-        a.button_default { background-color: #3F51B5; }
-        div.thumbnail { background-image: image-url("stagaire-carrefour.jpg"); }
-    }
-}
-
-section.container_formations {
-    #eemi {
-        a.button_default { background-color: #3F51B5; }
-        a:hover { background-color: $primaryBackgroundColor; border-color: #3F51B5; color: #3F51B5; }
-    }
-
-    #digitalActive {
-        a.button_default { background-color: #00c853; }
-        a:hover { background-color: $primaryBackgroundColor; border-color: #00c853; color: #00c853; }
-    }
-
-    #bachelor {
-        a.button_default { background-color: #E91E63; }
-        a:hover { background-color: $primaryBackgroundColor; border-color: #E91E63; color: #E91E63; }
     }
 }
 
@@ -382,9 +425,7 @@ section.container_portfolio {
         @include visible(false);
         @include single-transition(none, 0.3s, ease, 0s);
         @include transition-property(opacity, visibility);
-        &.active { 
-            @include visible(true);
-        }
+        &.active { @include visible(true); }
 
         & > div.popup_overlay {
             position: absolute;
@@ -472,8 +513,6 @@ section.container_portfolio {
         }
     }
 
-
-
     article.work {
         width: 25%;
         float: left;
@@ -486,6 +525,7 @@ section.container_portfolio {
         header {
             position: relative;
             width: 100%;
+            height: 127px;
             @include box-shadow($primaryShadow);
             border: 1px solid #dedede;
             @include box-sizing(border-box);
@@ -500,7 +540,7 @@ section.container_portfolio {
                 @include visible(false);
                 @include single-transition(none, 0.3s, ease, 0s);
                 @include transition-property(opacity, visibility);
-                width: 100%; height: 100%;
+                width: 100%; height: 127px;
                 background-color: rgbaExpress(white, 0.4);
                 top: 0; left: 0; right: 0; bottom: 0;
 
@@ -614,24 +654,6 @@ section.container_competences {
 
 /*----------  Barre de défilement experience/formations  ----------*/
 
-.trait {
-    height: 100%;
-    z-index: 1;
-    position: absolute;
-    width: 12px;
-    background: #f6f6f6;
-    left: 50%;
-    top: 0;
-    margin-left: -6px;
-
-    div.trait-actif {
-        position: relative;
-        width: 12px;
-        height: 0%;
-        background-color: #2196F3;
-        transition : height 1s;
-    }
-}
 
 /*----------  Retout en haut  ----------*/
 

@@ -44,6 +44,24 @@
 				</ul>
 			</div>
 		</div>
+		<div class="block row row-hori-center nowrap" id="freecodecamp">
+			<div class="thumbnail">
+				<img src="./public/assets/imgComp/freecodecamp.png" alt="">
+			</div>
+			<div class="description col nowrap">
+				<p class="date">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<span>Depuis Octobre <u>2016</u></span>
+				</p>
+				<div class="row row-hori-between nowrap row-verti-center">
+					<h4>Free Code Camp</h4>
+					<a class="button_default" title="" target="_blank" href="https://www.freecodecamp.org/">A propos</a>
+				</div>
+				<ul>
+					<li>Digital Active est une formation au marketing digital, gratuite et certifiante, proposée par Google.</li>
+				</ul>
+			</div>
+		</div>
 		<div class="block row row-hori-center nowrap" id="bachelor">
 			<div class="thumbnail">
 				<img src="./public/assets/imgComp/saint-paul.png" alt="">
