@@ -187,18 +187,21 @@ h1 {
 
 h2 {
   font-size: 40px;
+  text-align: center;
 }
 
 h3 {
   font-size: 35px;
+  text-align: center;
 }
 
 h4 {
-  font-size: 32px;
+  font-size: 27px;
+  text-align: center;
 }
 
 h5 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h6 {
@@ -292,7 +295,6 @@ nav[data-turbolinks-permanent] {
   height: 70px;
   background-color: #f6f6f6;
   color: #444;
-  font-family: "Karma", serif !important;
 }
 nav[data-turbolinks-permanent] ul li {
   width: calc(100% / 6);
@@ -313,7 +315,6 @@ nav[data-turbolinks-permanent] ul li a {
   display: block;
   line-height: 70px;
   text-decoration: none;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -408,7 +409,7 @@ section.container_index > div.content_block > div.row_block#profil_row > div.hea
 }
 section.container_index > div.content_block > div.row_block#resum_row > p.resum {
   text-align: center;
-  font-size: 20px;
+  font-size: 19px;
   padding: 30px;
   line-height: 1.2em;
 }
@@ -420,8 +421,10 @@ section.container_index > div.content_block > div.row_block#skills_row div.item 
 }
 section.container_index > div.content_block > div.row_block#skills_row div.item svg {
   width: 75px;
+  fill: #34495e;
 }
 section.container_index > div.content_block > div.row_block#skills_row div.item span {
+  color: #34495e;
   display: block;
   margin: 10px 0;
   font-weight: bold;
@@ -430,6 +433,7 @@ section.container_index > div.content_block > div.row_block#skills_row div.item 
 }
 section.container_index > div.content_block > div.row_block#skills_row div.item p {
   text-align: center;
+  color: #34495e;
 }
 section.container_index > div.content_block hr {
   width: 300px;
@@ -725,8 +729,7 @@ section.container_portfolio article.work footer {
   border-bottom-right-radius: 10px;
 }
 section.container_portfolio article.work footer > h4 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 17px;
   margin-bottom: 0.5em;
 }
 section.container_portfolio article.work footer > p {
@@ -811,7 +814,7 @@ section.container_competences div.skills article.skill_card > footer > ul > li {
   margin-left: 15px;
 }
 section.container_competences div.skills article.techno {
-  padding: 20px;
+  padding: 20px 0;
   margin: 20px;
 }
 section.container_competences div.skills article.techno > h5 {

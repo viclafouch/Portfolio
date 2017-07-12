@@ -118,7 +118,7 @@
 			<div class="title_stripes">
 				<h4>Technologies utilisées</h4>
 			</div>
-			<div class="row nowrap row-verti-center row-hori-center">
+			<div class="row wrap row-verti-center row-hori-center">
 				<article class="techno col nowrap col-hori-center" id="sublimText">
 		 			<h5>Sublime Text</h5>
 		    		<span>Editeur</span>

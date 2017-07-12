@@ -27,7 +27,7 @@
 					<div class="col col-hori-center nowrap">
 						<?php include_once('./public/assets/imgComp/smartphone.svg'); ?>
 						<span>Responsive design adapté</span>
-						<p>Penser responsive quelque soit l'appareil (tablettes, smartphones, desktop...).</p>
+						<p>Penser responsive quelque soit l'appareil (tablettes, desktop...).</p>
 					</div>
 				</div>
 				<div class="item">

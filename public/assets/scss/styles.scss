@@ -179,10 +179,10 @@ h3, h6 {
     color: #fff;
 }
 h1 { font-size: 2.1em; font-family: 'Karma', serif!important; font-weight: bold; }
-h2 { font-size: 40px; }
-h3 { font-size: 35px; }
-h4 { font-size: 32px; }
-h5 { font-size: 30px; }
+h2 { font-size: 40px; text-align: center; }
+h3 { font-size: 35px; text-align: center; }
+h4 { font-size: 27px; text-align: center; }
+h5 { font-size: 25px; }
 h6 { font-size: 25px; }
 
 
@@ -248,7 +248,6 @@ nav[data-turbolinks-permanent] {
     width: 100%; height: $navHeight;
     background-color: $primaryBackgroundColor;
     color: #444;
-    font-family: 'Karma', serif!important; 
 
     ul li {
         width: calc(100% / 6);
@@ -260,8 +259,7 @@ nav[data-turbolinks-permanent] {
         a { color: #444; 
             display:block; 
             line-height: $navHeight; 
-            text-decoration: none; 
-            font-weight: bold; 
+            text-decoration: none;
             text-transform: uppercase; 
         }
     }
@@ -328,7 +326,7 @@ section.container_index {
             &#resum_row {
                 & >  p.resum { 
                     text-align: center; 
-                    font-size: 20px; 
+                    font-size: 19px; 
                     padding: 30px; 
                     line-height: 1.2em;
                 }
@@ -340,9 +338,10 @@ section.container_index {
                     @include box-sizing(border-box);
                     padding: 10px 15px;
 
-                    svg { width: 75px; }
+                    svg { width: 75px; fill: #34495e; }
 
                     span { 
+                        color: #34495e;
                         display: block; 
                         margin: 10px 0; 
                         font-weight: bold;
@@ -350,7 +349,7 @@ section.container_index {
                         text-align: center;
                     }
 
-                    p { text-align: center; }
+                    p { text-align: center; color: #34495e;}
                 }
             }
         }
@@ -558,7 +557,7 @@ section.container_portfolio {
             text-align: center;
             padding: 9px 0;
             @include border-bottom-radius(10px);
-            & > h4 { font-size: 20px; font-weight: 600; margin-bottom: 0.5em; }
+            & > h4 { font-size: 17px; margin-bottom: 0.5em; }
             & > p { color: #9E9E9E; font-style: italic; }
         }
 
@@ -631,7 +630,7 @@ section.container_competences {
             }
         }
 
-        article.techno { padding: 20px; margin: 20px;
+        article.techno { padding: 20px 0; margin: 20px;
 
             & > h5 { color: #444; text-transform: capitalize; font-size: 20px; text-align: center; color: $primaryColor; }
 
