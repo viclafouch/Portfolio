@@ -49,6 +49,7 @@
 		<!--====  Scripts  ====-->
 		<script defer src="public/lib/jquery/jquery.min.js" type="text/javascript"></script>
 		<script defer src="public/assets/js/min/script.min.js" type="text/javascript"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 
 		<!--====  Turbolinks  ====-->
 		<script defer src="public/lib/turbolinks/turbolinks.min.js"></script>
@@ -59,7 +60,6 @@
 			<div class="container row row-hori-between nowrap">
 				<div class="heading_contact">
 					<a href="mailto:victor.dlf@outlook.fr""><span><i class="fa fa-envelope-o" aria-hidden="true"></i> victor.dlf@outlook.fr</span></a>
-					<a href="tel:+33626922635"><span><i class="fa fa-phone" aria-hidden="true"></i> 06.26.92.26.35</span></a>
 					<a href="skype:victor.dlf?add"><span><i class="fa fa-skype" aria-hidden="true"></i> viclafouch</span></a>
 				</div>
 				<div class="heading_social">
@@ -79,7 +79,7 @@
 					<li><a href="?module=default&action=productions" title="">Portfolio</a></li>
 					<li><a href="?module=default&action=competences" title="">Compétences</a></li>
 					<li><a href="#" target="_blank" title="">Google</a></li>
-					<li><a href="#" title="">Contact</a></li>
+					<li><a href="?module=default&action=contact" data-turbolinks="false" title="">Contact</a></li>
 				</ul>
 			</div>
 		</nav>

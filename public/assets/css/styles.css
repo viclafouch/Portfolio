@@ -208,7 +208,7 @@ h6 {
   font-size: 25px;
 }
 
-.button_default {
+.button_default, section.container_contact form button {
   text-decoration: none;
   border: 2px solid #f0f0f0;
   display: block;
@@ -239,7 +239,7 @@ h6 {
   transition-property: color, background-color, opacity, border-color, box-shadow;
   transition-property: color, background-color, opacity, border-color, box-shadow, -webkit-box-shadow;
 }
-.button_default:hover {
+.button_default:hover, section.container_contact form button:hover {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -444,7 +444,7 @@ section.container_index > div.content_block hr {
 
 section.container_formations div.block {
   width: 100%;
-  padding: 20px 0;
+  padding: 60px 0;
 }
 section.container_formations div.block:not(:last-child) {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
@@ -601,7 +601,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1499868959');
+  background: url('../imgComp/top-bar.png?1499957873');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -829,6 +829,85 @@ section.container_competences div.skills article.techno > span {
   font-style: italic;
   padding: 5px 3px;
   text-align: center;
+}
+
+section.container_contact form {
+  padding: 15px 0;
+}
+section.container_contact form label.field_label {
+  width: 100%;
+  padding: 0px 10px 20px 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+section.container_contact form label.field_label[data-captcha] div {
+  height: 74.5px;
+}
+section.container_contact form label.field_label > span {
+  margin-bottom: 10px;
+}
+section.container_contact form label.field_label > div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+section.container_contact form label.field_label > div.novalide {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+section.container_contact form label.field_label > div.novalide input, section.container_contact form label.field_label > div.novalide textarea {
+  color: #e74c3c;
+}
+section.container_contact form label.field_label > div.valide {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+section.container_contact form label.field_label > div.valide input, section.container_contact form label.field_label > div.valide textarea {
+  color: #2ecc71;
+}
+section.container_contact form label.field_label span.ico {
+  background-color: #fafafa;
+  padding: 0 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  position: relative;
+}
+section.container_contact form label.field_label span.ico > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section.container_contact form label.field_label input, section.container_contact form label.field_label textarea {
+  outline: none;
+  border: 0;
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  resize: none;
+  font-family: "ABeeZee", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+section.container_contact form label.field_label input {
+  height: 35px;
+}
+section.container_contact form button {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-color: #F05F40;
+  color: #F05F40;
+  background-color: #fff;
+  padding: 10px;
+}
+section.container_contact form button:hover {
+  background-color: #F05F40;
+  border-color: #fff;
+  color: #fff;
 }
 
 /*----------  Barre de d├®filement experience/formations  ----------*/

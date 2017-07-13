@@ -279,9 +279,6 @@ div#subheading[data-turbolinks-permanent] {
     a:hover { color: $primaryColor; background-color: $primaryBackgroundColor; border-color: $primaryColor }
 }
 
-main {  }
-
-
 section { width: 100%;
 
     & > header {
@@ -364,7 +361,7 @@ section.container_index {
 }
 
 section.container_formations {
-    div.block { width: 100%; padding: 20px 0;
+    div.block { width: 100%; padding: 60px 0;
         &:not(:last-child) { border-bottom: 1px dashed rgbaExpress(black, 0.3); }
 
         div.thumbnail img { height: 170px; width: 320px; display: block; }
@@ -640,6 +637,62 @@ section.container_competences {
     }
 }
 
+section.container_contact {
+    form { padding: 15px 0;
+        label.field_label {
+            width: 100%;
+            padding: 0px 10px 20px 10px;
+            @include box-sizing(border-box);
+            &[data-captcha] { div { height: 74.5px; } }
+
+            & > span { margin-bottom: 10px; }
+
+            & > div {
+                border: 1px solid rgbaExpress(black, 0.1);
+                position: relative;
+                &.novalide { border-color: #e74c3c; color: #e74c3c; input, textarea { color: #e74c3c; } }
+                &.valide { border-color: #2ecc71; color: #2ecc71; input, textarea { color: #2ecc71; } }
+            }
+
+            span.ico { 
+                background-color: #fafafa;
+                padding: 0 20px; 
+                border-right: 1px solid rgbaExpress(black, 0.1);
+                display: block;
+                position: relative;
+                & > i {
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    @include translate(-50%, -50%);
+                }
+            }
+
+            input, textarea {
+                outline: none;
+                border:0; margin: 0;
+                @include flex-grow(1);
+                resize: none;
+                font-family: $fonts;   
+                padding: 10px;
+                font-size: 16px;
+                @include box-sizing(border-box);
+            }
+
+            input { height: 35px; }
+        }
+
+        button {
+            @include align-self(center);
+            @extend .button_default;
+            border-color: $primaryColor;
+            color: $primaryColor;
+            background-color: #fff;
+            padding: 10px;
+
+            &:hover { background-color: $primaryColor; border-color: #fff; color: #fff; }
+        }
+    }
+}
 
 /*----------  Barre de défilement experience/formations  ----------*/
 
