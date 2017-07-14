@@ -376,7 +376,7 @@ section.container_formations {
                 & > span { @include inline-block(middle); }
             }
 
-            h4 { padding: 15px 0; color: #444; @include flex(row nowrap, center, center); }
+            h4 { padding: 15px 0; color: #444; text-align: left; }
 
             ul { color: #444; width: 100%; & > li { line-height: 22px; } }
 
@@ -643,12 +643,12 @@ section.container_contact {
             width: 100%;
             padding: 0px 10px 20px 10px;
             @include box-sizing(border-box);
-            &[data-captcha] { div { height: 74.5px; } }
+            &[data-captcha] { div { height: 76px; } }
 
             & > span { margin-bottom: 10px; }
 
             & > div {
-                border: 1px solid rgbaExpress(black, 0.1);
+                border: none;
                 position: relative;
                 &.novalide { border-color: #e74c3c; color: #e74c3c; input, textarea { color: #e74c3c; } }
                 &.valide { border-color: #2ecc71; color: #2ecc71; input, textarea { color: #2ecc71; } }
@@ -678,6 +678,20 @@ section.container_contact {
                 @include box-sizing(border-box);
             }
 
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus
+            input:-webkit-autofill, 
+            textarea:-webkit-autofill,
+            textarea:-webkit-autofill:hover
+            textarea:-webkit-autofill:focus,
+            select:-webkit-autofill,
+            select:-webkit-autofill:hover,
+            select:-webkit-autofill:focus {
+              -webkit-text-fill-color: #2ecc71;
+              -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+            }
+
             input { height: 35px; }
         }
 
@@ -687,7 +701,7 @@ section.container_contact {
             border-color: $primaryColor;
             color: $primaryColor;
             background-color: #fff;
-            padding: 10px;
+            padding: 10px 20px;
 
             &:hover { background-color: $primaryColor; border-color: #fff; color: #fff; }
         }

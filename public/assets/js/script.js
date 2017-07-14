@@ -106,7 +106,26 @@ $(document).on('keyup', '#email', function() {
     }
 });
 
+function recaptchaCallback() {
+	 $('.g-recaptcha').parent('div').removeClass('novalide').addClass('valide');
+};
+
 $(document).on('submit', '#contact_form', function(event) {
+	if (!firstname) {
+		$('#firstname').parent('div').addClass('novalide');
+	}
+	if(!lastname) {
+		$('#lastname').parent('div').addClass('novalide');
+	}
+	if (!email) {
+		$('#email').parent('div').addClass('novalide');
+	}
+	if (!message) {
+		$('#message').parent('div').addClass('novalide');
+	}
+	if(grecaptcha.getResponse().length == 0){
+	   $('.g-recaptcha').parent('div').addClass('novalide');
+	}
 	event.preventDefault();
 	return false;
 });

@@ -477,19 +477,7 @@ section.container_formations div.block div.description p.date > span {
 section.container_formations div.block div.description h4 {
   padding: 15px 0;
   color: #444;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: left;
 }
 section.container_formations div.block div.description ul {
   color: #444;
@@ -601,7 +589,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1499957873');
+  background: url('../imgComp/top-bar.png?1500031514');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -841,13 +829,13 @@ section.container_contact form label.field_label {
   box-sizing: border-box;
 }
 section.container_contact form label.field_label[data-captcha] div {
-  height: 74.5px;
+  height: 76px;
 }
 section.container_contact form label.field_label > span {
   margin-bottom: 10px;
 }
 section.container_contact form label.field_label > div {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: none;
   position: relative;
 }
 section.container_contact form label.field_label > div.novalide {
@@ -892,6 +880,19 @@ section.container_contact form label.field_label input, section.container_contac
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+section.container_contact form label.field_label input:-webkit-autofill,
+section.container_contact form label.field_label input:-webkit-autofill:hover,
+section.container_contact form label.field_label input:-webkit-autofill:focus
+input:-webkit-autofill,
+section.container_contact form label.field_label textarea:-webkit-autofill,
+section.container_contact form label.field_label textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+section.container_contact form label.field_label select:-webkit-autofill,
+section.container_contact form label.field_label select:-webkit-autofill:hover,
+section.container_contact form label.field_label select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #2ecc71;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
 section.container_contact form label.field_label input {
   height: 35px;
 }
@@ -902,7 +903,7 @@ section.container_contact form button {
   border-color: #F05F40;
   color: #F05F40;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 20px;
 }
 section.container_contact form button:hover {
   background-color: #F05F40;
