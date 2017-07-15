@@ -2,7 +2,7 @@
 
 <section class="container_competences">
 	<header>
-		<h3>Compétences</h3>
+		<h2>Compétences</h2>
 		<p>Ce que je sais faire</p>
 	</header>
 	<div class="content_block">

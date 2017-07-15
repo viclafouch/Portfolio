@@ -180,13 +180,13 @@ h3, h6 {
 }
 
 h1 {
-  font-size: 2.1em;
+  font-size: 2.4em;
   font-family: "Karma", serif !important;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 2.2em;
   text-align: center;
 }
 
@@ -329,6 +329,9 @@ div#subheading[data-turbolinks-permanent] {
 div#subheading[data-turbolinks-permanent] h1, div#subheading[data-turbolinks-permanent] p {
   padding: 10px 0;
 }
+div#subheading[data-turbolinks-permanent] h1 {
+  margin: 15px 0;
+}
 div#subheading[data-turbolinks-permanent] p {
   color: #444;
   line-height: 1.3em;
@@ -366,7 +369,7 @@ section > header {
       -ms-flex-align: center;
           align-items: center;
 }
-section > header h3 {
+section > header h2 {
   color: #444;
   padding-bottom: 7px;
 }
@@ -589,7 +592,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1500055348');
+  background: url('../imgComp/top-bar.png?1500135658');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;

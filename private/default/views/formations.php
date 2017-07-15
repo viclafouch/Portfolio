@@ -2,7 +2,7 @@
 
 <section class="container container_formations">
 	<header>
-		<h3>Formations</h3>
+		<h2>Formations</h2>
 		<p>Ce que j'apprends</p>
 	</header>
 	<div class="content_block">

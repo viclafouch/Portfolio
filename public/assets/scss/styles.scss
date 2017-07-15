@@ -178,8 +178,8 @@ h3, h6 {
     text-align: center;
     color: #fff;
 }
-h1 { font-size: 2.1em; font-family: 'Karma', serif!important; font-weight: bold; }
-h2 { font-size: 40px; text-align: center; }
+h1 { font-size: 2.4em; font-family: 'Karma', serif!important; font-weight: bold; }
+h2 { font-size: 2.2em; text-align: center; }
 h3 { font-size: 35px; text-align: center; }
 h4 { font-size: 27px; text-align: center; }
 h5 { font-size: 25px; }
@@ -273,6 +273,8 @@ div#subheading[data-turbolinks-permanent] {
 
     h1, p { padding: 10px 0; }
 
+    h1 { margin: 15px 0; }
+
     p { color: $textColor; line-height: 1.3em; font-size: 1em; max-width: 75%; }
 
     a { color: #fff; background-color: $primaryColor; margin-bottom: 0; }
@@ -286,7 +288,7 @@ section { width: 100%;
         text-align: center;
         @include flex(column nowrap, center, center);
     
-        h3 { color: #444; padding-bottom: 7px; }
+        h2 { color: #444; padding-bottom: 7px; }
 
         p { font-style: italic; font-weight: bold; color: $primaryColor; text-decoration: underline;}
     }

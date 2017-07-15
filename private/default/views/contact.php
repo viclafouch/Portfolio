@@ -1,7 +1,7 @@
 <?php include_once('/layouts/header.php'); ?>
 <section class="container container_contact">
 	<header>
-		<h3>Contact</h3>
+		<h2>Contact</h2>
 		<p>M'envoyer un message</p>
 	</header>
 	<div class="content_block">

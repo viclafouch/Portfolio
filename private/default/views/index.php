@@ -5,7 +5,7 @@
 		<div class="row_block" id="profil_row">
 			<img src="./public/assets/imgComp/victor-de-la-fouchardiere.png" title="" alt="">
 			<div class="heading_name_role">
-				<h1>Victor de la Fouchardière</h1>
+				<h2>Victor de la Fouchardière</h2>
 				<span>Google TC / Etudiant / Developpeur web</span>
 			</div>
 		</div>

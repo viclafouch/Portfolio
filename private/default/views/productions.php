@@ -2,7 +2,7 @@
 
 <section class="container container_portfolio">
 	<header>
-		<h3>Portfolio</h3>
+		<h2>Portfolio</h2>
 		<p>Ce que je développe</p>
 	</header>
 	<div class="row wrap">
