@@ -126,6 +126,14 @@ $(document).on('submit', '#contact_form', function(event) {
 	if(grecaptcha.getResponse().length == 0){
 	   $('.g-recaptcha').parent('div').addClass('novalide');
 	}
+	$.ajax({
+		type: $(this).attr('method'),
+		data: $(this).serialize(),
+		url : $(this).attr('action'),
+		success : function(data) {
+			console.log(data);
+		}
+	});
 	event.preventDefault();
 	return false;
 });

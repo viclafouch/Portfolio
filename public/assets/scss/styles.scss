@@ -643,7 +643,7 @@ section.container_contact {
             width: 100%;
             padding: 0px 10px 20px 10px;
             @include box-sizing(border-box);
-            &[data-captcha] { div { height: 76px; } }
+            &[data-captcha] { div { height: 76px; } span.ico { height: 100%; padding: 0; } }
 
             & > span { margin-bottom: 10px; }
 
@@ -656,7 +656,7 @@ section.container_contact {
 
             span.ico { 
                 background-color: #fafafa;
-                padding: 0 20px; 
+                width: 40px;
                 border-right: 1px solid rgbaExpress(black, 0.1);
                 display: block;
                 position: relative;

@@ -589,7 +589,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1500031514');
+  background: url('../imgComp/top-bar.png?1500055348');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -831,6 +831,10 @@ section.container_contact form label.field_label {
 section.container_contact form label.field_label[data-captcha] div {
   height: 76px;
 }
+section.container_contact form label.field_label[data-captcha] span.ico {
+  height: 100%;
+  padding: 0;
+}
 section.container_contact form label.field_label > span {
   margin-bottom: 10px;
 }
@@ -854,7 +858,7 @@ section.container_contact form label.field_label > div.valide input, section.con
 }
 section.container_contact form label.field_label span.ico {
   background-color: #fafafa;
-  padding: 0 20px;
+  width: 40px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   display: block;
   position: relative;

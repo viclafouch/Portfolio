@@ -5,19 +5,19 @@
 		<p>M'envoyer un message</p>
 	</header>
 	<div class="content_block">
-		<form action="#" method="" class="col nowrap" id="contact_form">
+		<form action="?module=default&action=contact" method="POST" class="col nowrap" id="contact_form">
 			<label class="field_label col nowrap" for="firstname">
 				<span>Prénom</span>
 				<div class="row nowrap">
 					<span class="ico"><i class="fa fa-user" aria-hidden="true"></i></span>
-					<input spellcheck="false" id="firstname" required="required" class="input_contact_form" type="text" name="" value="">
+					<input spellcheck="false" id="firstname" required="required" class="input_contact_form" type="text" name="firstname" value="">
 				</div>
 			</label>
 			<label class="field_label col nowrap" for="lastname">
 				<span>Nom</span>
 				<div class="row nowrap">
 					<span class="ico"><i class="fa fa-user" aria-hidden="true"></i></span>
-					<input spellcheck="false" id="lastname" required="required" class="input_contact_form" type="text" name="" value="">
+					<input spellcheck="false" id="lastname" required="required" class="input_contact_form" type="text" name="lastname" value="">
 				</div>
 			</label>
 			<label class="field_label col nowrap" for="email">
