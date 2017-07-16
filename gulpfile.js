@@ -35,7 +35,7 @@ gulp.task('styles', function() {
     	.pipe(gulp.dest('public/assets/css'));
 });
 
-/*----------  Images  ----------*/
+/*----------  Images  ----------*/	
 
 // Compressed task
 gulp.task('image', function() {
@@ -57,6 +57,7 @@ gulp.task('scripts', function() {
 	    }))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('public/assets/js/min'))
+
 		.pipe(print(function(filepath) {
 	      return "file created : " + filepath;
 	    }))
@@ -73,4 +74,4 @@ gulp.task('watch', function() {
 /*----------  Defaut  ----------*/
 
 // Default task
-gulp.task('default', ['image', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['image', 'styles', 'scripts', 'concat', 'watch']);

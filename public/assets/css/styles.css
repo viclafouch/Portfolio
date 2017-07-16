@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*======================================
 =            Your Main CSS            =
 ======================================*/
@@ -328,6 +327,7 @@ div#subheading[data-turbolinks-permanent] {
 }
 div#subheading[data-turbolinks-permanent] h1, div#subheading[data-turbolinks-permanent] p {
   padding: 10px 0;
+  text-align: center;
 }
 div#subheading[data-turbolinks-permanent] h1 {
   margin: 15px 0;
@@ -345,7 +345,7 @@ div#subheading[data-turbolinks-permanent] a {
 }
 div#subheading[data-turbolinks-permanent] a:hover {
   color: #F05F40;
-  background-color: #f6f6f6;
+  background-color: #fff;
   border-color: #F05F40;
 }
 
@@ -395,13 +395,12 @@ section.container_index > div.content_block > div.row_block#profil_row > img {
   height: 75px;
   display: block;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
   position: relative;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 section.container_index > div.content_block > div.row_block#profil_row > div.heading_name_role {
-  padding: 20px;
   text-align: center;
 }
 section.container_index > div.content_block > div.row_block#profil_row > div.heading_name_role > * {
@@ -417,10 +416,10 @@ section.container_index > div.content_block > div.row_block#resum_row > p.resum 
   line-height: 1.2em;
 }
 section.container_index > div.content_block > div.row_block#skills_row div.item {
-  width: 33%;
+  width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px 15px;
+  padding: 30px 15px;
 }
 section.container_index > div.content_block > div.row_block#skills_row div.item svg {
   width: 75px;
@@ -445,20 +444,28 @@ section.container_index > div.content_block hr {
   border: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  section.container_index > div.content_block > div.row_block#skills_row div.item {
+    width: 33%;
+  }
+}
 section.container_formations div.block {
   width: 100%;
-  padding: 60px 0;
+  padding: 20px 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 section.container_formations div.block:not(:last-child) {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
 }
 section.container_formations div.block div.thumbnail img {
+  padding-bottom: 15px;
   height: 170px;
   width: 320px;
+  margin: 0 auto;
   display: block;
 }
 section.container_formations div.block div.description {
-  margin-left: 15px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -492,18 +499,39 @@ section.container_formations div.block div.description ul > li {
 section.container_formations div.block div.description a {
   margin: 0;
   padding: 7px;
-  background-color: #95a5a6;
-  border-color: #95a5a6;
+  background-color: #3498db;
+  border-color: #3498db;
   color: #fff;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 section.container_formations div.block div.description a:hover {
   background-color: #fff;
-  border-color: #95a5a6;
-  color: #95a5a6;
+  border-color: #3498db;
+  color: #3498db;
 }
 
+@media only screen and (min-width: 768px) {
+  section.container_formations div.block {
+    padding: 60px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.container_formations div.block div.description {
+    margin-left: 15px;
+  }
+}
 section.container_portfolio div.popup_work {
   position: fixed;
   width: 100%;
@@ -592,7 +620,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1500135658');
+  background: url('../imgComp/top-bar.png?1500203477');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -632,9 +660,10 @@ section.container_portfolio div.popup_work div.popup_container > div > div.conte
 }
 section.container_portfolio > div.row {
   min-height: 400px;
+  padding: 0 5px;
 }
 section.container_portfolio article.work {
-  width: 25%;
+  width: 50%;
   float: left;
   margin-bottom: 30px;
   padding: 10px;
@@ -648,6 +677,7 @@ section.container_portfolio article.work header {
   position: relative;
   width: 100%;
   height: 127px;
+  overflow: hidden;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border: 1px solid #dedede;
@@ -737,6 +767,11 @@ section.container_portfolio article.work:hover div.overlay span {
   transform: translate(-50%, -50%) scale(1);
 }
 
+@media only screen and (min-width: 768px) {
+  section.container_portfolio article.work {
+    width: 25%;
+  }
+}
 section.container_competences div.skills div.title_stripes {
   width: 100%;
   margin: 0 auto;
@@ -766,7 +801,7 @@ section.container_competences div.skills h4 {
 }
 section.container_competences div.skills article.skill_card {
   width: 200px;
-  margin: 20px;
+  margin: 15px 10px;
 }
 section.container_competences div.skills article.skill_card > header {
   height: 50px;
@@ -803,6 +838,13 @@ section.container_competences div.skills article.skill_card > footer > ul > li {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
   padding: 5px 0;
   margin-left: 15px;
+}
+section.container_competences div.skills div.frameworks_row article.skill_card span {
+  text-align: center;
+  margin: 0 auto;
+}
+section.container_competences div.skills div.frameworks_row article.skill_card footer {
+  text-align: center;
 }
 section.container_competences div.skills article.techno {
   padding: 20px 0;
@@ -916,26 +958,4 @@ section.container_contact form button:hover {
   background-color: #F05F40;
   border-color: #fff;
   color: #fff;
-}
-
-/*----------  Barre de d├®filement experience/formations  ----------*/
-/*----------  Retout en haut  ----------*/
-span.haut {
-  height: 50px;
-  width: 50px;
-  background: #F05F40;
-  border-radius: 50%;
-  position: fixed;
-  color: #f6f6f6;
-  z-index: 20;
-  text-align: center;
-  right: 15px;
-  bottom: 20px;
-}
-span.haut i {
-  line-height: 50px;
-  font-size: 2.5em;
-}
-span.haut:hover {
-  cursor: pointer;
 }

@@ -5,11 +5,15 @@ function viewService($file, $title_page, $description_page) {
 	if ($title_page == '') {
 		console_log('Warning [SEO]: title is empty');
 		$title = '';
+	} else {
+		$title = $title_page;
 	}
 
 	if ($description_page == '') {
 		console_log('Warning [SEO]: description is empty');
 		$description = '';
+	} else {
+		$description = $description_page;
 	}
 
 	$file = pathinfo($file, PATHINFO_FILENAME);

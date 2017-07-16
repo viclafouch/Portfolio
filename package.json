@@ -24,6 +24,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^3.5.0",
     "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.3.0",
     "gulp-print": "^2.0.1",
     "gulp-rename": "^1.2.2",

@@ -15,7 +15,7 @@
 		</div>
 		<hr>
 		<div class="row_block" id="skills_row">
-			<div class="row nowrap row-verti-center">
+			<div class="row wrap row-verti-center">
 				<div class="item">
 					<div class="col col-hori-center nowrap">
 						<?php include_once('./public/assets/imgComp/settings.svg'); ?>

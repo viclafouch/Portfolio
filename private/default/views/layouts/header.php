@@ -10,7 +10,6 @@
    		<!--====  Meta  ====-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
  		<meta name="description" content="<?= $description; ?>" />
- 		<meta name="robots" content="">
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="">
@@ -40,11 +39,11 @@
    		<link rel="stylesheet" type="text/css" href="public/assets/css/styles.min.css">
 
 		<!--====  Favicon  ====-->
-   		<link rel="icon" type="image/png" href=""/>
-   		<link rel="shortcut icon" type="image/x-icon" href="" />
-		<link rel="apple-touch-icon" href="" />
-		<link rel="apple-touch-icon" sizes="72x72" href="" />
-		<link rel="apple-touch-icon" sizes="114x114" href="" />
+   		<link rel="icon" type="image/png" href="favicon.png"/>
+   		<link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png" />
+		<link rel="apple-touch-icon" href="icon-iphone.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
 
 		<!--====  Scripts  ====-->
 		<script defer src="public/lib/jquery/jquery.min.js" type="text/javascript"></script>
@@ -78,7 +77,6 @@
 					<li><a href="?module=default&action=formations" title="">Formations</a></li>
 					<li><a href="?module=default&action=productions" title="">Portfolio</a></li>
 					<li><a href="?module=default&action=competences" title="">Compétences</a></li>
-					<li><a href="#" target="_blank" title="">Google</a></li>
 					<li><a href="?module=default&action=contact" data-turbolinks="false" title="">Contact</a></li>
 				</ul>
 			</div>

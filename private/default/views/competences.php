@@ -1,4 +1,4 @@
-<?php include_once('/layouts/header.php'); ?>
+	<?php include_once('/layouts/header.php'); ?>
 
 <section class="container_competences">
 	<header>
@@ -6,11 +6,11 @@
 		<p>Ce que je sais faire</p>
 	</header>
 	<div class="content_block">
-		<div class="skills languages">
+		<div class="skills">
 			<div class="title_stripes">
-				<h4>Langages utilisés</h4>
+				<h4>Langages</h4>
 			</div>
-			<div class="row wrap row-verti-center row-hori-center">
+			<div class="row wrap row-verti-center row-hori-center languages_row">
 				<article class="skill_card" id="html">
 		 			<header>
 		  				<img src="./public/assets/imgComp/html.png" title="HTML5" alt="HTML5 Logo"/>
@@ -47,7 +47,7 @@
 		    			<h5>js</h5>
 		    			<span>2 ans d'expérience</span>
 					    <ul>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Javascript</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> ES6/ES7</li>
 							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> DOM</li>
 							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Ajax</li>
 					    </ul>
@@ -67,25 +67,39 @@
 					    </ul>
 					</footer>
 				</article>
-			</div>
-			<div class="title_stripes">
-				<h4>Frameworks utilisés</h4>
-			</div>
-			<div class="row wrap row-verti-center row-hori-center">
-				<article class="skill_card" id="compass">
+				<article class="skill_card" id="java">
 		 			<header>
-		  				<img src="./public/assets/imgComp/compass.png" title="HTML5" alt="HTML5 Logo"/>
+		  				<img src="./public/assets/imgComp/java.png" title="HTML5" alt="HTML5 Logo"/>
 		 			</header>
 		  			<footer>
-		    			<h5>compass</h5>
-		    			<span>2 ans d'expérience</span>
+		    			<h5>java</h5>
+		    			<span>1 an d'expérience</span>
 					    <ul>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> SCSS</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Nesting</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> @Mixins</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Android</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MVC</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MYSQL</li>
 					    </ul>
 					</footer>
 				</article>
+				<article class="skill_card" id="swift">
+		 			<header>
+		  				<img src="./public/assets/imgComp/swift.png" title="HTML5" alt="HTML5 Logo"/>
+		 			</header>
+		  			<footer>
+		    			<h5>swift</h5>
+		    			<span>1 an d'expérience</span>
+					    <ul>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Android</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MVC</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MYSQL</li>
+					    </ul>
+					</footer>
+				</article>	
+			</div>
+			<div class="title_stripes">
+				<h4>Frameworks</h4>
+			</div>
+			<div class="row wrap row-verti-center row-hori-center frameworks_row">
 				<article class="skill_card" id="jquery">
 		 			<header>
 		  				<img src="./public/assets/imgComp/jquery.png" title="HTML5" alt="HTML5 Logo"/>
@@ -93,11 +107,6 @@
 		  			<footer>
 		    			<h5>jquery</h5>
 		    			<span>2 ans d'expérience</span>
-					    <ul>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> SCSS</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Nesting</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> @Mixins</li>
-					    </ul>
 					</footer>
 				</article>
 				<article class="skill_card" id="bootstrap">
@@ -107,16 +116,29 @@
 		  			<footer>
 		    			<h5>bootstrap</h5>
 		    			<span>2 ans d'expérience</span>
-					    <ul>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> SCSS</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Nesting</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> @Mixins</li>
-					    </ul>
+					</footer>
+				</article>
+				<article class="skill_card" id="materialize">
+		 			<header>
+		  				<img src="./public/assets/imgComp/materialize.png" title="HTML5" alt="HTML5 Logo"/>
+		 			</header>
+		  			<footer>
+		    			<h5>materialize</h5>
+		    			<span>2 ans d'expérience</span>
+					</footer>
+				</article>
+				<article class="skill_card" id="react">
+		 			<header>
+		  				<img src="./public/assets/imgComp/react.png" title="HTML5" alt="HTML5 Logo"/>
+		 			</header>
+		  			<footer>
+		    			<h5>react</h5>
+		    			<span>2 ans d'expérience</span>
 					</footer>
 				</article>
 			</div>
 			<div class="title_stripes">
-				<h4>Technologies utilisées</h4>
+				<h4>Technologies</h4>
 			</div>
 			<div class="row wrap row-verti-center row-hori-center">
 				<article class="techno col nowrap col-hori-center" id="sublimText">
