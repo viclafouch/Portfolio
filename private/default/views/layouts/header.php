@@ -72,7 +72,8 @@
 		</header>
 		<nav id="nav" data-turbolinks-permanent>
 			<div class="container">
-				<ul class="row row-hori-around wrap">
+				<div class="menuburger"><span></span></div>
+				<ul class="navrow">
 					<li><a href="./" title="">Accueil</a></li>
 					<li><a href="?module=default&action=formations" title="">Formations</a></li>
 					<li><a href="?module=default&action=productions" title="">Portfolio</a></li>
@@ -83,6 +84,7 @@
 		</nav>
 		<div id="subheading" data-turbolinks-permanent>
 			<div class="container col col-verti-center col-hori-center nowrap">
+				<img class="logo" src="./public/assets/img/logo.png" alt="">
 				<h1>Besoin d'un développeur web ?</h1>
 				<p>Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.</p>
 				<a class="button_default" target="_blank" download href="CV-Victor_de_la_Fouchardiere" title=""><i class="fa fa-download" aria-hidden="true"></i> Télécharger/Imprimer le CV</a>

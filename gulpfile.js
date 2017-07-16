@@ -74,4 +74,4 @@ gulp.task('watch', function() {
 /*----------  Defaut  ----------*/
 
 // Default task
-gulp.task('default', ['image', 'styles', 'scripts', 'concat', 'watch']);
+gulp.task('default', ['image', 'styles', 'scripts', 'watch']);

@@ -7,6 +7,7 @@
 // Barre de loader verticale
 
 var popup = false;
+var menuopen = false;
 
 var getUrlParameter = function getUrlParameter(sParam) {
 	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -138,6 +139,28 @@ $(document).on('submit', '#contact_form', function(event) {
 	return false;
 });
 
+$(document).on('click', '.menuburger', function(e) {
+	e.stopPropagation();
+	$(this).addClass('menu-open');
+	console.log('burger');
+	$('.navrow').addClass('active');
+	menuopen = true;
+});
+
+$(document).on('click', '.menu-open', function() {
+	$(this).removeClass('menu-open');
+	$('.navrow').removeClass('active');
+	menuopen = false;
+});
+
+$(document).on('click', 'body', function(e){
+	if (menuopen) {
+		console.log('body');
+		$('.menuburger').removeClass('menu-open');
+		$('.navrow').removeClass('active');
+		menuopen = false;
+	}
+})
 
 // document.addEventListener("turbolinks:load", function() {
 // })

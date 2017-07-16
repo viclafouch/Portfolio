@@ -258,13 +258,16 @@ h6 {
 
 header[data-turbolinks-permanent] {
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 10px;
   background-color: #fff;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 header[data-turbolinks-permanent] a {
   display: inline-block;
   text-decoration: none;
-  margin-right: 17px;
+  margin-left: 10px;
   color: #444;
   -moz-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -294,8 +297,41 @@ nav[data-turbolinks-permanent] {
   height: 70px;
   background-color: #f6f6f6;
   color: #444;
+  position: relative;
+}
+nav[data-turbolinks-permanent] ul {
+  text-align: left;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: -170px;
+  background-color: rgba(255, 255, 255, 0.96);
+  padding-top: 120px;
+  width: 170px;
+  padding-left: 25px;
+  height: 100%;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: none 0.3s ease 0s;
+  -o-transition: none 0.3s ease 0s;
+  -webkit-transition: none 0.3s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: none 0.3s ease 0s;
+  transition: none 0.3s ease 0s;
+  -webkit-transition-property: right, opacity, visibility;
+  transition-property: right, opacity, visibility;
+}
+nav[data-turbolinks-permanent] ul.active {
+  right: 0;
+  visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
 }
 nav[data-turbolinks-permanent] ul li {
+  display: block;
   width: calc(100% / 6);
   text-align: center;
   cursor: pointer;
@@ -316,7 +352,105 @@ nav[data-turbolinks-permanent] ul li a {
   text-decoration: none;
   text-transform: uppercase;
 }
+nav[data-turbolinks-permanent] div.menuburger {
+  display: block;
+  height: 20px;
+  width: 28px;
+  right: 22px;
+  top: 50%;
+  margin-top: -10px;
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  z-index: 999;
+  -moz-transition: right 0.3s ease 0s;
+  -o-transition: right 0.3s ease 0s;
+  -webkit-transition: right 0.3s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
+}
+nav[data-turbolinks-permanent] div.menuburger::after, nav[data-turbolinks-permanent] div.menuburger::before,
+nav[data-turbolinks-permanent] div.menuburger span {
+  position: absolute;
+  background-color: #444;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  content: '';
+  display: block;
+  -moz-transition: none 0.2s ease 0s;
+  -o-transition: none 0.2s ease 0s;
+  -webkit-transition: none 0.2s ease;
+  -webkit-transition-delay: 0s;
+  -webkit-transition: none 0.2s ease 0s;
+  transition: none 0.2s ease 0s;
+  -webkit-transition-property: left, opacity, top, margin-top, -webkit-transform;
+  transition-property: left, opacity, top, margin-top, -webkit-transform;
+  transition-property: left, opacity, top, margin-top, transform;
+  transition-property: left, opacity, top, margin-top, transform, -webkit-transform;
+}
+nav[data-turbolinks-permanent] div.menuburger::before {
+  top: 0px;
+}
+nav[data-turbolinks-permanent] div.menuburger::after {
+  bottom: 0px;
+}
+nav[data-turbolinks-permanent] div.menuburger span {
+  top: 50%;
+  margin-top: -1px;
+}
+nav[data-turbolinks-permanent] div.menuburger:hover span {
+  left: -5px;
+}
+nav[data-turbolinks-permanent] div.menuburger.menu-open {
+  right: 61px;
+}
+nav[data-turbolinks-permanent] div.menuburger.menu-open span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+nav[data-turbolinks-permanent] div.menuburger.menu-open:after, nav[data-turbolinks-permanent] div.menuburger.menu-open:before {
+  top: 50%;
+  margin-top: -2px;
+}
+nav[data-turbolinks-permanent] div.menuburger.menu-open:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+nav[data-turbolinks-permanent] div.menuburger.menu-open:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+nav[data-turbolinks-permanent] div.menuburger.menu-open:hover:after {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+nav[data-turbolinks-permanent] div.menuburger.menu-open:hover:before {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
 
+@media only screen and (min-width: 600px) {
+  nav[data-turbolinks-permanent] ul {
+    text-align: center;
+    position: static;
+    padding: 0;
+    width: auto;
+    height: auto;
+    visibility: visible;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    background-color: transparent;
+  }
+  nav[data-turbolinks-permanent] ul li {
+    display: inline-block;
+  }
+  nav[data-turbolinks-permanent] div.menuburger {
+    display: none;
+  }
+}
 div#subheading[data-turbolinks-permanent] {
   width: 100%;
   height: auto;
@@ -324,6 +458,16 @@ div#subheading[data-turbolinks-permanent] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #fff;
+  position: relative;
+}
+div#subheading[data-turbolinks-permanent] img {
+  position: absolute;
+  top: -35px;
+  margin: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 50px;
+  left: 22px;
 }
 div#subheading[data-turbolinks-permanent] h1, div#subheading[data-turbolinks-permanent] p {
   padding: 10px 0;
@@ -349,6 +493,15 @@ div#subheading[data-turbolinks-permanent] a:hover {
   border-color: #F05F40;
 }
 
+@media only screen and (min-width: 600px) {
+  div#subheading[data-turbolinks-permanent] img {
+    position: static;
+    width: auto;
+    margin: 10px auto;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 section {
   width: 100%;
 }
@@ -620,7 +773,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1500203477');
+  background: url('../imgComp/top-bar.png?1500218265');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
