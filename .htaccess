@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteRule formations index.php?module=default&action=formations
+RewriteRule productions index.php?module=default&action=productions
+RewriteRule competences index.php?module=default&action=competences
+RewriteRule contact index.php?module=default&action=contact
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /404.php

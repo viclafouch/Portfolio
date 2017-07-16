@@ -5,7 +5,7 @@
 		<p>M'envoyer un message</p>
 	</header>
 	<div class="content_block">
-		<form action="?module=default&action=contact" method="POST" class="col nowrap" id="contact_form">
+		<form action="/contact" method="POST" class="col nowrap" id="contact_form">
 			<label class="field_label col nowrap" for="firstname">
 				<span>Prénom</span>
 				<div class="row nowrap">

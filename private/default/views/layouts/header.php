@@ -74,11 +74,11 @@
 			<div class="container">
 				<div class="menuburger"><span></span></div>
 				<ul class="navrow">
-					<li><a href="./" title="">Accueil</a></li>
-					<li><a href="?module=default&action=formations" title="">Formations</a></li>
-					<li><a href="?module=default&action=productions" title="">Portfolio</a></li>
-					<li><a href="?module=default&action=competences" title="">Compétences</a></li>
-					<li><a href="?module=default&action=contact" data-turbolinks="false" title="">Contact</a></li>
+					<li><a href="/" title="">Accueil</a></li>
+					<li><a href="/formations" title="">Formations</a></li>
+					<li><a href="/productions" title="">Portfolio</a></li>
+					<li><a href="/competences" title="">Compétences</a></li>
+					<li><a href="/contact" data-turbolinks="false" title="">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
