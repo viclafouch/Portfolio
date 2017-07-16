@@ -470,7 +470,7 @@ div#subheading[data-turbolinks-permanent] img {
   left: 22px;
 }
 div#subheading[data-turbolinks-permanent] h1, div#subheading[data-turbolinks-permanent] p {
-  padding: 10px 0;
+  padding: 10px 5px;
   text-align: center;
 }
 div#subheading[data-turbolinks-permanent] h1 {

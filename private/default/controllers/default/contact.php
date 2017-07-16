@@ -40,7 +40,7 @@
 		}		
 	} else {
 		$title_page = 'Contact | Victor de la Fouchardière';
-		$description_page = '';
+		$description_page = 'Prenez contact maintenant avec Victor de la Fouchardière, développeur et étudiant à l\'Ecole Européenne des Métiers de l\'Internet';
 
 		viewService(__FILE__, $title_page, $description_page);
 	}

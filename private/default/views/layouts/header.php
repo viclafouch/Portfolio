@@ -33,7 +33,7 @@
    		<!--====  Lib  ====-->
    		<link rel="stylesheet" type="text/css" href="public/lib/animate/animate.min.css">
 
-		<link href="https://fonts.googleapis.com/css?family=ABeeZee|Karma" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=ABeeZee%7CKarma" rel="stylesheet">
 
 		<!--====  Custom  ====-->
    		<link rel="stylesheet" type="text/css" href="public/assets/css/styles.min.css">
@@ -58,14 +58,14 @@
 		<header id="header" data-turbolinks-permanent>
 			<div class="container row row-hori-between nowrap">
 				<div class="heading_contact">
-					<a href="mailto:victor.dlf@outlook.fr""><span><i class="fa fa-envelope-o" aria-hidden="true"></i> victor.dlf@outlook.fr</span></a>
+					<a href="mailto:victor.dlf@outlook.fr"><span><i class="fa fa-envelope-o" aria-hidden="true"></i> victor.dlf@outlook.fr</span></a>
 					<a href="skype:victor.dlf?add"><span><i class="fa fa-skype" aria-hidden="true"></i> viclafouch</span></a>
 				</div>
 				<div class="heading_social">
 					<a href="https://www.linkedin.com/in/victordelafouchardiere/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-					<a href="https://codepen.io/Viclafouch/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></i></a>
+					<a href="https://codepen.io/Viclafouch/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
 					<a href="https://topcontributor.withgoogle.com/profile/victor-de-la-fouchardiere-e5fded" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-					<a href="https://github.com/viclafouch" target="_blank"><i class="fa fa-git" aria-hidden="true"></i></i></a>
+					<a href="https://github.com/viclafouch" target="_blank"><i class="fa fa-git" aria-hidden="true"></i></a>
 					<a href="https://twitter.com/VicAndTips" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 				</div>
 			</div>
