@@ -332,7 +332,7 @@ nav[data-turbolinks-permanent] ul.active {
 }
 nav[data-turbolinks-permanent] ul li {
   display: block;
-  width: calc(100% / 6);
+  width: 100%;
   text-align: center;
   cursor: pointer;
   -moz-transition: color 0.5s ease 0s;
@@ -347,6 +347,7 @@ nav[data-turbolinks-permanent] ul li:hover a, nav[data-turbolinks-permanent] ul 
 }
 nav[data-turbolinks-permanent] ul li a {
   color: #444;
+  text-align: left;
   display: block;
   line-height: 70px;
   text-decoration: none;
@@ -446,6 +447,11 @@ nav[data-turbolinks-permanent] div.menuburger.menu-open:hover:before {
   }
   nav[data-turbolinks-permanent] ul li {
     display: inline-block;
+    width: calc(100% / 6);
+    text-align: center;
+  }
+  nav[data-turbolinks-permanent] ul li a {
+    text-align: center;
   }
   nav[data-turbolinks-permanent] div.menuburger {
     display: none;
@@ -773,7 +779,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1500218265');
+  background: url('../imgComp/top-bar.png?1500327492');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
