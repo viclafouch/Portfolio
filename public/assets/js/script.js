@@ -6,32 +6,21 @@
 
 // Barre de loader verticale
 
-var popup = false;
-var menuopen = false;
+var popup = false,
+menuopen = false,
+i;
+const burger = document.getElementById('menuburger'),
+navrow = document.getElementById('navrow'),
+url = window.location.href.split('/'),
+pageUrl = url[url.length - 1],
+itemMenu = document.querySelectorAll("a.href-menu");
 
-var getUrlParameter = function getUrlParameter(sParam) {
-	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-	sURLVariables = sPageURL.split('&'),sParameterName,i;
-
-	for (i = 0; i < sURLVariables.length; i++) {
-		sParameterName = sURLVariables[i].split('=');
-
-		if (sParameterName[0] === sParam) {
-			return sParameterName[1] === undefined ? true : sParameterName[1];
-		}
-	}
-};
-
-if (getUrlParameter('module') == 'default'){
-	var actionUrl = getUrlParameter('action');
-	$('[href="?module=default&action='+actionUrl+'"]').parent('li').addClass('active');
-
-	if (actionUrl == "contact") {
-		$('body').attr('data-turbolinks', 'false');
-	}
-} else {
-	$('[href="./"]').parent('li').addClass('active');
+for (i = 0; i < itemMenu.length; ++i) {
+  	if (itemMenu[i].getAttribute('href') == '/'+pageUrl) {
+  		itemMenu[i].parentElement.classList.add('active');
+  	}
 }
+
 
 
 $(document).on('click', '.popup_overlay, [data-close-popup]', function(){
@@ -139,28 +128,32 @@ $(document).on('submit', '#contact_form', function(event) {
 	return false;
 });
 
-$(document).on('click', '.menuburger', function(e) {
-	e.stopPropagation();
-	$(this).addClass('menu-open');
-	console.log('burger');
-	$('.navrow').addClass('active');
-	menuopen = true;
-});
 
-$(document).on('click', '.menu-open', function() {
-	$(this).removeClass('menu-open');
-	$('.navrow').removeClass('active');
-	menuopen = false;
-});
 
-$(document).on('click', 'body', function(e){
-	if (menuopen) {
-		console.log('body');
-		$('.menuburger').removeClass('menu-open');
-		$('.navrow').removeClass('active');
+
+function checkMenu(params) {
+	if (!navrow.classList.contains('active') && !menuopen) {
+		if (params) {
+			navrow.classList.add('active');
+			burger.classList.add('menu-open');
+			menuopen = true;
+		}
+	} else {
+		navrow.classList.remove('active');
+		burger.classList.remove('menu-open');
 		menuopen = false;
 	}
-})
+};
+
+document.body.onclick = function(e) {
+	e.stopPropagation();
+	checkMenu(false);
+}
+
+burger.onclick = function(e) {
+	e.stopPropagation();
+	checkMenu(true);
+}
 
 // document.addEventListener("turbolinks:load", function() {
 // })

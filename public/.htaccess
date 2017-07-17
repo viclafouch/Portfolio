@@ -5,7 +5,7 @@ deny from all
     Allow from all
 </FilesMatch>
 
-<Files ~ "\.(jpg|jpeg|png|gif)$">
+<Files ~ "\.(jpg|jpeg|png|gif|svg)$">
    order deny,allow
    allow from all
 </Files>

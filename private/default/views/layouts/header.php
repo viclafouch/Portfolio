@@ -72,13 +72,13 @@
 		</header>
 		<nav id="nav" data-turbolinks-permanent>
 			<div class="container">
-				<div class="menuburger"><span></span></div>
-				<ul class="navrow">
-					<li><a href="/" title="">Accueil</a></li>
-					<li><a href="/formations" title="">Formations</a></li>
-					<li><a href="/productions" title="">Portfolio</a></li>
-					<li><a href="/competences" title="">Compétences</a></li>
-					<li><a href="/contact" data-turbolinks="false" title="">Contact</a></li>
+				<div class="menuburger" id="menuburger"><span></span></div>
+				<ul id="navrow">
+					<li><a href="/" title="" class="href-menu">Accueil</a></li>
+					<li><a href="index.php?module=default&action=formations" title="" class="href-menu">Formations</a></li>
+					<li><a href="/productions" title="" class="href-menu">Portfolio</a></li>
+					<li><a href="/competences" title="" class="href-menu">Compétences</a></li>
+					<li><a href="/contact" data-turbolinks="false" title="" class="href-menu">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
