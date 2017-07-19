@@ -3,7 +3,7 @@
 <section class="container container_index">
 	<div class="content_block">
 		<div class="row_block" id="profil_row">
-			<img src="./public/assets/imgComp/victor-de-la-fouchardiere.png" title="" alt="">
+			<img src="./public/assets/img/victor-de-la-fouchardiere.png" title="Victor de la Fouchardiere" alt="Victor de la Fouchardiere">
 			<div class="heading_name_role">
 				<h2>Victor de la Fouchardière</h2>
 				<span>Google TC / Etudiant / Developpeur web</span>
@@ -18,21 +18,33 @@
 			<div class="row wrap row-verti-center">
 				<div class="item">
 					<div class="col col-hori-center nowrap">
-						<?php include_once('./public/assets/imgComp/settings.svg'); ?>
+						<?php 
+							if (file_exists('./public/assets/img/settings.svg')) {
+								include_once('./public/assets/img/settings.svg'); 
+							}
+						?>
 						<span>Développement de A à Z</span>
 						<p>Créer des sites web complets coté utilisateur et coté serveur</p>
 					</div>
 				</div>
 				<div class="item">
 					<div class="col col-hori-center nowrap">
-						<?php include_once('./public/assets/imgComp/smartphone.svg'); ?>
+						<?php 
+							if (file_exists('./public/assets/img/settings.svg')) {
+								include_once('./public/assets/img/settings.svg');
+							} 
+						?>
 						<span>Responsive design adapté</span>
 						<p>Penser responsive quelque soit l'appareil (tablettes, desktop...).</p>
 					</div>
 				</div>
 				<div class="item">
 					<div class="col col-hori-center nowrap">
-						<?php include_once('./public/assets/imgComp/checked.svg'); ?>
+						<?php 
+							if (file_exists('./public/assets/img/settings.svg')) {
+								include_once('./public/assets/img/settings.svg'); 
+							}
+						?>
 						<span>Code propre et soigné</span>
 						<p>Programmer avec un code (HTML5 ; CSS3 ; PHP ; JS) propre et valide.</p>
 					</div>

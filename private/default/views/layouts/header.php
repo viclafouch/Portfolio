@@ -30,26 +30,18 @@
 
 		<meta property="fb:app_id" content="" />
 
-   		<!--====  Lib  ====-->
-   		<link rel="stylesheet" type="text/css" href="public/lib/animate/animate.min.css">
-
 		<link href="https://fonts.googleapis.com/css?family=ABeeZee%7CKarma" rel="stylesheet">
-
-		<!--====  Custom  ====-->
    		<link rel="stylesheet" type="text/css" href="public/assets/css/styles.min.css">
 
-		<!--====  Favicon  ====-->
    		<link rel="icon" type="image/png" href="favicon.png"/>
    		<link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png" />
 		<link rel="apple-touch-icon" href="icon-iphone.png" />
 		<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
 
-		<!--====  Scripts  ====-->
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script defer src="public/assets/js/min/script.min.js" type="text/javascript"></script>
 
-		<!--====  Turbolinks  ====-->
 		<script defer src="public/lib/turbolinks/turbolinks.min.js"></script>
 		<meta name="turbolinks-cache-control" content="no-cache">
 	</head>
@@ -83,7 +75,7 @@
 		</nav>
 		<div id="subheading" data-turbolinks-permanent>
 			<div class="container col col-verti-center col-hori-center nowrap">
-				<img class="logo" src="./public/assets/img/logo.png" alt="">
+				<a href="/"><img class="logo" src="./public/assets/img/logo-de-la-fouchardiere-victor.png" alt="Victor de la Fouchardiere Logo"></a>
 				<h1>Besoin d'un développeur web ?</h1>
 				<p>Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.</p>
 				<a class="button_default" target="_blank" download href="CV-Victor_de_la_Fouchardiere" title=""><i class="fa fa-download" aria-hidden="true"></i> Télécharger/Imprimer le CV</a>

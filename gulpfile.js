@@ -19,7 +19,7 @@ gulp.task('styles', function() {
 		.pipe(compass({
 		 	css: 'public/assets/css',
 			sass: 'public/assets/scss',
-			image: 'public/assets/imgComp/'
+			config_file: './config.rb',
 		}))
 		.on('error', function(error) {
 	      console.log(error);
@@ -37,12 +37,12 @@ gulp.task('styles', function() {
 
 /*----------  Images  ----------*/	
 
-// Compressed task
-gulp.task('image', function() {
-	return gulp.src(['public/assets/img/*'])
-		.pipe(imagemin())
-		.pipe(gulp.dest('public/assets/imgComp'));
-});
+// // Compressed task
+// gulp.task('image', function() {
+// 	return gulp.src(['public/assets/img/*'])
+// 		.pipe(imagemin())
+// 		.pipe(gulp.dest('public/assets/imgComp'));
+// });
 
 /*----------  Scripts  ----------*/
 
@@ -74,4 +74,4 @@ gulp.task('watch', function() {
 /*----------  Defaut  ----------*/
 
 // Default task
-gulp.task('default', ['image', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'watch']);

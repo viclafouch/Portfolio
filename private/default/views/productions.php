@@ -12,7 +12,7 @@
 					<div class="overlay">
 						<span data-popup-work="codepen"><i class="fa fa-link" aria-hidden="true"></i></span>
 					</div>
-					<img src="./public/assets/imgComp/codepen.png" alt="" title="" />
+					<img src="./public/assets/img/codepen-screen.png" alt="Codepen" title="" />
 				</header>
 				<footer class="footer_work">
 					<h4>Codepen</h4>
@@ -26,11 +26,11 @@
 					<div class="col nowrap">
 						<h3>Codepen</h3>
 						<div class="screen">
-							<img src="./public/assets/imgComp/codepen.png" alt="">
+							<img src="./public/assets/img/codepen-screen.png" alt="Codepen" title="Codepen">
 						</div>
 						<div class="content col nowrap col-hori-center">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ut ullam error inventore dolore doloribus vitae ipsum esse itaque, id dolorem at laboriosam quasi totam optio distinctio dolorum, est vel.</p>
-							<a href="#" title="" class="button_default">Accéder au site</a>
+							<p>Toutes mes réalisations de front sur Codepen.</p>
+							<a href="https://codepen.io/Viclafouch/" target="_blank" title="" class="button_default">Accéder au site</a>
 						</div>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 					<div class="overlay">
 						<span data-popup-work="beparis"><i class="fa fa-link" aria-hidden="true"></i></span>
 					</div>
-					<img src="./public/assets/imgComp/beparis.png" alt="" title="" />
+					<img src="./public/assets/img/beparis-screen.png" alt="BeParis" title="" />
 				</header>
 				<footer class="footer_work">
 					<h4>BeParis</h4>
@@ -56,11 +56,11 @@
 					<div class="col nowrap">
 						<h3>BeParis</h3>
 						<div class="screen">
-							<img src="./public/assets/imgComp/beparis.png" alt="">
+							<img src="./public/assets/img/beparis-screen.png" alt="BeParis" title="BeParis">
 						</div>
 						<div class="content col nowrap col-hori-center">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ut ullam error inventore dolore doloribus vitae ipsum esse itaque, id dolorem at laboriosam quasi totam optio distinctio dolorum, est vel.</p>
-							<a href="#" title="" class="button_default">Accéder au site</a>
+							<p>Premier site web développé avec différents étudiants de l'EEMI afin d'acquérir les premières bases du développement back et front d'un site web.</p>
+							<a href="http://beparis.hol.es/" target="_blank" title="" class="button_default">Accéder au site</a>
 						</div>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 					<div class="overlay">
 						<span data-popup-work="tutobwim"><i class="fa fa-link" aria-hidden="true"></i></span>
 					</div>
-					<img src="./public/assets/imgComp/tutobwim.png" alt="" title="" />
+					<img src="./public/assets/img/tutobwim-screen.png" alt="TutoBwim.fr" title="" />
 				</header>
 				<footer class="footer_work">
 					<h4>TutoBwim.fr</h4>
@@ -86,11 +86,11 @@
 					<div class="col nowrap">
 						<h3>TutoBwim.fr</h3>
 						<div class="screen">
-							<img src="./public/assets/imgComp/tutobwim.png" alt="">
+							<img src="./public/assets/img/tutobwim-screen.png" alt="TutoBwim.fr" title="TutoBwim.fr">
 						</div>
 						<div class="content col nowrap col-hori-center">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ut ullam error inventore dolore doloribus vitae ipsum esse itaque, id dolorem at laboriosam quasi totam optio distinctio dolorum, est vel.</p>
-							<a href="#" title="" class="button_default">Accéder au site</a>
+							<p>Mon premier site web personnel développé via le CMS WordPress, petit blog qui me permet de partager des astuces informatiques à mes abonnés.</p>
+							<a href="http://www.tutobwim.fr/" target="_blank" title="" class="button_default">Accéder au site</a>
 						</div>
 					</div>
 				</div>
@@ -102,10 +102,10 @@
 					<div class="overlay">
 						<span data-popup-work="ficheandtricks"><i class="fa fa-link" aria-hidden="true"></i></span>
 					</div>
-					<img src="./public/assets/imgComp/ficheandtricks.png" alt="" title="" />
+					<img src="./public/assets/img/ficheandtricks-screen.png" alt="Fiche &amp; Tricks" title="" />
 				</header>
 				<footer class="footer_work">
-					<h4>Fiche & Tricks</h4>
+					<h4>Fiche &amp; Tricks</h4>
 					<p>Fronted</p>
 				</footer>
 			</div>
@@ -114,13 +114,13 @@
 				<div class="popup_container">
 					<span class="close" data-close-popup><i class="fa fa-times" aria-hidden="true"></i></span>
 					<div class="col nowrap">
-						<h3>Fiche & Tricks</h3>
+						<h3>Fiche &amp; Tricks</h3>
 						<div class="screen">
-							<img src="./public/assets/imgComp/ficheandtricks.png" alt="">
+							<img src="./public/assets/img/ficheandtricks-screen.png" title="Fiche &amp; Tricks" alt="Fiche &amp; Tricks">
 						</div>
 						<div class="content col nowrap col-hori-center">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ut ullam error inventore dolore doloribus vitae ipsum esse itaque, id dolorem at laboriosam quasi totam optio distinctio dolorum, est vel.</p>
-							<a href="#" title="" class="button_default">Accéder au site</a>
+							<p>Site web développé (coté front/back) pour les experts Top Contributeur de Google  afin d'améliorer leur productivité et leur capacité de réponse sur les forums officiels Google. </p>
+							<a href="http://www.vicandtips.fr/Fiche&Tricks/" target="_blank" title="" class="button_default">Accéder au site</a>
 						</div>
 					</div>
 				</div>

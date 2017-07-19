@@ -467,13 +467,7 @@ div#subheading[data-turbolinks-permanent] {
   position: relative;
 }
 div#subheading[data-turbolinks-permanent] img {
-  position: absolute;
-  top: -35px;
-  margin: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   width: 50px;
-  left: 22px;
 }
 div#subheading[data-turbolinks-permanent] h1, div#subheading[data-turbolinks-permanent] p {
   padding: 10px 5px;
@@ -488,24 +482,35 @@ div#subheading[data-turbolinks-permanent] p {
   font-size: 1em;
   max-width: 75%;
 }
-div#subheading[data-turbolinks-permanent] a {
+div#subheading[data-turbolinks-permanent] a:first-child {
+  display: block;
+  position: absolute;
+  top: -35px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0;
+  left: 22px;
+}
+div#subheading[data-turbolinks-permanent] a:last-child {
   color: #fff;
   background-color: #F05F40;
   margin-bottom: 0;
 }
-div#subheading[data-turbolinks-permanent] a:hover {
+div#subheading[data-turbolinks-permanent] a:last-child:hover {
   color: #F05F40;
   background-color: #fff;
   border-color: #F05F40;
 }
 
 @media only screen and (min-width: 600px) {
-  div#subheading[data-turbolinks-permanent] img {
+  div#subheading[data-turbolinks-permanent] a:first-child {
     position: static;
-    width: auto;
     margin: 10px auto;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+  div#subheading[data-turbolinks-permanent] a:first-child > img {
+    width: auto;
   }
 }
 section {
@@ -598,7 +603,7 @@ section.container_index > div.content_block > div.row_block#skills_row div.item 
 }
 section.container_index > div.content_block hr {
   width: 300px;
-  background: url("../imgComp/stripes.png") center left repeat-x;
+  background: url("../img/stripes.png") center left repeat-x;
   height: 30px;
   border: 0;
 }
@@ -779,7 +784,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../imgComp/top-bar.png?1500327492');
+  background: url('../img/top-bar.png?1499639325');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -947,7 +952,7 @@ section.container_competences div.skills div.title_stripes {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../imgComp/stripes.png") center left repeat-x;
+  background: url("../img/stripes.png") center left repeat-x;
 }
 section.container_competences div.skills h4 {
   background-color: #f6f6f6;
@@ -1021,6 +1026,9 @@ section.container_competences div.skills article.techno > span {
   font-style: italic;
   padding: 5px 3px;
   text-align: center;
+}
+section.container_competences div.skills article.techno > img {
+  margin-top: 15px;
 }
 
 section.container_contact form {

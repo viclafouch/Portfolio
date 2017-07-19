@@ -361,14 +361,7 @@ div#subheading[data-turbolinks-permanent] {
     background-color: #fff;
     position: relative;
 
-    img { 
-        position: absolute;
-        top: -35px;
-        margin: 0;
-        @include translateY(-50%);
-        width: 50px;
-        left: 22px;
-    }
+    img { width: 50px; }
 
     h1, p { padding: 10px 5px; text-align: center; }
 
@@ -376,17 +369,25 @@ div#subheading[data-turbolinks-permanent] {
 
     p { color: $textColor; line-height: 1.3em; font-size: 1em; max-width: 75%; }
 
-    a { color: #fff; background-color: $primaryColor; margin-bottom: 0; }
-    a:hover { color: $primaryColor; background-color: #fff; border-color: $primaryColor }
+    a:first-child {
+        display: block;
+        position: absolute;
+        top: -35px;
+        @include translateY(-50%);
+        margin: 0; left: 22px;
+    }
+
+    a:last-child { color: #fff; background-color: $primaryColor; margin-bottom: 0; }
+    a:last-child:hover { color: $primaryColor; background-color: #fff; border-color: $primaryColor }
 }
 
 @media only screen and (min-width:600px) {
     div#subheading[data-turbolinks-permanent] {
-        img {
+        a:first-child {
             position: static;
-            width: auto;
             margin: 10px auto;
             @include translateY(0);
+            & > img { width: auto; }
         }
     }
 }
@@ -463,7 +464,7 @@ section.container_index {
 
         hr {
             width: 300px;
-            background: url('../imgComp/stripes.png') center left repeat-x;
+            background: url('../img/stripes.png') center left repeat-x;
             height: 30px;
             border: 0;
         }
@@ -706,7 +707,7 @@ section.container_competences {
             width: 100%;
             margin: 0 auto;
             @include flex(row wrap, center, center);
-            background: url('../imgComp/stripes.png') center left repeat-x;
+            background: url('../img/stripes.png') center left repeat-x;
         }
 
         h4 {
@@ -772,6 +773,8 @@ section.container_competences {
             & > h5 { color: #444; text-transform: capitalize; font-size: 20px; text-align: center; color: $primaryColor; }
 
             & > span { color: #9E9E9E; font-style: italic; padding: 5px 3px; text-align: center; }
+
+            & > img { margin-top: 15px; }
 
         }
     }

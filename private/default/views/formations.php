@@ -8,7 +8,7 @@
 	<div class="content_block">
 		<div class="block" id="eemi">
 			<div class="thumbnail">
-				<img src="./public/assets/imgComp/eemi-logo.png" alt="">
+				<img src="./public/assets/img/eemi-logo.png" alt="EEMI" title="EEMI">
 			</div>
 			<div class="description col nowrap">
 				<div class="row row-hori-between nowrap row-verti-center">
@@ -28,7 +28,7 @@
 		</div>
 		<div class="block" id="digitalActive">
 			<div class="thumbnail">
-				<img src="./public/assets/imgComp/digital-active.png" alt="">
+				<img src="./public/assets/img/digital-active.png" alt="Digital Active" title="Digital Active">
 			</div>
 			<div class="description col nowrap">
 				<div class="row row-hori-between nowrap row-verti-center">
@@ -46,7 +46,7 @@
 		</div>
 		<div class="block" id="freecodecamp">
 			<div class="thumbnail">
-				<img src="./public/assets/imgComp/freecodecamp.png" alt="">
+				<img src="./public/assets/img/freecodecamp.png" alt="freeCodeCamp" title="freeCodeCamp">
 			</div>
 			<div class="description col nowrap">
 				<div class="row row-hori-between nowrap row-verti-center">
@@ -64,7 +64,7 @@
 		</div>
 		<div class="block" id="bachelor">
 			<div class="thumbnail">
-				<img src="./public/assets/imgComp/saint-paul.png" alt="">
+				<img src="./public/assets/img/saint-paul.png" alt="Lycée Saint Paul" title="Lycée Saint Paul">
 			</div>
 			<div class="description col nowrap">
 				<div class="row row-hori-between nowrap row-verti-center">
