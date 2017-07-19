@@ -46,7 +46,6 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
 
 		<!--====  Scripts  ====-->
-		<script defer src="public/lib/jquery/jquery.min.js" type="text/javascript"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script defer src="public/assets/js/min/script.min.js" type="text/javascript"></script>
 

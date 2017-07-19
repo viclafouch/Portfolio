@@ -9,7 +9,7 @@
 var popup = false,
 menuopen = false,
 i;
-const burger = document.getElementById('menuburger'),
+var burger = document.getElementById('menuburger'),
 navrow = document.getElementById('navrow'),
 url = window.location.href.split('/'),
 pageUrl = url[url.length - 1],
@@ -23,8 +23,8 @@ for (i = 0; i < itemMenu.length; ++i) {
 
 document.addEventListener("turbolinks:load", function() {
 
-	const closePopup = document.querySelectorAll('[data-close-popup]');
-	const dataWork = document.querySelectorAll('[data-popup-work]');
+	var closePopup = document.querySelectorAll('[data-close-popup]');
+	var dataWork = document.querySelectorAll('[data-popup-work]');
 
 	closePopup.forEach(function(element) {
 	 	element.addEventListener('click', function () {
@@ -44,6 +44,20 @@ document.addEventListener("turbolinks:load", function() {
 		});
 	});
 
+	function checkMenu(params) {
+		if (!navrow.classList.contains('active') && !menuopen) {
+			if (params) {
+				navrow.classList.add('active');
+				burger.classList.add('menu-open');
+				menuopen = true;
+			}
+		} else {
+			navrow.classList.remove('active');
+			burger.classList.remove('menu-open');
+			menuopen = false;
+		}
+	};
+
 	document.body.onclick = function(e) {
 		checkMenu(false);
 	}
@@ -53,92 +67,9 @@ document.addEventListener("turbolinks:load", function() {
 		e.stopPropagation();
 		checkMenu(true);
 	}
-
 });
 
-const li = navrow.querySelectorAll(':scope > *');
-li.forEach(function(element) {
-	element.addEventListener('click', function() {
-		for (var i = li.length - 1; i >= 0; i--) {
-			li[i].classList.remove('active');
-		}
-		element.classList.add('active');
-	});
-});
-
-/* Formulaire de contact */
-
-var firstname = false,
-lastname = false,
-email = false,
-message = false;
-
-const inputForm = document.querySelectorAll('.input_contact_form');
-
-inputForm.forEach(function(element) {
-	element.addEventListener('focusin', function() {
-		if (element.value == '') {
-			element.parentElement.classList.add('novalide');
-		}
-	});
-});
-
-inputForm.forEach(function(element) {
-	element.addEventListener('blur', function() {
-		element.parentElement.classList.remove('novalide');
-	});
-});
-
-inputForm.forEach(function(element) {
-	element.addEventListener('keyup', function() {
-		if (element.getAttribute('id') != 'email') {
-			if (this.value == '') {
-				this.parentElement.classList.remove('valide');
-				this.parentElement.classList.add('novalide');
-
-				if (this.getAttribute('id') == 'firstname') {
-					firstname = false;
-				}
-				else if (this.getAttribute('id') == 'lastname') {
-					lastname = false;
-				}
-				else if (this.getAttribute('id') == 'message') {
-					message = false;
-				}
-			}
-
-			else {
-				this.parentElement.classList.remove('novalide');
-				this.parentElement.classList.add('valide');
-
-				if (this.getAttribute('id') == 'firstname') {
-					firstname = true;
-				}
-				else if (this.getAttribute('id') == 'lastname') {
-					lastname = true;
-				}
-				else if (this.getAttribute('id') == 'message') {
-					message = true;
-				}
-			}
-		}
-		else {
-			if (this.value.match( /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i ) ) {
-    			this.parentElement.classList.remove('novalide');
-				this.parentElement.classList.add('valide');
-    			email = true;
-			} else {
-				this.parentElement.classList.remove('valide');
-				this.parentElement.classList.add('novalide');
-    			email = false;
-			}
-		}
-	});
-});
-
-const contactForm = document.getElementById('contact_form');
-var valide,
-human = false;
+var human = false;
 
 function recaptchaCallback() {
 	var captcha = document.querySelector('.g-recaptcha');
@@ -147,71 +78,144 @@ function recaptchaCallback() {
 	human = true;
 };
 
-contactForm.addEventListener('submit', function(event) {
-	event.preventDefault();
-	if (!firstname) {
-		document.getElementById('firstname').parentElement.classList.add('novalide');
-		valide = false;
-	}
-	if (!lastname) {
-		document.getElementById('lastname').parentElement.classList.add('novalide');
-		valide = false;
-	}
-	if (!email) {
-		document.getElementById('email').parentElement.classList.add('novalide');
-		valide = false;
-	}
-	if (!message) {
-		document.getElementById('message').parentElement.classList.add('novalide');
-		valide = false;
-	}
-	if (grecaptcha.getResponse().length == 0) {
-	  	document.querySelector('.g-recaptcha').parentElement.classList.add('novalide');
-	  	valide = human = false;
-	}
-	if (firstname && lastname && email && message && human) { valide = true; }
+document.addEventListener("DOMContentLoaded", function(event) {
 
-	if (!valide) { return false; }
+	var li = navrow.querySelectorAll(':scope > *');
+	li.forEach(function(element) {
+		element.addEventListener('click', function() {
+			for (var i = li.length - 1; i >= 0; i--) {
+				li[i].classList.remove('active');
+			}
+			element.classList.add('active');
+		});
+	});
 
-	else {
-		var http = new XMLHttpRequest();
-		var url = this.getAttribute('action');
-		var firstnameValue = document.getElementById('firstname').value;
-		var lastnameValue = document.getElementById('lastname').value;
-		var emailValue = document.getElementById('email').value;
-		var messageValue = document.getElementById('message').value;
-		var responseCaptcha = grecaptcha.getResponse();
+	/* Formulaire de contact */
 
-		http.open("POST", url, true);
+	var firstname = false,
+	lastname = false,
+	email = false,
+	message = false;
 
-		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	var inputForm = document.querySelectorAll('.input_contact_form');
 
-		http.onreadystatechange = function() {
-		    if (http.readyState == 4 && http.status == 200) {
-		        inputForm.forEach(function(element) {
-		        	element.value = '';
-		        	element.parentElement.classList.remove('valide');
-		        });
-		        grecaptcha.reset();
-		        document.querySelector('.g-recaptcha').parentElement.classList.remove('valide');
-		    }
-		}
-		http.send(encodeURI('firstname='+firstnameValue+'&lastname='+lastnameValue+'&email='+emailValue+'&message='+messageValue+'&g-recaptcha-response='+responseCaptcha));
+	inputForm.forEach(function(element) {
+		element.addEventListener('focusin', function() {
+			if (element.value == '') {
+				element.parentElement.classList.add('novalide');
+			}
+		});
+	});
+
+	inputForm.forEach(function(element) {
+		element.addEventListener('blur', function() {
+			element.parentElement.classList.remove('novalide');
+		});
+	});
+
+	inputForm.forEach(function(element) {
+		element.addEventListener('keyup', function() {
+			if (element.getAttribute('id') != 'email') {
+				if (this.value == '') {
+					this.parentElement.classList.remove('valide');
+					this.parentElement.classList.add('novalide');
+
+					if (this.getAttribute('id') == 'firstname') {
+						firstname = false;
+					}
+					else if (this.getAttribute('id') == 'lastname') {
+						lastname = false;
+					}
+					else if (this.getAttribute('id') == 'message') {
+						message = false;
+					}
+				}
+
+				else {
+					this.parentElement.classList.remove('novalide');
+					this.parentElement.classList.add('valide');
+
+					if (this.getAttribute('id') == 'firstname') {
+						firstname = true;
+					}
+					else if (this.getAttribute('id') == 'lastname') {
+						lastname = true;
+					}
+					else if (this.getAttribute('id') == 'message') {
+						message = true;
+					}
+				}
+			}
+			else {
+				if (this.value.match( /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i ) ) {
+	    			this.parentElement.classList.remove('novalide');
+					this.parentElement.classList.add('valide');
+	    			email = true;
+				} else {
+					this.parentElement.classList.remove('valide');
+					this.parentElement.classList.add('novalide');
+	    			email = false;
+				}
+			}
+		});
+	});
+
+	var contactForm = document.getElementById('contact_form');
+	var valide;
+
+	if (contactForm) {
+		contactForm.addEventListener('submit', function(event) {
+			event.preventDefault();
+			if (!firstname) {
+				document.getElementById('firstname').parentElement.classList.add('novalide');
+				valide = false;
+			}
+			if (!lastname) {
+				document.getElementById('lastname').parentElement.classList.add('novalide');
+				valide = false;
+			}
+			if (!email) {
+				document.getElementById('email').parentElement.classList.add('novalide');
+				valide = false;
+			}
+			if (!message) {
+				document.getElementById('message').parentElement.classList.add('novalide');
+				valide = false;
+			}
+			if (grecaptcha.getResponse().length == 0) {
+			  	document.querySelector('.g-recaptcha').parentElement.classList.add('novalide');
+			  	valide = human = false;
+			}
+			if (firstname && lastname && email && message && human) { valide = true; }
+
+			if (!valide) { return false; }
+
+			else {
+				var http = new XMLHttpRequest();
+				var url = this.getAttribute('action');
+				var firstnameValue = document.getElementById('firstname').value;
+				var lastnameValue = document.getElementById('lastname').value;
+				var emailValue = document.getElementById('email').value;
+				var messageValue = document.getElementById('message').value;
+				var responseCaptcha = grecaptcha.getResponse();
+
+				http.open("POST", url, true);
+
+				http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+				http.onreadystatechange = function() {
+				    if (http.readyState == 4 && http.status == 200) {
+				        inputForm.forEach(function(element) {
+				        	element.value = '';
+				        	element.parentElement.classList.remove('valide');
+				        });
+				        grecaptcha.reset();
+				        document.querySelector('.g-recaptcha').parentElement.classList.remove('valide');
+				    }
+				}
+				http.send(encodeURI('firstname='+firstnameValue+'&lastname='+lastnameValue+'&email='+emailValue+'&message='+messageValue+'&g-recaptcha-response='+responseCaptcha));
+			}
+
+		});
 	}
-
 });
-
-function checkMenu(params) {
-	if (!navrow.classList.contains('active') && !menuopen) {
-		if (params) {
-			navrow.classList.add('active');
-			burger.classList.add('menu-open');
-			menuopen = true;
-		}
-	} else {
-		navrow.classList.remove('active');
-		burger.classList.remove('menu-open');
-		menuopen = false;
-	}
-};
-

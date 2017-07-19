@@ -15,6 +15,7 @@
         }
 
         if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) { $email = true; }
+        
 		else { $email = false; }
 
 		if ($email && $human) {
