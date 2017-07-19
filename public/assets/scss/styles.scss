@@ -18,14 +18,14 @@
 //=====  CHOOSE YOUR ICONS  ======\\
 
 // Do you need Material Icon ?
-$material_icon: true;
+$material_icon: false;
 
 @if $material_icon == true {
    	@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 }
 
 // Do you need font Awesome ?
-$font_awesome: true;
+$font_awesome: false;
 
 @if $font_awesome == true {
    	@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
@@ -768,7 +768,7 @@ section.container_competences {
             footer { text-align: center; }
         }
 
-        article.techno { padding: 20px 0; margin: 20px;
+        article.techno { padding: 20px 10px; margin: 20px;
 
             & > h5 { color: #444; text-transform: capitalize; font-size: 20px; text-align: center; color: $primaryColor; }
 

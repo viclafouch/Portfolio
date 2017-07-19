@@ -76,8 +76,7 @@
 		    			<span>1 an d'expérience</span>
 					    <ul>
 							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Android</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MVC</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MYSQL</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Objet</li>
 					    </ul>
 					</footer>
 				</article>
@@ -89,9 +88,8 @@
 		    			<h5>swift</h5>
 		    			<span>1 an d'expérience</span>
 					    <ul>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Android</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MVC</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MYSQL</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> IOS</li>
+							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Objet</li>
 					    </ul>
 					</footer>
 				</article>	

@@ -3,34 +3,34 @@
 	<head>
 		<title><?= $title; ?></title>
 
-		<!--====  LIVERELOAD  ====-->
-		<!-- YOU NEED LIVERELOAD APPLICATION ON YOUR COMPUTER -->
-		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
-   		<!--====  Meta  ====-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
  		<meta name="description" content="<?= $description; ?>" />
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="">
-		<meta name="msapplication-navbutton-color" content="">
-		<meta name="apple-mobile-web-app-capable" content="">
-		<meta name="apple-mobile-web-app-status-bar-style" content="">
+		<meta name="theme-color" content="#f6f6f6">
+		<meta name="msapplication-navbutton-color" content="#f6f6f6">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-		<meta name="twitter:card" content="" />
-		<meta name="twitter:site" content="" />
-		<meta name="twitter:creator" content="" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@VicAndTips" />
+		<meta name="twitter:title" content="Portfolio de Victor de la Fouchardière" />
+		<meta name="twitter:description" content="Besoin d'un développeur web ?" />
+		<meta name="twitter:image" content="https://www.victor-de-la-fouchardiere/victor-de-la-fouchardiere.jpg" />
+		<meta name="twitter:image:alt" content="Portfolio Victor de la Fouchardière" />
 
-		<meta property="og:type"        content="" />
-		<meta property="og:title"       content="" />
-		<meta property="og:description" content="" />
-		<meta property="og:url"         content="" />
-		<meta property="og:site_name"   content="" />
-		<meta property="og:image"       content="" />
+		<meta property="og:type"        content="profile" />
+		<meta property="og:title"       content="Portfolio de Victor de la Fouchardière" />
+		<meta property="og:description" content="Besoin d'un développeur web ? Découvrez le profil de cet étudiant en programmation web" />
+		<meta property="og:url"         content="https://victor-de-la-fouchardiere.fr/" />
+		<meta property="og:site_name"   content="Victor de la Fouchardière | Portfolio" />
+		<meta property="og:image"       content="https://www.victor-de-la-fouchardiere/victor-de-la-fouchardiere.png" />
+		<meta property="og:locale"      content="fr" />
 
-		<meta property="fb:app_id" content="" />
+		<meta property="fb:app_id" content="124333614845929" />
 
 		<link href="https://fonts.googleapis.com/css?family=ABeeZee%7CKarma" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    		<link rel="stylesheet" type="text/css" href="public/assets/css/styles.min.css">
 
    		<link rel="icon" type="image/png" href="favicon.png"/>
@@ -39,10 +39,6 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
 
-		<script src='https://www.google.com/recaptcha/api.js'></script>
-		<script defer src="public/assets/js/min/script.min.js" type="text/javascript"></script>
-
-		<script defer src="public/lib/turbolinks/turbolinks.min.js"></script>
 		<meta name="turbolinks-cache-control" content="no-cache">
 	</head>
 	<body>

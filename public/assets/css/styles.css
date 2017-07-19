@@ -6,8 +6,6 @@
  * if you need loader : https://codepen.io/Viclafouch/ or https://github.com/viclafouch/Loaders
  *
  */
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 /* ----------  Classes  ---------- */
 .row, .col {
   display: -webkit-box;
@@ -784,7 +782,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../img/top-bar.png?1499639325');
+  background: url('../img/top-bar.png?1500492658');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -1011,7 +1009,7 @@ section.container_competences div.skills div.frameworks_row article.skill_card f
   text-align: center;
 }
 section.container_competences div.skills article.techno {
-  padding: 20px 0;
+  padding: 20px 10px;
   margin: 20px;
 }
 section.container_competences div.skills article.techno > h5 {
