@@ -10,28 +10,28 @@
 				<span>Prénom</span>
 				<div class="row nowrap">
 					<span class="ico"><i class="fa fa-user" aria-hidden="true"></i></span>
-					<input spellcheck="false" id="firstname" required="required" class="input_contact_form" type="text" name="firstname" value="">
+					<input spellcheck="false" id="firstname" class="input_contact_form" type="text" name="firstname" value="">
 				</div>
 			</label>
 			<label class="field_label col nowrap" for="lastname">
 				<span>Nom</span>
 				<div class="row nowrap">
 					<span class="ico"><i class="fa fa-user" aria-hidden="true"></i></span>
-					<input spellcheck="false" id="lastname" required="required" class="input_contact_form" type="text" name="lastname" value="">
+					<input spellcheck="false" id="lastname" class="input_contact_form" type="text" name="lastname" value="">
 				</div>
 			</label>
 			<label class="field_label col nowrap" for="email">
 				<span>Email</span>
 				<div class="row nowrap">
 					<span class="ico"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-					<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" spellcheck="false" id="email" class="input_contact_form" required="required" type="email" name="email" value="">
+					<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" spellcheck="false" id="email" class="input_contact_form" type="email" name="email" value="">
 				</div>
 			</label>
 			<label class="field_label col nowrap" for="message">
 				<span>Votre message</span>
 				<div class="row nowrap">
 					<span class="ico"><i class="fa fa-pencil-square" aria-hidden="true"></i></span>
-					<textarea rows="10" name="message" id="message" required="required" class="input_contact_form" spellcheck="false" autocomplete="off"></textarea>
+					<textarea rows="10" name="message" id="message" class="input_contact_form" spellcheck="false" autocomplete="off"></textarea>
 				</div>
 			</label>
 			<label class="field_label col nowrap" data-captcha>

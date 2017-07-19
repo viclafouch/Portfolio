@@ -20,7 +20,7 @@
 				</footer>
 			</div>
 			<div class="popup_work" id="codepen">
-				<div class="popup_overlay"></div>
+				<div class="popup_overlay" data-close-popup></div>
 				<div class="popup_container">
 					<span class="close" data-close-popup><i class="fa fa-times" aria-hidden="true"></i></span>
 					<div class="col nowrap">
@@ -50,7 +50,7 @@
 				</footer>
 			</div>
 			<div class="popup_work" id="beparis">
-				<div class="popup_overlay"></div>
+				<div class="popup_overlay" data-close-popup></div>
 				<div class="popup_container">
 					<span class="close" data-close-popup><i class="fa fa-times" aria-hidden="true"></i></span>
 					<div class="col nowrap">
@@ -80,7 +80,7 @@
 				</footer>
 			</div>
 			<div class="popup_work" id="tutobwim">
-				<div class="popup_overlay"></div>
+				<div class="popup_overlay" data-close-popup></div>
 				<div class="popup_container">
 					<span class="close" data-close-popup><i class="fa fa-times" aria-hidden="true"></i></span>
 					<div class="col nowrap">
@@ -110,7 +110,7 @@
 				</footer>
 			</div>
 			<div class="popup_work" id="ficheandtricks">
-				<div class="popup_overlay"></div>
+				<div class="popup_overlay" data-close-popup></div>
 				<div class="popup_container">
 					<span class="close" data-close-popup><i class="fa fa-times" aria-hidden="true"></i></span>
 					<div class="col nowrap">
