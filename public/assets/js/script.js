@@ -21,18 +21,42 @@ for (i = 0; i < itemMenu.length; ++i) {
   	}
 }
 
-$(document).on('click', '.popup_overlay, [data-close-popup]', function(){
-    if (popup) {
-        $('.popup_work').removeClass('active');
-        popup = false;
-    }
+document.addEventListener("turbolinks:load", function() {
+
+	const closePopup = document.querySelectorAll('[data-close-popup]');
+	const dataWork = document.querySelectorAll('[data-popup-work]');
+
+	closePopup.forEach(function(element) {
+	 	element.addEventListener('click', function () {
+	        if (popup) {
+	        	var article = document.getElementsByClassName('popup_work active');
+	        	article[0].classList.remove('active');
+	        	popup = false;
+	        }
+	    });
+	});
+
+	dataWork.forEach(function(element) {
+		element.addEventListener('click', function() {
+			let id = this.getAttribute('data-popup-work');
+			document.getElementById(id).classList.add('active');
+			popup = true;
+		});
+	});
+
+	document.body.onclick = function(e) {
+		checkMenu(false);
+	}
+
+
+	burger.onclick = function(e) {
+		e.stopPropagation();
+		checkMenu(true);
+	}
+
 });
 
-$(document).on('click', '[data-popup-work]', function(){
-    let id = $(this).data('popup-work');
-    $('#'+id).addClass('active');
-    popup = true;
-});
+
 
 $(document).on('click', '#nav li', function() {
 	$(this).attr('data-appened', 'true');
@@ -126,56 +150,18 @@ $(document).on('submit', '#contact_form', function(event) {
 	return false;
 });
 
-// $(document).on('click', '.menuburger', function(e) {
-// 	e.stopPropagation();
-// 	$(this).addClass('menu-open');
-// 	console.log('burger');
-// 	$('.navrow').addClass('active');
-// 	menuopen = true;
-// });
-
-// $(document).on('click', '.menu-open', function() {
-// 	$(this).removeClass('menu-open');
-// 	$('.navrow').removeClass('active');
-// 	menuopen = false;
-// });
-
-// $(document).on('click', 'body', function(e){
-// 	if (menuopen) {
-// 		console.log('body');
-// 		$('.menuburger').removeClass('menu-open');
-// 		$('.navrow').removeClass('active');
-// 		menuopen = false;
-// 	}
-// })
 
 function checkMenu(params) {
-	console.log('function');
 	if (!navrow.classList.contains('active') && !menuopen) {
 		if (params) {
-			console.log('params')
 			navrow.classList.add('active');
 			burger.classList.add('menu-open');
 			menuopen = true;
 		}
 	} else {
-		console.log('il passe ici');
 		navrow.classList.remove('active');
 		burger.classList.remove('menu-open');
 		menuopen = false;
 	}
 };
 
-document.body.onclick = function(e) {
-	checkMenu(false);
-}
-
-
-burger.onclick = function(e) {
-	e.stopPropagation();
-	checkMenu(true);
-}
-
-
-// document.addEventListener("turbolinks:load", function() {
-// })

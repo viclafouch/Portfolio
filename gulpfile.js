@@ -48,13 +48,13 @@ gulp.task('image', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src('public/assets/js/*.js')
-		.pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-		.pipe(uglify().on('error', function(e){
-	         console.log(e);
-	    }))
+		// .pipe(sourcemaps.init())
+  //       .pipe(babel({
+  //           presets: ['es2015']
+  //       }))
+		// .pipe(uglify().on('error', function(e){
+	 //         console.log(e);
+	 //    }))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('public/assets/js/min'))
 
