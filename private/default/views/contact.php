@@ -1,4 +1,4 @@
-<?php include_once('/layouts/header.php'); ?>
+<?php include_once('private/default/views/layouts/header.php'); ?>
 <section class="container container_contact">
 	<header>
 		<h2>Contact</h2>
@@ -38,11 +38,12 @@
 				<span>Sécurité</span>
 				<div class="row nowrap row-verti-center">
 					<span class="ico"><i class="fa fa-shield" aria-hidden="true"></i></span>
-					<div class="g-recaptcha" data-callback="recaptchaCallback"  data-sitekey="6LdI-SgUAAAAAAWcm8waKfihXSM710e-reVZk_-9"></div>
+					<div class="g-recaptcha" data-callback="recaptchaCallback"  data-sitekey="6LczzykUAAAAAAJL2bPrH5jMQBsvls9dWo0IBZHy"></div>
 				</div>
 			</label>
-			<button type="submit">Envoyer</button>
+			<button type="submit" id="submit-btn">Envoyer</button>
 		</form>
 	</div>
 </section>
-<?php include_once('/layouts/footer.php'); ?>
+
+<?php include_once('private/default/views/layouts/footer.php'); ?>

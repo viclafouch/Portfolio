@@ -1,4 +1,4 @@
-	<?php include_once('/layouts/header.php'); ?>
+<?php include_once('private/default/views/layouts/header.php'); ?>
 
 <section class="container_competences">
 	<header>
@@ -113,7 +113,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>bootstrap</h5>
-		    			<span>2 ans d'expérience</span>
+		    			<span>1 ans d'expérience</span>
 					</footer>
 				</article>
 				<article class="skill_card" id="materialize">
@@ -122,7 +122,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>materialize</h5>
-		    			<span>2 ans d'expérience</span>
+		    			<span>1 ans d'expérience</span>
 					</footer>
 				</article>
 				<article class="skill_card" id="react">
@@ -131,7 +131,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>react</h5>
-		    			<span>2 ans d'expérience</span>
+		    			<span> 2 mois+ d'expérience</span>
 					</footer>
 				</article>
 			</div>
@@ -169,4 +169,4 @@
 	</div>
 </section>
 
-<?php include_once('/layouts/footer.php'); ?>
+<?php include_once('private/default/views/layouts/footer.php'); ?>

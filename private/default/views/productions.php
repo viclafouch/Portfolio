@@ -1,4 +1,4 @@
-<?php include_once('/layouts/header.php'); ?>
+<?php include_once('private/default/views/layouts/header.php'); ?>
 
 <section class="container container_portfolio">
 	<header>
@@ -129,4 +129,4 @@
 	</div>
 </section>
 
-<?php include_once('/layouts/footer.php'); ?>
+<?php include_once('private/default/views/layouts/footer.php'); ?>

@@ -16,22 +16,18 @@
 		<meta name="twitter:site" content="@VicAndTips" />
 		<meta name="twitter:title" content="Portfolio de Victor de la Fouchardière" />
 		<meta name="twitter:description" content="Besoin d'un développeur web ?" />
-		<meta name="twitter:image" content="https://www.victor-de-la-fouchardiere/victor-de-la-fouchardiere.jpg" />
-		<meta name="twitter:image:alt" content="Portfolio Victor de la Fouchardière" />
+		<meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.jpg" />
 
-		<meta property="og:type"        content="profile" />
+		<meta property="og:type"        content="website" />
 		<meta property="og:title"       content="Portfolio de Victor de la Fouchardière" />
 		<meta property="og:description" content="Besoin d'un développeur web ? Découvrez le profil de cet étudiant en programmation web" />
-		<meta property="og:url"         content="https://victor-de-la-fouchardiere.fr/" />
+		<meta property="og:url"         content="https://www.victor-de-la-fouchardiere.fr" />
 		<meta property="og:site_name"   content="Victor de la Fouchardière | Portfolio" />
-		<meta property="og:image"       content="https://www.victor-de-la-fouchardiere/victor-de-la-fouchardiere.png" />
-		<meta property="og:locale"      content="fr" />
-
+		<meta property="og:image"       content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.png" />
 		<meta property="fb:app_id" content="124333614845929" />
 
-		<link href="https://fonts.googleapis.com/css?family=ABeeZee%7CKarma" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    		<link rel="stylesheet" type="text/css" href="public/assets/css/styles.min.css">
+   		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
    		<link rel="icon" type="image/png" href="favicon.png"/>
    		<link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png" />
@@ -39,7 +35,7 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
 
-		<meta name="turbolinks-cache-control" content="no-cache">
+		<link rel="alternate" href="http://www.victor-de-la-fouchardiere.fr" hreflang="fr-fr" />
 	</head>
 	<body>
 		<header id="header" data-turbolinks-permanent>
@@ -71,8 +67,8 @@
 		</nav>
 		<div id="subheading" data-turbolinks-permanent>
 			<div class="container col col-verti-center col-hori-center nowrap">
-				<a href="/"><img class="logo" src="./public/assets/img/logo-de-la-fouchardiere-victor.png" alt="Victor de la Fouchardiere Logo"></a>
-				<h1>Besoin d'un développeur web ?</h1>
+				<a href="/" id="logo"><img class="logo" src="./public/assets/img/logo-de-la-fouchardiere-victor.png" alt="Victor de la Fouchardiere Logo"></a>
+				<h1>Besoin d'un développeur web&nbsp;?</h1>
 				<p>Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.</p>
 				<a class="button_default" target="_blank" download href="CV-Victor_de_la_Fouchardiere" title=""><i class="fa fa-download" aria-hidden="true"></i> Télécharger/Imprimer le CV</a>
 			</div>

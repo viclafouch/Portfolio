@@ -226,6 +226,12 @@ header[data-turbolinks-permanent] {
     height: 50px;
     @include box-sizing(border-box);
 
+    & > div { line-height: 20px; }
+
+    div.heading_contact a { display: none; }
+
+    @media only screen and (min-width:500px) { div.heading_contact a { display: inline-block; } }
+
     a { 
         display: inline-block; 
         text-decoration:none; 
@@ -233,6 +239,7 @@ header[data-turbolinks-permanent] {
         color: $textColor;
         @include single-transition(color, 0.3s, ease, 0s);
     }
+
     a:hover { color: $primaryColor; }
 }
 
@@ -363,11 +370,11 @@ div#subheading[data-turbolinks-permanent] {
 
     img { width: 50px; }
 
-    h1, p { padding: 10px 5px; text-align: center; }
+    h1, p { text-align: center; }
 
-    h1 { margin: 15px 0; }
+    h1 { margin: 15px 0; padding: 10px 15px; }
 
-    p { color: $textColor; line-height: 1.3em; font-size: 1em; max-width: 75%; }
+    p { color: $textColor; line-height: 1.3em; max-width: 75%; padding: 10px 5px; }
 
     a:first-child {
         display: block;
@@ -628,7 +635,7 @@ section.container_portfolio {
     & > div.row { min-height: 400px; padding: 0 5px; }
 
     article.work {
-        width: 50%;
+        width: 100%;
         float: left;
         margin-bottom: 30px;
         padding: 10px;
@@ -691,6 +698,12 @@ section.container_portfolio {
             div.overlay { @include visible(true); }
             div.overlay span { @include transform(translate(-50%, -50%) scale(1)); }
         }
+    }
+}
+
+@media only screen and (min-width:500px) {
+    section.container_portfolio article.work {
+        width: 50%;
     }
 }
 
@@ -801,7 +814,7 @@ section.container_contact {
                 background-color: #fafafa;
                 width: 40px;
                 border-right: 1px solid rgbaExpress(black, 0.1);
-                display: block;
+                display: none;
                 position: relative;
                 & > i {
                     position: absolute;
@@ -809,6 +822,13 @@ section.container_contact {
                     @include translate(-50%, -50%);
                 }
             }
+
+            @media only screen and (min-width:500px) {
+                span.ico {
+                    display: block;
+                }
+            }
+
 
             input, textarea {
                 outline: none;
@@ -847,6 +867,12 @@ section.container_contact {
             padding: 10px 20px;
 
             &:hover { background-color: $primaryColor; border-color: #fff; color: #fff; }
+        }
+
+        span.valideMessage {
+            text-align: center;
+            color: #27ae60;
+            padding: 20px 10px;
         }
     }
 }

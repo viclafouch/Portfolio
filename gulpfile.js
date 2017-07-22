@@ -1,5 +1,7 @@
 /*----------  Récupération des modules  ----------*/
 
+const inProduction = true;
+
 const gulp = require('gulp'),
 	compass = require('gulp-compass'),
 	autoprefixer = require('gulp-autoprefixer'),
@@ -8,7 +10,9 @@ const gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	sourcemaps = require('gulp-sourcemaps'),
 	babel = require('gulp-babel'),
+	concat = require('gulp-concat'),
 	print = require('gulp-print'),
+	runSequence = require('run-sequence'),
 	imagemin = require('gulp-imagemin');
 
 /*----------  Styles  ----------*/
@@ -46,21 +50,50 @@ gulp.task('styles', function() {
 
 /*----------  Scripts  ----------*/
 
-gulp.task('scripts', function() {
-	return gulp.src('public/assets/js/*.js')
-		.pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-		.pipe(uglify().on('error', function(e){
-	         console.log(e);
-	    }))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('public/assets/js/min'))
+if (!inProduction) {
 
-		.pipe(print(function(filepath) {
-	      return "file created : " + filepath;
-	    }))
+	gulp.task('myJs', function() {
+		return gulp.src('public/assets/js/*.js')
+			.pipe(sourcemaps.init())
+	 		.pipe(babel({
+	            presets: ['es2015']
+	        }))
+			.pipe(uglify().on('error', function(e){
+		         console.log(e);
+		    }))
+			.pipe(rename({ suffix: '.min' }))
+			.pipe(gulp.dest('public/assets/js/min'))
+
+			.pipe(print(function(filepath) {
+		      return "file created : " + filepath;
+		    }))
+	});
+}
+else {
+	gulp.task('myJs', function() {
+		return gulp.src('public/assets/js/*.js')
+			.pipe(sourcemaps.init())
+			.pipe(rename({ suffix: '.min' }))
+			.pipe(gulp.dest('public/assets/js/min'))
+
+			.pipe(print(function(filepath) {
+		      return "file created : " + filepath;
+		    }))
+	});
+}
+
+gulp.task('concat', function() {
+  gulp.src(['public/lib/turbolinks/*.js','public/assets/js/min/*.js'])
+    .pipe(concat('script.min.js'))
+    .pipe(gulp.dest('public/assets/js/min'));
+});
+
+gulp.task('scripts', function() {
+	runSequence('myJs','concat');
+});
+
+
+gulp.task('default', ['styles', 'scripts', 'watch'], function() {
 });
 
 /*----------  Live  ----------*/
@@ -72,6 +105,3 @@ gulp.task('watch', function() {
 });
 
 /*----------  Defaut  ----------*/
-
-// Default task
-gulp.task('default', ['styles', 'scripts', 'watch']);

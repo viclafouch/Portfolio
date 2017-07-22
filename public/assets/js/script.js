@@ -4,13 +4,12 @@
 
 // Your code will minify in /min
 
-// Barre de loader verticale
-
 var popup = false,
 menuopen = false,
 i;
 var burger = document.getElementById('menuburger'),
 navrow = document.getElementById('navrow'),
+logo = document.getElementById('logo'),
 url = window.location.href.split('/'),
 pageUrl = url[url.length - 1],
 itemMenu = document.querySelectorAll("a.item-href");
@@ -42,6 +41,12 @@ document.addEventListener("turbolinks:load", function() {
 			document.getElementById(id).classList.add('active');
 			popup = true;
 		});
+	});
+
+	logo.addEventListener('click', function() {
+		for (i = 0; i < itemMenu.length; ++i) {
+		  	itemMenu[i].parentElement.classList.remove('active');
+		}
 	});
 
 	function checkMenu(params) {
@@ -211,6 +216,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				        });
 				        grecaptcha.reset();
 				        document.querySelector('.g-recaptcha').parentElement.classList.remove('valide');
+				        var btn = document.getElementById("submit-btn");
+					  	var mySpan = document.createElement("span");
+					  	mySpan.setAttribute("class", "valideMessage");
+					  	mySpan.innerHTML = "Votre message a bien été envoyé !";
+					  	btn.parentNode.replaceChild(mySpan, btn);	
 				    }
 				}
 				http.send(encodeURI('firstname='+firstnameValue+'&lastname='+lastnameValue+'&email='+emailValue+'&message='+messageValue+'&g-recaptcha-response='+responseCaptcha));

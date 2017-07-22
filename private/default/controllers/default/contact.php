@@ -2,7 +2,7 @@
 
 	if (!empty($_POST)) {
 		$captcha= $_POST['g-recaptcha-response'];
-		$secretKey = "6LdI-SgUAAAAAHQ17S8Rb04JThAWsCibIidYP_f_";
+		$secretKey = "6LczzykUAAAAAE9R-TDyrTV0XoaOEIpHRaLsb5lN";
         $ip = $_SERVER['REMOTE_ADDR'];
 
         $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
@@ -29,7 +29,7 @@
 			$message = $message;
 
 			$headers = "From: $from"; 
-			$send = @mail($to, $subject, $message, $headers, "-f " . $from);   
+			$send = @mail($to, $subject, htmlspecialchars_decode($message), $headers, "-f " . $from);   
 
 			if ($send) {
 				echo "email envoyé";

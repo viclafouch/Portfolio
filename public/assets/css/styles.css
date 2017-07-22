@@ -262,6 +262,17 @@ header[data-turbolinks-permanent] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+header[data-turbolinks-permanent] > div {
+  line-height: 20px;
+}
+header[data-turbolinks-permanent] div.heading_contact a {
+  display: none;
+}
+@media only screen and (min-width: 500px) {
+  header[data-turbolinks-permanent] div.heading_contact a {
+    display: inline-block;
+  }
+}
 header[data-turbolinks-permanent] a {
   display: inline-block;
   text-decoration: none;
@@ -468,17 +479,17 @@ div#subheading[data-turbolinks-permanent] img {
   width: 50px;
 }
 div#subheading[data-turbolinks-permanent] h1, div#subheading[data-turbolinks-permanent] p {
-  padding: 10px 5px;
   text-align: center;
 }
 div#subheading[data-turbolinks-permanent] h1 {
   margin: 15px 0;
+  padding: 10px 15px;
 }
 div#subheading[data-turbolinks-permanent] p {
   color: #444;
   line-height: 1.3em;
-  font-size: 1em;
   max-width: 75%;
+  padding: 10px 5px;
 }
 div#subheading[data-turbolinks-permanent] a:first-child {
   display: block;
@@ -782,7 +793,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../img/top-bar.png?1500492658');
+  background: url('../img/top-bar.png?1500718347');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -825,7 +836,7 @@ section.container_portfolio > div.row {
   padding: 0 5px;
 }
 section.container_portfolio article.work {
-  width: 50%;
+  width: 100%;
   float: left;
   margin-bottom: 30px;
   padding: 10px;
@@ -929,6 +940,11 @@ section.container_portfolio article.work:hover div.overlay span {
   transform: translate(-50%, -50%) scale(1);
 }
 
+@media only screen and (min-width: 500px) {
+  section.container_portfolio article.work {
+    width: 50%;
+  }
+}
 @media only screen and (min-width: 768px) {
   section.container_portfolio article.work {
     width: 25%;
@@ -1070,7 +1086,7 @@ section.container_contact form label.field_label span.ico {
   background-color: #fafafa;
   width: 40px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  display: block;
+  display: none;
   position: relative;
 }
 section.container_contact form label.field_label span.ico > i {
@@ -1079,6 +1095,11 @@ section.container_contact form label.field_label span.ico > i {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 500px) {
+  section.container_contact form label.field_label span.ico {
+    display: block;
+  }
 }
 section.container_contact form label.field_label input, section.container_contact form label.field_label textarea {
   outline: none;
@@ -1123,4 +1144,9 @@ section.container_contact form button:hover {
   background-color: #F05F40;
   border-color: #fff;
   color: #fff;
+}
+section.container_contact form span.valideMessage {
+  text-align: center;
+  color: #27ae60;
+  padding: 20px 10px;
 }

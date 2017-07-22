@@ -1,4 +1,4 @@
-<?php include_once('/layouts/header.php'); ?>
+<?php include_once('private/default/views/layouts/header.php'); ?>
 
 <section class="container container_index">
 	<div class="content_block">
@@ -30,8 +30,8 @@
 				<div class="item">
 					<div class="col col-hori-center nowrap">
 						<?php 
-							if (file_exists('./public/assets/img/settings.svg')) {
-								include_once('./public/assets/img/settings.svg');
+							if (file_exists('./public/assets/img/smartphone.svg')) {
+								include_once('./public/assets/img/smartphone.svg');
 							} 
 						?>
 						<span>Responsive design adapté</span>
@@ -41,8 +41,8 @@
 				<div class="item">
 					<div class="col col-hori-center nowrap">
 						<?php 
-							if (file_exists('./public/assets/img/settings.svg')) {
-								include_once('./public/assets/img/settings.svg'); 
+							if (file_exists('./public/assets/img/checked.svg')) {
+								include_once('./public/assets/img/checked.svg'); 
 							}
 						?>
 						<span>Code propre et soigné</span>
@@ -54,4 +54,4 @@
 	</div>
 </section>
 
-<?php include_once('/layouts/footer.php'); ?>
+<?php include_once('private/default/views/layouts/footer.php'); ?>

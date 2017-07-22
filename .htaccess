@@ -1,6 +1,10 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-
-RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 RewriteRule formations index.php?module=default&action=formations
 RewriteRule productions index.php?module=default&action=productions
@@ -9,3 +13,25 @@ RewriteRule contact index.php?module=default&action=contact
 
 ErrorDocument 404 /404.php
 ErrorDocument 403 /404.php
+
+# BEGIN Expire headers
+<IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresDefault "access plus 7200 seconds"
+ ExpiresByType image/jpg "access plus 2592000 seconds"
+ ExpiresByType image/jpeg "access plus 2592000 seconds"
+ ExpiresByType image/png "access plus 2592000 seconds"
+ ExpiresByType image/gif "access plus 2592000 seconds"
+ AddType image/x-icon .ico
+ ExpiresByType image/ico "access plus 2592000 seconds"
+ ExpiresByType image/icon "access plus 2592000 seconds"
+ ExpiresByType image/x-icon "access plus 2592000 seconds"
+ ExpiresByType text/css "access plus 2592000 seconds"
+ ExpiresByType text/javascript "access plus 2592000 seconds"
+ ExpiresByType text/html "access plus 7200 seconds"
+ ExpiresByType application/xhtml+xml "access plus 7200 seconds"
+ ExpiresByType application/javascript A2592000
+ ExpiresByType application/x-javascript "access plus 2592000 seconds"
+ ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+</IfModule>
+# END Expire headers
