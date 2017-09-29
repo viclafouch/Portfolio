@@ -16,7 +16,7 @@
 				</header>
 				<footer class="footer_work">
 					<h4>Codepen</h4>
-					<p>Fronted</p>
+					<p>FrontEnd</p>
 				</footer>
 			</div>
 			<div class="popup_work" id="codepen">
@@ -46,7 +46,7 @@
 				</header>
 				<footer class="footer_work">
 					<h4>BeParis</h4>
-					<p>Fronted</p>
+					<p>FrontEnd</p>
 				</footer>
 			</div>
 			<div class="popup_work" id="beparis">
@@ -76,7 +76,7 @@
 				</header>
 				<footer class="footer_work">
 					<h4>TutoBwim.fr</h4>
-					<p>Fronted</p>
+					<p>FrontEnd</p>
 				</footer>
 			</div>
 			<div class="popup_work" id="tutobwim">
@@ -106,7 +106,7 @@
 				</header>
 				<footer class="footer_work">
 					<h4>Fiche &amp; Tricks</h4>
-					<p>Fronted</p>
+					<p>FrontEnd, BackEnd</p>
 				</footer>
 			</div>
 			<div class="popup_work" id="ficheandtricks">
@@ -120,7 +120,7 @@
 						</div>
 						<div class="content col nowrap col-hori-center">
 							<p>Site web développé (coté front/back) pour les experts Top Contributeur de Google  afin d'améliorer leur productivité et leur capacité de réponse sur les forums officiels Google. </p>
-							<a href="http://www.vicandtips.fr/Fiche&Tricks/" target="_blank" title="" class="button_default">Accéder au site</a>
+							<a href="http://ficheandtricks.vicandtips.fr" target="_blank" title="" class="button_default">Accéder au site</a>
 						</div>
 					</div>
 				</div>

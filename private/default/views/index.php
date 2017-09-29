@@ -24,7 +24,7 @@
 							}
 						?>
 						<span>Développement de A à Z</span>
-						<p>Créer des sites web complets coté utilisateur et coté serveur</p>
+						<p>Créer des sites web complets coté client et coté serveur</p>
 					</div>
 				</div>
 				<div class="item">

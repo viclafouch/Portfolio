@@ -35,7 +35,7 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
 
-		<link rel="alternate" href="http://www.victor-de-la-fouchardiere.fr" hreflang="fr-fr" />
+		<link rel="alternate" href="http://www.victor-de-la-fouchardiere.fr" hreflang="fr" />
 	</head>
 	<body>
 		<header id="header" data-turbolinks-permanent>
