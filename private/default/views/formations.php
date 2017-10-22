@@ -20,7 +20,7 @@
 				</div>
 				<h4>EEMI</h4>
 				<ul>
-					<li>- 2ème année à l'Ecole Européenne des Métiers de L'Internet</li>
+					<li>- 3ème année à l'Ecole Européenne des Métiers de L'Internet</li>
 					<li>- Connaissances acquises dans : Webmarketing / Communication digitale / Webdesign / Développement web / Gestion de Projet</li>
 					<li>- Objectif : Licence + Master (BAC +5)</li>
 				</ul>
@@ -38,9 +38,11 @@
 					</p>
 					<a class="button_default" title="" target="_blank" href="http://digitalactive.withgoogle.com/"><i class="fa fa-external-link" aria-hidden="true"></i> A propos</a>
 				</div>
-				<h4>Certification Google</h4>
+				<h4>Certifications Google</h4>
 				<ul>
-					<li>Digital Active est une formation au marketing digital, gratuite et certifiante, proposée par Google.</li>
+					<li>- <a href="Certification-Digital-Active.pdf" target="_blank">Digital Active</a> (Google)</li>
+					<li>- <a href="Certification-Google-Partners.pdf" target="_blank">Conception de sites mobiles</a> (Google)</li>
+					<li>- <a href="Certification-YouTube-Developpement-de-chaine.pdf" target="_blank">Développement de chaîne</a> (YouTube)</li>
 				</ul>
 			</div>
 		</div>
@@ -58,7 +60,7 @@
 				</div>
 				<h4>Free Code Camp</h4>
 				<ul>
-					<li>Digital Active est une formation au marketing digital, gratuite et certifiante, proposée par Google.</li>
+					<li>Il s'agit d'un programme qui permet d'apprendre le développement web et qui délivre des certifications.</li>
 				</ul>
 			</div>
 		</div>

@@ -503,7 +503,7 @@ section.container_formations {
 
             ul { color: #444; width: 100%; & > li { line-height: 22px; } }
 
-            a { 
+            div:first-child a { 
                 margin: 0; 
                 padding: 7px;
                 background-color: #3498db;
@@ -516,6 +516,10 @@ section.container_formations {
                     color: #3498db; 
                 }
             }
+
+            li a {
+                color: #15c;
+            }
         }
     }
 }
@@ -526,7 +530,7 @@ section.container_formations {
             padding: 60px 0; 
             @include flex(row nowrap, flex-start, center);
 
-            div.description { margin-left: 15px; }
+            div.description { margin-left: 15px; padding-right: 17px; }
         }
     }
 }
@@ -552,8 +556,8 @@ section.container_portfolio {
         }
 
         & > div.popup_container {
-            width: 50%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 85%;
             position: absolute;
             top: 50%; left: 50%;
             @include translate(-50%, -50%);
@@ -709,6 +713,10 @@ section.container_portfolio {
 @media only screen and (min-width:768px) {
     section.container_portfolio article.work {
         width: 25%;
+    }
+    section.container_portfolio div.popup_work>div.popup_container  {
+        width: 100%;
+        max-width: 600px;
     }
 }
 

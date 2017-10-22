@@ -249,7 +249,6 @@ h6 {
 }
 
 [data-turbolinks-permanent] {
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -669,7 +668,7 @@ section.container_formations div.block div.description ul {
 section.container_formations div.block div.description ul > li {
   line-height: 22px;
 }
-section.container_formations div.block div.description a {
+section.container_formations div.block div.description div:first-child a {
   margin: 0;
   padding: 7px;
   background-color: #3498db;
@@ -678,10 +677,13 @@ section.container_formations div.block div.description a {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-section.container_formations div.block div.description a:hover {
+section.container_formations div.block div.description div:first-child a:hover {
   background-color: #fff;
   border-color: #3498db;
   color: #3498db;
+}
+section.container_formations div.block div.description li a {
+  color: #15c;
 }
 
 @media only screen and (min-width: 768px) {
@@ -703,6 +705,7 @@ section.container_formations div.block div.description a:hover {
   }
   section.container_formations div.block div.description {
     margin-left: 15px;
+    padding-right: 17px;
   }
 }
 section.container_portfolio div.popup_work {
@@ -742,8 +745,8 @@ section.container_portfolio div.popup_work > div.popup_overlay {
   height: 100%;
 }
 section.container_portfolio div.popup_work > div.popup_container {
-  width: 50%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 85%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -793,7 +796,7 @@ section.container_portfolio div.popup_work div.popup_container > div > div.scree
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: url('../img/top-bar.png?1500718347');
+  background: url('../img/top-bar.png?1508680157');
   background-attachment: scroll;
   background-size: 100% 35px;
   background-position: top;
@@ -948,6 +951,11 @@ section.container_portfolio article.work:hover div.overlay span {
 @media only screen and (min-width: 768px) {
   section.container_portfolio article.work {
     width: 25%;
+  }
+
+  section.container_portfolio div.popup_work > div.popup_container {
+    width: 100%;
+    max-width: 600px;
   }
 }
 section.container_competences div.skills div.title_stripes {

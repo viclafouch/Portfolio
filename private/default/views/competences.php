@@ -66,32 +66,6 @@
 							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MYSQL</li>
 					    </ul>
 					</footer>
-				</article>
-				<article class="skill_card" id="java">
-		 			<header>
-		  				<img src="./public/assets/img/java-logo.png" title="Java" alt="Java Logo"/>
-		 			</header>
-		  			<footer>
-		    			<h5>java</h5>
-		    			<span>1 an d'expérience</span>
-					    <ul>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Android</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Objet</li>
-					    </ul>
-					</footer>
-				</article>
-				<article class="skill_card" id="swift">
-		 			<header>
-		  				<img src="./public/assets/img/swift-logo.png" title="Swift" alt="Swift Logo"/>
-		 			</header>
-		  			<footer>
-		    			<h5>swift</h5>
-		    			<span>1 an d'expérience</span>
-					    <ul>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> IOS</li>
-							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> Objet</li>
-					    </ul>
-					</footer>
 				</article>	
 			</div>
 			<div class="title_stripes">
@@ -132,6 +106,24 @@
 		  			<footer>
 		    			<h5>react</h5>
 		    			<span> 2 mois+ d'expérience</span>
+					</footer>
+				</article>
+				<article class="skill_card" id="symfony">
+		 			<header>
+		  				<img src="./public/assets/img/symfony-logo.png" title="Symfony" alt="Symfony Logo"/>
+		 			</header>
+		  			<footer>
+		    			<h5>Symfony</h5>
+		    			<span> 1 mois+ d'expérience</span>
+					</footer>
+				</article>
+				<article class="skill_card" id="rubyonrails">
+		 			<header>
+		  				<img src="./public/assets/img/ruby-logo.png" title="Ruby on Rails" alt="Ruby On Rails Logo"/>
+		 			</header>
+		  			<footer>
+		    			<h5>Ruby on Rails</h5>
+		    			<span> 1 mois+ d'expérience</span>
 					</footer>
 				</article>
 			</div>
