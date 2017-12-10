@@ -99,6 +99,15 @@
 		    			<span>1 ans d'expérience</span>
 					</footer>
 				</article>
+				<article class="skill_card" id="vuejs">
+		 			<header>
+		  				<img src="./public/assets/img/vuejs-logo.png" title="Vue.js" alt="VueJS Logo"/>
+		 			</header>
+		  			<footer>
+		    			<h5>Vue.js</h5>
+		    			<span> 3 mois+ d'expérience</span>
+					</footer>
+				</article>
 				<article class="skill_card" id="react">
 		 			<header>
 		  				<img src="./public/assets/img/react-logo.png" title="React" alt="React Logo"/>
@@ -123,6 +132,15 @@
 		 			</header>
 		  			<footer>
 		    			<h5>Ruby on Rails</h5>
+		    			<span> 1 mois+ d'expérience</span>
+					</footer>
+				</article>
+				<article class="skill_card" id="angular">
+		 			<header>
+		  				<img src="./public/assets/img/angular-logo.png" title="Angular" alt="Angular Logo"/>
+		 			</header>
+		  			<footer>
+		    			<h5>Angular 5</h5>
 		    			<span> 1 mois+ d'expérience</span>
 					</footer>
 				</article>
