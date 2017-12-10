@@ -3,6 +3,8 @@
 .sass-cache
 .sass-cache/
 
+.htaccess
+
 # Logs
 logs
 *.log
