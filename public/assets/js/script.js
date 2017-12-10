@@ -85,7 +85,8 @@ function recaptchaCallback() {
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    var li = navrow.querySelectorAll(':scope > *');
+    var li = navrow.querySelectorAll('li');
+
     li.forEach(function(element) {
         element.addEventListener('click', function() {
             for (var i = li.length - 1; i >= 0; i--) {

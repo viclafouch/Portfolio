@@ -1,6 +1,6 @@
 /*----------  Récupération des modules  ----------*/
 
-const inProduction = false;
+const inProduction = true;
 
 const gulp = require('gulp'),
 	compass = require('gulp-compass'),
