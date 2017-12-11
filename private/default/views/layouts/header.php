@@ -34,6 +34,8 @@
 		<link rel="apple-touch-icon" href="icon-iphone.png" />
 		<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
 
 		<link rel="alternate" href="http://www.victor-de-la-fouchardiere.fr" hreflang="fr" />
 	</head>
