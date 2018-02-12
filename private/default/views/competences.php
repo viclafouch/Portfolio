@@ -66,7 +66,7 @@
 							<li><i class="fa fa-bandcamp" aria-hidden="true"></i> MYSQL</li>
 					    </ul>
 					</footer>
-				</article>	
+				</article>
 			</div>
 			<div class="title_stripes">
 				<h4>Frameworks</h4>
@@ -78,7 +78,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>jquery</h5>
-		    			<span>2 ans d'expérience</span>
+		    			<span>3 ans d'expérience</span>
 					</footer>
 				</article>
 				<article class="skill_card" id="bootstrap">
@@ -87,7 +87,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>bootstrap</h5>
-		    			<span>1 ans d'expérience</span>
+		    			<span>2 ans d'expérience</span>
 					</footer>
 				</article>
 				<article class="skill_card" id="materialize">
@@ -105,7 +105,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>Vue.js</h5>
-		    			<span> 3 mois+ d'expérience</span>
+		    			<span> 1 mois+ d'expérience</span>
 					</footer>
 				</article>
 				<article class="skill_card" id="react">
@@ -114,7 +114,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>react</h5>
-		    			<span> 2 mois+ d'expérience</span>
+		    			<span> 1 mois+ d'expérience</span>
 					</footer>
 				</article>
 				<article class="skill_card" id="symfony">
@@ -123,7 +123,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>Symfony</h5>
-		    			<span> 1 mois+ d'expérience</span>
+		    			<span> 3 mois+ d'expérience</span>
 					</footer>
 				</article>
 				<article class="skill_card" id="rubyonrails">
@@ -141,7 +141,7 @@
 		 			</header>
 		  			<footer>
 		    			<h5>Angular 5</h5>
-		    			<span> 1 mois+ d'expérience</span>
+		    			<span> 3 mois+ d'expérience</span>
 					</footer>
 				</article>
 			</div>
@@ -149,10 +149,10 @@
 				<h4>Technologies</h4>
 			</div>
 			<div class="row wrap row-verti-center row-hori-center">
-				<article class="techno col nowrap col-hori-center" id="sublimText">
-		 			<h5>Sublime Text</h5>
+				<article class="techno col nowrap col-hori-center" id="visualCodeStudio">
+		 			<h5>Visual Code Studio</h5>
 		    		<span>Editeur</span>
-		    		<img src="./public/assets/img/sublime-text-logo.png" title="Sublime Text" alt="Sublime Text Logo">
+		    		<img src="./public/assets/img/visual-code-studio-logo.png" title="Visual Code Studio" alt="Visual Code Studio Logo">
 				</article>
 				<article class="techno col nowrap col-hori-center" id="git">
 		 			<h5>Git</h5>
