@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import CSSModules from 'react-css-modules';
+import styles from './styles.css'
 
-export default class HomeContainer extends Component {
+class HomeContainer extends Component {
     render() {
         return(
-            <div>Hello HomeContainer</div>
+            <div className={styles.table}>Hello HomeContainer</div>
         )
     }
 }
+
+export default HomeContainer;
