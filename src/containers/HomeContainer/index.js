@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import CSSModules from 'react-css-modules';
+import classNames from 'classnames/bind';
+// import global from '../../styles.css'
 import styles from './styles.css'
+
+let cx = classNames.bind(styles);
 
 class HomeContainer extends Component {
     render() {
         return(
-            <div className={styles.table}>Hello HomeContainer</div>
+            <div></div>
         )
     }
 }

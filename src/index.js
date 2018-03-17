@@ -6,6 +6,8 @@ import { Provider } from 'react-redux'
 import skillApp from './reducers'
 import { createStore } from 'redux'
 
+// import './styles.css'
+
 const supportsHistory = 'pushState' in window.history;
 
 
