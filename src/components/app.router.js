@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
-import AddSkill from '../containers/AddSkill';
+import HomeContainer from '../containers/HomeContainer';
 
 const AppRouter = () => (
     <main>
         <Switch>
-            <Route exact path='/' component={AddSkill} />
+            <Route exact path='/' component={HomeContainer} />
         </Switch>
     </main>
 )
