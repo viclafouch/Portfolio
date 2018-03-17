@@ -5,7 +5,7 @@ import FontAwesome from 'react-fontawesome'
 
 let cx = classNames.bind(styles);
 
-let contactLinks = [
+const contactLinks = [
     {
         text: {
             title: 'victor.dlf@outlook.fr',
@@ -28,7 +28,7 @@ let contactLinks = [
     }
 ]
 
-let socialLinks = [
+const socialLinks = [
     {
         fontawesome: 'linkedin-square',
         href: 'https://www.linkedin.com/in/victordelafouchardiere/',
@@ -42,14 +42,14 @@ let socialLinks = [
         className: cx('header-item-links'),
     },
     {
-        fontawesome: 'git',
-        href: 'https://github.com/viclafouch',
+        fontawesome: 'google',
+        href: 'https://topcontributor.withgoogle.com/profile/victor-de-la-fouchardiere-e5fded',
         title: '',
         className: cx('header-item-links'),
     },
     {
-        fontawesome: 'google',
-        href: 'https://topcontributor.withgoogle.com/profile/victor-de-la-fouchardiere-e5fded',
+        fontawesome: 'git',
+        href: 'https://github.com/viclafouch',
         title: '',
         className: cx('header-item-links'),
     },
@@ -70,7 +70,7 @@ export const Header = () => {
                     {
                         contactLinks.map((link, index) => {
                             return (
-                                <a href={link.href} target="_blank" className={link.className} title={link.title}>
+                                <a href={link.href} key={index} target="_blank" className={link.className} title={link.title}>
                                     <FontAwesome name={link.fontawesome} />
                                     <span className={link.text.className}>{link.text.title}</span>
                                 </a>
@@ -82,13 +82,12 @@ export const Header = () => {
                     {
                         socialLinks.map((link, index) => {
                             return (
-                                <a href={link.href} target="_blank" className={link.className} title={link.title}>
+                                <a href={link.href} key={index} target="_blank" className={link.className} title={link.title}>
                                     <FontAwesome name={link.fontawesome} />
                                 </a>
                             )
                         })
                     }
-
                 </div>
             </div>
         </header>
