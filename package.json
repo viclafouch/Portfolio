@@ -1,36 +1,21 @@
 {
-  "name": "skeleton",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "styled-components": "^3.2.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viclafouch/skeleton.git"
-  },
-  "keywords": [],
-  "author": "Victor de la Fouchardière",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/viclafouch/skeleton/issues"
-  },
-  "homepage": "https://github.com/viclafouch/skeleton#readme",
-  "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.5.0",
-    "gulp-compass": "^2.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-print": "^2.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.0.0"
-  },
-  "dependencies": {}
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
