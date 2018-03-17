@@ -1,0 +1,61 @@
+.subheading {
+    width: 100%; height: auto;
+    padding: 50px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.sub-container {
+    composes: container from '../../styles.css';
+    composes: col from '../../styles.css';
+    composes: col-verti-center from '../../styles.css';
+    composes: col-hori-center from '../../styles.css';
+    composes: nowrap from '../../styles.css';
+}
+
+.sub-link {
+    display: block;
+    position: absolute;
+    top: -35px;
+    transform: translateY(-50%);
+    margin: 0;
+    left: 22px;
+}
+
+.sub-link img {
+    width: 50px;
+}
+
+.sub-center {
+    text-align: center;
+}
+
+.sub-h1 {
+    margin: 15px 0;
+    padding: 10px 15px;
+}
+
+.sub-p {
+    color: #444;
+    line-height: 1.3em;
+    max-width: 75%;
+    padding: 10px 5px;
+}
+
+.subheading a[download] {
+    margin-bottom: 0;
+}
+
+.subheading a[download] span {
+    margin-right: 5px;
+}
+
+@media only screen and (min-width:600px) {
+    .sub-link {
+        position: static;
+        margin: 10px auto;
+        transform: translateY(0);
+    }
+
+    .sub-link img { width: auto; }
+}

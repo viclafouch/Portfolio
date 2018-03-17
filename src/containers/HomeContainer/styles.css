@@ -1,3 +1,78 @@
-.table {
-    color: red;
+.HomeContainer {
+    composes: container from '../../styles.css';
+}
+
+.content-row {
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 75px; height: 75px;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    composes: p-shadow from '../../styles.css';
+}
+
+.title {
+    padding: 5px;
+}
+
+.sub-title {
+    color: #7f8c8d;
+}
+
+.homecontainer hr {
+    width: 300px;
+    background: url(./stripes.png) center left repeat-x;
+    height: 30px;
+    border: 0;
+}
+
+.profile-resume {
+    text-align: center;
+    font-size: 19px;
+    padding: 30px;
+    line-height: 1.2em;
+}
+
+.list-skills {
+    composes: row from '../../styles.css';
+    composes: row-verti-center from '../../styles.css';
+    composes: wrap from '../../styles.css';
+}
+
+.list-skills-item {
+    composes: col from '../../styles.css';
+    composes: col-hori-center from '../../styles.css';
+    composes: nowrap from '../../styles.css';
+    width: 100%;
+    padding: 30px 15px;
+}
+
+.list-skills-item .list-skills-item-img {
+    width: 75px;
+    fill: #34495e;
+}
+.list-skills-item .list-skills-item-span {
+    color: #34495e;
+    display: block;
+    margin: 10px auto;
+    font-weight: 700;
+    padding: 15px 10px;
+    text-align: center;
+}
+.list-skills-item .list-skills-item-p {
+    text-align: center;
+    color: #34495e;
+}
+
+@media only screen and (min-width:768px)  {
+    .list-skills-item {
+        width: 33%;
+    }
 }

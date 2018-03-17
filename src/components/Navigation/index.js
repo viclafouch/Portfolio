@@ -34,20 +34,30 @@ const navigationLinks = [
 
 export class Navigation extends Component {
 
-
     constructor() {
         super()
         this.state = {
             menuOpened: false
         }
         this.toggle = this.toggle.bind(this);
+        this.closeNav = this.closeNav.bind(this);
+    }
+
+    componentDidMount = () => {
+        document.body.addEventListener('click', this.closeNav);
+    }
+
+    closeNav() {
+        if (this.state.menuOpened) {
+            this.setState({
+                menuOpened: false
+            })
+        }
     }
 
     toggle() {
         this.setState({
             menuOpened: !this.state.menuOpened
-        }, () => {
-            console.log(this.state.menuOpened);
         });
     }
 

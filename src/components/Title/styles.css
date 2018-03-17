@@ -1,0 +1,8 @@
+.title {
+    padding: 25px 10px;
+    text-align: center;
+    composes: col from '../../styles.css';
+    composes: col-hori-center from '../../styles.css';
+    composes: col-verti-center from '../../styles.css';
+    composes: nowrap from '../../styles.css';
+}
