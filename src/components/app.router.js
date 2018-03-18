@@ -9,6 +9,7 @@ import styles from './app.router.css'
 import Footer from './Footer/Footer';
 import { FormationsContainer } from '../containers/FormationContainer';
 import { ProductionsContainer } from '../containers/ProductionsContainer';
+import { SkillContainer } from '../containers/SkillsContainer';
 let cx = classNames.bind(styles);
 
 const AppRouter = () => (
@@ -21,6 +22,7 @@ const AppRouter = () => (
                 <Route exact path='/' component={HomeContainer} />
                 <Route path='/formations' component={FormationsContainer} />
                 <Route path='/productions' component={ProductionsContainer} />
+                <Route path='/competences' component={SkillContainer} />
             </Switch>
         </main>
         <Footer />

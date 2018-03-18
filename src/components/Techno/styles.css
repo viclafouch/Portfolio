@@ -1,0 +1,25 @@
+.techno {
+    composes: col from '../../styles.css';
+    composes: col-hori-center from '../../styles.css';
+    composes: nowrap from '../../styles.css';
+    padding: 20px 10px;
+    margin: 20px;
+}
+
+.techno-title {
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: center;
+    color: #f05f40;
+}
+
+.techno-subtitle {
+    color: #9e9e9e;
+    font-style: italic;
+    padding: 5px 3px;
+    text-align: center;
+}
+
+.techno-img {
+    margin-top: 15px;
+}

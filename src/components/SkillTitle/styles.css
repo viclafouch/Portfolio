@@ -1,0 +1,19 @@
+.skilltitle {
+    width: 100%;
+    margin: 0 auto;
+    composes: row from '../../styles.css';
+    composes: row-verti-center from '../../styles.css';
+    composes: row-hori-center from '../../styles.css';
+    composes: wrap from '../../styles.css';
+    background: url('../../containers/HomeContainer/stripes.png') center left repeat-x;
+}
+
+.skilltitle > h4 {
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #444;
+    margin: 30px 0;
+}

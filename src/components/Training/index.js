@@ -18,7 +18,7 @@ const Training = (props) => {
                         <FontAwesome name="calendar" />
                         <span>{props.date}</span>
                     </p>
-                    <Button anchor href={props.href} target="_blank" fa="external-link" primary text='A propos' />
+                    <Button inverse nchor href={props.href} target="_blank" fa="external-link" primary text='A propos' />
                 </header>
                 <h4>{props.title}</h4>
                 <ul className={cx('training-item-list-row')}>
