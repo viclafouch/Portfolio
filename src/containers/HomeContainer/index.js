@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import styles from './styles.css'
-import Title from '../../components/Title';
 
 import profilePicture from './victor-de-la-fouchardiere.png'
 import gears from './gears.svg';
@@ -29,11 +28,6 @@ const skills = [
 ]
 
 class HomeContainer extends Component {
-
-    constructor(props) {
-        super(props);
-        console.log(props);
-    }
 
     render() {
         return(

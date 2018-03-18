@@ -22,7 +22,7 @@
 }
 
 .button:hover {
-    overflow: 1;
+    opacity: 1;
 }
 
 .button.primary {

@@ -1,0 +1,30 @@
+.productionscontainer {
+    composes: container from '../../styles.css';
+}
+
+.productions-list {
+    min-height: 400px;
+    padding: 0 5px;
+    composes: row from '../../styles.css';
+    composes: wrap from '../../styles.css';
+    align-items: flex-start;
+}
+
+.productions-list > li {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+@media only screen and (min-width:500px) {
+    .productions-list > li {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .productions-list > li {
+        width: 25%;
+    }
+}

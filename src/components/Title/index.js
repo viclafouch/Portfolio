@@ -7,7 +7,8 @@ let cx = classNames.bind(styles);
 const Title = (props) => {
   return (
     <div className={cx('title')}>
-
+      <h2>{props.title}</h2>
+      <p>{props.subtitle}</p>
     </div>
   )
 }

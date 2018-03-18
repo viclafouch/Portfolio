@@ -7,6 +7,8 @@ import { Subheading } from './Subheading';
 import classNames from 'classnames/bind';
 import styles from './app.router.css'
 import Footer from './Footer/Footer';
+import { FormationsContainer } from '../containers/FormationContainer';
+import { ProductionsContainer } from '../containers/ProductionsContainer';
 let cx = classNames.bind(styles);
 
 const AppRouter = () => (
@@ -17,6 +19,8 @@ const AppRouter = () => (
         <main className={cx('main')}>
             <Switch>
                 <Route exact path='/' component={HomeContainer} />
+                <Route path='/formations' component={FormationsContainer} />
+                <Route path='/productions' component={ProductionsContainer} />
             </Switch>
         </main>
         <Footer />

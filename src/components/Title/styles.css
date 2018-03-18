@@ -6,3 +6,15 @@
     composes: col-verti-center from '../../styles.css';
     composes: nowrap from '../../styles.css';
 }
+
+.title > h2 {
+    color: #444;
+    padding-bottom: 7px
+}
+
+.title > p {
+    font-style: italic;
+    font-weight: 700;
+    color: #f05f40;
+    text-decoration: underline;
+}
