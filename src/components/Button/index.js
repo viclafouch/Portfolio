@@ -15,7 +15,7 @@ const Button = (props) => {
             {props.text}
         </a>
     ) : (
-        <button className={cx('button', { 'primary': props.primary }, { 'inverse': props.inverse })}>
+        <button disabled={props.disabled} className={cx('button', { 'primary': props.primary }, { 'inverse': props.inverse })}>
             {props.text}
         </button>
     );

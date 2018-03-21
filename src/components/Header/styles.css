@@ -14,10 +14,6 @@
     width: 100%;
 }
 
-.foo {
-   composes: primary-color from '../../styles.css';
-}
-
 .header-item-links {
     display: inline-block;
     text-decoration: none;

@@ -10,6 +10,7 @@ import Footer from './Footer/Footer';
 import { FormationsContainer } from '../containers/FormationContainer';
 import { ProductionsContainer } from '../containers/ProductionsContainer';
 import { SkillContainer } from '../containers/SkillsContainer';
+import { ContactContainer } from '../containers/ContactContainer';
 let cx = classNames.bind(styles);
 
 const AppRouter = () => (

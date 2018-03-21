@@ -25,11 +25,6 @@ const navigationLinks = [
         exact: false,
         text: 'Compétences'
     },
-    {
-        href: '/contact',
-        exact: false,
-        text: 'Contact'
-    },
 ]
 
 export class Navigation extends Component {

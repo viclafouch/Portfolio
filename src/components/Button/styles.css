@@ -48,3 +48,14 @@
     background-color: #f05f40;
     border-color: #fff;
 }
+
+.button:disabled {
+    background-color: #f0f0f0;
+    color: #444;
+}
+
+.button:disabled:hover {
+    background-color: #f0f0f0;
+    color: #444;
+    border-color: #fff;
+}
