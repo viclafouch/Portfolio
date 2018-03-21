@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './styles.css'
 import Title from '../../components/Title';
 import EEMIlogo from './eemi-logo.png'
+import SEO from '../../components/SEO';
 import Freecodecamplogo from './freecodecamp.png'
 import DigitalGooglelogo from './digital-active.png'
 import SaintPaullogo from './saint-paul.png'
@@ -82,6 +83,7 @@ export class FormationsContainer extends Component {
   render() {
     return (
         <section className={cx('formationscontainer')}>
+            <SEO url={this.props.match.url} />
             <Title title="Formations" subtitle="Ce que j'apprends" />
             <ul className={cx('training-list')}>
                 {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import styles from './styles.css'
-
 import profilePicture from './victor-de-la-fouchardiere.png'
 import gears from './gears.svg';
 import correct from './correct.svg';
 import smartphone from './smartphone.svg';
+import SEO from '../../components/SEO';
 
 let cx = classNames.bind(styles);
 
@@ -27,11 +27,11 @@ const skills = [
     }
 ]
 
-class HomeContainer extends Component {
-
+export class HomeContainer extends Component {
     render() {
         return(
             <section className={cx('homecontainer')}>
+                <SEO url={this.props.match.url} />
                 <div className={cx('content-row')}>
                     <img src={profilePicture} className={cx('profile-picture')} title="Victor de la Fouchardiere" alt="Victor de la Fouchardiere"/>
                     <h2 className={cx('title-h2', 'title')}>Victor de la Fouchardiere</h2>

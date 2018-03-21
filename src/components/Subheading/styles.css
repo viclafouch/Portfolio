@@ -47,10 +47,6 @@
     margin-bottom: 0;
 }
 
-.subheading a[download] span {
-    margin-right: 5px;
-}
-
 @media only screen and (min-width:600px) {
     .sub-link {
         position: static;

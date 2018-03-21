@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames/bind';
 import styles from './styles.css'
 import Title from '../../components/Title';
+import SEO from '../../components/SEO';
 import SkillTitle from '../../components/SkillTitle';
 import SkillItem from '../../components/SkillItem';
 import Techno from '../../components/Techno';
@@ -131,6 +132,7 @@ export class SkillContainer extends Component {
     render() {
         return (
             <section className={cx('skillscontainer')}>
+                <SEO url={this.props.match.url} />
                 <Title title="Compétences" subtitle="Ce que je sais faire" />
                 <div className={cx('skillscontainer-languages')}>
                     <SkillTitle title="Languages" />

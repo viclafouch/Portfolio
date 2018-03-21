@@ -25,6 +25,10 @@
     opacity: 1;
 }
 
+.button span {
+    margin-right: 5px;
+}
+
 .button.primary {
     color: #fff;
     background-color: #f05f40;

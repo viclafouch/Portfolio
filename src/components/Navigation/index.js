@@ -2,30 +2,8 @@ import React, { Component } from 'react'
 import classNames from 'classnames/bind';
 import styles from './styles.css'
 import { NavLink } from 'react-router-dom'
+import links from '../../pages-config'
 let cx = classNames.bind(styles);
-
-const navigationLinks = [
-    {
-        href: '/',
-        exact: true,
-        text: 'Accueil'
-    },
-    {
-        href: '/formations',
-        exact: false,
-        text: 'Formations'
-    },
-    {
-        href: '/productions',
-        exact: false,
-        text: 'Portfolio'
-    },
-    {
-        href: '/competences',
-        exact: false,
-        text: 'Compétences'
-    },
-]
 
 export class Navigation extends Component {
 
@@ -63,10 +41,16 @@ export class Navigation extends Component {
                     <div className={cx('nav-burger', { 'menu-opened': this.state.menuOpened })} onClick={this.toggle}><span></span></div>
                     <ul className={cx('nav-links-list', { 'active': this.state.menuOpened })}>
                     {
-                        navigationLinks.map((navlink, index) => {
+                        links.map((navlink, index) => {
                             return (
+                                navlink.inNav &&
                                 <li key={index} className={cx('nav-links-list-item')}>
-                                    <NavLink exact={navlink.exact} to={navlink.href} className={cx('nav-links-list-item-href')} activeClassName={cx('active')}>{navlink.text}</NavLink>
+                                    <NavLink
+                                        exact={navlink.exact}
+                                        to={navlink.url}
+                                        className={cx('nav-links-list-item-href')}
+                                        activeClassName={cx('active')}
+                                    >{navlink.textInNav}</NavLink>
                                 </li>
                             )
                         })
