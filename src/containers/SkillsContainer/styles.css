@@ -1,8 +1,15 @@
 .skills-list {
-    composes: row from '../../styles.css';
-    composes: row-verti-center from '../../styles.css';
-    composes: row-hori-center from '../../styles.css';
-    composes: wrap from '../../styles.css';
+    composes: col from '../../styles.css';
+    composes: col-verti-center from '../../styles.css';
+    composes: col-hori-center from '../../styles.css';
+    composes: nowrap from '../../styles.css';
+}
+
+@media only screen and (min-width:480px) {
+    .skills-list {
+        display: flex;
+        flex-flow: row wrap;
+    }
 }
 
 .skillscontainer ul:not(.technos-list) article {

@@ -12,3 +12,8 @@
 .footer {
     font-weight: 700;
 }
+
+.footer > p {
+    text-align: center;
+    line-height: 24px;
+}

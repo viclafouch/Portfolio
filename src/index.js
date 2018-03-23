@@ -8,7 +8,6 @@ import { createStore } from 'redux'
 
 const supportsHistory = 'pushState' in window.history;
 
-
 let store = createStore(
     skillApp,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
