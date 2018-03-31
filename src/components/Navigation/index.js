@@ -17,7 +17,8 @@ export class Navigation extends Component {
     }
 
     componentDidMount = () => {
-        document.body.addEventListener('click', this.closeNav);
+        
+
     }
 
     closeNav() {

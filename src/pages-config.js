@@ -2,6 +2,7 @@ import { FormationsContainer } from './containers/FormationContainer';
 import { ProductionsContainer } from './containers/ProductionsContainer';
 import { SkillContainer } from './containers/SkillsContainer';
 import { HomeContainer } from './containers/HomeContainer';
+import { ContactContainer } from './containers/ContactContainer';
 
 export default [
     {
@@ -47,5 +48,16 @@ export default [
         component: FormationsContainer,
         inNav: true,
         textInNav: 'Formations'
+    },
+    {
+        metas: {
+            title: 'Contact',
+            description: 'Ma description'
+        },
+        url: '/contact',
+        exact: false,
+        component: ContactContainer,
+        inNav: true,
+        textInNav: 'Contact'
     }
 ]

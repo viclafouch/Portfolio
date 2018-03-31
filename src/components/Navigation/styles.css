@@ -108,7 +108,7 @@
     transform: rotate(0deg)
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:700px) {
     .nav-links-list {
         text-align: center;
         position: static;

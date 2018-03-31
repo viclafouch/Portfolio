@@ -28,4 +28,11 @@
 
 .header-item-links-text {
     margin-left: 4px;
+    display: none;
+}
+
+@media only screen and (min-width:480px) {
+    .header-item-links-text {
+        display: inline-block;
+    }
 }
