@@ -5,6 +5,7 @@ import Title from '../../components/Title';
 import axios from 'axios'
 import ContactForm from '../../components/ContactForm';
 import Loader from '../../components/Loader';
+import SEO from '../../components/SEO';
 
 let cx = classNames.bind(styles);
 
@@ -71,6 +72,7 @@ export class ContactContainer extends Component {
     render() {
         return (
             <section className={cx('contactcontainer')}>
+                <SEO url={this.props.match.url} />
                 <Title title="Contact" subtitle="M'envoyer un message" />
                 <ContactForm
                     reset={this.state.reset}

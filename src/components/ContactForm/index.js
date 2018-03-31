@@ -3,6 +3,8 @@ import classNames from 'classnames/bind';
 import styles from './styles.css'
 import FontAwesome from 'react-fontawesome'
 import Button from '../Button';
+import ReCAPTCHA  from "react-google-recaptcha"
+
 
 let cx = classNames.bind(styles);
 
@@ -16,10 +18,12 @@ export default class ContactContainer extends Component {
             lastname: '',
             email: '',
             message: '',
+            captcha: '',
             firstnameValid: null,
             lastnameValid: null,
             emailValid: null,
             messageValid: null,
+            captchaValid: null,
             formValid: false,
             note: {
                 display: false,
@@ -49,6 +53,14 @@ export default class ContactContainer extends Component {
         }
     }
 
+    recaptchaCallback(value) {
+        this.setState({
+            captcha: value
+        }, () => {
+            this.validateField('captcha', value);
+        });
+    };
+
     resetForm = () => {
         this.setState({
             ...this.baseState,
@@ -58,6 +70,8 @@ export default class ContactContainer extends Component {
                 text: 'Votre message a bien été envoyé !'
             }
         });
+
+        window.grecaptcha.reset();
     }
 
     handleChange(e) {
@@ -75,6 +89,7 @@ export default class ContactContainer extends Component {
         let lastnameValid = this.state.lastnameValid;
         let emailValid = this.state.emailValid;
         let messageValid = this.state.messageValid;
+        let captchaValid = this.state.captchaValid;
 
         switch (InputName) {
             case 'firstname':
@@ -89,6 +104,9 @@ export default class ContactContainer extends Component {
             case 'message':
                 messageValid = InputValue.length > 0
                 break;
+            case 'captcha':
+                captchaValid = (InputValue) ? InputValue.length > 0 : false
+                break;
             default:
                 break;
         }
@@ -98,6 +116,7 @@ export default class ContactContainer extends Component {
             lastnameValid: lastnameValid,
             emailValid: emailValid,
             messageValid: messageValid,
+            captchaValid: captchaValid,
             note : this.baseState.note
         }, () => {
             this.validateForm();
@@ -105,9 +124,9 @@ export default class ContactContainer extends Component {
     }
 
     validateForm() {
-        let { firstnameValid, lastnameValid, emailValid, messageValid } = this.state;
+        let { firstnameValid, lastnameValid, emailValid, messageValid, captchaValid } = this.state;
         this.setState({
-            formValid: firstnameValid && lastnameValid && messageValid && emailValid === true
+            formValid: firstnameValid && lastnameValid && messageValid && emailValid && captchaValid === true
         });
     }
 
@@ -122,7 +141,8 @@ export default class ContactContainer extends Component {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
             email: this.state.email,
-            message: this.state.message
+            message: this.state.message,
+            captcha: this.state.captcha
         });
     }
 
@@ -216,6 +236,24 @@ export default class ContactContainer extends Component {
                         onChange={this.handleChange}
                         value={this.state.message}
                         ></textarea>
+                    </div>
+                </label>
+                <label htmlFor="message" className={cx('form-label')}>
+                    <span className={cx('form-span')}>Sécurité</span>
+                    <div className={cx(
+                        'form-field',
+                        (this.state.captchaValid === true ? 'valid' : ''),
+                        (this.state.captchaValid === false ? 'invalid' : ''),
+                    )}>
+                        <span className={cx('form-ico')}>
+                            <FontAwesome name="shield" />
+                        </span>
+                        <ReCAPTCHA
+                            ref="recaptcha"
+                            size="normal"
+                            sitekey="6LegHVAUAAAAAK8cKu7NsdkpaC11KNNnIMTdd_xl"
+                            onChange={(e) => { this.recaptchaCallback(e) }}
+                        />
                     </div>
                 </label>
                 <Button primary disabled={!this.state.formValid} text='Envoyer' />
