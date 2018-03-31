@@ -8,7 +8,8 @@ export default [
     {
         metas: {
             title: 'Portfolio',
-            description: 'Ma description'
+            description: 'Ma description',
+            contentType: 'website'
         },
         url: '/',
         exact: true,
@@ -19,7 +20,8 @@ export default [
     {
         metas: {
             title: 'Compétences',
-            description: 'Ma description'
+            description: 'Ma description',
+            contentType: 'website'
         },
         url: '/competences',
         exact: false,
@@ -30,7 +32,8 @@ export default [
     {
         metas: {
             title: 'Productions',
-            description: 'Ma description'
+            description: 'Ma description',
+            contentType: 'website'
         },
         url: '/productions',
         exact: false,
@@ -41,7 +44,8 @@ export default [
     {
         metas: {
             title: 'Formations',
-            description: 'Ma description'
+            description: 'Ma description',
+            contentType: 'website'
         },
         url: '/formations',
         exact: false,
@@ -52,7 +56,8 @@ export default [
     {
         metas: {
             title: 'Contact',
-            description: 'Ma description'
+            description: 'Ma description',
+            contentType: 'website'
         },
         url: '/contact',
         exact: false,
