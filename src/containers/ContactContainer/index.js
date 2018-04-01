@@ -21,9 +21,9 @@ export class ContactContainer extends Component {
     }
 
     onSubmit(datas) {
-        var params = new URLSearchParams();
+        let params = new URLSearchParams();
 
-        for (var p in datas) {
+        for (let p in datas) {
             params.append(p, datas[p])
         }
 
@@ -55,7 +55,7 @@ export class ContactContainer extends Component {
             });
         })
 
-        .catch(e => {
+        .catch(() => {
             this.setState({
                 error: true
             });

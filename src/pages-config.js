@@ -7,7 +7,7 @@ import { ContactContainer } from './containers/ContactContainer';
 export default [
     {
         metas: {
-            title: 'Portfolio',
+            title: 'Portfolio de',
             description: 'Ma description',
             contentType: 'website'
         },
@@ -19,7 +19,7 @@ export default [
     },
     {
         metas: {
-            title: 'Compétences',
+            title: 'Compétences de',
             description: 'Ma description',
             contentType: 'website'
         },
@@ -31,7 +31,7 @@ export default [
     },
     {
         metas: {
-            title: 'Productions',
+            title: 'Productions de',
             description: 'Ma description',
             contentType: 'website'
         },
@@ -43,7 +43,7 @@ export default [
     },
     {
         metas: {
-            title: 'Formations',
+            title: 'Formations de',
             description: 'Ma description',
             contentType: 'website'
         },
@@ -55,7 +55,7 @@ export default [
     },
     {
         metas: {
-            title: 'Contact',
+            title: 'Contacter',
             description: 'Ma description',
             contentType: 'website'
         },

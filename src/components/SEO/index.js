@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Meta from '../../pages-config'
 import Helmet from 'react-helmet';
 
-const titleMe = "| Victor de la Fouchardiere"
+const titleMe = "Victor de la Fouchardiere - Développeur Front-end"
 
 const getMetaTags = ({
     title, description, contentType,

@@ -17,3 +17,8 @@
     text-align: center;
     line-height: 24px;
 }
+
+.footer > p:last-child {
+    font-size: 0.8em;
+    color: #b2bec3;
+}
