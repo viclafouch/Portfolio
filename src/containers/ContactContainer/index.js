@@ -59,7 +59,10 @@ export class ContactContainer extends Component {
             }
 
             this.setState({
-                reset: true
+                reset: true,
+                isLoading: false
+            }, () => {
+                return;
             });
         })
 
@@ -69,7 +72,7 @@ export class ContactContainer extends Component {
             });
         })
 
-        .finally(() => {
+        .finally(function() {
             this.setState({
                 isLoading: false
             });

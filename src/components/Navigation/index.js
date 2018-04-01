@@ -16,11 +16,6 @@ export class Navigation extends Component {
         this.closeNav = this.closeNav.bind(this);
     }
 
-    componentDidMount = () => {
-
-
-    }
-
     closeNav() {
         if (this.state.menuOpened) {
             this.setState({
