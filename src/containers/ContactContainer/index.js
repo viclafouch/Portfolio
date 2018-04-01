@@ -7,6 +7,8 @@ import ContactForm from '../../components/ContactForm';
 import Loader from '../../components/Loader';
 import SEO from '../../components/SEO';
 
+import phpServer from './contact.php';
+
 let cx = classNames.bind(styles);
 
 export class ContactContainer extends Component {
@@ -33,7 +35,15 @@ export class ContactContainer extends Component {
             error: false
         });
 
-        axios.post('http://portfolio.local/', params, {
+        let url;
+
+        if (process.env.NODE_ENV === 'development') {
+            url = 'http://portfolio.local/'
+        } else {
+            url = phpServer;
+        }
+
+        axios.post(url, params, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'HTTP_TOKEN': process.env.TOKEN
@@ -41,6 +51,9 @@ export class ContactContainer extends Component {
         })
 
         .then(response => {
+
+            console.log(response);
+
 
             if (!response.data) {
                 throw new Error();
@@ -55,7 +68,8 @@ export class ContactContainer extends Component {
             });
         })
 
-        .catch(() => {
+        .catch((e) => {
+            console.log(e);
             this.setState({
                 error: true
             });
