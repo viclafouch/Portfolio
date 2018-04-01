@@ -46,15 +46,10 @@ export class ContactContainer extends Component {
         axios.post(url, params, {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'HTTP_TOKEN': process.env.TOKEN
             }
         })
 
         .then(response => {
-
-            console.log(response);
-
-
             if (!response.data) {
                 throw new Error();
             }
@@ -69,7 +64,6 @@ export class ContactContainer extends Component {
         })
 
         .catch((e) => {
-            console.log(e);
             this.setState({
                 error: true
             });
