@@ -2,30 +2,13 @@ import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import styles from './styles.css'
 import profilePicture from './victor-de-la-fouchardiere.png'
-import gears from './gears.svg';
-import correct from './correct.svg';
-import smartphone from './smartphone.svg';
 import SEO from '../../components/SEO';
+import { Link } from 'react-router-dom'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+
+import imgActually from './myedc.png'
 
 let cx = classNames.bind(styles);
-
-const skills = [
-    {
-        svg: gears,
-        title: 'Développement de A à Z',
-        text: 'Créer des sites web complets coté client et coté serveur'
-    },
-    {
-        svg: smartphone,
-        title: 'Responsive design adapté',
-        text: 'Penser responsive quelque soit l\'appareil(tablettes, desktop...).'
-    },
-    {
-        svg: correct,
-        title: 'Code propre et soigné',
-        text: 'Programmer avec un code (HTML5 ; CSS3 ; PHP ; JS) propre et valide.'
-    }
-]
 
 export class HomeContainer extends Component {
     render() {
@@ -45,19 +28,21 @@ export class HomeContainer extends Component {
                 </div>
                 <hr />
                 <div className={cx('content-row')}>
-                    <ul className={cx('list-skills')}>
-                    {
-                        skills.map((skill, index) => {
-                            return (
-                                <li key={index} className={cx('list-skills-item')}>
-                                    <img className={cx('list-skills-item-img')} src={skill.svg} alt=""/>
-                                    <span className={cx('list-skills-item-span')} >{skill.title}</span>
-                                    <p className={cx('list-skills-item-p')} >{skill.text}</p>
-                                </li>
-                            )
-                        })
-                    }
-                    </ul>
+                    <h3>Aujourd'hui</h3>
+                    <div className={cx('actually-container')}>
+                        <Link target="_blank" to="http://www.myedco.fr/">
+                            <img src={imgActually} className={cx('actually-img')} alt="" />
+                        </Link>
+                        <p>Développeur Frontend en stage chez <b><i>My Edition Company</i> depuis le 01/03/2018</b>.</p>
+                        <p>
+                            <span>React.js{' '}
+                            <FontAwesomeIcon icon={["fab", "react"]}
+                            /></span>{' / '}
+                            <span>Python{' '}
+                            <FontAwesomeIcon icon={["fab", "python"]}
+                            /></span>
+                        </p>
+                    </div>
                 </div>
             </section>
         )

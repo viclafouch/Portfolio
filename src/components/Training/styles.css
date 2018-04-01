@@ -34,7 +34,7 @@
     color: #444;
 }
 
-.training-item-description-date span:first-child {
+.training-item-description-date svg {
     vertical-align: middle;
     margin-right: 7px;
 }

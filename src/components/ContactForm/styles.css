@@ -50,7 +50,7 @@
     position: relative;
 }
 
-.form-field span.form-ico span {
+.form-field span.form-ico svg {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);

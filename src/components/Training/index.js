@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames/bind';
 import styles from './styles.css'
 import Button from '../Button';
-import FontAwesome from 'react-fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 let cx = classNames.bind(styles);
 
@@ -15,10 +15,10 @@ const Training = (props) => {
             <div className={cx('training-item-description')}>
                 <header className={cx('training-item-description-header')}>
                     <p className={cx('training-item-description-date')}>
-                        <FontAwesome name="calendar" />
+                        <FontAwesomeIcon icon="calendar-alt" />
                         <span>{props.date}</span>
                     </p>
-                    <Button inverse anchor href={props.href} target="_blank" fa="external-link" primary text='A propos' />
+                    <Button inverse anchor href={props.href} target="_blank" primary text='A propos' />
                 </header>
                 <h4>{props.title}</h4>
                 <ul className={cx('training-item-list-row')}>

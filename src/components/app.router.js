@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import { Header } from './Header';
 import { Navigation } from './Navigation';
 import { Subheading } from './Subheading';
+import NotFound from './NotFound';
 import classNames from 'classnames/bind';
 import styles from './app.router.css'
 import Footer from './Footer/Footer';
@@ -36,6 +37,9 @@ const AppRouter = () => (
                         />
                     )
                 }
+                <Route
+                    component={NotFound}
+                />
             </Switch>
         </main>
         <Footer />

@@ -1,7 +1,8 @@
 import React from 'react'
 import classNames from 'classnames/bind';
 import styles from './styles.css'
-import FontAwesome from 'react-fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+
 let cx = classNames.bind(styles);
 
 const Production = (props) => {
@@ -10,7 +11,7 @@ const Production = (props) => {
             <header className={cx('production-header')}>
                 <div className={cx('production-header-overlay')}>
                     <a href={props.href} target="_blank">
-                        <FontAwesome name="link" />
+                        <FontAwesomeIcon icon="link" />
                     </a>
                 </div>
                 <img src={props.img} alt="" className={cx('production-header-cover')}/>

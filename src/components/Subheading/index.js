@@ -19,7 +19,7 @@ export const Subheading = () => {
                 <p className={cx('sub-p', 'sub-center')}>
                     Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.
                 </p>
-                <Button anchor href={pdf} fa="download" download primary text='Télécharger/Imprimer le CV' />
+                <Button anchor href={pdf} icon={{name: 'download'}} download primary text='Télécharger/Imprimer le CV' />
             </div>
         </div>
     )

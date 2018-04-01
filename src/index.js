@@ -6,6 +6,9 @@ import { Provider } from 'react-redux'
 import skillApp from './reducers'
 import { createStore } from 'redux'
 
+/*eslint no-unused-vars: */
+import fonts from './font-figuration';
+
 const supportsHistory = 'pushState' in window.history;
 let store = {}
 

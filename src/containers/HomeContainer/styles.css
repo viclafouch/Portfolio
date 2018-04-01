@@ -35,44 +35,27 @@
 
 .profile-resume {
     text-align: center;
-    font-size: 19px;
+    font-size: 17px;
     padding: 30px;
-    line-height: 1.2em;
-}
-
-.list-skills {
-    composes: row from '../../styles.css';
-    composes: row-verti-center from '../../styles.css';
-    composes: wrap from '../../styles.css';
-}
-
-.list-skills-item {
-    composes: col from '../../styles.css';
-    composes: col-hori-center from '../../styles.css';
-    composes: nowrap from '../../styles.css';
-    width: 100%;
-    padding: 30px 15px;
-}
-
-.list-skills-item .list-skills-item-img {
-    width: 75px;
-    fill: #34495e;
-}
-.list-skills-item .list-skills-item-span {
-    color: #34495e;
-    display: block;
-    margin: 10px auto;
-    font-weight: 700;
-    padding: 15px 10px;
+    max-width: 800px;
     text-align: center;
-}
-.list-skills-item .list-skills-item-p {
-    text-align: center;
-    color: #34495e;
+    margin: 0 auto;
+    line-height: 1.3em;
 }
 
-@media only screen and (min-width:768px)  {
-    .list-skills-item {
-        width: 33%;
-    }
+.content-row h3 {
+    margin-bottom: 20px;
+}
+
+.actually-img {
+    margin: 20px auto;
+    max-width: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    composes: p-shadow from '../../styles.css';
+}
+
+.actually-container p:last-child {
+    font-size: 13px;
+    color: #576574;
+    padding: 10px 5px;
 }

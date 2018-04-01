@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import classNames from 'classnames/bind';
 import styles from './styles.css'
-import FontAwesome from 'react-fontawesome'
 import Button from '../Button';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import ReCAPTCHA  from "react-google-recaptcha"
-
 
 let cx = classNames.bind(styles);
 
@@ -158,7 +157,7 @@ export default class ContactContainer extends Component {
                         (this.state.firstnameValid === false ? 'invalid' : ''),
                         )}>
                         <span className={cx('form-ico')}>
-                            <FontAwesome name="user" />
+                            <FontAwesomeIcon icon="user" />
                         </span>
                         <input
                         type="text"
@@ -180,7 +179,7 @@ export default class ContactContainer extends Component {
                         (this.state.lastnameValid === false ? 'invalid' : ''),
                         )}>
                         <span className={cx('form-ico')}>
-                            <FontAwesome name="user" />
+                            <FontAwesomeIcon icon="user" />
                         </span>
                         <input
                         type="text"
@@ -202,7 +201,7 @@ export default class ContactContainer extends Component {
                         (this.state.emailValid === false ? 'invalid' : ''),
                         )}>
                         <span className={cx('form-ico')}>
-                            <FontAwesome name="envelope" />
+                            <FontAwesomeIcon icon="envelope" />
                         </span>
                         <input
                         type="email"
@@ -224,7 +223,7 @@ export default class ContactContainer extends Component {
                         (this.state.messageValid === false ? 'invalid' : ''),
                         )}>
                         <span className={cx('form-ico')}>
-                            <FontAwesome name="pencil-square" />
+                            <FontAwesomeIcon icon="pencil-alt" />
                         </span>
                         <textarea
                         name="message"
@@ -246,7 +245,7 @@ export default class ContactContainer extends Component {
                         (this.state.captchaValid === false ? 'invalid' : ''),
                     )}>
                         <span className={cx('form-ico')}>
-                            <FontAwesome name="shield" />
+                            <FontAwesomeIcon icon="shield-alt" />
                         </span>
                         <ReCAPTCHA
                             ref="recaptcha"

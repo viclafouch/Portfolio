@@ -8,7 +8,7 @@ export default [
     {
         metas: {
             title: 'Portfolio de',
-            description: 'Ma description',
+            description: "Je m'appelle Victor de la Fouchardière et je suis développeur web et étudiant depuis septembre 2015 à l'Ecole Européenne des Métiers de l'Internet (EEMI), j'ai une vraie vocation pour la programmation web (React.js, Angular 6, Vue.js,...)",
             contentType: 'website'
         },
         url: '/',
@@ -20,7 +20,7 @@ export default [
     {
         metas: {
             title: 'Compétences de',
-            description: 'Ma description',
+            description: "Découvrez les compétences de Victor de la Fouchardière, développeur web et étudiant à l'Ecole Européenne des Métiers de l'Internet (EEMI)",
             contentType: 'website'
         },
         url: '/competences',
@@ -32,7 +32,7 @@ export default [
     {
         metas: {
             title: 'Productions de',
-            description: 'Ma description',
+            description: "Découvrez les productions de Victor de la Fouchardière, développeur web et étudiant à l'Ecole Européenne des Métiers de l'Internet (EEMI)",
             contentType: 'website'
         },
         url: '/productions',
@@ -44,7 +44,7 @@ export default [
     {
         metas: {
             title: 'Formations de',
-            description: 'Ma description',
+            description: "Découvrez les formations de Victor de la Fouchardière, développeur web et étudiant à l'Ecole Européenne des Métiers de l'Internet (EEMI)",
             contentType: 'website'
         },
         url: '/formations',
@@ -56,7 +56,7 @@ export default [
     {
         metas: {
             title: 'Contacter',
-            description: 'Ma description',
+            description: "Prenez contact maintenant avec Victor de la Fouchardière, développeur et étudiant à l'Ecole Européenne des Métiers de l'Internet (EEMI). Email : victor.dlf@outlook.fr",
             contentType: 'website'
         },
         url: '/contact',

@@ -72,7 +72,7 @@ let trainings = [
                 text: 'Diplôme du Baccalauréat Economique et Social (ES)'
             },
             {
-                text: 'Lycée Saint Paul - Lille - Mention AB'
+                text: 'Lycée Saint Paul - Lille'
             },
         ],
         img: SaintPaullogo
