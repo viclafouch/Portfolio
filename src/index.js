@@ -7,11 +7,16 @@ import skillApp from './reducers'
 import { createStore } from 'redux'
 
 const supportsHistory = 'pushState' in window.history;
+let store = {}
 
-let store = createStore(
-    skillApp,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+if (process.env.NODE_ENV === 'development') {
+    store = createStore(
+        skillApp,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+} else {
+    store = createStore(skillApp)
+}
 
 render(
     <Provider store={store}>

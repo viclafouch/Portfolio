@@ -5,33 +5,60 @@ import Title from '../../components/Title';
 import SEO from '../../components/SEO';
 import Production from '../../components/Production';
 
-import Production1 from './codepen-screen.png'
+import PokemonBattle from './pokemon-battle.png'
+import TCsCenter from './tc-center.png'
+import FicheAndTricks from './ficheandtricks.png'
+import TutoBwim from './tutobwim.fr.png'
+import WpInformations from './wpinformations.png'
+import ScrollMe from './scrollme.png'
+import Bubblesee from './bubblesee.png'
 
 let cx = classNames.bind(styles);
 
-let typesDev = ['FrontEnd']
+let typesDev = ['FrontEnd', 'BackEnd', 'FrontEnd/BackEnd', 'Extension']
 
 const productions = [
     {
         title: 'Pokemon battle',
-        img: Production1,
+        img: PokemonBattle,
         type: typesDev[0],
-        description: 'Toutes mes réalisations de front sur Codepen.',
-        href: 'https://codepen.io/Viclafouch/'
+        href: 'https://codepen.io/Viclafouch/full/VMNdpg/'
     },
     {
-        title: 'Pokemon battle',
-        img: Production1,
-        type: typesDev[0],
-        description: 'Toutes mes réalisations de front sur Codepen.',
-        href: 'https://codepen.io/Viclafouch/'
+        title: 'TC\'s Center',
+        img: TCsCenter,
+        type: typesDev[3],
+        href: 'https://chrome.google.com/webstore/detail/tcs-center/hanknpkmjbfhcalmipokkfplndkohgdm'
     },
     {
-        title: 'Pokemon battle',
-        img: Production1,
+        title: 'FicheAndTricks',
+        img: FicheAndTricks,
+        type: typesDev[2],
+        href: 'https://tc-center.victor-de-la-fouchardiere.fr/'
+    },
+    {
+        title: 'ScrollMe',
+        img: ScrollMe,
         type: typesDev[0],
-        description: 'Toutes mes réalisations de front sur Codepen.',
-        href: 'https://codepen.io/Viclafouch/'
+        href: 'https://www.victor-de-la-fouchardiere.fr/uscroll/demo.html'
+    },
+    {
+        title: 'TutoBwim.fr',
+        img: TutoBwim,
+        type: typesDev[2],
+        href: 'https://www.tutobwim.fr/'
+    },
+    {
+        title: 'Bubblesee',
+        img: Bubblesee,
+        type: typesDev[0],
+        href: 'https://www.victor-de-la-fouchardiere.fr/bubblesee/demo.html'
+    },
+    {
+        title: 'WP Informations',
+        img: WpInformations,
+        type: typesDev[1],
+        href: 'https://github.com/viclafouch/WP_Informations'
     },
 ]
 

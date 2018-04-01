@@ -40,7 +40,7 @@ class SEO extends Component {
     componentDidMount = () => {
         document.addEventListener('visibilitychange', () => {
             if (document.hidden) {
-                document.title = "Get back to me 😢"
+                document.title = "Reviens moi 😢"
             } else {
                 document.title = this.title;
             }

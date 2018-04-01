@@ -76,7 +76,7 @@ const frameworks = [
     {
         img: VUEJS,
         title: 'vue.js',
-        dateInYears: 3,
+        dateInYears: -1,
     },
     {
         img: REACT,
