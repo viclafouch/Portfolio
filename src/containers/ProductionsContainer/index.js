@@ -58,7 +58,7 @@ const productions = [
         title: 'WP Informations',
         img: WpInformations,
         type: typesDev[1],
-        href: 'https://github.com/viclafouch/WP_Informations'
+        href: 'https://viclafouch.github.io/WP_Informations/'
     },
 ]
 
