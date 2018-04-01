@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Pokemon GB';
+  src: url("https://www.victor-de-la-fouchardiere.fr/pokemon/fonts/Pokemon_GB.eot?#iefix") format("embedded-opentype"), url("https://www.victor-de-la-fouchardiere.fr/pokemon/fonts/Pokemon_GB.woff") format("woff"), url("https://www.victor-de-la-fouchardiere.fr/pokemon/fonts/Pokemon_GB.ttf") format("truetype"), url("https://www.victor-de-la-fouchardiere.fr/pokemon/fonts/Pokemon_GB.svg#PokemonGB") format("svg");
+  font-weight: 400;
+}
