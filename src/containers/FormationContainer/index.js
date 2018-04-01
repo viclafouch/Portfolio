@@ -13,7 +13,7 @@ let cx = classNames.bind(styles);
 
 let trainings = [
     {
-        date: 'Depuis Septembre 2015',
+        date: 'Depuis Sept 2015',
         title: 'EEMI',
         href: 'http://www.eemi.com/',
         rows: [
@@ -47,7 +47,7 @@ let trainings = [
         img: DigitalGooglelogo
     },
     {
-        date: 'Depuis Octobre 2016',
+        date: 'Depuis Oct 2016',
         title: 'Free Code Camp',
         href: 'https://www.freecodecamp.org/',
         rows: [

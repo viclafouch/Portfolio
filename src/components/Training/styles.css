@@ -1,6 +1,6 @@
 .training-item {
     width: 100%;
-    padding: 20px 30px;
+    padding: 20px 10px;
     composes: col from '../../styles.css';
     composes: nowrap from '../../styles.css';
 }
@@ -48,6 +48,10 @@
     padding: 15px 0;
     color: #444;
     text-align: left;
+}
+
+.training-item a {
+    margin-right: 0;
 }
 
 .training-item-list-row {

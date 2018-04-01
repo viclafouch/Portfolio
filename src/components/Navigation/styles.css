@@ -90,6 +90,8 @@
 .nav-burger:hover span { left: -5px; }
 
 .nav-burger.menu-opened {
+    position: fixed;
+    top: 85px;
     right: 61px;
 }
 

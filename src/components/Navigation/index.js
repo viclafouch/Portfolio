@@ -17,7 +17,7 @@ export class Navigation extends Component {
     }
 
     componentDidMount = () => {
-        
+
 
     }
 
@@ -47,6 +47,11 @@ export class Navigation extends Component {
                                 navlink.inNav &&
                                 <li key={index} className={cx('nav-links-list-item')}>
                                     <NavLink
+                                        onClick={() => {
+                                            this.setState({
+                                                menuOpened: false
+                                            });
+                                        }}
                                         exact={navlink.exact}
                                         to={navlink.url}
                                         className={cx('nav-links-list-item-href')}
