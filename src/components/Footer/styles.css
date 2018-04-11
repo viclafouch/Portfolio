@@ -15,10 +15,11 @@
 
 .footer > p {
     text-align: center;
-    line-height: 24px;
+    line-height: 19px;
 }
 
 .footer > p:last-child {
+    margin-top: 7px;
     font-size: 0.8em;
     color: #b2bec3;
 }

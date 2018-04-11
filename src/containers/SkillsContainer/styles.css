@@ -1,20 +1,18 @@
 .skills-list {
-    composes: col from '../../styles.css';
-    composes: col-verti-center from '../../styles.css';
-    composes: col-hori-center from '../../styles.css';
-    composes: nowrap from '../../styles.css';
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-@media only screen and (min-width:480px) {
-    .skills-list {
-        display: flex;
-        flex-flow: row wrap;
-    }
+.skills-list li {
+    width: 50%;
+    min-width: 180px;
 }
 
 .skillscontainer ul:not(.technos-list) article {
-    width: 200px;
-    margin: 15px 10px;
+    width: 100%;
+    margin: 15px 0px;
+    overflow: hidden;
 }
 
 .skillscontainer article > header {
@@ -60,4 +58,16 @@
 .skillscontainer ul.frameworks-list article > footer {
    text-align: center!important;
    margin: 0 auto;
+}
+
+
+@media only screen and (min-width:480px) {
+    .skills-list li {
+        width: auto;
+    }
+
+    .skillscontainer ul:not(.technos-list) article {
+        width: 200px;
+        margin: 15px 10px;
+    }
 }

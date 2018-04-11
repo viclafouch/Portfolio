@@ -59,3 +59,7 @@
     color: #576574;
     padding: 10px 5px;
 }
+
+.actually-container p {
+    line-height: 1.3em;
+}
