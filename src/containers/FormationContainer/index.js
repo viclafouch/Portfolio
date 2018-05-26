@@ -24,7 +24,7 @@ let trainings = [
                 text: 'Connaissances acquises dans : Webmarketing / Communication digitale / Webdesign / Développement web / Gestion de Projet'
             },
             {
-                text: 'Objectif : Licence + Master (BAC +5)'
+                text: 'Objectif : Licence'
             }
         ],
         img: EEMIlogo

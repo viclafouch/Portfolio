@@ -8,13 +8,13 @@ let cx = classNames.bind(styles);
 const contactLinks = [
     {
         text: {
-            title: 'victor.dlf@outlook.fr',
+            title: 'victor.delafouchardiere@gmail.com',
             className: cx('header-item-links-text')
         },
         fontawesome: {
             name: 'envelope'
         },
-        href: 'mailto:victor.dlf@outlook.fr',
+        href: 'mailto:victor.delafouchardiere@gmail.com',
         title: '',
         className: cx('header-item-links'),
     },

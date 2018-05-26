@@ -12,6 +12,7 @@ import TutoBwim from './tutobwim.fr.png'
 import WpInformations from './wpinformations.png'
 import uScroll from './uscroll.png'
 import Bubblesee from './bubblesee.png'
+import ReactTemplateForm from './react-template-form.png'
 
 let cx = classNames.bind(styles);
 
@@ -59,6 +60,12 @@ const productions = [
         img: WpInformations,
         type: typesDev[1],
         href: 'https://viclafouch.github.io/WP_Informations/'
+    },
+    {
+        title: 'React Template Form',
+        img: ReactTemplateForm,
+        type: typesDev[0],
+        href: 'https://viclafouch.github.io/react-template-form/'
     },
 ]
 
