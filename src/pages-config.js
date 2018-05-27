@@ -1,8 +1,8 @@
-import { FormationsContainer } from './containers/FormationContainer';
-import { ProductionsContainer } from './containers/ProductionsContainer';
-import { SkillContainer } from './containers/SkillsContainer';
-import { HomeContainer } from './containers/HomeContainer';
-import { ContactContainer } from './containers/ContactContainer';
+import FormationsContainer from './containers/FormationContainer';
+import ProductionsContainer from './containers/ProductionsContainer';
+import SkillContainer from './containers/SkillsContainer';
+import HomeContainer from './containers/HomeContainer';
+import ContactContainer from './containers/ContactContainer';
 
 export default [
     {

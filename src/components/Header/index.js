@@ -75,7 +75,7 @@ const socialLinks = [
             prefix: 'fab',
             name: 'twitter'
         },
-        href: 'https://twitter.com/VicAndTips',
+        href: 'https://twitter.com/TrustedSheriff',
         title: '',
         className: cx('header-item-links'),
         blank: true

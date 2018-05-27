@@ -8,8 +8,8 @@ let cx = classNames.bind(styles);
 export class SkillItem extends React.Component {
 
     convertDate(date) {
-        let now = moment();
-        let diff = now.diff(date, 'month');
+        let dateTo = (date.length > 1) ? date[1] : moment();
+        let diff = dateTo.diff(date[0], 'month');
         if (diff < 12) return diff + ' mois';
         if ((diff / 12) % 1 > 0.5) return Math.floor((diff / 12) + 1) + ' ans'
         return Math.floor((diff / 12)) + ' ans'
@@ -26,7 +26,7 @@ export class SkillItem extends React.Component {
                 </header>
                 <footer className={cx('skill-footer')}>
                     <h5>{props.title}</h5>
-                    <span>{this.convertDate(props.dateInYears)} d'expérience</span>
+                    <span>{this.convertDate(props.duration)} d'expérience</span>
                     <ul>
                         { props.items && props.items.map((item, index) => {
                             return (

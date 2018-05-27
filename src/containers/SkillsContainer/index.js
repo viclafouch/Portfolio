@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import moment from 'moment';
 import classNames from 'classnames/bind';
 import styles from './styles.css'
@@ -32,25 +32,25 @@ const languages = [
     {
         img: HTML,
         title: 'html',
-        dateInYears: moment([2015, 1, 1]),
+        duration: [moment([2015, 1, 1])],
         items: ['HTML5', 'Sémantique', 'SVG']
     },
     {
         img: CSS,
         title: 'css',
-        dateInYears: moment([2015, 1, 1]),
+        duration: [moment([2015, 1, 1])],
         items: ['CSS3', 'Responsive', 'SASS']
     },
     {
         img: JS,
         title: 'js',
-        dateInYears: moment([2015, 1, 1]),
+        duration: [moment([2015, 1, 1])],
         items: ['ES6/ES7', 'DOM', 'Ajax']
     },
     {
         img: PHP,
         title: 'php',
-        dateInYears: moment([2016, 1, 1]),
+        duration: [moment([2016, 1, 1])],
         items: ['Objet', 'MVC', 'MySql']
     },
 ]
@@ -59,42 +59,42 @@ const frameworks = [
     {
         img: JQUERY,
         title: 'jquery',
-        dateInYears: moment([2015, 1, 1]),
+        duration: [moment([2015, 1, 1])],
     },
     {
         img: BOOTSTRAP,
         title: 'bootstrap',
-        dateInYears: moment([2016, 1, 1]),
+        duration: [moment([2016, 1, 1])],
     },
     {
         img: MATERIALIZE,
         title: 'materialize',
-        dateInYears: moment([2017, 1, 1]),
+        duration:[moment([2017, 1, 1]), moment([2017, 9, 1])],
     },
     {
         img: VUEJS,
         title: 'vue.js',
-        dateInYears: moment([2018, 1, 1]),
+        duration: [moment([2018, 1, 1]), moment([2018, 3, 1])],
     },
     {
         img: REACT,
         title: 'react',
-        dateInYears: moment([2018, 2, 1]),
+        duration: [moment([2018, 2, 1])],
     },
     {
         img: SYMFONY,
         title: 'symfony',
-        dateInYears: moment([2017, 10, 1]),
+        duration: [moment([2017, 10, 1])],
     },
     {
         img: ROR,
         title: 'ruby on rails',
-        dateInYears: moment([2017, 10, 1]),
+        duration: [moment([2017, 10, 1])],
     },
     {
         img: ANGULAR,
         title: 'angular 5',
-        dateInYears: moment([2017, 10, 1]),
+        duration: [moment([2017, 10, 1])],
     },
 ]
 
@@ -126,58 +126,55 @@ const technos = [
     },
 ]
 
-export class SkillContainer extends Component {
-
-    render() {
-        return (
-            <section className={cx('skillscontainer')}>
-                <SEO url={this.props.match.url} />
-                <Title title="Compétences" subtitle="Ce que je sais faire" />
-                <div className={cx('skillscontainer-languages')}>
-                    <SkillTitle title="Languages" />
-                    <ul className={cx('languages-list', 'skills-list')}>
-                        {
-                            languages.map((language, index) => {
-                                return (
-                                    <li key={index}>
-                                        <SkillItem {...language} />
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
-                <div className={cx('skillscontainer-frameworks')}>
-                    <SkillTitle title="Frameworks" />
-                    <ul className={cx('frameworks-list', 'skills-list')}>
-                        {
-                            frameworks.map((framework, index) => {
-                                return (
-                                    <li key={index}>
-                                        <SkillItem {...framework} />
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
-                <div className={cx('skillscontainer-technos')}>
-                    <SkillTitle title="Technologies" />
-                    <ul className={cx('technos-list', 'skills-list')}>
-                        {
-                            technos.map((techno, index) => {
-                                return (
-                                    <li key={index}>
-                                        <Techno {...techno} />
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
-            </section>
-        )
-  }
+const SkillContainer = (props) => {
+    return (
+        <section className={cx('skillscontainer')}>
+            <SEO url={props.match.url} />
+            <Title title="Compétences" subtitle="Ce que je sais faire" />
+            <div className={cx('skillscontainer-languages')}>
+                <SkillTitle title="Languages" />
+                <ul className={cx('languages-list', 'skills-list')}>
+                    {
+                        languages.map((language, index) => {
+                            return (
+                                <li key={index}>
+                                    <SkillItem {...language} />
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+            <div className={cx('skillscontainer-frameworks')}>
+                <SkillTitle title="Frameworks" />
+                <ul className={cx('frameworks-list', 'skills-list')}>
+                    {
+                        frameworks.map((framework, index) => {
+                            return (
+                                <li key={index}>
+                                    <SkillItem {...framework} />
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+            <div className={cx('skillscontainer-technos')}>
+                <SkillTitle title="Technologies" />
+                <ul className={cx('technos-list', 'skills-list')}>
+                    {
+                        technos.map((techno, index) => {
+                            return (
+                                <li key={index}>
+                                    <Techno {...techno} />
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+        </section>
+    )
 }
 
 export default SkillContainer
