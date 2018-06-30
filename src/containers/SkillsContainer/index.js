@@ -79,7 +79,7 @@ const frameworks = [
     {
         img: REACT,
         title: 'react',
-        duration: [moment([2018, 2, 1])],
+        duration: [moment([2018, 1, 1])],
     },
     {
         img: SYMFONY,

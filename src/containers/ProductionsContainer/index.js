@@ -13,6 +13,7 @@ import WpInformations from './wpinformations.png'
 import uScroll from './uscroll.png'
 import Bubblesee from './bubblesee.png'
 import ReactTemplateForm from './react-template-form.png'
+import GithubProfile from './github-profile.png'
 
 let cx = classNames.bind(styles);
 
@@ -66,6 +67,12 @@ const productions = [
         img: ReactTemplateForm,
         type: typesDev[0],
         href: 'https://viclafouch.github.io/react-template-form/'
+    },
+    {
+        title: 'Github Profile',
+        img: GithubProfile,
+        type: typesDev[0],
+        href: 'https://viclafouch.github.io/github-profile/'
     },
 ]
 

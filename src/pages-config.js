@@ -56,7 +56,7 @@ export default [
     {
         metas: {
             title: 'Contacter',
-            description: "Prenez contact maintenant avec Victor de la Fouchardière, développeur et étudiant à l'Ecole Européenne des Métiers de l'Internet (EEMI). Email : victor.dlf@outlook.fr",
+            description: "Prenez contact maintenant avec Victor de la Fouchardière, développeur et étudiant à l'Ecole Européenne des Métiers de l'Internet (EEMI). Email : victor.delafouchardiere@gmail.com",
             contentType: 'website'
         },
         url: '/contact',
