@@ -22,7 +22,7 @@ import ROR from './ror-logo.png';
 import ANGULAR from './angular-logo.png';
 import VSC from './visual-code-studio-logo.png';
 import GIT from './git-logo.png';
-import GULP from './gulp-logo.png';
+import PARCEL from './parcel-logo.png';
 import WINDOWS from './windows-logo.png';
 import PHOTOSHOP from './photoshop-logo.png';
 
@@ -110,9 +110,9 @@ const technos = [
         img: GIT
     },
     {
-        title: 'Gulp',
+        title: 'Parcel',
         type: 'Automatisation',
-        img: GULP
+        img: PARCEL
     },
     {
         title: 'Windows',
