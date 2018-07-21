@@ -13,7 +13,7 @@ let cx = classNames.bind(styles);
 
 let trainings = [
     {
-        date: 'Depuis Sept 2015',
+        date: '2015 - 2018',
         title: 'EEMI',
         href: 'http://www.eemi.com/',
         rows: [
