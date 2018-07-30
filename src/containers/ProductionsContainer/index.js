@@ -14,6 +14,7 @@ import uScroll from './uscroll.png'
 import Bubblesee from './bubblesee.png'
 import ReactTemplateForm from './react-template-form.png'
 import GithubProfile from './github-profile.png'
+import LazyLoad from 'react-lazyload';
 
 let cx = classNames.bind(styles);
 
@@ -87,7 +88,9 @@ export class ProductionsContainer extends Component {
                         productions.map((production, index) => {
                             return (
                                 <li key={index}>
-                                    <Production {...production} />
+                                    <LazyLoad height={200} once>
+                                        <Production {...production} />
+                                    </LazyLoad>
                                 </li>
                             )
                         })
