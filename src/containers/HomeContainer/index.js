@@ -18,12 +18,12 @@ export class HomeContainer extends Component {
                 <div className={cx('content-row')}>
                     <img src={profilePicture} className={cx('profile-picture')} title="Victor de la Fouchardiere" alt="Victor de la Fouchardiere"/>
                     <h2 className={cx('title-h2', 'title')}>Victor de la Fouchardiere</h2>
-                    <span className={cx('sub-title', 'title')}>Google TC / Etudiant / Developpeur web</span>
+                    <span className={cx('sub-title', 'title')}>Developpeur web / YouTube/Google TC</span>
                 </div>
                 <hr/>
                 <div className={cx('content-row')}>
                     <p className={cx('profile-resume')}>
-                    Developpeur web et étudiant depuis septembre 2015 à l'Ecole Européenne des Métiers de l'Internet, j'ai une vraie vocation pour la programmation web tout en ayant acquis des connaissances renforcées en marketing et en design.
+                    Etudiant entre 2015 et 2018 à l'Ecole Européenne des Métiers de l'Internet et aujourd'hui développeur web, j'ai une vraie vocation pour la programmation web tout en ayant acquis des connaissances renforcées en marketing et en design.
                     </p>
                 </div>
                 <hr />

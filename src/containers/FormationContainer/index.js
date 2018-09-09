@@ -18,7 +18,7 @@ let trainings = [
         href: 'http://www.eemi.com/',
         rows: [
             {
-                text: '3ème année à l\'Ecole Européenne des Métiers de L\'Internet'
+                text: 'Spécialisation dans le web developpement'
             },
             {
                 text: 'Connaissances acquises dans : Webmarketing / Communication digitale / Webdesign / Développement web / Gestion de Projet'

@@ -17,7 +17,7 @@ export const Subheading = () => {
                 </Link>
                 <h1 className={cx('sub-h1', 'sub-center')}>Besoin d'un développeur web&nbsp;?</h1>
                 <p className={cx('sub-p', 'sub-center')}>
-                    Disponible pour vous aider dans le développement de votre site web, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.
+                    Disponible pour vous aider dans le développement de votre projet, je vous invite à regarder ci-dessous l'ensemble de mes références pour mieux connaitre mon profil.
                 </p>
                 <Button anchor href={pdf} icon={{name: 'download'}} download primary text='Télécharger/Imprimer le CV' />
             </div>
