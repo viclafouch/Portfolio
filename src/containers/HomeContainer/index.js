@@ -28,12 +28,12 @@ export class HomeContainer extends Component {
                 </div>
                 <hr />
                 <div className={cx('content-row')}>
-                    <h3>Aujourd'hui</h3>
+                    <h3>Dernière expérience</h3>
                     <div className={cx('actually-container')}>
                         <Link target="_blank" to="http://www.myedco.fr/">
                             <img src={imgActually} className={cx('actually-img')} alt="" />
                         </Link>
-                        <p>Développeur Frontend en stage chez <b><i>My Edition Company</i> depuis le 01/03/2018</b>.</p>
+                        <p>Développeur Frontend en stage chez <b><i>My Edition Company</i> du 02/03/18 au 05/09/18</b>.</p>
                         <p>
                             <span>React.js{' '}
                             <FontAwesomeIcon icon={["fab", "react"]}

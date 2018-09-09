@@ -84,17 +84,17 @@ const frameworks = [
     {
         img: SYMFONY,
         title: 'symfony',
-        duration: [moment([2017, 10, 1])],
+        duration: [moment([2017, 10, 1]), moment([2018, 3, 1])],
     },
     {
         img: ROR,
         title: 'ruby on rails',
-        duration: [moment([2017, 10, 1])],
+        duration: [moment([2017, 10, 1]), moment([2018, 2, 1])],
     },
     {
         img: ANGULAR,
         title: 'angular 5',
-        duration: [moment([2017, 10, 1])],
+        duration: [moment([2017, 10, 1]), moment([2018, 3, 1])],
     },
 ]
 
