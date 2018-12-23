@@ -1,8 +1,16 @@
-const withSass = require("@zeit/next-sass");
+const withSass = require('@zeit/next-sass')
+
+module.exports = {
+  webpack(config, options) {
+    const { dev, isServer } = options
+    return config
+  }
+}
 
 module.exports = withSass({
-  webpack(config, options) {
-    const { dev, isServer } = options;
-    return config;
+  sassLoaderOptions: {
+    data: `
+      @import "scss/app.scss";
+    `
   }
-});
+})
