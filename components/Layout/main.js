@@ -24,6 +24,7 @@ import {
   faDownload,
   faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
+import Nav from './Nav/Nav'
 library.add(
   faPython,
   faReact,
@@ -52,6 +53,7 @@ class Layout extends React.Component {
       <>
         <Meta />
         <Header />
+        <Nav />
         {this.props.children}
         <Footer />
       </>
