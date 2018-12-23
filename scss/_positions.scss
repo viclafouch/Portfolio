@@ -1,0 +1,80 @@
+$tblr: 'top' 'bottom' 'left' 'right';
+
+@each $pos in $tblr {
+  @for $i from 0 through 100 {
+    .pdi--#{$pos}-#{$i} {
+      padding-#{$pos}: $i + px !important;
+    }
+    .mgi--#{$pos}-#{$i} {
+      margin-#{$pos}: $i + px !important;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .pdi--#{$i} {
+    padding: $i + px !important;
+  }
+}
+@for $i from 0 through 100 {
+  .mgi--#{$i} {
+    margin: $i + px !important;
+  }
+}
+
+.flex-me {
+  display: flex !important;
+  &.inline-flex {
+    display: inline-flex;
+  }
+  &.flex-align {
+    align-items: center;
+  }
+  &.flex-align-start {
+    align-items: flex-start;
+  }
+  &.flex-align-end {
+    align-items: flex-end;
+  }
+  &.flex-vertical {
+    flex-direction: column;
+  }
+  &.flex-horizontal {
+    flex-direction: row;
+  }
+  &.flex-justify-start {
+    justify-content: flex-start;
+  }
+  &.flex-justify-end {
+    justify-content: flex-end;
+  }
+  &.flex-justify-center {
+    justify-content: center;
+  }
+  &.flex-justify-between {
+    justify-content: space-between;
+  }
+  &.flex-justify-around {
+    justify-content: space-around;
+  }
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.center-text {
+  text-align: center;
+}
+.right-text {
+  text-align: right;
+}
+.left-text {
+  text-align: left;
+}
+
+.row::after {
+  content: '';
+  display: table;
+  clear: both;
+}

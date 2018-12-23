@@ -5,28 +5,24 @@ import './header.scss'
 const contactLinks = [
   {
     text: {
-      title: 'victor.delafouchardiere@gmail.com',
-      className: 'header-item-links-text'
+      title: 'victor.delafouchardiere@gmail.com'
     },
     fontawesome: {
       name: 'envelope'
     },
     href: 'mailto:victor.delafouchardiere@gmail.com',
-    title: '',
-    className: 'header-item-links'
+    title: ''
   },
   {
     text: {
-      title: 'viclafouch',
-      className: 'header-item-links-text'
+      title: 'viclafouch'
     },
     fontawesome: {
       prefix: 'fab',
       name: 'skype'
     },
     href: 'skype:victor.dlf?add',
-    title: '',
-    className: 'header-item-links'
+    title: ''
   }
 ]
 
@@ -37,8 +33,7 @@ const socialLinks = [
       name: 'linkedin'
     },
     href: 'https://www.linkedin.com/in/victordelafouchardiere/',
-    title: '',
-    className: 'header-item-links'
+    title: ''
   },
   {
     fontawesome: {
@@ -46,8 +41,7 @@ const socialLinks = [
       name: 'codepen'
     },
     href: 'https://codepen.io/Viclafouch/',
-    title: '',
-    className: 'header-item-links'
+    title: ''
   },
   {
     fontawesome: {
@@ -56,8 +50,7 @@ const socialLinks = [
     },
     href:
       'https://topcontributor.withgoogle.com/profile/victor-de-la-fouchardiere-e5fded',
-    title: '',
-    className: 'header-item-links'
+    title: ''
   },
   {
     fontawesome: {
@@ -65,8 +58,7 @@ const socialLinks = [
       name: 'git'
     },
     href: 'https://github.com/viclafouch',
-    title: '',
-    className: 'header-item-links'
+    title: ''
   },
   {
     fontawesome: {
@@ -75,7 +67,6 @@ const socialLinks = [
     },
     href: 'https://twitter.com/TrustedSheriff',
     title: '',
-    className: 'header-item-links',
     blank: true
   }
 ]
@@ -83,15 +74,15 @@ const socialLinks = [
 export const Header = () => {
   return (
     <header className="header">
-      <div className="header-links">
-        <div className="header-box-links">
+      <div className="header-links flex-me container flex-justify-between">
+        <div className="header-links-box-left">
           {contactLinks.map((link, index) => {
             return (
               <a
                 href={link.href}
                 key={index}
                 target="_blank"
-                className={link.className}
+                className="header-links-item"
                 title={link.title}
               >
                 <FontAwesomeIcon
@@ -100,19 +91,21 @@ export const Header = () => {
                     link.fontawesome.name
                   ]}
                 />
-                <span className={link.text.className}>{link.text.title}</span>
+                <span className="header-links-item-text">
+                  {link.text.title}
+                </span>
               </a>
             )
           })}
         </div>
-        <div className="header-box-links">
+        <div className="header-links-box-right">
           {socialLinks.map((link, index) => {
             return (
               <a
                 href={link.href}
                 key={index}
                 target="_blank"
-                className={link.className}
+                className="header-links-item"
                 title={link.title}
               >
                 <FontAwesomeIcon

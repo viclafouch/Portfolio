@@ -10,7 +10,8 @@ module.exports = {
 module.exports = withSass({
   sassLoaderOptions: {
     data: `
-      @import "scss/app.scss";
+      @import "scss/_variables.scss";
+      @import "scss/_mixins.scss";
     `
   }
 })

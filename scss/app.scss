@@ -1,2 +1,66 @@
-@import 'variables';
-@import 'mixins';
+@import 'positions';
+
+html {
+  visibility: hidden;
+}
+
+html.fonts-loaded {
+  visibility: visible;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: $p-txt-color;
+  background-color: $p-bg-color;
+  overflow-y: scroll;
+  font-family: ABeeZee, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.4em;
+  font-family: Karma, serif !important;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.76em;
+  text-align: center;
+}
+
+h4 {
+  font-size: 27px;
+  text-align: center;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+.p-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.s-shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.t-shadow {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}

@@ -1,38 +1,34 @@
 .header {
   width: 100%;
   padding: 15px 10px;
-  background-color: $red;
+  background-color: $s-bg-color;
   min-height: 50px;
+
+  .header-links {
+    line-height: 20px;
+    width: 100%;
+
+    &-item {
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 10px;
+      color: $p-txt-color;
+      transition: color 0.3s ease 0s;
+      &:hover {
+        color: #f05f40;
+      }
+
+      &-text {
+        margin-left: 4px;
+        display: none;
+        @include screen('nosmall') {
+          display: inline-block;
+        }
+      }
+    }
+
+    &-box-left > a:first-child {
+      margin-left: 0;
+    }
+  }
 }
-
-// .header-links {
-//   composes: row from '../../styles.css';
-//   composes: row-hori-between from '../../styles.css';
-//   composes: nowrap from '../../styles.css';
-//   composes: container from '../../styles.css';
-//   line-height: 20px;
-//   width: 100%;
-// }
-
-// .header-item-links {
-//   display: inline-block;
-//   text-decoration: none;
-//   margin-left: 10px;
-//   color: #444;
-//   transition: color 0.3s ease 0s;
-// }
-
-// .header-item-links:hover {
-//   color: #f05f40;
-// }
-
-// .header-item-links-text {
-//   margin-left: 4px;
-//   display: none;
-// }
-
-// @media only screen and (min-width: 480px) {
-//   .header-item-links-text {
-//     display: inline-block;
-//   }
-// }
