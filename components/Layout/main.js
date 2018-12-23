@@ -25,6 +25,7 @@ import {
   faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 import Nav from './Nav/Nav'
+import Heading from '../Heading/Heading'
 library.add(
   faPython,
   faReact,
@@ -54,7 +55,8 @@ class Layout extends React.Component {
         <Meta />
         <Header />
         <Nav />
-        {this.props.children}
+        <Heading />
+        <main id="main-app">{/* {this.props.children} */}</main>
         <Footer />
       </>
     )
