@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default () => (
   <Page>
-    <section className="homecontainer">
+    <section className="home-section">
       <div className="content-row">
         <img
           src="/static/victor-de-la-fouchardiere.png"

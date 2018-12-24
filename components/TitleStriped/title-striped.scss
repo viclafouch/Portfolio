@@ -1,0 +1,17 @@
+.title-striped {
+  padding: 25px 10px;
+  text-align: center;
+  width: 100%;
+
+  & > h2 {
+    color: $p-txt-color;
+    padding-bottom: 7px;
+  }
+
+  & > p {
+    font-style: italic;
+    font-weight: 700;
+    color: #f05f40;
+    text-decoration: underline;
+  }
+}

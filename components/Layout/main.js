@@ -45,9 +45,7 @@ library.add(
 )
 
 class Layout extends React.Component {
-  componentDidMount() {
-    Fonts()
-  }
+  componentDidMount = () => Fonts()
 
   render() {
     return (
