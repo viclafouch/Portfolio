@@ -10,7 +10,7 @@ const Button = props => {
   const button = (
     <button disabled={props.disabled} className={classnames.join(' ')}>
       {props.icon && <FontAwesomeIcon icon={props.icon} />}
-      {props.text}
+      {props.children}
     </button>
   )
 
@@ -18,7 +18,7 @@ const Button = props => {
     <a
       href={props.href}
       target={props.target || ''}
-      download={props.download || ''}
+      download={props.download || 'false'}
     >
       <style jsx>{`
         a {

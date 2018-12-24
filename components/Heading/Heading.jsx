@@ -25,8 +25,9 @@ const Heading = () => (
         className="p-shadow"
         download
         primary
-        text="Télécharger/Imprimer le CV"
-      />
+      >
+        Télécharger/Imprimer le CV
+      </Button>
     </div>
   </div>
 )

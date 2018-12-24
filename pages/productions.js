@@ -1,5 +1,6 @@
 import Page from '../components/Layout/main'
 import Title from '../components/Title/Title'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const pathProductions = '/static/productions'
 
@@ -22,6 +23,7 @@ const productions = [
   {
     title: 'FicheAndTricks',
     img: `${pathProductions}/ficheandtricks.png`,
+    type: typesDev[2],
     href: 'https://tc-center.victor-de-la-fouchardiere.fr/'
   },
   {
@@ -67,15 +69,32 @@ export default () => (
     <section className="productions-section">
       <Title title="Portfolio" subtitle="Ce que je développe" />
       <ul className="productions-list">
-        {productions.map((production, index) => {
-          return (
-            <li key={index}>
-              {/* <LazyLoad height={200} once>
-                <Production {...production} />
-              </LazyLoad> */}
-            </li>
-          )
-        })}
+        {productions.map((production, index) => (
+          <li key={index} className="p-shadow">
+            <article className="production-article">
+              <header className="production-article-header">
+                <div className="production-article-header-overlay">
+                  <a href={production.href} target="_blank">
+                    <FontAwesomeIcon icon="link" />
+                  </a>
+                </div>
+                <img
+                  src={production.img}
+                  alt=""
+                  className="production-article-header-cover"
+                />
+              </header>
+              <footer className="production-article-footer">
+                <h4 className="production-article-footer-title">
+                  {production.title}
+                </h4>
+                <p className="production-article-footer-subtitle">
+                  {production.type}
+                </p>
+              </footer>
+            </article>
+          </li>
+        ))}
       </ul>
     </section>
   </Page>

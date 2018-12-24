@@ -173,9 +173,9 @@ hr.striped,
 
   .skills-list {
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
-    grid-gap: 18px 10px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 220px));
+    grid-gap: 18px 5px;
     margin-bottom: 10px;
 
     & > li {
@@ -237,6 +237,7 @@ hr.striped,
     }
 
     &.technos-list {
+      grid-template-columns: repeat(auto-fill, 150px);
       .skill-article-header-title,
       .skill-article-header-note {
         line-height: 1em;
@@ -247,7 +248,152 @@ hr.striped,
       .skill-article-header-title {
         color: #f05f40;
       }
-      grid-template-columns: repeat(auto-fill, 150px);
+    }
+  }
+}
+
+.productions-section {
+  .productions-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+    grid-gap: 18px 15px;
+    margin-bottom: 10px;
+
+    & > li {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #dedede;
+    }
+
+    .production-article {
+      width: 100%;
+
+      &-header {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        &-cover {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        &-overlay {
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+          transition-property: opacity, visibility;
+          transition-duration: 0.3s;
+          transition-timing-function: ease;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.4);
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          & > a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            padding: 10px;
+            transition: transform 0.3s ease 0s;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &:hover {
+        .production-article-header-overlay {
+          opacity: 1;
+          visibility: visible;
+          & > a {
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+
+      &-footer {
+        width: 100%;
+        text-align: center;
+        padding: 9px 0;
+
+        &-title {
+          font-size: 17px;
+          margin-bottom: 0.5em;
+        }
+
+        &-subtitle {
+          color: #9e9e9e;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+.training-section {
+  .training-list {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    & > li {
+      width: 100%;
+      padding: 20px 10px;
+      &:not(:last-child) {
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .training-article {
+      width: 100%;
+      display: grid;
+      grid-template-rows: 200px auto;
+
+      &-thumbnail-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-description-side {
+        display: flex;
+        flex-flow: column nowrap;
+        flex: 1;
+
+        .training-article-date {
+          color: $p-txt-color;
+          span {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          svg {
+            vertical-align: middle;
+            margin-right: 7px;
+          }
+        }
+
+        .training-article-title {
+          padding: 15px 0;
+          color: $p-txt-color;
+          text-align: left;
+        }
+
+        ul.training-article-list-texts {
+          color: #445;
+          width: 100%;
+          & > li {
+            line-height: 22px;
+          }
+        }
+      }
     }
   }
 }
