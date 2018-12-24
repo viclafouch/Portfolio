@@ -1,14 +1,10 @@
-import React from 'react'
+import './footer.scss'
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <p>
-        Copyright &copy; {new Date().getFullYear()} by Victor de la Fouchardiere
-      </p>
-      <p>Developed with React.js / Next.js</p>
-    </footer>
-  )
-}
-
-export default Footer
+export default () => (
+  <footer className="footer flex-me flex-vertical flex-align flex-justify-center">
+    <p>
+      Copyright &copy; {new Date().getFullYear()} by Victor de la Fouchardiere
+    </p>
+    <p>Developed with React.js / Next.js</p>
+  </footer>
+)
