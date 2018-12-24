@@ -1,17 +1,32 @@
 const withSass = require('@zeit/next-sass')
+const withSourceMaps = require('@zeit/next-source-maps')
+const withPlugins = require('next-compose-plugins')
 
-module.exports = {
-  webpack(config, options) {
-    const { dev, isServer } = options
-    return config
-  }
+// next.js configuration
+const nextConfig = {
+  useFileSystemPublicRoutes: true,
+  distDir: 'build'
 }
 
-module.exports = withSass({
-  sassLoaderOptions: {
-    data: `
+module.exports = withPlugins(
+  [
+    [
+      withSass,
+      {
+        sassLoaderOptions: {
+          data: `
       @import "scss/_variables.scss";
       @import "scss/_mixins.scss";
     `
-  }
-})
+        }
+      }
+    ],
+    [
+      withSourceMaps,
+      {
+        devtool: 'cheap-module-eval-source-map'
+      }
+    ]
+  ],
+  nextConfig
+)

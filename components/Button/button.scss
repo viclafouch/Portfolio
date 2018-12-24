@@ -27,13 +27,6 @@
     margin-right: 5px;
   }
 
-  &[disabled] {
-    cursor: not-allowed;
-    background-color: #f0f0f0;
-    color: $p-txt-color;
-    cursor: default;
-  }
-
   &.primary {
     color: #fff;
     background-color: #f05f40;
@@ -53,5 +46,11 @@
         border-color: #fff;
       }
     }
+  }
+
+  &:disabled {
+    cursor: not-allowed !important;
+    background-color: #f0f0f0;
+    color: $p-txt-color;
   }
 }
