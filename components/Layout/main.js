@@ -56,7 +56,9 @@ class Layout extends React.Component {
         <Header />
         <Nav />
         <Heading />
-        <main id="main-app">{/* {this.props.children} */}</main>
+        <main className="container" id="main-app">
+          {this.props.children}
+        </main>
         <Footer />
       </>
     )
