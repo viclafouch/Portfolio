@@ -1,6 +1,6 @@
 import Page from '../components/Layout/main'
 import moment from 'moment'
-import TitleStriped from '../components/TitleStriped/TitleStriped'
+import Title from '../components/Title/Title'
 import { convertDate } from '../utils/date'
 
 const pathSkills = '/static/skills'
@@ -114,7 +114,7 @@ const SkillTitle = ({ title }) => {
 export default () => (
   <Page>
     <section className="skills-section">
-      <TitleStriped title="Compétences" subtitle="Ce que je sais faire" />
+      <Title title="Compétences" subtitle="Ce que je sais faire" />
       <div className="skills-languages">
         <SkillTitle title="Langages" />
         <ul className="languages-list skills-list">
