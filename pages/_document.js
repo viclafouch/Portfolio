@@ -28,7 +28,11 @@ export default class MyDocument extends Document {
           <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.png" />
           <meta property="fb:app_id" content="124333614845929" />
           <meta name="robots" content="noodp" />
-
+          <link rel="icon" type="image/png" href="/static/favicon.png" />
+          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon-16x16.png" />
+          <link rel="apple-touch-icon" href="/static/icon-iphone.png" />
+          <link rel="apple-touch-icon" sizes="72x72" href="/static/icon-ipad.png" />
+          <link rel="apple-touch-icon" sizes="114x114" href="/static/icon-retina.png" />
           <meta key="charset" charSet="utf-8" />
         </Head>
         {/* prettier-ignore-end */}
