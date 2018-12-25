@@ -1,11 +1,19 @@
 import Head from 'next/head'
-export default () => (
-  <>
+
+export default ({ title, description }) => {
+  if (title && title !== 'Contacter Victor de la Fouchardiere')
+    title += ' de Victor de la Fouchardiere – Développeur Front-end'
+  return (
     <Head>
-      <title>test</title>
-      <link rel="stylesheet" href="/static/reset.css" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
+      <title>{title || '404 - Not found'}</title>
+      <meta
+        name="description"
+        content={
+          description ||
+          "Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux' (à l'Ecole Européenne des Métiers de l'Internet) et développeur web fullstack chez Seald, j'ai une vraie vocation pour la programmation web coté frontend (React, Vue.js, Angular ...)."
+        }
+      />
+      <link key="reset" rel="stylesheet" href="/static/reset.css" />
     </Head>
-  </>
-)
+  )
+}

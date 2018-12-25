@@ -2,6 +2,7 @@ import Page from '../components/Layout/main'
 import Title from '../components/Title/Title'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Button from '../components/Button/Button'
+import Meta from '../components/Meta/Meta'
 
 const pathTraining = '/static/training'
 
@@ -49,6 +50,7 @@ const trainings = [
 
 export default () => (
   <Page>
+    <Meta title="Formations" />
     <section className="training-section">
       <Title title="Formations" subtitle="Ce que j'apprends" />
       <ul className="training-list">

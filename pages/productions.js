@@ -1,6 +1,7 @@
 import Page from '../components/Layout/main'
 import Title from '../components/Title/Title'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Meta from '../components/Meta/Meta'
 
 const pathProductions = '/static/productions'
 
@@ -66,6 +67,7 @@ const productions = [
 
 export default () => (
   <Page>
+    <Meta title="Productions" />
     <section className="productions-section">
       <Title title="Portfolio" subtitle="Ce que je développe" />
       <ul className="productions-list">

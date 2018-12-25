@@ -2,6 +2,7 @@ import Page from '../components/Layout/main'
 import moment from 'moment'
 import Title from '../components/Title/Title'
 import { convertDate } from '../utils/date'
+import Meta from '../components/Meta/Meta'
 
 const pathSkills = '/static/skills'
 
@@ -113,6 +114,7 @@ const SkillTitle = ({ title }) => {
 
 export default () => (
   <Page>
+    <Meta title="Compétences" />
     <section className="skills-section">
       <Title title="Compétences" subtitle="Ce que je sais faire" />
       <div className="skills-languages">

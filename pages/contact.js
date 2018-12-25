@@ -4,6 +4,7 @@ import ContactForm from '../components/ContactForm/ContactForm'
 
 export default () => (
   <Page>
+    <Meta title="Contacter Victor de la Fouchardiere"  />
     <section className="contact-section">
       <Title title="Contact" subtitle="M'envoyer un message" />
       <ContactForm />

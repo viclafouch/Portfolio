@@ -1,8 +1,10 @@
 import Page from '../components/Layout/main'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Meta from '../components/Meta/Meta'
 
 export default () => (
   <Page>
+    <Meta title="Portfolio" />
     <section className="home-section">
       <div className="content-row">
         <img
