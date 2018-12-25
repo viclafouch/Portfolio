@@ -2,10 +2,13 @@
 
 html {
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 html.fonts-loaded {
   visibility: visible;
+  opacity: 1;
 }
 
 html,

@@ -4,49 +4,36 @@
   padding: 50px 0;
   background-color: $s-bg-color;
   position: relative;
-}
 
-.sub-link {
-  display: block;
-  position: absolute;
-  top: -35px;
-  transform: translateY(-50%);
-  margin: 0;
-  left: 22px;
-}
+  &-link-logo {
+    display: none;
+    margin: 0;
+    border: 0;
 
-.sub-link img {
-  width: 50px;
-}
+    & > img {
+      width: 50px;
+    }
+  }
 
-.sub-center {
-  text-align: center;
-}
+  &-title {
+    margin: 15px 0;
+    padding: 10px 15px;
+  }
 
-.sub-h1 {
-  margin: 15px 0;
-  padding: 10px 15px;
-}
+  &-subtitle {
+    color: $p-txt-color;
+    padding: 10px 5px;
+    max-width: 75%;
+    margin: 0 auto;
+  }
 
-.sub-p {
-  color: $p-txt-color;
-  line-height: 1.3em;
-  max-width: 75%;
-  padding: 10px 5px;
-}
-
-.subheading a[download] {
-  margin-bottom: 0;
+  .button {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-  .sub-link {
-    position: static;
-    margin: 10px auto;
-    transform: translateY(0);
-  }
-
-  .sub-link img {
-    width: auto;
+  .subheading-link-logo {
+    display: block;
   }
 }
