@@ -3,7 +3,6 @@ import '../../scss/app.scss'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Meta from '../Meta/Meta'
-import Fonts from './Font/Font'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faSkype,
@@ -45,8 +44,6 @@ library.add(
 )
 
 class Layout extends React.Component {
-  componentDidMount = () => Fonts()
-
   render() {
     return (
       <>

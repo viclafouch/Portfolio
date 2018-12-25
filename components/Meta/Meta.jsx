@@ -13,7 +13,6 @@ export default ({ title, description }) => {
           "Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux' (à l'Ecole Européenne des Métiers de l'Internet) et développeur web fullstack chez Seald, j'ai une vraie vocation pour la programmation web coté frontend (React, Vue.js, Angular ...)."
         }
       />
-      <link key="reset" rel="stylesheet" href="/static/reset.css" />
     </Head>
   )
 }
