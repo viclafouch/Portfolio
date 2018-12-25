@@ -87,10 +87,10 @@ export default () => (
                 />
               </header>
               <footer className="production-article-footer">
-                <h4 className="production-article-footer-title">
+                <h5 className="production-article-footer-title">
                   {production.title}
-                </h4>
-                <p className="production-article-footer-subtitle">
+                </h5>
+                <p className="production-article-footer-subtitle note">
                   {production.type}
                 </p>
               </footer>

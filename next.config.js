@@ -15,6 +15,7 @@ module.exports = withPlugins(
       {
         sassLoaderOptions: {
           data: `
+      @import "scss/_rem.scss";
       @import "scss/_variables.scss";
       @import "scss/_mixins.scss";
     `

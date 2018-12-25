@@ -19,6 +19,7 @@
       }
 
       &-text {
+        font-size: rem(13px);
         margin-left: 4px;
         display: none;
         @include screen('nosmall') {

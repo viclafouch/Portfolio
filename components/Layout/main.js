@@ -47,7 +47,6 @@ class Layout extends React.Component {
   render() {
     return (
       <>
-        <Meta />
         <Header />
         <Nav />
         <Heading />

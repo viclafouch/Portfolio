@@ -5,6 +5,6 @@ export default () => (
     <p>
       Copyright &copy; {new Date().getFullYear()} by Victor de la Fouchardiere
     </p>
-    <p>Developed with React.js / Next.js</p>
+    <p className="note">Developed with React.js / Next.js</p>
   </footer>
 )

@@ -56,6 +56,8 @@ export class ContactForm extends Component {
 
     this.baseState = this.state
     this.handleChange = this.handleChange.bind(this)
+
+    console.log('test')
   }
 
   handleChange({ target }) {

@@ -4,6 +4,7 @@ html {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
+  font-size: 14px;
 }
 
 html.fonts-loaded {
@@ -36,6 +37,16 @@ body {
   background-color: $p-bg-color;
   overflow-y: scroll;
   font-family: ABeeZee, sans-serif;
+
+  @include rem-baseline; // Default zoom to 100%
+
+  @media (max-width: 400px) {
+    @include rem-baseline(75%);
+  }
+
+  @media (min-width: 800px) {
+    @include rem-baseline(120%);
+  }
 }
 
 .container {
@@ -49,35 +60,46 @@ body * {
 
 h1 {
   margin: 0;
-  font-size: 2.4em;
+  font-size: 2.5rem;
   font-family: Karma, serif !important;
   font-weight: 700;
 }
 
 h2 {
   margin: 0;
-  font-size: 2.2em;
+  font-size: 2.2rem;
+  font-weight: 600;
   text-align: center;
 }
 
 h3 {
-  font-size: 1.76em;
+  font-size: 1.75rem;
   text-align: center;
+  font-weight: 500;
 }
 
 h4 {
-  font-size: 27px;
+  font-size: 1.5rem;
+  font-weight: 400;
   text-align: center;
 }
 
 h5 {
-  font-size: 25px;
+  font-weight: 400;
+  font-size: 1.25rem;
 }
 
 hr.striped {
   width: 100%;
   height: 30px;
   border: 0;
+}
+
+.note {
+  color: #7f8c8d;
+  font-size: rem(13px);
+  font-style: italic;
+  font-weight: normal !important;
 }
 
 hr.striped,
@@ -122,17 +144,13 @@ hr.striped,
     padding: 5px;
   }
 
-  .sub-title {
-    color: #7f8c8d;
-  }
-
   hr {
     width: 300px;
   }
 
   .profile-resume {
     text-align: center;
-    font-size: 17px;
+    font-size: rem(17px);
     padding: 30px;
     max-width: 800px;
     text-align: center;
@@ -144,7 +162,7 @@ hr.striped,
     p {
       line-height: 1.3em;
       &:last-child {
-        font-size: 13px;
+        font-size: rem(14px);
         color: #576574;
         padding: 10px 5px;
       }
@@ -167,8 +185,6 @@ hr.striped,
       background-color: $p-bg-color;
       text-align: center;
       padding: 0 20px;
-      font-size: 20px;
-      font-weight: 700;
       color: $p-txt-color;
       margin: 30px 0;
     }
@@ -201,7 +217,6 @@ hr.striped,
         }
 
         &-title {
-          font-size: 1.2em;
           color: #222;
           text-align: center;
           margin: 20px 0;
@@ -211,8 +226,6 @@ hr.striped,
         &-note {
           display: block;
           text-align: left;
-          color: #9e9e9e;
-          font-style: italic;
         }
       }
 
@@ -329,13 +342,11 @@ hr.striped,
         padding: 9px 0;
 
         &-title {
-          font-size: 17px;
           margin-bottom: 0.5em;
         }
 
         &-subtitle {
-          color: #9e9e9e;
-          font-style: italic;
+          text-align: center;
         }
       }
     }

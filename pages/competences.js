@@ -133,7 +133,7 @@ export default () => (
                   <h5 className="skill-article-header-title">
                     {language.title}
                   </h5>
-                  <span className="skill-article-header-note">
+                  <span className="skill-article-header-note note">
                     {convertDate(language.duration)} d'expérience
                   </span>
                 </header>
@@ -166,7 +166,7 @@ export default () => (
                   <h5 className="skill-article-header-title">
                     {framework.title}
                   </h5>
-                  <span className="skill-article-header-note">
+                  <span className="skill-article-header-note note">
                     {convertDate(framework.duration)} d'expérience
                   </span>
                 </header>
@@ -183,7 +183,7 @@ export default () => (
               <article className="skill-article">
                 <header className="skill-article-header">
                   <h5 className="skill-article-header-title">{techno.title}</h5>
-                  <span className="skill-article-header-note">
+                  <span className="skill-article-header-note note">
                     {techno.type}
                   </span>
                 </header>

@@ -13,8 +13,8 @@ export default () => (
           title="Victor de la Fouchardiere"
           alt="Victor de la Fouchardiere"
         />
-        <h2 className="title-h2 title">Victor de la Fouchardiere</h2>
-        <span className="sub-title title">
+        <h2 className="title-h2 pdi--5">Victor de la Fouchardiere</h2>
+        <span className="sub-title note">
           Developpeur web / YouTube/Google TC
         </span>
       </div>
