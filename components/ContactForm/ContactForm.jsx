@@ -48,7 +48,7 @@ export class ContactForm extends Component {
       emailValid: null,
       messageValid: null,
       captchaValid: null,
-      formValid: false,
+      formValid: true,
       status: { display: false, valid: null, text: '' }
     }
 
@@ -122,13 +122,24 @@ export class ContactForm extends Component {
 
   onSubmit = e => {
     e.preventDefault()
-    if (!this.state.formValid) return
+    // if (!this.state.formValid) return
     console.log('submitted')
+    return fetch('/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        test: 'gello'
+      })
+    })
   }
 
   render() {
     return (
       <form
+        noValidate
         className="form-contact flex-me flex-vertical"
         onSubmit={e => this.onSubmit(e)}
       >
