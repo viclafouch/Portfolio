@@ -43,21 +43,20 @@ export class ContactForm extends Component {
       lastname: '',
       email: '',
       message: '',
+      token: undefined,
       firstnameValid: null,
       lastnameValid: null,
       emailValid: null,
       messageValid: null,
       captchaValid: null,
-      formValid: true,
-      status: { display: false, valid: null, text: '' }
+      formValid: false,
+      status: { success: null, text: '', isLoading: false }
     }
 
     this.recaptchaRef = React.createRef()
 
     this.baseState = this.state
     this.handleChange = this.handleChange.bind(this)
-
-    console.log('test')
   }
 
   handleChange({ target }) {
@@ -115,15 +114,27 @@ export class ContactForm extends Component {
     }))
 
   recaptchaCallback = token =>
-    this.setState({ captchaValid: token !== null }, () => this.validateForm())
+    this.setState({ captchaValid: token !== null, token }, () =>
+      this.validateForm()
+    )
+
+  asyncSetState = object =>
+    new Promise(resolve => this.setState(object, resolve))
 
   resetForm = () =>
-    this.setState({ ...this.baseState }, () => this.recaptchaRef.reset())
+    new Promise(resolve =>
+      this.setState({ ...this.baseState }, async () => {
+        await this.recaptchaRef.current.reset()
+        resolve(true)
+      })
+    )
 
-  onSubmit = e => {
+  onSubmit = async e => {
     e.preventDefault()
-    // if (!this.state.formValid) return
-    console.log('submitted')
+    if (!this.state.formValid) return
+    await this.asyncSetState({
+      status: { ...this.baseState.status, isLoading: true }
+    })
     return fetch('/contact', {
       method: 'POST',
       headers: {
@@ -131,9 +142,33 @@ export class ContactForm extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        test: 'gello'
+        from: this.state.email,
+        message: this.state.message,
+        subject: `Portfolio from ${this.state.firstname} ${
+          this.state.lastname
+        }`,
+        recaptcha: this.state.token,
+        firstname: this.state.firstname,
+        lastname: this.state.lastname
       })
     })
+      .then(response => response.json())
+      .then(async json => {
+        if (json.success) await this.resetForm()
+        return this.setState({
+          status: {
+            success: !!json.success,
+            text: json.success
+              ? 'Votre message a bien été envoyé.'
+              : 'Une erreur est survenue, merci de réessayer.'
+          }
+        })
+      })
+      .finally(() =>
+        this.setState(state => ({
+          status: { ...state.status, isLoading: false }
+        }))
+      )
   }
 
   render() {
@@ -206,9 +241,13 @@ export class ContactForm extends Component {
             onChange={e => this.recaptchaCallback(e)}
           />
         </FieldsetItem>
-        <Button primary disabled={!this.state.formValid}>
+        <Button
+          primary
+          disabled={!this.state.formValid || this.state.status.isLoading}
+        >
           Envoyer
         </Button>
+        {this.state.status.success !== null && <p>{this.state.status.text}</p>}
       </form>
     )
   }
