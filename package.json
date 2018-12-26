@@ -1,6 +1,9 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.12.0"
+  },
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -30,8 +33,11 @@
   "scripts": {
     "dev": "node ssr-server.js",
     "build": "next build",
-    "start": "next start",
-    "export": "npm run build && next export"
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out"
+
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.2.0",
@@ -40,6 +46,11 @@
     "@zeit/next-source-maps": "0.0.3",
     "babel-loader": "^8.0.4",
     "next-compose-plugins": "^2.1.1"
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ]
   },
   "prettier": {
     "tabWidth": 2,
