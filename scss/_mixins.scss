@@ -5,6 +5,25 @@
   text-overflow: ellipsis;
 }
 
+@mixin outlined($transitions-property: '') {
+  $selector: outline-color, outline-offset;
+
+  @each $item in $transitions-property {
+    $selector: append($selector, $item, 'comma');
+  }
+
+  outline-color: transparent;
+  outline-style: dotted;
+  outline-width: thin;
+  outline-offset: 1em;
+  transition-property: $selector;
+  transition-duration: 0.2s;
+  &:focus {
+    outline-color: #f05f40;
+    outline-offset: 0;
+  }
+}
+
 @mixin hardware($backface: true, $perspective: 1000) {
   @if $backface {
     backface-visibility: hidden;
@@ -47,13 +66,6 @@
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
-}
-
-@mixin outlined {
-  outline: none;
-  &:active {
-    outline: -webkit-focus-ring-color auto 5px;
-  }
 }
 
 @mixin screen($size) {

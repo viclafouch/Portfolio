@@ -8,7 +8,11 @@ const Button = props => {
   if (props.className) classnames = classnames.concat(props.className)
 
   const button = (
-    <button disabled={props.disabled} className={classnames.join(' ')}>
+    <button
+      disabled={props.disabled}
+      className={classnames.join(' ')}
+      tabIndex={props.href ? '-1' : '0'}
+    >
       {props.icon && <FontAwesomeIcon icon={props.icon} />}
       {props.children}
     </button>
@@ -17,11 +21,13 @@ const Button = props => {
   return props.href ? (
     <a
       href={props.href}
+      className="focused-button"
       target={props.target || ''}
       download={props.download || 'false'}
     >
       <style jsx>{`
         a {
+          display: block;
           text-decoration: none;
         }
       `}</style>

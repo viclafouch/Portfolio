@@ -13,7 +13,8 @@
       text-decoration: none;
       margin-left: 10px;
       color: $p-txt-color;
-      transition: color 0.3s ease 0s;
+      padding: 1px 2px;
+      @include outlined((color));
       &:hover {
         color: #f05f40;
       }

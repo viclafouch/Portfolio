@@ -1,20 +1,18 @@
 .button {
   border: 2px solid #f0f0f0;
   display: block;
-  margin: 10px 20px;
   color: #f0f0f0;
   font-family: 'ABeeZee', sans-serif;
   cursor: pointer;
-  font-size: rem(16px);
+  font-size: rem(15px);
   padding: 10px 10px;
   background-color: #000;
   border-radius: 5px;
   text-align: center;
   text-transform: uppercase;
-  outline: none;
   opacity: 0.8;
-  transition-property: color, background-color, opacity, border-color,
-    box-shadow;
+  transition-property: outline-offset, outline-color, color, background-color,
+    opacity, border-color, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 
@@ -23,6 +21,10 @@
     opacity: 1;
   }
 
+  outline-color: transparent;
+  outline-style: dotted;
+  outline-width: thin;
+  outline-offset: 0em;
   svg {
     margin-right: 5px;
   }
@@ -52,5 +54,21 @@
     cursor: not-allowed !important;
     background-color: #f0f0f0;
     color: $p-txt-color;
+  }
+}
+
+a {
+  outline: none;
+  &:not(.focused-button) {
+    @include outlined();
+  }
+
+  &.focused-button:focus .button {
+    outline-color: #ffffff;
+    outline-offset: -0.6em;
+
+    &.primary.inverse {
+      outline-color: #f05f40;
+    }
   }
 }
