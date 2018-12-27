@@ -8,7 +8,7 @@ export default () => (
     <section className="home-section">
       <div className="content-row">
         <img
-          src="/static/victor-de-la-fouchardiere.png"
+          src="/static/victor-de-la-fouchardiere.jpg"
           className="profile-picture"
           title="Victor de la Fouchardiere"
           alt="Victor de la Fouchardiere"

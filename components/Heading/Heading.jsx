@@ -21,15 +21,17 @@ const Heading = () => (
         vous invite à regarder ci-dessous l'ensemble de mes références pour
         mieux connaitre mon profil.
       </p>
-      <Button
-        href="/static/CV-Victor_de_la_Fouchardiere.pdf"
-        icon="download"
-        className="p-shadow"
-        download
-        primary
-      >
-        Télécharger/Imprimer le CV
-      </Button>
+      <div className="mgi--top-10 mgi--left-20 mgi--right-20">
+        <Button
+          href="/static/CV-Victor_de_la_Fouchardiere.pdf"
+          icon="download"
+          className="p-shadow"
+          download
+          primary
+        >
+          Télécharger/Imprimer le CV
+        </Button>
+      </div>
     </div>
   </div>
 )

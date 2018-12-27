@@ -4,7 +4,14 @@ html {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
-  font-size: 14px;
+  font-size: 15px;
+  @media (max-width: 600px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 12px;
+  }
 }
 
 html.fonts-loaded {
@@ -37,16 +44,6 @@ body {
   background-color: $p-bg-color;
   overflow-y: scroll;
   font-family: ABeeZee, sans-serif;
-
-  @include rem-baseline; // Default zoom to 100%
-
-  @media (max-width: 400px) {
-    @include rem-baseline(75%);
-  }
-
-  @media (min-width: 800px) {
-    @include rem-baseline(120%);
-  }
 }
 
 .container {
@@ -92,6 +89,7 @@ h5 {
 hr.striped {
   width: 100%;
   height: 30px;
+  max-width: 100%;
   border: 0;
 }
 
@@ -99,6 +97,7 @@ hr.striped {
   color: #7f8c8d;
   font-size: rem(13px);
   font-style: italic;
+  line-height: normal;
   font-weight: normal !important;
 }
 
@@ -375,6 +374,11 @@ hr.striped,
         display: flex;
         justify-content: center;
         align-items: center;
+
+        & > img {
+          max-width: 100%;
+          display: block;
+        }
       }
 
       &-description-side {
@@ -384,6 +388,7 @@ hr.striped,
 
         .training-article-date {
           color: $p-txt-color;
+          @include truncate(100%);
           span {
             display: inline-block;
             vertical-align: middle;
