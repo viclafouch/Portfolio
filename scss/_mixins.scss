@@ -5,10 +5,10 @@
   text-overflow: ellipsis;
 }
 
-@mixin outlined($transitions-property: '') {
+@mixin outlined($transitions-property...) {
   $selector: outline-color, outline-offset;
 
-  @each $item in $transitions-property {
+  @each $item in unquote($transitions-property) {
     $selector: append($selector, $item, 'comma');
   }
 
