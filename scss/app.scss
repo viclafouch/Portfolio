@@ -14,6 +14,14 @@ html {
   }
 }
 
+[data-whatintent='mouse'] *:focus,
+[data-whatintent='mouse'] * {
+  outline-color: transparent !important;
+  outline-style: none !important;
+  outline-offset: 0 !important;
+  outline-width: 0 !important;
+}
+
 html.fonts-loaded {
   visibility: visible;
   opacity: 1;
@@ -317,6 +325,7 @@ hr.striped,
             transform: translate(-50%, -50%) scale(0);
             padding: 10px;
             transition: transform 0.3s ease 0s;
+            @include outlined(transform);
             background-color: rgba(0, 0, 0, 0.4);
             border-radius: 50%;
             color: #fff;
@@ -325,7 +334,9 @@ hr.striped,
         }
       }
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:focus-within {
         .production-article-header-overlay {
           opacity: 1;
           visibility: visible;

@@ -73,7 +73,7 @@ export default () => (
       <ul className="productions-list">
         {productions.map((production, index) => (
           <li key={index} className="p-shadow">
-            <article className="production-article">
+            <article className="production-article" tabIndex="0">
               <header className="production-article-header">
                 <div className="production-article-header-overlay">
                   <a href={production.href} target="_blank">

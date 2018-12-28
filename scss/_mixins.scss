@@ -5,10 +5,15 @@
   text-overflow: ellipsis;
 }
 
+%outlined-active {
+  outline-color: #f05f40;
+  outline-offset: 0;
+}
+
 @mixin outlined($transitions-property...) {
   $selector: outline-color, outline-offset;
 
-  @each $item in unquote($transitions-property) {
+  @each $item in $transitions-property {
     $selector: append($selector, $item, 'comma');
   }
 
@@ -18,10 +23,6 @@
   outline-offset: 1em;
   transition-property: $selector;
   transition-duration: 0.2s;
-  &:focus {
-    outline-color: #f05f40;
-    outline-offset: 0;
-  }
 }
 
 @mixin hardware($backface: true, $perspective: 1000) {

@@ -59,8 +59,13 @@
 
 a {
   outline: none;
+
   &:not(.focused-button) {
     @include outlined();
+
+    &:focus {
+      @extend %outlined-active;
+    }
   }
 
   &.focused-button:focus .button {

@@ -2,6 +2,7 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import Font from '../components/Layout/Font/Font'
 import Head from 'next/head'
+import 'what-input'
 
 export default class MyApp extends App {
   componentDidMount = () => Font()
