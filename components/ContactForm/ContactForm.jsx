@@ -2,7 +2,8 @@ import React, { Component, memo } from 'react'
 import './contact-form.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Button from '../Button/Button'
-import ReCAPTCHA from 'react-google-recaptcha'
+import loadable from '@loadable/component'
+const ReCAPTCHA = loadable(() => import('react-google-recaptcha'))
 
 const Input = memo(({ onChange, value, name, type = 'text' }) => (
   <input
