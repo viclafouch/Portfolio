@@ -22,7 +22,11 @@ const ActiveLink = withRouter(({ router, children, ...props }) => {
 
   delete props.activeClassName
 
-  return <Link {...props}>{React.cloneElement(child, { className })}</Link>
+  return (
+    <Link {...props} scroll={false}>
+      {React.cloneElement(child, { className })}
+    </Link>
+  )
 })
 
 export class Nav extends Component {
