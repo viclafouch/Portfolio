@@ -4,6 +4,7 @@ import Font from '../components/Layout/Font/Font'
 import Head from 'next/head'
 import 'what-input'
 import Nprogress from 'nprogress'
+import * as gtag from '../utils/analytics'
 import Router from 'next/router'
 import 'nprogress/nprogress.css'
 
@@ -16,12 +17,29 @@ Nprogress.configure({
   parent: 'body'
 })
 
+const getScrolled = () => {
+  const navHeight = document.getElementById('navbar').offsetHeight
+  const { top } = document.getElementById('main-app').getBoundingClientRect()
+
+  return { navHeight, betweenTopScreenAndMain: top }
+}
+
 export default class MyApp extends App {
   constructor() {
     super()
-    Router.events.on('routeChangeStart', () => Nprogress.start())
-    Router.events.on('routeChangeComplete', () => Nprogress.done())
+    let scroll = false
+    Router.events.on('routeChangeStart', () => {
+      Nprogress.start()
+      const { navHeight, betweenTopScreenAndMain } = getScrolled()
+      scroll = betweenTopScreenAndMain < navHeight + 20
+    })
     Router.events.on('routeChangeError', () => Nprogress.done())
+    Router.events.on('routeChangeComplete', url => {
+      gtag.pageview(url)
+      Nprogress.done()
+      const { navHeight, betweenTopScreenAndMain } = getScrolled()
+      if (scroll) window.scrollBy(0, betweenTopScreenAndMain - navHeight)
+    })
   }
   componentDidMount = () => Font()
 

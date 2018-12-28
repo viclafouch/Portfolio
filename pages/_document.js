@@ -1,4 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document'
+import { GA_TRACKING_ID } from '../utils/analytics'
+
+const isProd = process.env['NODE_ENV'] === 'production'
 
 export default class MyDocument extends Document {
   render() {
@@ -34,6 +37,20 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="72x72" href="/static/icon-ipad.png" />
           <link rel="apple-touch-icon" sizes="114x114" href="/static/icon-retina.png" />
           <meta key="charset" charSet="utf-8" />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('config', '${GA_TRACKING_ID}', { 'send_page_view': ${isProd} });
+          `
+            }}
+          />
         </Head>
         {/* prettier-ignore-end */}
         <body>

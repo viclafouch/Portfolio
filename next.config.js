@@ -29,9 +29,7 @@ module.exports = withPlugins(
         devtool: 'cheap-module-eval-source-map'
       }
     ],
-    [
-      withCSS
-    ]
+    [withCSS]
   ],
   nextConfig
 )
