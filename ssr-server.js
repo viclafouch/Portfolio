@@ -88,7 +88,9 @@ app
           html: `<p>Message sent at ${new Date().toString()}</p><p>${message}</p>`
         }
 
-        const responseMail = await sendMail(mailOptions)
+        const responseMail = dev
+          ? 'Fake Mail sent'
+          : await sendMail(mailOptions)
         return res.json({ success: true, response: responseMail })
       } catch (error) {
         return res.status(500).json({ error: true, response: error.message })

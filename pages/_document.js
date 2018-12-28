@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { GA_TRACKING_ID } from '../utils/analytics'
+import { GA_TRACKING_ID } from '../private'
 
 const isProd = process.env['NODE_ENV'] === 'production'
 
