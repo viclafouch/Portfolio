@@ -31,20 +31,20 @@
 
   &.primary {
     color: #fff;
-    background-color: #f05f40;
+    background-color: $salmon;
     border-color: #fff;
     &:not(:disabled):hover {
-      color: #f05f40;
+      color: $salmon;
       background-color: #fff;
-      border-color: #f05f40;
+      border-color: $salmon;
     }
     &.inverse {
-      color: #f05f40;
+      color: $salmon;
       background-color: #fff;
-      border-color: #f05f40;
+      border-color: $salmon;
       &:not(:disabled):hover {
         color: #fff;
-        background-color: #f05f40;
+        background-color: $salmon;
         border-color: #fff;
       }
     }
@@ -73,7 +73,7 @@ a {
     outline-offset: -0.6em;
 
     &.primary.inverse {
-      outline-color: #f05f40;
+      outline-color: $salmon;
     }
   }
 }
