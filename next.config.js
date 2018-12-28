@@ -1,6 +1,7 @@
 const withSass = require('@zeit/next-sass')
 const withSourceMaps = require('@zeit/next-source-maps')
 const withPlugins = require('next-compose-plugins')
+const withCSS = require('@zeit/next-css')
 
 // next.js configuration
 const nextConfig = {
@@ -27,6 +28,9 @@ module.exports = withPlugins(
       {
         devtool: 'cheap-module-eval-source-map'
       }
+    ],
+    [
+      withCSS
     ]
   ],
   nextConfig
