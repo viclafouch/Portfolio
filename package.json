@@ -47,12 +47,24 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "@zeit/next-source-maps": "0.0.3",
+    "autoprefixer": "^9.4.3",
     "babel-loader": "^8.0.4",
-    "next-compose-plugins": "^2.1.1"
+    "next-compose-plugins": "^2.1.1",
+    "postcss": "^7.0.7"
   },
   "babel": {
     "presets": [
       "next/babel"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "ie 10"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
     ]
   },
   "prettier": {
