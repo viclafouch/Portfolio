@@ -208,7 +208,7 @@ hr.striped,
   .skills-list {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 220px));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 18px 5px;
     margin-bottom: 10px;
 
@@ -240,7 +240,7 @@ hr.striped,
 
         &-note {
           display: block;
-          text-align: left;
+          text-align: center;
         }
       }
 
@@ -248,7 +248,7 @@ hr.striped,
         margin-top: 10px;
 
         &-list {
-          text-align: left;
+          text-align: center;
           width: 100%;
           color: $p-txt-color;
 
@@ -260,6 +260,15 @@ hr.striped,
       }
     }
 
+    @media only screen and (min-width: 600px) {
+      .skill-article-footer-list {
+        text-align: left;
+      }
+      &:not(.technos-list) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 220px));
+      }
+    }
+
     &.framworks-list,
     &.technos-list {
       .skill-article-header-note {
@@ -268,7 +277,6 @@ hr.striped,
     }
 
     &.technos-list {
-      grid-template-columns: repeat(auto-fill, 150px);
       .skill-article-header-title,
       .skill-article-header-note {
         line-height: 1em;
