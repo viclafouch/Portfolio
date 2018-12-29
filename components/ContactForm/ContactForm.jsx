@@ -1,11 +1,11 @@
-import React, { Component, memo } from 'react'
 import './contact-form.scss'
+import React, { Component, memo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Button from '../Button/Button'
 import loadable from '@loadable/component'
 const ReCAPTCHA = loadable(() => import('react-google-recaptcha'))
 
-const Input = ({ onChange, value, name, type = 'text' }) => (
+const Input = memo(({ onChange, value, name, type = 'text' }) => (
   <input
     type={type}
     name={name}
@@ -16,9 +16,9 @@ const Input = ({ onChange, value, name, type = 'text' }) => (
     onChange={onChange}
     value={value}
   />
-)
+))
 
-const FieldsetItem = ({ label, valid, icon, inputOptions, children }) => (
+const FieldsetItem = memo(({ label, valid, icon, inputOptions, children }) => (
   <label htmlFor={inputOptions.name} className="form-label">
     <span className="form-label-text">{label}</span>
     <div
@@ -33,7 +33,7 @@ const FieldsetItem = ({ label, valid, icon, inputOptions, children }) => (
       {children ? children : <Input {...inputOptions} />}
     </div>
   </label>
-)
+))
 
 export class ContactForm extends Component {
   constructor() {
