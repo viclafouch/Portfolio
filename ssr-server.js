@@ -32,13 +32,6 @@ const options = {
   }
 }
 
-const seoOptions = {
-  root: __dirname + '/static/',
-  headers: {
-    'Content-Type': 'text/plain;charset=UTF-8'
-  }
-}
-
 const verifRecaptcha = (token, ip, key) => {
   const googleUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${key}&response=${token}&remoteip=${ip}`
   return new Promise((resolve, reject) =>
@@ -96,14 +89,6 @@ app
         return res.status(500).json({ error: true, response: error.message })
       }
     })
-
-    server.get('/robots.txt', (req, res) =>
-      res.status(200).sendFile('robots.txt', seoOptions)
-    )
-
-    server.get('/sitemap.xml', (req, res) =>
-      res.status(200).sendFile('sitemap.xml', seoOptions)
-    )
 
     server.get('*', (req, res) => handle(req, res))
 

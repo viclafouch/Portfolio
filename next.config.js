@@ -2,11 +2,22 @@ const withSass = require('@zeit/next-sass')
 const withSourceMaps = require('@zeit/next-source-maps')
 const withPlugins = require('next-compose-plugins')
 const withCSS = require('@zeit/next-css')
+const fs = require('fs')
+const { join } = require('path')
+const { promisify } = require('util')
+const copyFile = promisify(fs.copyFile)
 
 // next.js configuration
 const nextConfig = {
   useFileSystemPublicRoutes: true,
-  distDir: 'build'
+  distDir: 'build',
+  outDir: 'out',
+  exportPathMap: async (defaultPathMap, { dev, dir, outDir }) => {
+    if (dev) return defaultPathMap
+    await copyFile(join(dir, 'robots.txt'), join(outDir, 'robots.txt'))
+    await copyFile(join(dir, 'sitemap.xml'), join(outDir, 'sitemap.xml'))
+    return defaultPathMap
+  }
 }
 
 module.exports = withPlugins(
