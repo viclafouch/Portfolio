@@ -37,22 +37,32 @@ export class Nav extends Component {
     }
     this.list = React.createRef()
     this.burger = React.createRef()
+    this.escFunction = this.escFunction.bind(this)
     this.toggleNavigation = this.toggleNavigation.bind(this)
   }
 
+  escFunction(event) {
+    if (event.keyCode === 27) this.toggleNavigation()
+  }
+
+  componentWillUnmount = () =>
+    document.removeEventListener('keydown', this.escFunction, false)
+
   toggleNavigation() {
     return this.setState(
-      {
-        menuOpened: !this.state.menuOpened
-      },
+      state => ({
+        menuOpened: !state.menuOpened
+      }),
       () => {
         if (this.state.menuOpened) {
           const listWidth = this.list.current.offsetWidth
           const burgerWidth = this.burger.current.offsetWidth
           const translationX = listWidth / 2 - (burgerWidth - 5) // padding-right + width burger / 2
           this.burger.current.style.transform = `translateX(-${translationX}px)`
+          document.addEventListener('keydown', this.escFunction, false)
         } else {
           this.burger.current.style.transform = 'translateX(0px)'
+          document.removeEventListener('keydown', this.escFunction, false)
         }
       }
     )
@@ -70,6 +80,8 @@ export class Nav extends Component {
           </a>
           <div>
             <div
+              tabIndex="0"
+              onKeyDown={e => e.keyCode === 13 && this.toggleNavigation()}
               ref={this.burger}
               className={
                 'nav-burger ' + (this.state.menuOpened ? 'menu-opened' : '')

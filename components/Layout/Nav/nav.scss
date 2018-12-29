@@ -59,27 +59,36 @@
   }
 }
 
+$sizeBurger: 32px;
+
 .nav-burger {
   display: block;
-  height: 20px;
-  width: 28px;
+  height: $sizeBurger;
+  width: $sizeBurger;
   cursor: pointer;
   z-index: 999;
   position: relative;
   transition: transform 0.3s ease;
+  @include outlined();
+  &:focus {
+    @extend %outlined-active;
+  }
 
   &::before,
   &::after,
   & > span {
     background-color: $p-txt-color;
     height: 2px;
-    width: 100%;
+    width: calc(100% - calc(#{$sizeBurger} / 4));
+    margin: 0 auto;
     left: 0;
     right: 0;
     @include pseudo();
     transition-property: left, opacity, top, margin-top, transform;
     transition-duration: 0.2s;
     transition-timing-function: ease;
+    top: 50%;
+    margin-top: -1px;
   }
 
   &:hover {
@@ -89,15 +98,10 @@
   }
 
   &::before {
-    top: 0px;
+    transform: translateY(calc(#{$sizeBurger} / 4));
   }
   &::after {
-    bottom: 0px;
-  }
-
-  & > span {
-    top: 50%;
-    margin-top: -1px;
+    transform: translateY(calc(#{$sizeBurger} / -4));
   }
 
   &.menu-opened {
@@ -108,7 +112,7 @@
     &::before,
     &::after {
       top: 50%;
-      margin-top: -2px;
+      margin-top: -1px;
     }
 
     &::before {
