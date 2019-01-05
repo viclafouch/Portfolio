@@ -35,7 +35,7 @@
   "scripts": {
     "dev": "node ssr-server.js",
     "build": "next build",
-    "export": "next export",
+    "export": "next export && node tasks/build-sitemap.js && node tasks/build-robotstxt.js",
     "start": "NODE_ENV=production node ssr-server.js",
     "deploy": "now --public --token u0h8KcC0RBHqkTkZXczgc14j out && now --token u0h8KcC0RBHqkTkZXczgc14j alias && now --token u0h8KcC0RBHqkTkZXczgc14j remove portfolio --safe -y"
   },
@@ -43,13 +43,14 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "@zeit/next-source-maps": "0.0.3",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-source-maps": "0.0.3",
     "autoprefixer": "^9.4.4",
     "babel-loader": "^8.0.5",
     "next-compose-plugins": "^2.1.1",
-    "postcss": "^7.0.7"
+    "postcss": "^7.0.7",
+    "robots-generator": "^2.3.6"
   },
   "babel": {
     "presets": [
