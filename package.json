@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Portfolio of Victor de la Fouchardiere",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "engines": {
     "node": "10.12.x",
     "npm": "6.5.x"
@@ -36,7 +36,8 @@
     "dev": "node ssr-server.js",
     "build": "next build",
     "export": "next export",
-    "start": "NODE_ENV=production node ssr-server.js"
+    "start": "NODE_ENV=production node ssr-server.js",
+    "deploy": "now --public --token u0h8KcC0RBHqkTkZXczgc14j out && now --token u0h8KcC0RBHqkTkZXczgc14j alias && now --token u0h8KcC0RBHqkTkZXczgc14j remove portfolio --safe -y"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.2.0",

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "portfolio",
+  "builds": [
+    {
+      "use": "@now/static"
+    }
+  ],
+  "alias": ["www.victor-de-la-fouchardiere.fr"],
+  "env": {},
+  "public": true,
+  "github": {
+    "enabled": false
+  }
+}
