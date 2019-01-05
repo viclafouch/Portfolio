@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "alias": ["victor-de-la-fouchardiere.fr"],
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "https://www.victor-de-la-fouchardiere.fr/$1"
+      }
+    }
+  ]
+}
