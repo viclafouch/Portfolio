@@ -6,6 +6,11 @@
     "node": "10.12.x",
     "npm": "6.5.x"
   },
+  "homepage": "https://www.victor-de-la-fouchardiere.fr",
+  "bugs": {
+    "url": "https://github.com/viclafouch/Portfolio/issues",
+    "email": "victor.delafouchardiere@gmail.com"
+  },
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
