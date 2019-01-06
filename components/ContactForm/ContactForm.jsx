@@ -3,6 +3,7 @@ import React, { Component, memo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Button from '../Button/Button'
 import ReCAPTCHA from 'react-google-recaptcha'
+import apivic from '../../api/apivic'
 
 const Input = memo(({ onChange, value, name, type = 'text' }) => (
   <input
@@ -135,30 +136,20 @@ export class ContactForm extends Component {
     await this.asyncSetState({
       status: { ...this.baseState.status, isLoading: true }
     })
-    return fetch('/contact', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
+    return apivic
+      .post('/contact', {
         from: this.state.email,
         message: this.state.message,
-        subject: `Portfolio from ${this.state.firstname} ${
-          this.state.lastname
-        }`,
         recaptcha: this.state.token,
         firstname: this.state.firstname,
         lastname: this.state.lastname
       })
-    })
-      .then(response => response.json())
-      .then(async json => {
-        if (json.success) await this.resetForm()
+      .then(async ({ data }) => {
+        if (data.success) await this.resetForm()
         return this.setState({
           status: {
-            success: !!json.success,
-            text: json.success
+            success: !!data.success,
+            text: data.success
               ? 'Votre message a bien été envoyé.'
               : 'Une erreur est survenue, merci de réessayer.'
           }

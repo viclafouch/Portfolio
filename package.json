@@ -17,6 +17,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.6.3",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@fortawesome/react-fontawesome": "^0.1.3",
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "fontfaceobserver": "^2.1.0",
@@ -37,7 +38,7 @@
     "build": "next build",
     "export": "next export && node tasks/build-sitemap.js && node tasks/build-robotstxt.js",
     "start": "NODE_ENV=production node ssr-server.js",
-    "deploy": "now --public --token u0h8KcC0RBHqkTkZXczgc14j out && now --token u0h8KcC0RBHqkTkZXczgc14j alias && now --token u0h8KcC0RBHqkTkZXczgc14j remove portfolio --safe -y"
+    "deploy": "now -A ../now.json --public --token u0h8KcC0RBHqkTkZXczgc14j out && now --token u0h8KcC0RBHqkTkZXczgc14j alias && now --token u0h8KcC0RBHqkTkZXczgc14j remove portfolio --safe -y"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.2.0",
