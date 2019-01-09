@@ -1,5 +1,16 @@
 @import 'positions';
 
+#forkMe {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999999;
+  @media (min-width: 1250px) {
+    display: block;
+  }
+}
+
 html {
   visibility: hidden;
   opacity: 0;
