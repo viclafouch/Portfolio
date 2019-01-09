@@ -9,8 +9,7 @@ export class Meta extends Component {
   static getDerivedStateFromProps(props, state) {
     if (props.title) {
       return {
-        title:
-          props.title + ' de Victor de la Fouchardiere – Développeur Front-end'
+        title: props.title + ' – Développeur Front-end'
       }
     }
     return null
@@ -38,10 +37,7 @@ export class Meta extends Component {
         <title>{this.state.title || '404 - Not found'}</title>
         <meta
           name="description"
-          content={
-            this.state.title ||
-            "Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux' (à l'Ecole Européenne des Métiers de l'Internet) et développeur web fullstack chez Seald, j'ai une vraie vocation pour la programmation web coté frontend (React, Vue.js, Angular ...)."
-          }
+          content={(this.props.description || '') + " Portfolio de Victor de la Fouchardiere, développeur web chez Seald, diplomé de l'EEMI."}
         />
       </Head>
     )

@@ -50,7 +50,7 @@ const trainings = [
 
 export default () => (
   <Page>
-    <Meta title="Formations" />
+    <Meta title="Formations de Victor de la Fouchardiere" description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, autodidacte, découvrez mon cursus." />
     <section className="training-section">
       <Title title="Formations" subtitle="Ce que j'apprends" />
       <ul className="training-list">

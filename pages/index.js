@@ -4,7 +4,7 @@ import Meta from '../components/Meta/Meta'
 
 export default () => (
   <Page>
-    <Meta title="Portfolio" />
+    <Meta title="Portfolio de Victor de la Fouchardiere" description="Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux', j'ai une vraie vocation pour le métier de développeur web coté front-end (React, Vue, Angular ...)." />
     <section className="home-section">
       <div className="content-row">
         <img

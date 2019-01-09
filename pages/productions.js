@@ -67,7 +67,7 @@ const productions = [
 
 export default () => (
   <Page>
-    <Meta title="Productions" />
+    <Meta title="Productions de Victor de la Fouchardiere" description="Dernières productions, dernières réalisations et projets personnels." />
     <section className="productions-section">
       <Title title="Portfolio" subtitle="Ce que je développe" />
       <ul className="productions-list">

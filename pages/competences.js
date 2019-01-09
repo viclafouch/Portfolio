@@ -114,7 +114,7 @@ const SkillTitle = ({ title }) => {
 
 export default () => (
   <Page>
-    <Meta title="Compétences" />
+    <Meta title="Compétences de Victor de la Fouchardiere" description="Découvrez mes compétences en tant que développeur web. React, Vue, ou encore Angular sont ma spécialité !"/>
     <section className="skills-section">
       <Title title="Compétences" subtitle="Ce que je sais faire" />
       <div className="skills-languages">
