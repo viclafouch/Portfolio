@@ -5,6 +5,18 @@ const port = 3000
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+const options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html'],
+  index: false,
+  maxAge: '1d',
+  redirect: false,
+  setHeaders: function(res, path, stat) {
+    res.set('x-timestamp', Date.now())
+  }
+}
+
 app
   .prepare()
   .then(() => {
