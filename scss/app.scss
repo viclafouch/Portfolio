@@ -46,6 +46,10 @@ html.fonts-loaded {
   opacity: 1;
 }
 
+.svgblock {
+  display: block;
+}
+
 html,
 body,
 #__next {
@@ -128,6 +132,10 @@ hr.striped {
   font-weight: normal !important;
 }
 
+p {
+  line-height: 1.3em;
+}
+
 hr.striped,
 .skill-title {
   background: url('/static/stripes.png') center left repeat-x;
@@ -163,7 +171,7 @@ hr.striped,
   }
 
   h3 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .title {
@@ -176,28 +184,36 @@ hr.striped,
 
   .profile-resume {
     text-align: center;
-    font-size: rem(17px);
     padding: 30px;
     max-width: 800px;
-    text-align: center;
     margin: 0 auto;
-    line-height: 1.3em;
   }
 
-  .last-experience-container {
-    p {
-      line-height: 1.3em;
-      &:last-child {
-        font-size: rem(14px);
-        color: #576574;
-        padding: 10px 5px;
-      }
+  .experience-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    a {
+      display: block;
+      margin-bottom: 20px;
     }
 
-    img {
-      margin: 20px auto;
-      max-width: 100px;
-      border: 1px solid rgba(0, 0, 0, 0.02);
+    p {
+      b {
+        font-weight: 700;
+      }
+      &:last-child {
+        font-size: rem(14px);
+        color: transparentize(#576574, 0.3);
+        opacity: 0.8;
+        padding: 15px 5px 0px;
+
+        .vuejs svg,
+        .python {
+          width: 13px;
+          height: 13px;
+        }
+      }
     }
   }
 }

@@ -1,10 +1,13 @@
 import Page from '../components/Layout/main'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Meta from '../components/Meta/Meta'
+import SVG from 'react-inlinesvg'
 
 export default () => (
   <Page>
-    <Meta title="Portfolio de Victor de la Fouchardiere" description="Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux', j'ai une vraie vocation pour le métier de développeur web coté front-end (React, Vue, Angular ...)." />
+    <Meta
+      title="Portfolio de Victor de la Fouchardiere"
+      description="Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux', j'ai une vraie vocation pour le métier de développeur web coté front-end (React, Vue, Angular ...)."
+    />
     <section className="home-section">
       <div className="content-row">
         <img
@@ -29,29 +32,24 @@ export default () => (
       </div>
       <hr className="striped" />
       <div className="content-row">
-        <h3>Dernière expérience</h3>
-        <div className="last-experience-container">
-          <a target="_blank" to="http://www.myedco.fr/">
-            <img
-              src="/static/myedc.png"
-              className="last-experience-img"
-              alt=""
-            />
+        <h3>Expérience actuelle</h3>
+        <div className="experience-container">
+          <a target="_blank" href="https://www.seald.io">
+            <SVG src="/static/seald-logo.svg" className="svgblock" />
           </a>
           <p>
-            Développeur Frontend en stage chez{' '}
-            <b>
-              <i>My Edition Company</i> du 02/03/18 au 05/09/18
-            </b>
-            .
+            Développeur Full-Stack chez <b>Seald</b> depuis oct. 2018.
+            <br />
+            Contributions au développement des applications internes de
+            l'entreprise (front-end et back-end).
           </p>
           <p>
             <span>
-              React.js <FontAwesomeIcon icon={['fab', 'react']} />
+              Vue.js <SVG src="/static/vuejs.svg" className="vuejs" />
             </span>
             {' / '}
             <span>
-              Python <FontAwesomeIcon icon={['fab', 'python']} />
+              Python <img src="/static/python.svg" className="python" />
             </span>
           </p>
         </div>

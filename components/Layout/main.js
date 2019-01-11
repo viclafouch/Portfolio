@@ -2,7 +2,6 @@ import React from 'react'
 import '../../scss/app.scss'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
-import Meta from '../Meta/Meta'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faSkype,
@@ -11,7 +10,7 @@ import {
   faCodepen,
   faLinkedin,
   faGoogle,
-  faReact,
+  faVuejs,
   faPython
 } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -27,13 +26,13 @@ import Nav from './Nav/Nav'
 import Heading from '../Heading/Heading'
 library.add(
   faPython,
-  faReact,
   faGoogle,
   faLinkedin,
   faCodepen,
   faGit,
   faTwitter,
   faSkype,
+  faVuejs,
   faEnvelope,
   faDownload,
   faCalendarAlt,
