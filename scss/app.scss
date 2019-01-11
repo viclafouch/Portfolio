@@ -315,7 +315,7 @@ hr.striped,
     margin-bottom: 10px;
 
     & > li {
-      @extend %subheading;
+      @extend %p-shad;
       border-radius: 10px;
       overflow: hidden;
       border: 1px solid #dedede;
