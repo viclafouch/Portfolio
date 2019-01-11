@@ -70,7 +70,7 @@ export class Nav extends Component {
 
   render() {
     return (
-      <nav className="navigation p-shadow" id="navbar">
+      <nav className="navigation" id="navbar">
         <div className="container flex-me flex-align">
           <a href="/">
             <img

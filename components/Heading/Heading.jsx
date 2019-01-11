@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Button from '../Button/Button'
 
 const Heading = () => (
-  <div className="subheading p-shadow">
+  <div className="subheading">
     <div className="container flex-me flex-vertical flex-align flex-justify-center">
       <Link href="/">
         <a className="subheading-link-logo center-text">
@@ -25,7 +25,6 @@ const Heading = () => (
         <Button
           href="/static/CV-Victor_de_la_Fouchardiere.pdf"
           icon="download"
-          className="p-shadow"
           download
           primary
         >

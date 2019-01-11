@@ -5,6 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 9999;
+  @extend %subheading;
 
   & > .container {
     padding: 10px;

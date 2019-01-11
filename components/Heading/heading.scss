@@ -4,6 +4,7 @@
   padding: 50px 0;
   background-color: $s-bg-color;
   position: relative;
+  @extend %subheading;
 
   &-link-logo {
     display: none;
@@ -29,6 +30,7 @@
 
   .button {
     margin-bottom: 0;
+    @extend %subheading;
   }
 }
 

@@ -72,7 +72,7 @@ export default () => (
       <Title title="Portfolio" subtitle="Ce que je développe" />
       <ul className="productions-list">
         {productions.map((production, index) => (
-          <li key={index} className="p-shadow">
+          <li key={index}>
             <article className="production-article" tabIndex="0">
               <header className="production-article-header">
                 <div className="production-article-header-overlay">
