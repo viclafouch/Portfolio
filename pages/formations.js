@@ -14,7 +14,7 @@ const trainings = [
     rows: [
       'Spécialisation dans le web developpement',
       'Connaissances acquises dans : Webmarketing / Communication digitale / Webdesign / Développement web / Gestion de Projet',
-      'Objectif : Licence'
+      "Licence 'Chef de Projets Digitaux' obtenue"
     ],
     img: `${pathTraining}/eemi-logo.png`
   },
@@ -50,7 +50,10 @@ const trainings = [
 
 export default () => (
   <Page>
-    <Meta title="Formations de Victor de la Fouchardiere" description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, autodidacte, découvrez mon cursus." />
+    <Meta
+      title="Formations de Victor de la Fouchardiere"
+      description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, autodidacte, découvrez mon cursus."
+    />
     <section className="training-section">
       <Title title="Formations" subtitle="Ce que j'apprends" />
       <ul className="training-list">
@@ -73,7 +76,7 @@ export default () => (
                 <h4 className="training-article-title">{training.title}</h4>
                 <ul className="training-article-list-texts">
                   {training.rows.map((text, i) => (
-                    <li key={i}>- {text}</li>
+                    <li key={i}>- {text}.</li>
                   ))}
                 </ul>
               </div>

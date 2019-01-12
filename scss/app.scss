@@ -113,7 +113,7 @@ h4 {
 
 h5 {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 hr.striped {
@@ -296,6 +296,10 @@ hr.striped,
         line-height: 1em;
         padding: 0;
         min-height: 2em;
+      }
+
+      .skills-img {
+        max-height: 80px;
       }
 
       .skill-article-header-title {

@@ -23,7 +23,7 @@ const languages = [
     img: `${pathSkills}/languages/js-logo.png`,
     title: 'js',
     duration: [moment([2015, 1, 1])],
-    items: ['ES6/ES7', 'DOM', 'Ajax']
+    items: ['ES7/ES8', 'JSX', 'SSR']
   },
   {
     img: `${pathSkills}/languages/php-logo.png`,
@@ -51,8 +51,8 @@ const frameworks = [
   },
   {
     img: `${pathSkills}/frameworks/vuejs-logo.png`,
-    title: 'vue.js',
-    duration: [moment([2018, 1, 1]), moment([2018, 3, 1])]
+    title: 'vue',
+    duration: [moment([2018, 7, 1]), moment()]
   },
   {
     img: `${pathSkills}/frameworks/react-logo.png`,
@@ -60,7 +60,7 @@ const frameworks = [
     duration: [moment([2018, 1, 1])]
   },
   {
-    img: `${pathSkills}/frameworks/symfony-logo.png`,
+    img: `${pathSkills}/frameworks/symfony-logo.svg`,
     title: 'symfony',
     duration: [moment([2017, 10, 1]), moment([2018, 3, 1])]
   },
@@ -73,33 +73,43 @@ const frameworks = [
     img: `${pathSkills}/frameworks/angular-logo.png`,
     title: 'angular 5',
     duration: [moment([2017, 10, 1]), moment([2018, 3, 1])]
+  },
+  {
+    img: `${pathSkills}/frameworks/expressjs-logo.svg`,
+    title: 'express',
+    duration: [moment([2018, 11, 1])]
+  },
+  {
+    img: `${pathSkills}/frameworks/nextjs-logo.svg`,
+    title: 'next.js',
+    duration: [moment([2018, 10, 1])]
   }
 ]
 
 const technos = [
   {
-    title: 'Visual Code Studio',
-    type: 'Editeur',
-    img: `${pathSkills}/visual-code-studio-logo.png`
-  },
-  {
     title: 'Git',
     type: 'Versioning',
-    img: `${pathSkills}/git-logo.png`
+    img: `${pathSkills}/git-logo.svg`
   },
   {
-    title: 'Parcel',
+    title: 'Webpack',
     type: 'Automatisation',
-    img: `${pathSkills}/parcel-logo.png`
+    img: `${pathSkills}/webpack-logo.svg`
   },
   {
-    title: 'Windows',
+    title: 'Visual Studio Code',
+    type: 'Editeur',
+    img: `${pathSkills}/visual-code-studio-logo.svg`
+  },
+  {
+    title: 'MAC OS',
     type: 'OS Principal',
-    img: `${pathSkills}/windows-logo.png`
+    img: `${pathSkills}/apple-logo.png`
   },
   {
     title: 'Photoshop',
-    type: 'Conception Graphique',
+    type: 'Graphisme',
     img: `${pathSkills}/photoshop-logo.png`
   }
 ]
@@ -114,7 +124,10 @@ const SkillTitle = ({ title }) => {
 
 export default () => (
   <Page>
-    <Meta title="Compétences de Victor de la Fouchardiere" description="Découvrez mes compétences en tant que développeur web. React, Vue, ou encore Angular sont ma spécialité !"/>
+    <Meta
+      title="Compétences de Victor de la Fouchardiere"
+      description="Découvrez mes compétences en tant que développeur web. React, Vue, ou encore Angular sont ma spécialité !"
+    />
     <section className="skills-section">
       <Title title="Compétences" subtitle="Ce que je sais faire" />
       <div className="skills-languages">
