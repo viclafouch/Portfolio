@@ -41,7 +41,10 @@ export default class MyApp extends App {
       if (scroll) window.scrollBy(0, betweenTopScreenAndMain - navHeight)
     })
   }
-  componentDidMount = () => Font()
+  componentDidMount = () => {
+    Nprogress.start()
+    Font().finally(Nprogress.done())
+  }
 
   render() {
     const { Component } = this.props

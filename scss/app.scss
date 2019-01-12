@@ -12,11 +12,9 @@
 }
 
 html {
-  visibility: hidden;
-  opacity: 0;
   transition: opacity 0.3s;
   font-size: 15px;
-  &.fonts-loaded {
+  &.fonts-loaded #__next {
     visibility: visible;
     opacity: 1;
   }
@@ -56,6 +54,8 @@ body,
 }
 
 #__next {
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   flex-direction: column;
 }
