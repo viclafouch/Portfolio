@@ -16,6 +16,10 @@ html {
   opacity: 0;
   transition: opacity 0.3s;
   font-size: 15px;
+  &.fonts-loaded {
+    visibility: visible;
+    opacity: 1;
+  }
   @media (max-width: 600px) {
     font-size: 13px;
   }
@@ -39,11 +43,6 @@ html body div#nprogress div.bar {
   outline-style: none !important;
   outline-offset: 0 !important;
   outline-width: 0 !important;
-}
-
-html.fonts-loaded {
-  visibility: visible;
-  opacity: 1;
 }
 
 .svgblock {
@@ -89,7 +88,7 @@ body * {
 h1 {
   margin: 0;
   font-size: 2.5rem;
-  font-family: Karma, serif !important;
+  font-family: Karma, sans-serif;
   font-weight: 700;
 }
 
@@ -442,6 +441,7 @@ hr.striped,
           svg {
             vertical-align: middle;
             margin-right: 7px;
+            width: 13px;
           }
         }
 

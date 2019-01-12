@@ -11,5 +11,19 @@
   "public": true,
   "github": {
     "enabled": false
-  }
+  },
+  "routes": [
+    {
+      "src": "/_next/static/(chunks|runtime|commons)/.*",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/static/.*",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    }
+  ]
 }
