@@ -22,12 +22,6 @@ const productions = [
       'https://chrome.google.com/webstore/detail/tcs-center/hanknpkmjbfhcalmipokkfplndkohgdm'
   },
   {
-    title: 'FicheAndTricks',
-    img: `${pathProductions}/ficheandtricks.png`,
-    type: typesDev[2],
-    href: 'https://tc-center.victor-de-la-fouchardiere.fr/'
-  },
-  {
     title: 'uScroll',
     img: `${pathProductions}/uscroll.png`,
     type: typesDev[0],
@@ -67,7 +61,10 @@ const productions = [
 
 export default () => (
   <Page>
-    <Meta title="Productions de Victor de la Fouchardiere" description="Dernières productions, dernières réalisations et projets personnels." />
+    <Meta
+      title="Productions de Victor de la Fouchardiere"
+      description="Dernières productions, dernières réalisations et projets personnels."
+    />
     <section className="productions-section">
       <Title title="Portfolio" subtitle="Ce que je développe" />
       <ul className="productions-list">
