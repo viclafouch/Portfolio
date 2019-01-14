@@ -104,19 +104,29 @@ const technos = [
   },
   {
     title: 'MAC OS',
-    type: 'OS Principal',
+    type: 'OS',
     img: `${pathSkills}/apple-logo.png`
   },
   {
     title: 'Photoshop',
     type: 'Graphisme',
     img: `${pathSkills}/photoshop-logo.png`
+  },
+  {
+    title: 'Parcel',
+    type: 'Automatisation',
+    img: `${pathSkills}/parcel-logo.png`
+  },
+  {
+    title: 'Windows',
+    type: 'OS',
+    img: `${pathSkills}/windows-logo.png`
   }
 ]
 
 const SkillTitle = ({ title }) => {
   return (
-    <div className="skill-title flex-me flex-justify-center flex-align">
+    <div className="skill-title center-text">
       <h4>{title}</h4>
     </div>
   )
@@ -153,9 +163,7 @@ export default () => (
                 <footer className="skill-article-footer">
                   <ul className="skill-article-footer-list">
                     {language.items &&
-                      language.items.map((item, i) => {
-                        return <li key={i}>{item}</li>
-                      })}
+                      language.items.map((item, i) => <li key={i}>{item}</li>)}
                   </ul>
                 </footer>
               </article>
@@ -195,19 +203,17 @@ export default () => (
             <li key={index}>
               <article className="skill-article">
                 <header className="skill-article-header">
-                  <h5 className="skill-article-header-title">{techno.title}</h5>
-                  <span className="skill-article-header-note note">
-                    {techno.type}
-                  </span>
-                </header>
-                <footer className="skill-article-footer">
                   <img
                     className="skills-img"
                     src={techno.img}
                     alt={techno.title.toUpperCase()}
                     title={techno.title.toUpperCase()}
                   />
-                </footer>
+                  <h5 className="skill-article-header-title">{techno.title}</h5>
+                  <span className="skill-article-header-note note">
+                    {techno.type}
+                  </span>
+                </header>
               </article>
             </li>
           ))}
