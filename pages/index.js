@@ -34,7 +34,12 @@ export default () => (
       <div className="content-row">
         <h3>Expérience actuelle</h3>
         <div className="experience-container">
-          <a target="_blank" href="https://www.seald.io">
+          <a
+            target="_blank"
+            href="https://www.seald.io"
+            title="seald"
+            rel="noreferrer noopener"
+          >
             <SVG src="/static/seald-logo.svg" className="svgblock" />
           </a>
           <p>
@@ -49,7 +54,12 @@ export default () => (
             </span>
             {' / '}
             <span>
-              Python <img src="/static/python.svg" className="python" />
+              Python{' '}
+              <img
+                src="/static/python.svg"
+                alt="python-logo"
+                className="python"
+              />
             </span>
           </p>
         </div>
