@@ -124,7 +124,7 @@ hr.striped {
 }
 
 .note {
-  color: #7f8c8d;
+  color: lighten(#444444, 11%);
   font-size: rem(13px);
   font-style: italic;
   line-height: normal;
@@ -190,9 +190,7 @@ hr.striped,
         font-weight: 700;
       }
       &:last-child {
-        font-size: rem(14px);
-        color: transparentize(#576574, 0.3);
-        opacity: 0.8;
+        font-style: normal;
         padding: 15px 5px 0px;
 
         .vuejs svg,

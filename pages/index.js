@@ -48,7 +48,7 @@ export default () => (
             Contributions au développement des applications internes de
             l'entreprise (front-end et back-end).
           </p>
-          <p>
+          <p className="note">
             <span>
               Vue.js <SVG src="/static/vuejs.svg" className="vuejs" />
             </span>
