@@ -12,6 +12,15 @@
     font-style: italic;
     font-weight: 700;
     color: $salmon;
-    text-decoration: underline;
+    position: relative;
+    &:after {
+      @include pseudo();
+      width: 100%;
+      height: 1px;
+      background: lighten($salmon, 24%);
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 }

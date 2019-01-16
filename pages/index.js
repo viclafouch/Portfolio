@@ -1,6 +1,7 @@
 import Page from '../components/Layout/main'
 import Meta from '../components/Meta/Meta'
 import SVG from 'react-inlinesvg'
+import Title from '../components/Title/Title'
 
 export default () => (
   <Page>
@@ -16,10 +17,10 @@ export default () => (
           title="Victor de la Fouchardiere"
           alt="Victor de la Fouchardiere"
         />
-        <h2 className="title-h2 pdi--5">Victor de la Fouchardiere</h2>
-        <span className="sub-title note">
-          Developpeur web / YouTube/Google TC
-        </span>
+        <Title
+          title="Victor de la Fouchardiere"
+          subtitle="Developpeur web / Expert Produit Google"
+        />
       </div>
       <hr className="striped" />
       <div className="content-row">
