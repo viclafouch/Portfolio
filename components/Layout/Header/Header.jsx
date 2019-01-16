@@ -33,7 +33,7 @@ const socialLinks = [
       name: 'linkedin'
     },
     href: 'https://www.linkedin.com/in/victordelafouchardiere/',
-    title: ''
+    title: 'linkedin'
   },
   {
     fontawesome: {
@@ -41,7 +41,7 @@ const socialLinks = [
       name: 'codepen'
     },
     href: 'https://codepen.io/Viclafouch/',
-    title: ''
+    title: 'codepen'
   },
   {
     fontawesome: {
@@ -50,7 +50,7 @@ const socialLinks = [
     },
     href:
       'https://topcontributor.withgoogle.com/profile/victor-de-la-fouchardiere-e5fded',
-    title: ''
+    title: 'google'
   },
   {
     fontawesome: {
@@ -58,7 +58,7 @@ const socialLinks = [
       name: 'git'
     },
     href: 'https://github.com/viclafouch',
-    title: ''
+    title: 'github'
   },
   {
     fontawesome: {
@@ -66,8 +66,7 @@ const socialLinks = [
       name: 'twitter'
     },
     href: 'https://twitter.com/TrustedSheriff',
-    title: '',
-    blank: true
+    title: 'twitter'
   }
 ]
 
@@ -79,11 +78,12 @@ export const Header = () => {
           {contactLinks.map((link, index) => {
             return (
               <a
+                rel="noreferrer noopener"
                 href={link.href}
                 key={index}
                 target="_blank"
                 className="header-links-item"
-                title={link.title}
+                title={link.text.title}
               >
                 <FontAwesomeIcon
                   icon={[
@@ -102,6 +102,7 @@ export const Header = () => {
           {socialLinks.map((link, index) => {
             return (
               <a
+                rel="noreferrer noopener"
                 href={link.href}
                 key={index}
                 target="_blank"
