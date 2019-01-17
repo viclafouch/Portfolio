@@ -22,6 +22,7 @@ const Button = props => {
     <a
       href={props.href}
       className="focused-button"
+      rel={props.target ? 'noreferrer noopener' : ''}
       target={props.target || ''}
       download={props.download || 'false'}
     >
