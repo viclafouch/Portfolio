@@ -85,17 +85,11 @@ $sizeBurger: 32px;
     left: 0;
     right: 0;
     @include pseudo();
-    transition-property: left, opacity, top, margin-top, transform;
+    transition-property: opacity, margin-top, transform;
     transition-duration: 0.2s;
     transition-timing-function: ease;
     top: 50%;
     margin-top: -1px;
-  }
-
-  &:hover {
-    & > span {
-      left: -5px;
-    }
   }
 
   &::before {

@@ -291,7 +291,7 @@ hr.striped,
   .productions-list {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
     grid-gap: 18px 15px;
     margin-bottom: 10px;
 
@@ -313,10 +313,14 @@ hr.striped,
         height: 0;
 
         &-cover {
-          position: absolute;
-          height: 100%;
           display: block;
           width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
           z-index: 1;
         }
 
