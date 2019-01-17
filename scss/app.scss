@@ -313,6 +313,8 @@ hr.striped,
         height: 0;
 
         &-cover {
+          position: absolute;
+          height: 100%;
           display: block;
           width: 100%;
           z-index: 1;

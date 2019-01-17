@@ -73,13 +73,18 @@ export default () => (
             <article className="production-article" tabIndex="0">
               <header className="production-article-header">
                 <div className="production-article-header-overlay">
-                  <a href={production.href} target="_blank">
+                  <a
+                    href={production.href}
+                    target="_blank"
+                    title={production.title}
+                    rel="noreferrer noopener"
+                  >
                     <FontAwesomeIcon icon="link" />
                   </a>
                 </div>
                 <img
                   src={production.img}
-                  alt=""
+                  alt={production.title}
                   className="production-article-header-cover"
                 />
               </header>
