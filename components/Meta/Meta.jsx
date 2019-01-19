@@ -37,8 +37,12 @@ export class Meta extends Component {
         <title>{this.state.title || '404 - Not found'}</title>
         <meta
           name="description"
-          content={(this.props.description || '') + " Portfolio de Victor de la Fouchardiere, développeur web chez Seald, diplomé de l'EEMI."}
+          content={
+            (this.props.description || '') +
+            " Portfolio de Victor de la Fouchardiere, développeur web chez Seald, diplomé de l'EEMI."
+          }
         />
+        <link rel="canonical" href={this.props.canonical} />
       </Head>
     )
   }
