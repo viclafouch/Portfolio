@@ -63,7 +63,7 @@ export default () => (
   <Page>
     <Meta
       title="Productions de Victor de la Fouchardiere"
-      description="Dernières productions, dernières réalisations et projets personnels."
+      description="Dernières productions, réalisations et projets personnels de Victor de la Fouchardiere, développeur front chez Seald."
       canonical="https://www.victor-de-la-fouchardiere.fr/productions"
     />
     <section className="productions-section">

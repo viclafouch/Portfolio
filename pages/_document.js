@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
       <html lang="fr">
         {/* prettier-ignore */}
         <Head>
-          <meta charSet="utf-8" />
+          <meta key="charset" charSet="utf-8" />
           <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
           <meta name="theme-color" content="#f6f6f6" />
           <meta name="msapplication-navbutton-color" content="#f6f6f6" />
@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
           {/* Facebook/Linkedin */}
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Portfolio de ctor de la Fouchardière" />
-          <meta property="og:description" content="Besoin d'un développeur web ? Découvrez le profil de cet étudiant en programmation web" />
+          <meta property="og:description" content="Besoin d'un développeur web ? Découvrez le profil de Victor de la Fouchardiere" />
           <meta property="og:url" content="https://www.victor-de-la-fouchardiere.fr" />
           <meta property="og:site_name" content="Victor de la Fouchardière | Portfolio" />
           <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.png" />
@@ -36,7 +36,6 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/static/icon-iphone.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/static/icon-ipad.png" />
           <link rel="apple-touch-icon" sizes="114x114" href="/static/icon-retina.png" />
-          <meta key="charset" charSet="utf-8" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

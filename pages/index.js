@@ -7,7 +7,7 @@ export default () => (
   <Page>
     <Meta
       title="Portfolio de Victor de la Fouchardiere"
-      description="Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux', j'ai une vraie vocation pour le métier de développeur web coté front-end (React, Vue, Angular ...)."
+      description="Victor de la Fouchardiere | Développeur front (React, Vue, Angular, etc..) chez Seald, diplomé d'un bachelor. Fan de Javascript. Découvrez mon portfolio !"
       canonical="https://www.victor-de-la-fouchardiere.fr"
     />
     <section className="home-section">

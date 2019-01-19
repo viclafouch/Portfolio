@@ -7,7 +7,7 @@ export default () => (
   <Page>
     <Meta
       title="Contacter Victor de la Fouchardiere"
-      description="Je suis disponible par email et à l'écoute sur Linkedin."
+      description="Prendre contact avec Victor de la Fouchardiere"
       canonical="https://www.victor-de-la-fouchardiere.fr/contact"
     />
     <section className="contact-section">
