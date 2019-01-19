@@ -160,6 +160,29 @@ $sizeBurger: 32px;
         line-height: 70px;
         display: block;
         text-align: center;
+        position: relative;
+
+        &:hover {
+          color: $salmon;
+        }
+
+        &::after {
+          @include pseudo();
+          bottom: 0;
+          width: 0;
+          height: 2px;
+          background-color: $salmon;
+          left: 50%;
+          opacity: 0;
+          transition: opacity 0.5s, width 0.5s;
+          transform: translateX(-50%);
+        }
+
+        &:hover::after,
+        &.active::after {
+          opacity: 1;
+          width: 80%;
+        }
       }
     }
   }
