@@ -17,7 +17,7 @@ const languages = [
     img: `${pathSkills}/languages/css-logo.png`,
     title: 'css',
     duration: [moment([2015, 1, 1])],
-    items: ['CSS3', 'Responsive', 'SASS']
+    items: ['CSS3', 'Grid', 'SASS']
   },
   {
     img: `${pathSkills}/languages/js-logo.png`,
