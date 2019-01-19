@@ -70,10 +70,6 @@ $sizeBurger: 32px;
   z-index: 999;
   position: relative;
   transition: transform 0.3s ease;
-  @include outlined();
-  &:focus {
-    @extend %outlined-active;
-  }
 
   &::before,
   &::after,

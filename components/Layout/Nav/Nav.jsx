@@ -80,7 +80,6 @@ export class Nav extends Component {
           </a>
           <div>
             <div
-              tabIndex="0"
               onKeyDown={e => e.keyCode === 13 && this.toggleNavigation()}
               ref={this.burger}
               className={
