@@ -53,6 +53,7 @@ export default () => (
     <Meta
       title="Formations de Victor de la Fouchardiere"
       description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, autodidacte, découvrez mon cursus."
+      canonical="https://www.victor-de-la-fouchardiere.fr/formations"
     />
     <section className="training-section">
       <Title title="Formations" subtitle="Ce que j'apprends" />

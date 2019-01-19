@@ -137,6 +137,7 @@ export default () => (
     <Meta
       title="Compétences de Victor de la Fouchardiere"
       description="Découvrez mes compétences en tant que développeur web. React, Vue, ou encore Angular sont ma spécialité !"
+      canonical="https://www.victor-de-la-fouchardiere.fr/competences"
     />
     <section className="skills-section">
       <Title title="Compétences" subtitle="Ce que je sais faire" />

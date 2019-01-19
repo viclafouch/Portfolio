@@ -8,6 +8,7 @@ export default () => (
     <Meta
       title="Portfolio de Victor de la Fouchardiere"
       description="Je m'appelle Victor de la Fouchardière, titulaire d'une licence 'Chef de Projets Digitaux', j'ai une vraie vocation pour le métier de développeur web coté front-end (React, Vue, Angular ...)."
+      canonical="https://www.victor-de-la-fouchardiere.fr"
     />
     <section className="home-section">
       <div className="content-row">

@@ -64,6 +64,7 @@ export default () => (
     <Meta
       title="Productions de Victor de la Fouchardiere"
       description="Dernières productions, dernières réalisations et projets personnels."
+      canonical="https://www.victor-de-la-fouchardiere.fr/productions"
     />
     <section className="productions-section">
       <Title title="Portfolio" subtitle="Ce que je développe" />
