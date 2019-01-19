@@ -36,6 +36,8 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/static/icon-iphone.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/static/icon-ipad.png" />
           <link rel="apple-touch-icon" sizes="114x114" href="/static/icon-retina.png" />
+          <meta name="google-site-verification" content="7_XZ1bK94NNQLjHFdKXCa9FjsNaOZGx76uQgQzDPIIw" />
+
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
