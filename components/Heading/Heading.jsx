@@ -23,7 +23,7 @@ const Heading = () => (
       </p>
       <div className="mgi--top-10 mgi--left-20 mgi--right-20">
         <Button
-          href="/static/CV-Victor_de_la_Fouchardiere.pdf"
+          href="/static/CV-Victor-de-la-Fouchardiere.pdf"
           icon="download"
           download
           primary
