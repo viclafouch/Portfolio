@@ -22,6 +22,12 @@ const productions = [
       'https://chrome.google.com/webstore/detail/tcs-center/hanknpkmjbfhcalmipokkfplndkohgdm'
   },
   {
+    title: 'Seald.io',
+    img: `${pathProductions}/seald.io.jpg`,
+    type: typesDev[0],
+    href: 'https://www.seald.io/'
+  },
+  {
     title: 'uScroll',
     img: `${pathProductions}/uscroll.jpg`,
     type: typesDev[0],
