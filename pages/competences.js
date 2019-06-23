@@ -23,7 +23,7 @@ const languages = [
     img: `${pathSkills}/languages/js-logo.png`,
     title: 'js',
     duration: [moment([2015, 1, 1])],
-    items: ['ES7/ES8', 'JSX', 'SSR']
+    items: ['ES7/ES8', 'JSX', 'Node']
   },
   {
     img: `${pathSkills}/languages/php-logo.png`,
@@ -83,6 +83,11 @@ const frameworks = [
     img: `${pathSkills}/frameworks/nextjs-logo.svg`,
     title: 'next.js',
     duration: [moment([2018, 10, 1])]
+  },
+  {
+    img: `${pathSkills}/frameworks/material-ui.png`,
+    title: 'Material UI',
+    duration: [moment([2018, 10, 1]), moment([2019, 3, 1])]
   }
 ]
 

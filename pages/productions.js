@@ -15,11 +15,17 @@ const productions = [
     href: 'https://codepen.io/Viclafouch/full/VMNdpg/'
   },
   {
-    title: "TC's Center",
-    img: `${pathProductions}/tc-center.jpg`,
+    title: 'PE Center',
+    img: `${pathProductions}/pe-center.jpg`,
     type: typesDev[3],
     href:
-      'https://chrome.google.com/webstore/detail/tcs-center/hanknpkmjbfhcalmipokkfplndkohgdm'
+      'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
+  },
+  {
+    title: 'Google Support Crawler',
+    img: `${pathProductions}/google-support-crawler.jpg`,
+    type: typesDev[1],
+    href: 'https://github.com/viclafouch/Google-Support-Crawler'
   },
   {
     title: 'Seald.io',
