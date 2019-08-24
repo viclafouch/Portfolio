@@ -1,11 +1,7 @@
 {
   "version": 2,
   "name": "portfolio",
-  "builds": [
-    {
-      "use": "@now/static"
-    }
-  ],
+  "builds": [{ "src": "./out/**", "use": "@now/static" }],
   "alias": ["www.victor-de-la-fouchardiere.fr"],
   "env": {},
   "public": true,
@@ -13,6 +9,13 @@
     "enabled": false
   },
   "routes": [
+    { "src": "/formations", "dest": "out/formations.html" },
+    { "src": "/404", "dest": "out/404.html" },
+    { "src": "/competences", "dest": "out/competences.html" },
+    { "src": "/index", "dest": "out/index.html" },
+    { "src": "/productions", "dest": "out/productions.html" },
+    { "src": "/contact", "dest": "out/contact.html" },
+    { "src": "/(.*)", "dest": "out/$1" },
     {
       "src": "/_next/static/*",
       "headers": {

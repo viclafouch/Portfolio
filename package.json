@@ -42,7 +42,7 @@
     "build": "next build",
     "export": "next export && node tasks/build-sitemap.js && node tasks/build-robotstxt.js",
     "start": "NODE_ENV=production node ssr-server.js",
-    "deploy": "now -A ../now.json --public out && now alias && now remove portfolio --safe -y"
+    "deploy": "now --prod"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.5.5",
