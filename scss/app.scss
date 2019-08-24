@@ -195,10 +195,14 @@ hr.striped,
         font-style: normal;
         padding: 15px 5px 0px;
 
-        .vuejs svg,
+        .vuejs,
         .python {
           width: 13px;
           height: 13px;
+        }
+
+        .vuejs {
+          margin-left: 4px;
         }
       }
     }

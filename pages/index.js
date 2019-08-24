@@ -52,7 +52,10 @@ export default () => (
           </p>
           <p className="note">
             <span>
-              Vue.js <SVG src="/static/vuejs.svg" className="vuejs" />
+              Vue.js
+              <span>
+                <SVG src="/static/vuejs.svg" className="vuejs" />
+              </span>
             </span>
             {' / '}
             <span>

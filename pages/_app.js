@@ -50,12 +50,12 @@ export default class MyApp extends App {
     const { Component } = this.props
 
     return (
-      <Container>
+      <>
         <Head>
           <link key="reset" rel="stylesheet" href="/static/reset.css" />
         </Head>
         <Component />
-      </Container>
+      </>
     )
   }
 }

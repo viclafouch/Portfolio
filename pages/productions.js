@@ -9,6 +9,12 @@ const typesDev = ['FrontEnd', 'BackEnd', 'FrontEnd/BackEnd', 'Extension']
 
 const productions = [
   {
+    title: 'Fetch Crawler',
+    img: `${pathProductions}/fetch-crawler.jpg`,
+    type: typesDev[1],
+    href: 'https://github.com/viclafouch/fetch-crawler'
+  },
+  {
     title: 'Pokemon battle',
     img: `${pathProductions}/pokemon-battle.jpg`,
     type: typesDev[0],
