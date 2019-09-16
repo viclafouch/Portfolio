@@ -15,6 +15,12 @@ const productions = [
     href: 'https://github.com/viclafouch/fetch-crawler'
   },
   {
+    title: 'Seald Dashboard',
+    img: `${pathProductions}/dashboard-seald.jpg`,
+    type: typesDev[0],
+    href: 'https://dashboard.seald.io/dashboard/v2/#'
+  },
+  {
     title: 'Pokemon battle',
     img: `${pathProductions}/pokemon-battle.jpg`,
     type: typesDev[0],
