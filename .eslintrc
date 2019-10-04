@@ -1,0 +1,6 @@
+{
+  "extends": ["@viclafouch/eslint-config-viclafouch"],
+  "rules": {
+    "react/display-name": 0
+  }
+}

@@ -10,9 +10,7 @@ const Fonts = async () => {
   const ABeeZee = new FontFaceObserver('ABeeZee')
   const Karma = new FontFaceObserver('Karma')
 
-  return Promise.all([ABeeZee.load(), Karma.load()]).then(() =>
-    document.documentElement.classList.add('fonts-loaded')
-  )
+  return Promise.all([ABeeZee.load(), Karma.load()]).then(() => document.documentElement.classList.add('fonts-loaded'))
 }
 
 export default Fonts

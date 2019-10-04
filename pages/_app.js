@@ -1,11 +1,11 @@
 import React from 'react'
-import App, { Container } from 'next/app'
-import Font from '../components/Layout/Font/Font'
+import App from 'next/app'
 import Head from 'next/head'
 import 'what-input'
 import Nprogress from 'nprogress'
-import * as gtag from '../utils/analytics'
 import Router from 'next/router'
+import * as gtag from '../utils/analytics'
+import Font from '../components/Layout/Font/Font'
 import 'nprogress/nprogress.css'
 
 Nprogress.configure({
@@ -41,6 +41,7 @@ export default class MyApp extends App {
       if (scroll) window.scrollBy(0, betweenTopScreenAndMain - navHeight)
     })
   }
+
   componentDidMount = () => {
     Nprogress.start()
     Font().finally(Nprogress.done())

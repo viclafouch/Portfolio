@@ -1,0 +1,7 @@
+node_modules/
+build/
+out/
+tasks/
+next.config.js
+ssr.server.js
+postcss.config.js

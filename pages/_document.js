@@ -1,13 +1,12 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { GA_TRACKING_ID } from '../private'
 
-const isProd = process.env['NODE_ENV'] === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 
 export default class MyDocument extends Document {
   render() {
     return (
       <html lang="fr">
-        {/* prettier-ignore */}
         <Head>
           <meta key="charset" charSet="utf-8" />
           <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
@@ -20,12 +19,13 @@ export default class MyDocument extends Document {
           <meta name="twitter:creator" content="@TrustedSheriff" />
           <meta name="twitter:title" content="Portfolio de Victor de la Fouchardière" />
           <meta name="twitter:description" content="Besoin d'un développeur web ?" />
-          <meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/static/victor-de-la-fouchardiere.jpg"
-          />
-          {/* Facebook/Linkedin */}
+          <meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/static/victor-de-la-fouchardiere.jpg" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Portfolio de Victor de la Fouchardière" />
-          <meta property="og:description" content="Besoin d'un développeur web ? Découvrez le profil de Victor de la Fouchardiere" />
+          <meta
+            property="og:description"
+            content="Besoin d'un développeur web ? Découvrez le profil de Victor de la Fouchardiere"
+          />
           <meta property="og:url" content="https://www.victor-de-la-fouchardiere.fr" />
           <meta property="og:site_name" content="Victor de la Fouchardière | Portfolio" />
           <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/static/victor-de-la-fouchardiere.png" />
@@ -39,11 +39,9 @@ export default class MyDocument extends Document {
           <meta name="google-site-verification" content="7_XZ1bK94NNQLjHFdKXCa9FjsNaOZGx76uQgQzDPIIw" />
 
           {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];
@@ -53,7 +51,6 @@ export default class MyDocument extends Document {
             }}
           />
         </Head>
-        {/* prettier-ignore-end */}
         <body>
           <Main />
           <NextScript />

@@ -1,5 +1,5 @@
-import Page from '../components/Layout/main'
 import moment from 'moment'
+import Page from '../components/Layout/main'
 import Title from '../components/Title/Title'
 import { convertDate } from '../utils/date'
 import Meta from '../components/Meta/Meta'
@@ -129,13 +129,11 @@ const technos = [
   }
 ]
 
-const SkillTitle = ({ title }) => {
-  return (
-    <div className="skill-title center-text">
-      <h4>{title}</h4>
-    </div>
-  )
-}
+const SkillTitle = ({ title }) => (
+  <div className="skill-title center-text">
+    <h4>{title}</h4>
+  </div>
+)
 
 export default () => (
   <Page>
@@ -159,17 +157,12 @@ export default () => (
                     alt={language.title.toUpperCase()}
                     title={language.title.toUpperCase()}
                   />
-                  <h5 className="skill-article-header-title">
-                    {language.title}
-                  </h5>
-                  <span className="skill-article-header-note note">
-                    {convertDate(language.duration)} d'expérience
-                  </span>
+                  <h5 className="skill-article-header-title">{language.title}</h5>
+                  <span className="skill-article-header-note note">{convertDate(language.duration)} d'expérience</span>
                 </header>
                 <footer className="skill-article-footer">
                   <ul className="skill-article-footer-list">
-                    {language.items &&
-                      language.items.map((item, i) => <li key={i}>{item}</li>)}
+                    {language.items && language.items.map((item, i) => <li key={i}>{item}</li>)}
                   </ul>
                 </footer>
               </article>
@@ -190,12 +183,8 @@ export default () => (
                     alt={framework.title.toUpperCase()}
                     title={framework.title.toUpperCase()}
                   />
-                  <h5 className="skill-article-header-title">
-                    {framework.title}
-                  </h5>
-                  <span className="skill-article-header-note note">
-                    {convertDate(framework.duration)} d'expérience
-                  </span>
+                  <h5 className="skill-article-header-title">{framework.title}</h5>
+                  <span className="skill-article-header-note note">{convertDate(framework.duration)} d'expérience</span>
                 </header>
               </article>
             </li>
@@ -216,9 +205,7 @@ export default () => (
                     title={techno.title.toUpperCase()}
                   />
                   <h5 className="skill-article-header-title">{techno.title}</h5>
-                  <span className="skill-article-header-note note">
-                    {techno.type}
-                  </span>
+                  <span className="skill-article-header-note note">{techno.type}</span>
                 </header>
               </article>
             </li>

@@ -1,4 +1,13 @@
 {
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "eslint.enable": false
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "prettier.disableLanguages": ["javascript", "javascriptreact"]
 }

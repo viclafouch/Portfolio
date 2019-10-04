@@ -1,6 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Page from '../components/Layout/main'
 import Title from '../components/Title/Title'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Meta from '../components/Meta/Meta'
 
 const pathProductions = '/static/productions'
@@ -30,8 +30,7 @@ const productions = [
     title: 'PE Center',
     img: `${pathProductions}/pe-center.jpg`,
     type: typesDev[3],
-    href:
-      'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
+    href: 'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
   },
   {
     title: 'Google Support Crawler',
@@ -95,31 +94,18 @@ export default () => (
       <ul className="productions-list">
         {productions.map((production, index) => (
           <li key={index}>
-            <article className="production-article" tabIndex="0">
+            <article className="production-article">
               <header className="production-article-header">
                 <div className="production-article-header-overlay">
-                  <a
-                    href={production.href}
-                    target="_blank"
-                    title={production.title}
-                    rel="noreferrer noopener"
-                  >
+                  <a href={production.href} target="_blank" title={production.title} rel="noreferrer noopener">
                     <FontAwesomeIcon icon="link" />
                   </a>
                 </div>
-                <img
-                  src={production.img}
-                  alt={production.title}
-                  className="production-article-header-cover"
-                />
+                <img src={production.img} alt={production.title} className="production-article-header-cover" />
               </header>
               <footer className="production-article-footer">
-                <h5 className="production-article-footer-title">
-                  {production.title}
-                </h5>
-                <p className="production-article-footer-subtitle note">
-                  {production.type}
-                </p>
+                <h5 className="production-article-footer-title">{production.title}</h5>
+                <p className="production-article-footer-subtitle note">{production.type}</p>
               </footer>
             </article>
           </li>

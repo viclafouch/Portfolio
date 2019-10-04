@@ -1,6 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Page from '../components/Layout/main'
 import Title from '../components/Title/Title'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Button from '../components/Button/Button'
 import Meta from '../components/Meta/Meta'
 
@@ -22,11 +22,7 @@ const trainings = [
     date: 'Obtenu en 2016',
     title: 'Certifications Google',
     href: 'https://learndigital.withgoogle.com/digitalactive/',
-    rows: [
-      'Digital Active (Google)',
-      'Conception de sites mobiles (Google)',
-      'Développement de chaîne (YouTube)'
-    ],
+    rows: ['Digital Active (Google)', 'Conception de sites mobiles (Google)', 'Développement de chaîne (YouTube)'],
     img: `${pathTraining}/digital-active.png`
   },
   {
@@ -40,10 +36,7 @@ const trainings = [
     date: ' Obtenu en 2015',
     title: 'BAC Economique et Social',
     href: 'http://www.lycee-saint-paul-lille.fr/',
-    rows: [
-      'Diplôme du Baccalauréat Economique et Social (ES)',
-      'Lycée Saint Paul - Lille'
-    ],
+    rows: ['Diplôme du Baccalauréat Economique et Social (ES)', 'Lycée Saint Paul - Lille'],
     img: `${pathTraining}/saint-paul.png`
   }
 ]
