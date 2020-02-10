@@ -26,6 +26,12 @@ const languages = [
     items: ['ES7/ES8', 'JSX', 'Node']
   },
   {
+    img: `${pathSkills}/languages/ts-logo.png`,
+    title: 'ts',
+    duration: [moment([2019, 1, 1])],
+    items: ['ES7/ES8', 'TSX', 'Casting']
+  },
+  {
     img: `${pathSkills}/languages/php-logo.png`,
     title: 'php',
     duration: [moment([2016, 1, 1])],
