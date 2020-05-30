@@ -9,6 +9,12 @@ const typesDev = ['FrontEnd', 'BackEnd', 'FrontEnd/BackEnd', 'Extension']
 
 const productions = [
   {
+    title: 'Meme Studio',
+    img: `${pathProductions}/meme-studio.png`,
+    type: typesDev[2],
+    href: 'https://www.meme-studio.io'
+  },
+  {
     title: 'Minesweeper',
     img: `${pathProductions}/minesweeper.jpg`,
     type: typesDev[0],
