@@ -14,7 +14,6 @@
       margin-left: 10px;
       color: $p-txt-color;
       padding: 1px 2px;
-      @include outlined((color));
       &:hover {
         color: $salmon;
       }

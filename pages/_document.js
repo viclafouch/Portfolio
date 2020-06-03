@@ -1,3 +1,4 @@
+import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { GA_TRACKING_ID } from '../private'
 
@@ -47,7 +48,7 @@ export default class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('config', '${GA_TRACKING_ID}', { 'send_page_view': ${isProd} });
-          `,
+          `
             }}
           />
         </Head>

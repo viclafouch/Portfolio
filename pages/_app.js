@@ -1,12 +1,24 @@
 import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
-import 'what-input'
 import Nprogress from 'nprogress'
 import Router from 'next/router'
+import FontFaceObserver from 'fontfaceobserver'
 import * as gtag from '../utils/analytics'
-import Font from '../components/Layout/Font/Font'
 import 'nprogress/nprogress.css'
+
+async function loadFonts() {
+  const link = document.createElement('link')
+  link.href = 'https://fonts.googleapis.com/css?family=ABeeZee|Karma'
+  link.rel = 'stylesheet'
+
+  document.head.appendChild(link)
+
+  const ABeeZee = new FontFaceObserver('ABeeZee')
+  const Karma = new FontFaceObserver('Karma')
+
+  return Promise.all([ABeeZee.load(), Karma.load()]).then(() => document.documentElement.classList.add('fonts-loaded'))
+}
 
 Nprogress.configure({
   showSpinner: false,
@@ -14,7 +26,7 @@ Nprogress.configure({
   speed: 200,
   trickle: true,
   trickleSpeed: 200,
-  parent: 'body',
+  parent: 'body'
 })
 
 const getScrolled = () => {
@@ -34,7 +46,7 @@ export default class MyApp extends App {
       scroll = betweenTopScreenAndMain < navHeight + 20
     })
     Router.events.on('routeChangeError', () => Nprogress.done())
-    Router.events.on('routeChangeComplete', (url) => {
+    Router.events.on('routeChangeComplete', url => {
       gtag.pageview(url)
       Nprogress.done()
       const { navHeight, betweenTopScreenAndMain } = getScrolled()
@@ -44,7 +56,7 @@ export default class MyApp extends App {
 
   componentDidMount = () => {
     Nprogress.start()
-    Font().finally(Nprogress.done())
+    loadFonts().finally(Nprogress.done)
   }
 
   render() {

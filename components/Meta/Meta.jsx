@@ -1,6 +1,5 @@
-import Head from 'next/head'
-
 import React, { Component } from 'react'
+import Head from 'next/head'
 
 export class Meta extends Component {
   state = {
