@@ -14,7 +14,7 @@ Nprogress.configure({
   speed: 200,
   trickle: true,
   trickleSpeed: 200,
-  parent: 'body'
+  parent: 'body',
 })
 
 const getScrolled = () => {
@@ -34,7 +34,7 @@ export default class MyApp extends App {
       scroll = betweenTopScreenAndMain < navHeight + 20
     })
     Router.events.on('routeChangeError', () => Nprogress.done())
-    Router.events.on('routeChangeComplete', url => {
+    Router.events.on('routeChangeComplete', (url) => {
       gtag.pageview(url)
       Nprogress.done()
       const { navHeight, betweenTopScreenAndMain } = getScrolled()

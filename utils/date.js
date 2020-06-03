@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-export const convertDate = date => {
+export const convertDate = (date) => {
   const dateTo = date.length > 1 ? date[1] : moment()
   const diff = dateTo.diff(date[0], 'month')
   if (diff < 12) return `${diff} mois`

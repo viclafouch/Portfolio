@@ -14,31 +14,31 @@ const trainings = [
     rows: [
       'Spécialisation dans le web developpement',
       'Connaissances acquises dans : Webmarketing / Communication digitale / Webdesign / Développement web / Gestion de Projet',
-      "Licence 'Chef de Projets Digitaux' obtenue"
+      "Licence 'Chef de Projets Digitaux' obtenue",
     ],
-    img: `${pathTraining}/eemi-logo.png`
+    img: `${pathTraining}/eemi-logo.png`,
   },
   {
     date: 'Obtenu en 2016',
     title: 'Certifications Google',
     href: 'https://learndigital.withgoogle.com/digitalactive/',
     rows: ['Digital Active (Google)', 'Conception de sites mobiles (Google)', 'Développement de chaîne (YouTube)'],
-    img: `${pathTraining}/digital-active.png`
+    img: `${pathTraining}/digital-active.png`,
   },
   {
     date: 'Depuis Oct 2016',
     title: 'Free Code Camp',
     href: 'https://www.freecodecamp.org/',
     rows: ['Javascript', 'Php', 'CSS/SCSS'],
-    img: `${pathTraining}/freecodecamp.png`
+    img: `${pathTraining}/freecodecamp.png`,
   },
   {
     date: ' Obtenu en 2015',
     title: 'BAC Economique et Social',
     href: 'http://www.lycee-saint-paul-lille.fr/',
     rows: ['Diplôme du Baccalauréat Economique et Social (ES)', 'Lycée Saint Paul - Lille'],
-    img: `${pathTraining}/saint-paul.png`
-  }
+    img: `${pathTraining}/saint-paul.png`,
+  },
 ]
 
 export default () => (

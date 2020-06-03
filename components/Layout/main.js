@@ -9,7 +9,7 @@ import {
   faUser,
   faCalendarAlt,
   faDownload,
-  faEnvelope
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 import Footer from './Footer/Footer'
 import Header from './Header/Header'

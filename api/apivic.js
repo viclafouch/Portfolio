@@ -4,5 +4,5 @@ const baseUrl = process.env.NODE_ENV === 'production' ? 'https://api.victor-de-l
 
 export default axios.create({
   baseURL: `${baseUrl}/portfolio`,
-  timeout: 10000
+  timeout: 10000,
 })

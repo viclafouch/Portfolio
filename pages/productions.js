@@ -12,86 +12,86 @@ const productions = [
     title: 'Meme Studio',
     img: `${pathProductions}/meme-studio.png`,
     type: typesDev[2],
-    href: 'https://www.meme-studio.io'
+    href: 'https://www.meme-studio.io',
   },
   {
     title: 'Minesweeper',
     img: `${pathProductions}/minesweeper.jpg`,
     type: typesDev[0],
-    href: 'https://github.com/viclafouch/Minesweeper'
+    href: 'https://github.com/viclafouch/Minesweeper',
   },
   {
     title: 'Fetch Crawler',
     img: `${pathProductions}/fetch-crawler.jpg`,
     type: typesDev[1],
-    href: 'https://github.com/viclafouch/fetch-crawler'
+    href: 'https://github.com/viclafouch/fetch-crawler',
   },
   {
     title: 'Seald Dashboard',
     img: `${pathProductions}/dashboard-seald.jpg`,
     type: typesDev[0],
-    href: 'https://dashboard.seald.io/dashboard/v2/#'
+    href: 'https://dashboard.seald.io/dashboard/v2/#',
   },
   {
     title: 'Pokemon battle',
     img: `${pathProductions}/pokemon-battle.jpg`,
     type: typesDev[0],
-    href: 'https://codepen.io/Viclafouch/full/VMNdpg/'
+    href: 'https://codepen.io/Viclafouch/full/VMNdpg/',
   },
   {
     title: 'PE Center',
     img: `${pathProductions}/pe-center.jpg`,
     type: typesDev[3],
-    href: 'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
+    href: 'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm',
   },
   {
     title: 'Google Support Crawler',
     img: `${pathProductions}/google-support-crawler.jpg`,
     type: typesDev[1],
-    href: 'https://github.com/viclafouch/Google-Support-Crawler'
+    href: 'https://github.com/viclafouch/Google-Support-Crawler',
   },
   {
     title: 'Seald.io',
     img: `${pathProductions}/seald.io.jpg`,
     type: typesDev[0],
-    href: 'https://www.seald.io/'
+    href: 'https://www.seald.io/',
   },
   {
     title: 'uScroll',
     img: `${pathProductions}/uscroll.jpg`,
     type: typesDev[0],
-    href: 'https://viclafouch.github.io/uscroll/demo.html'
+    href: 'https://viclafouch.github.io/uscroll/demo.html',
   },
   {
     title: 'TutoBwim.fr',
     img: `${pathProductions}/tutobwim.fr.jpg`,
     type: typesDev[2],
-    href: 'https://www.tutobwim.fr/'
+    href: 'https://www.tutobwim.fr/',
   },
   {
     title: 'Bubblesee',
     img: `${pathProductions}/bubblesee.jpg`,
     type: typesDev[0],
-    href: 'https://viclafouch.github.io/bubblesee/demo.html'
+    href: 'https://viclafouch.github.io/bubblesee/demo.html',
   },
   {
     title: 'WP Informations',
     img: `${pathProductions}/wpinformations.jpg`,
     type: typesDev[1],
-    href: 'https://viclafouch.github.io/WP_Informations/'
+    href: 'https://viclafouch.github.io/WP_Informations/',
   },
   {
     title: 'React Template Form',
     img: `${pathProductions}/react-template-form.jpg`,
     type: typesDev[0],
-    href: 'https://viclafouch.github.io/react-template-form/'
+    href: 'https://viclafouch.github.io/react-template-form/',
   },
   {
     title: 'Github Profile',
     img: `${pathProductions}/github-profil.jpg`,
     type: typesDev[0],
-    href: 'https://viclafouch.github.io/github-profile/'
-  }
+    href: 'https://viclafouch.github.io/github-profile/',
+  },
 ]
 
 export default () => (

@@ -16,11 +16,11 @@ module.exports = withPlugins(
       withSass,
       {
         sassLoaderOptions: {
-          data: `
-      @import "scss/_rem.scss";
-      @import "scss/_variables.scss";
-      @import "scss/_mixins.scss";
-    `
+          prependData: `
+            @import "scss/_rem.scss";
+            @import "scss/_variables.scss";
+            @import "scss/_mixins.scss";
+          `
         }
       }
     ],
