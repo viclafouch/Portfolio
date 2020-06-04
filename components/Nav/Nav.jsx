@@ -57,7 +57,7 @@ function Nav() {
     <nav className={styles.navigation} id="navbar">
       <div className="container flex-me flex-align">
         <a href="/">
-          <img src="/static/logo-de-la-fouchardiere-victor.png" alt="Logo Victor de la Fouchardière" />
+          <img src="/images/logo.png" alt="Logo Victor de la Fouchardière" />
         </a>
         <div>
           <div

@@ -5,9 +5,9 @@ module.exports = {
   },
   sassOptions: {
     prependData: `
-      @import "scss/_rem.scss";
-      @import "scss/_variables.scss";
-      @import "scss/_mixins.scss";
+      @import "scss/global/_rem.scss";
+      @import "scss/global/_variables.scss";
+      @import "scss/global/_mixins.scss";
     `
   }
 }

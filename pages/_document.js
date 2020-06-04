@@ -30,12 +30,13 @@ export default class MyDocument extends Document {
           <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/static/victor-de-la-fouchardiere.png" />
           <meta property="fb:app_id" content="124333614845929" />
           <meta name="robots" content="noodp" />
-          <link rel="icon" type="image/png" href="/static/favicon.png" />
-          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon-16x16.png" />
-          <link rel="apple-touch-icon" href="/static/icon-iphone.png" />
-          <link rel="apple-touch-icon" sizes="72x72" href="/static/icon-ipad.png" />
-          <link rel="apple-touch-icon" sizes="114x114" href="/static/icon-retina.png" />
+          <link rel="icon" type="image/png" href="favicon.png" />
+          <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png" />
+          <link rel="apple-touch-icon" href="icon-iphone.png" />
+          <link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
+          <link rel="apple-touch-icon" sizes="114x114" href="icon-retina.png" />
           <meta name="google-site-verification" content="7_XZ1bK94NNQLjHFdKXCa9FjsNaOZGx76uQgQzDPIIw" />
+          <link rel="stylesheet" href="/reset.css" />
 
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
           <script

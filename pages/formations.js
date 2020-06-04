@@ -4,7 +4,7 @@ import Title from 'components/Title/Title'
 import Button from 'components/Button/Button'
 import Meta from 'components/Meta/Meta'
 
-const pathTraining = '/static/training'
+const pathTraining = '/images/training'
 
 const trainings = [
   {

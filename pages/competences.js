@@ -4,7 +4,7 @@ import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
 import { convertDate } from '../utils/date'
 
-const pathSkills = '/static/skills'
+const pathSkills = '/images'
 
 const languages = [
   {
@@ -43,12 +43,12 @@ const frameworks = [
   {
     img: `${pathSkills}/frameworks/jquery-logo.png`,
     title: 'jquery',
-    duration: [moment([2015, 1, 1])]
+    duration: [moment([2015, 1, 1]), moment([2017, 1, 1])]
   },
   {
     img: `${pathSkills}/frameworks/bootstrap-logo.png`,
     title: 'bootstrap',
-    duration: [moment([2016, 1, 1])]
+    duration: [moment([2016, 1, 1]), moment([2017, 1, 1])]
   },
   {
     img: `${pathSkills}/frameworks/materialize-logo.png`,
@@ -101,37 +101,37 @@ const technos = [
   {
     title: 'Git',
     type: 'Versioning',
-    img: `${pathSkills}/git-logo.svg`
+    img: `${pathSkills}/technos/git-logo.svg`
   },
   {
     title: 'Webpack',
     type: 'Automatisation',
-    img: `${pathSkills}/webpack-logo.svg`
+    img: `${pathSkills}/technos/webpack-logo.svg`
   },
   {
     title: 'Visual Studio Code',
     type: 'Editeur',
-    img: `${pathSkills}/visual-code-studio-logo.svg`
+    img: `${pathSkills}/technos/visual-code-studio-logo.svg`
   },
   {
     title: 'MAC OS',
     type: 'OS',
-    img: `${pathSkills}/apple-logo.png`
+    img: `${pathSkills}/technos/apple-logo.png`
   },
   {
     title: 'Photoshop',
     type: 'Graphisme',
-    img: `${pathSkills}/photoshop-logo.png`
+    img: `${pathSkills}/technos/photoshop-logo.png`
   },
   {
     title: 'Parcel',
     type: 'Automatisation',
-    img: `${pathSkills}/parcel-logo.png`
+    img: `${pathSkills}/technos/parcel-logo.png`
   },
   {
     title: 'Windows',
     type: 'OS',
-    img: `${pathSkills}/windows-logo.png`
+    img: `${pathSkills}/technos/windows-logo.png`
   }
 ]
 

@@ -8,7 +8,7 @@ function Heading() {
       <div className="container flex-me flex-vertical flex-align flex-justify-center">
         <Link href="/">
           <a>
-            <img src="/static/logo-de-la-fouchardiere-victor.png" alt="Victor de la Fouchardiere Logo" />
+            <img src="/images/logo.png" alt="Victor de la Fouchardiere Logo" />
           </a>
         </Link>
         <h1 className={`${styles.subheading_title}`}>Besoin d&quot;un développeur web&nbsp;?</h1>
@@ -17,7 +17,7 @@ function Heading() {
           de mes références pour mieux connaitre mon profil.
         </p>
         <div className="mgi--top-10">
-          <Button href="/static/CV-Victor-de-la-Fouchardiere.pdf" icon="download" download primary>
+          <Button href="/pdf/CV-Victor-de-la-Fouchardiere.pdf" icon="download" download primary>
             Télécharger/Imprimer le CV
           </Button>
         </div>

@@ -13,7 +13,7 @@ function Home() {
       <section className="home-section">
         <div className="content-row">
           <img
-            src="/static/victor-de-la-fouchardiere.jpg"
+            src="victor-de-la-fouchardiere.jpg"
             className="profile-picture"
             title="Victor de la Fouchardiere"
             alt="Victor de la Fouchardiere"
@@ -32,25 +32,12 @@ function Home() {
           <h3>Expérience actuelle</h3>
           <div className="experience-container">
             <a target="_blank" href="https://www.seald.io" title="seald" rel="noreferrer noopener">
-              <img src="/static/seald-logo.svg" alt="Seald" />
+              <img src="/images/companies/seald-logo.svg" alt="Seald" />
             </a>
             <p>
               Développeur Full-Stack chez <b>Seald</b> depuis oct. 2018.
               <br />
               {`Contributions au développement des applications internes de l'entreprise (front-end et back-end).`}
-            </p>
-            <p className="note">
-              <span>
-                Vue.js
-                <span>
-                  <img src="/static/vuejs.svg" alt="vue-js" />
-                </span>
-              </span>
-              /
-              <span>
-                Python
-                <img src="/static/python.svg" alt="python" />
-              </span>
             </p>
           </div>
         </div>

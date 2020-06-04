@@ -61,14 +61,6 @@ export default class MyApp extends App {
 
   render() {
     const { Component } = this.props
-
-    return (
-      <>
-        <Head>
-          <link key="reset" rel="stylesheet" href="/static/reset.css" />
-        </Head>
-        <Component />
-      </>
-    )
+    return <Component />
   }
 }

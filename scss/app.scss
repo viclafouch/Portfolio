@@ -19,11 +19,7 @@ html {
     opacity: 1;
   }
   @media (max-width: 600px) {
-    font-size: 13px;
-  }
-
-  @media (max-width: 300px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -33,10 +29,6 @@ html body div#nprogress div.bar {
   left: 0 !important;
   z-index: 99999 !important;
   background: $salmon !important;
-}
-
-.svgblock {
-  display: block;
 }
 
 html,
@@ -64,7 +56,7 @@ body {
   margin: 0;
   color: $p-txt-color;
   background-color: $p-bg-color;
-  overflow-y: scroll;
+  overflow-y: auto;
   font-family: ABeeZee, sans-serif;
 }
 
@@ -129,7 +121,7 @@ p {
 
 hr.striped,
 .skill-title {
-  background: url('/static/stripes.png') center left repeat-x;
+  background: url('/images/stripes.png') center left repeat-x;
   display: flex;
   justify-content: center;
 }
@@ -179,24 +171,8 @@ hr.striped,
       margin-bottom: 20px;
     }
 
-    p {
-      b {
-        font-weight: 700;
-      }
-      &:last-child {
-        font-style: normal;
-        padding: 15px 5px 0px;
-
-        .vuejs,
-        .python {
-          width: 13px;
-          height: 13px;
-        }
-
-        .vuejs {
-          margin-left: 4px;
-        }
-      }
+    p b {
+      font-weight: 700;
     }
   }
 }
