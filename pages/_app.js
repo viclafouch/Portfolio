@@ -1,10 +1,10 @@
-import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 import Nprogress from 'nprogress'
 import Router from 'next/router'
 import FontFaceObserver from 'fontfaceobserver'
 import * as gtag from '../utils/analytics'
+import 'scss/app.scss'
 import 'nprogress/nprogress.css'
 
 async function loadFonts() {

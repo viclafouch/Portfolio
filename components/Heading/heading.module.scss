@@ -4,33 +4,19 @@
   padding: 50px 0;
   background-color: $s-bg-color;
   position: relative;
-  @extend %p-shad;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-align: center;
 
-  &-link-logo {
-    display: none;
-    margin: 0;
-    border: 0;
-
-    & > img {
-      width: 50px;
-    }
-  }
-
-  &-title {
+  &_title {
     margin: 15px 0;
     padding: 10px 15px;
   }
 
-  &-subtitle {
+  &_subtitle {
     color: $p-txt-color;
     padding: 10px 5px;
     max-width: 75%;
     margin: 0 auto;
-  }
-
-  .button {
-    margin-bottom: 0;
-    @extend %p-shad;
   }
 }
 

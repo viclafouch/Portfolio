@@ -1,8 +1,7 @@
-import React from 'react'
 import SVG from 'react-inlinesvg'
-import Page from '../components/Page/Page'
-import Meta from '../components/Meta/Meta'
-import Title from '../components/Title/Title'
+import Page from 'components/Page/Page'
+import Meta from 'components/Meta/Meta'
+import Title from 'components/Title/Title'
 
 function Home() {
   return (

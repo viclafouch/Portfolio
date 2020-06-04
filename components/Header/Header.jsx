@@ -1,6 +1,5 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './header.scss'
+import styles from './header.module.scss'
 
 const contactLinks = [
   {
@@ -52,31 +51,31 @@ const socialLinks = [
 
 function Header() {
   return (
-    <header className="header">
-      <div className="header-links flex-me container flex-justify-between">
-        <div className="header-links-box-left">
+    <header className={styles.header}>
+      <div className={`${styles.header_links} flex-me container flex-justify-between`}>
+        <div>
           {contactLinks.map((link, index) => (
             <a
               rel="noreferrer noopener"
               href={link.href}
               key={index}
               target="_blank"
-              className="header-links-item"
+              className={styles.header_links_item}
               title={link.text.title}
             >
               <FontAwesomeIcon icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]} />
-              <span className="header-links-item-text">{link.text.title}</span>
+              <span className={styles.header_links_item_text}>{link.text.title}</span>
             </a>
           ))}
         </div>
-        <div className="header-links-box-right">
+        <div>
           {socialLinks.map((link, index) => (
             <a
               rel="noreferrer noopener"
               href={link.href}
               key={index}
               target="_blank"
-              className="header-links-item"
+              className={styles.header_links_item}
               title={link.title}
             >
               <FontAwesomeIcon icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]} />

@@ -5,53 +5,10 @@
   text-overflow: ellipsis;
 }
 
-%outlined-active {
-  outline-color: $salmon;
-  outline-offset: 0;
-}
-
-@mixin hardware($backface: true, $perspective: 1000) {
-  @if $backface {
-    backface-visibility: hidden;
-  }
-  perspective: $perspective;
-}
-
-@mixin push--auto {
-  margin: {
-    left: auto;
-    right: auto;
-  }
-}
-
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
   position: $pos;
-}
-
-@mixin input-placeholder {
-  &.placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-  &::-webkit-input-placeholder {
-    @content;
-  }
-}
-
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
 }
 
 @mixin screen($size) {
@@ -62,8 +19,4 @@
   } @else {
     @content;
   }
-}
-
-%p-shad {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }

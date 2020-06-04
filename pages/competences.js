@@ -1,8 +1,7 @@
-import React from 'react'
 import moment from 'moment'
-import Page from '../components/Page/Page'
-import Title from '../components/Title/Title'
-import Meta from '../components/Meta/Meta'
+import Page from 'components/Page/Page'
+import Title from 'components/Title/Title'
+import Meta from 'components/Meta/Meta'
 import { convertDate } from '../utils/date'
 
 const pathSkills = '/static/skills'

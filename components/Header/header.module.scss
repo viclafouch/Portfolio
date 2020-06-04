@@ -4,11 +4,11 @@
   background-color: $s-bg-color;
   min-height: 50px;
 
-  .header-links {
+  .header_links {
     line-height: 20px;
     width: 100%;
 
-    &-item {
+    &_item {
       display: inline-block;
       text-decoration: none;
       margin-left: 10px;
@@ -22,7 +22,7 @@
         width: 12px;
       }
 
-      &-text {
+      &_text {
         font-size: rem(13px);
         margin-left: 4px;
         display: none;
@@ -32,7 +32,7 @@
       }
     }
 
-    &-box-left > a:first-child {
+    &_box_left > a:first-child {
       margin-left: 0;
     }
   }

@@ -1,8 +1,7 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Page from '../components/Layout/main'
-import Title from '../components/Title/Title'
-import Meta from '../components/Meta/Meta'
+import Page from 'components/Page/Page'
+import Title from 'components/Title/Title'
+import Meta from 'components/Meta/Meta'
 
 const pathProductions = '/static/productions'
 

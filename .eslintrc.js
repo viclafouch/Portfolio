@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['react'],
-  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:prettier/recommended'],
   parser: 'babel-eslint',
   settings: {
     react: {
@@ -15,9 +15,12 @@ module.exports = {
     }
   },
   rules: {
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
   env: {
-    browser: true
+    browser: true,
+    es6: true,
+    node: true
   }
 }

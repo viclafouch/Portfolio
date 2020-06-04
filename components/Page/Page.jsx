@@ -1,4 +1,3 @@
-import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTwitter, faGit, faCodepen, faLinkedin, faVuejs, faPython } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -14,7 +13,6 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import Nav from '../Nav/Nav'
 import Heading from '../Heading/Heading'
-import '../../scss/app.scss'
 
 library.add(
   faPython,

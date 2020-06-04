@@ -2,6 +2,5 @@ node_modules/
 build/
 out/
 tasks/
+.eslintrc.js
 next.config.js
-ssr.server.js
-postcss.config.js

@@ -11,8 +11,7 @@
   text-align: center;
   text-transform: uppercase;
   opacity: 0.8;
-  transition-property: outline-offset, outline-color, color, background-color,
-    opacity, border-color, box-shadow;
+  transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 
@@ -21,12 +20,9 @@
     opacity: 1;
   }
 
-  outline-color: transparent;
-  outline-style: dotted;
-  outline-width: thin;
-  outline-offset: 0em;
   svg {
     margin-right: 5px;
+    width: 16px;
   }
 
   &.primary {
@@ -54,22 +50,5 @@
     cursor: not-allowed !important;
     background-color: #f0f0f0;
     color: $p-txt-color;
-  }
-
-  svg {
-    width: 16px;
-  }
-}
-
-a {
-  outline: none;
-
-  &.focused-button:focus .button {
-    outline-color: #ffffff;
-    outline-offset: -0.6em;
-
-    &.primary.inverse {
-      outline-color: $salmon;
-    }
   }
 }
