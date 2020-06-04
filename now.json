@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "name": "portfolio",
   "builds": [{ "src": "./out/**", "use": "@now/static" }],
   "alias": ["www.victor-de-la-fouchardiere.fr"],
   "env": {},
-  "public": true,
-  "github": {
-    "enabled": false
-  },
   "routes": [
     { "src": "/formations", "dest": "out/formations.html" },
     { "src": "/404", "dest": "out/404.html" },

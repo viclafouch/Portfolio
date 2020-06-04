@@ -1,4 +1,3 @@
-import SVG from 'react-inlinesvg'
 import Page from 'components/Page/Page'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
@@ -33,7 +32,7 @@ function Home() {
           <h3>Expérience actuelle</h3>
           <div className="experience-container">
             <a target="_blank" href="https://www.seald.io" title="seald" rel="noreferrer noopener">
-              <SVG src="/static/seald-logo.svg" className="svgblock" />
+              <img src="/static/seald-logo.svg" alt="Seald" />
             </a>
             <p>
               Développeur Full-Stack chez <b>Seald</b> depuis oct. 2018.
@@ -44,13 +43,13 @@ function Home() {
               <span>
                 Vue.js
                 <span>
-                  <SVG src="/static/vuejs.svg" className="vuejs" />
+                  <img src="/static/vuejs.svg" alt="vue-js" />
                 </span>
               </span>
               /
               <span>
                 Python
-                <img src="/static/python.svg" alt="python-logo" className="python" />
+                <img src="/static/python.svg" alt="python" />
               </span>
             </p>
           </div>
