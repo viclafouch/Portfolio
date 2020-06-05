@@ -9,6 +9,7 @@
     { "src": "/competences", "dest": "out/competences.html" },
     { "src": "/index", "dest": "out/index.html" },
     { "src": "/productions", "dest": "out/productions.html" },
+    { "src": "/blog", "dest": "out/blog.html" },
     { "src": "/(.*)", "dest": "out/$1" },
     {
       "src": "/_next/static/*",

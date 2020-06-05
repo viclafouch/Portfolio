@@ -1,5 +1,4 @@
 import App from 'next/app'
-import Head from 'next/head'
 import Nprogress from 'nprogress'
 import Router from 'next/router'
 import FontFaceObserver from 'fontfaceobserver'
@@ -60,7 +59,7 @@ export default class MyApp extends App {
   }
 
   render() {
-    const { Component } = this.props
-    return <Component />
+    const { Component, pageProps } = this.props
+    return <Component {...pageProps} />
   }
 }

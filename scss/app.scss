@@ -431,3 +431,102 @@ hr.striped,
     }
   }
 }
+
+.blog-section {
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      max-width: 750px;
+      margin: 0 auto 17px;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 3px;
+
+      .blog-article-top {
+        margin-bottom: 10px;
+
+        .blog-article-cover {
+          width: 100%;
+          height: auto;
+          padding-bottom: 42%;
+          background-size: cover;
+          background-position: center center;
+        }
+
+        .blog-article-top-metas {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 16px 16px 0;
+
+          .blog-meta-left {
+            display: flex;
+            align-items: center;
+
+            img.blog-author-pic {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+
+            .meta-texts {
+              display: flex;
+              flex-direction: column;
+              margin-left: 10px;
+
+              span.meta-author-name,
+              a.meta-author-date {
+                color: inherit;
+                margin-bottom: 5px;
+                text-decoration: none;
+                font-size: 12px;
+                line-height: 1;
+                font-weight: 700;
+              }
+
+              a.meta-author-date {
+                margin-bottom: 0;
+                font-weight: 400;
+                color: #64707d;
+              }
+            }
+          }
+
+          .blog-meta-right {
+            img {
+              width: 30px;
+            }
+          }
+        }
+      }
+
+      .blog-article-body {
+        padding: 16px 16px 16px 66px;
+
+        .body-article-title {
+          text-align: left;
+          color: #000000;
+          line-height: 1.2;
+
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+
+        .blog-list-tags {
+          li {
+            margin: 16px 6px 10px;
+            display: inline-block;
+            color: rgb(77, 87, 96);
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

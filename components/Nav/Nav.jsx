@@ -9,7 +9,8 @@ const links = [
   { text: 'Accueil', href: '/' },
   { text: 'Compétences', href: '/competences' },
   { text: 'Productions', href: '/productions' },
-  { text: 'Formations', href: '/formations' }
+  { text: 'Formations', href: '/formations' },
+  { text: 'Blog', href: '/blog' }
 ]
 
 const ActiveLink = withRouter(({ router, children, ...props }) => {
