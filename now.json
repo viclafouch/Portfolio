@@ -1,7 +1,6 @@
 {
   "version": 2,
   "builds": [{ "src": "./out/**", "use": "@now/static" }],
-  "alias": ["www.victor-de-la-fouchardiere.fr"],
   "env": {},
   "routes": [
     { "src": "/formations", "dest": "out/formations.html" },
