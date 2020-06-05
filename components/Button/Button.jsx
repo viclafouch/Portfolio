@@ -23,6 +23,7 @@ function Button(props) {
       <style jsx>{`
         a {
           display: block;
+          outline: none;
           text-decoration: none;
         }
       `}</style>

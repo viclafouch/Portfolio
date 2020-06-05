@@ -1,11 +1,10 @@
 .header {
   width: 100%;
-  padding: 15px 10px;
+  padding: 15px 0;
   background-color: $s-bg-color;
   min-height: 50px;
 
   .header_links {
-    line-height: 20px;
     width: 100%;
 
     &_item {
@@ -14,8 +13,13 @@
       margin-left: 10px;
       color: $p-txt-color;
       padding: 1px 2px;
+
       &:hover {
         color: $salmon;
+      }
+
+      &:first-child {
+        margin-left: 0;
       }
 
       svg {
@@ -28,14 +32,10 @@
         font-size: rem(13px);
         margin-left: 4px;
         display: none;
-        @include screen('nosmall') {
+        @include sm {
           display: inline-block;
         }
       }
-    }
-
-    &_box_left > a:first-child {
-      margin-left: 0;
     }
   }
 }

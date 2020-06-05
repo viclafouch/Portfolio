@@ -11,10 +11,10 @@ function Heading() {
             <img src="/images/logo.png" alt="Victor de la Fouchardiere Logo" />
           </a>
         </Link>
-        <h1 className={`${styles.subheading_title}`}>Besoin d&quot;un développeur web&nbsp;?</h1>
+        <h1 className={`${styles.subheading_title}`}>Besoin d&#39;un développeur web&nbsp;?</h1>
         <p className={`${styles.subheading_subtitle}`}>
-          Disponible pour vous aider dans le développement de votre projet, je vous invite à regarder ci-dessous l&quot;ensemble
-          de mes références pour mieux connaitre mon profil.
+          Disponible pour vous aider dans le développement de votre projet, je vous invite à regarder ci-dessous l&#39;ensemble de
+          mes références pour mieux connaitre mon profil.
         </p>
         <div className="mgi--top-10">
           <Button href="/pdf/CV-Victor-de-la-Fouchardiere.pdf" icon="download" download primary>

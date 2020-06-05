@@ -15,8 +15,12 @@
   &_subtitle {
     color: $p-txt-color;
     padding: 10px 5px;
-    max-width: 75%;
     margin: 0 auto;
+    font-size: 1.1rem;
+    max-width: none;
+    @include sm {
+      max-width: 75%;
+    }
   }
 
   button {
