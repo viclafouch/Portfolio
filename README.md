@@ -2,10 +2,8 @@
 
 Public url : [https://www.victor-de-la-fouchardiere.fr/](https://www.victor-de-la-fouchardiere.fr/)
 
-## Libraries Used
+### Installing from source
 
-```sh
-React.js
-Next.js
-Now
-```
+1. Clone the repository: `git clone https://github.com/viclafouch/portfolio.git`
+2. Install the npm dependencies `npm install`
+3. Start server: `npm run dev`
