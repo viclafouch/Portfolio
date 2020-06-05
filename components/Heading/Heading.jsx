@@ -8,7 +8,7 @@ function Heading() {
       <div className="container flex-me flex-vertical flex-align flex-justify-center">
         <Link href="/">
           <a>
-            <img src="/images/logo.png" alt="Victor de la Fouchardiere Logo" />
+            <img className={styles.subheading_logo} src="/images/logo.png" alt="Victor de la Fouchardiere Logo" />
           </a>
         </Link>
         <h1 className={`${styles.subheading_title}`}>Besoin d&#39;un développeur web&nbsp;?</h1>
