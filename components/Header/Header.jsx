@@ -21,7 +21,7 @@ const socialLinks = [
       name: 'linkedin'
     },
     href: 'https://www.linkedin.com/in/victordelafouchardiere/',
-    title: 'linkedin'
+    title: 'Linkedin'
   },
   {
     fontawesome: {
@@ -29,7 +29,7 @@ const socialLinks = [
       name: 'codepen'
     },
     href: 'https://codepen.io/Viclafouch/',
-    title: 'codepen'
+    title: 'Codepen'
   },
   {
     fontawesome: {
@@ -37,7 +37,7 @@ const socialLinks = [
       name: 'git'
     },
     href: 'https://github.com/viclafouch',
-    title: 'github'
+    title: 'Github'
   },
   {
     fontawesome: {
@@ -45,7 +45,7 @@ const socialLinks = [
       name: 'twitter'
     },
     href: 'https://twitter.com/TrustedSheriff',
-    title: 'twitter'
+    title: 'Twitter'
   }
 ]
 
