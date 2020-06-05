@@ -512,12 +512,21 @@ hr.striped,
       }
 
       .blog-article-body {
-        padding: 16px 16px 16px 66px;
+        padding: 16px;
+
+        @include sm {
+          padding-left: 66px;
+        }
 
         .body-article-title {
           text-align: left;
           color: #000000;
           line-height: 1.2;
+          font-size: 1.6rem;
+
+          @include sm {
+            font-size: 2rem;
+          }
 
           a {
             color: inherit;

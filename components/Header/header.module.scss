@@ -10,7 +10,6 @@
     &_item {
       display: inline-block;
       text-decoration: none;
-      margin-left: 10px;
       color: $p-txt-color;
       padding: 1px 2px;
 
@@ -18,14 +17,21 @@
         color: $salmon;
       }
 
-      &:first-child {
-        margin-left: 0;
-      }
-
       svg {
-        width: 12px;
+        width: 16px;
+        height: 16px;
+        margin-left: 15px;
         vertical-align: middle;
         display: inline-block;
+
+        @include sm {
+          margin-left: 10px;
+          width: 12px;
+        }
+      }
+
+      &:first-child svg {
+        margin-left: 0;
       }
 
       &_text {
