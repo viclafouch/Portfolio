@@ -443,6 +443,9 @@ hr.striped,
       background-color: #fff;
       width: 100%;
       border-radius: 3px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+      border: 1px solid #dedede;
 
       .blog-article-top {
         margin-bottom: 10px;
@@ -453,6 +456,8 @@ hr.striped,
           padding-bottom: 42%;
           background-size: cover;
           background-position: center center;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
         }
 
         .blog-article-top-metas {
@@ -490,6 +495,10 @@ hr.striped,
                 margin-bottom: 0;
                 font-weight: 400;
                 color: #64707d;
+
+                &:hover {
+                  color: #9da1a7;
+                }
               }
             }
           }
@@ -513,6 +522,9 @@ hr.striped,
           a {
             color: inherit;
             text-decoration: none;
+            &:hover {
+              color: $salmon;
+            }
           }
         }
 
