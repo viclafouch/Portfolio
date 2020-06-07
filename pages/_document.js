@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:creator" content="@TrustedSheriff" />
           <meta name="twitter:title" content="Portfolio de Victor de la Fouchardière" />
           <meta name="twitter:description" content="Besoin d'un développeur web ?" />
-          <meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/static/victor-de-la-fouchardiere.jpg" />
+          <meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.jpg" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Portfolio de Victor de la Fouchardière" />
           <meta
@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           />
           <meta property="og:url" content="https://www.victor-de-la-fouchardiere.fr" />
           <meta property="og:site_name" content="Victor de la Fouchardière | Portfolio" />
-          <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/static/victor-de-la-fouchardiere.png" />
+          <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.png" />
           <meta property="fb:app_id" content="124333614845929" />
           <meta name="robots" content="noodp" />
           <link rel="icon" type="image/png" href="favicon.png" />
