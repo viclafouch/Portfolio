@@ -16,20 +16,19 @@ export default class MyDocument extends Document {
           {/* Twitter */}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@TrustedSheriff" />
-          <meta name="twitter:title" content="Portfolio de Victor de la Fouchardière" />
+          <meta name="twitter:title" content="Portfolio de Victor de la Fouchardiere" />
           <meta name="twitter:description" content="Besoin d'un développeur web ?" />
-          <meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.jpg" />
+          <meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/victordelafouchardiere.jpg" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Portfolio de Victor de la Fouchardière" />
+          <meta property="og:title" content="Portfolio de Victor de la Fouchardiere" />
           <meta
             property="og:description"
             content="Besoin d'un développeur web ? Découvrez le profil de Victor de la Fouchardiere"
           />
           <meta property="og:url" content="https://www.victor-de-la-fouchardiere.fr" />
           <meta property="og:site_name" content="Victor de la Fouchardière | Portfolio" />
-          <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/victor-de-la-fouchardiere.png" />
+          <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/victordelafouchardiere.png" />
           <meta property="fb:app_id" content="124333614845929" />
-          <meta name="robots" content="noodp" />
           <link rel="icon" type="image/png" href="favicon.png" />
           <link rel="shortcut icon" type="image/x-icon" href="favicon-16x16.png" />
           <link rel="apple-touch-icon" href="icon-iphone.png" />
