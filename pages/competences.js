@@ -41,29 +41,14 @@ const languages = [
 
 const frameworks = [
   {
-    img: `${pathSkills}/frameworks/jquery-logo.png`,
-    title: 'jquery',
-    duration: [moment([2015, 1, 1]), moment([2017, 1, 1])]
-  },
-  {
-    img: `${pathSkills}/frameworks/bootstrap-logo.png`,
-    title: 'bootstrap',
-    duration: [moment([2016, 1, 1]), moment([2017, 1, 1])]
-  },
-  {
-    img: `${pathSkills}/frameworks/materialize-logo.png`,
-    title: 'materialize',
-    duration: [moment([2017, 1, 1]), moment([2017, 9, 1])]
-  },
-  {
     img: `${pathSkills}/frameworks/vuejs-logo.png`,
     title: 'vue',
-    duration: [moment([2018, 7, 1]), moment()]
+    duration: [moment([2017, 7, 1])]
   },
   {
     img: `${pathSkills}/frameworks/react-logo.png`,
     title: 'react',
-    duration: [moment([2018, 1, 1])]
+    duration: [moment([2017, 1, 1])]
   },
   {
     img: `${pathSkills}/frameworks/symfony-logo.svg`,
@@ -94,6 +79,21 @@ const frameworks = [
     img: `${pathSkills}/frameworks/material-ui.png`,
     title: 'Material UI',
     duration: [moment([2018, 10, 1]), moment([2019, 3, 1])]
+  },
+  {
+    img: `${pathSkills}/frameworks/jquery-logo.png`,
+    title: 'jquery',
+    duration: [moment([2015, 1, 1]), moment([2017, 1, 1])]
+  },
+  {
+    img: `${pathSkills}/frameworks/bootstrap-logo.png`,
+    title: 'bootstrap',
+    duration: [moment([2016, 1, 1]), moment([2017, 1, 1])]
+  },
+  {
+    img: `${pathSkills}/frameworks/materialize-logo.png`,
+    title: 'materialize',
+    duration: [moment([2017, 1, 1]), moment([2017, 9, 1])]
   }
 ]
 
