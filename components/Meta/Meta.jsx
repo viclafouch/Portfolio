@@ -5,7 +5,7 @@ export class Meta extends Component {
   state = {
     title: ''
   }
-  static getDerivedStateFromProps(props, state) {
+  static getDerivedStateFromProps(props) {
     if (props.title) {
       return {
         title: props.title + ' – Développeur Front-end'

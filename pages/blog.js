@@ -16,23 +16,39 @@ function Blog({ posts }) {
       <section className="blog-section">
         <Title title="Blog" subtitle="Ce que j'écris" />
         <div className="blog-list">
-          {posts.map((post, index) => (
+          {posts.map(post => (
             <article key={post.id} className="blog-list-item" data-id={post.id}>
               <div role="presentation">
                 <div className="blog-article-top">
-                  {index === 0 && (
-                    <a href={post.url} target="_blank" rel="noreferrer">
-                      <div
-                        className="blog-article-cover"
-                        style={{
-                          backgroundImage: `url(${post.cover_image})`
-                        }}
-                      />
-                    </a>
-                  )}
+                  <a href={post.url} target="_blank" rel="noreferrer">
+                    <img src="/images/devto.webp" className="source-url" alt="Dev.to" />
+                    <div
+                      className="blog-article-cover"
+                      style={{
+                        backgroundImage: `url(${post.cover_image})`
+                      }}
+                    />
+                  </a>
+                </div>
+                <div className="blog-article-body">
                   <div className="blog-article-top-metas">
-                    <div className="blog-meta-left">
-                      <img className="blog-author-pic" src={post.user.profile_image_90} alt={post.user.name} />
+                    <h3 className="body-article-title">
+                      <a href={post.url} target="_blank" rel="noreferrer">
+                        {post.title}
+                      </a>
+                    </h3>
+                    <p className="blog-article-description">{post.description}</p>
+                  </div>
+                  <div className="blog-article-bottom-metas">
+                    <ul className="blog-list-tags">
+                      {post.tag_list.map((tag, index) => (
+                        <li key={index}>#{tag}</li>
+                      ))}
+                    </ul>
+                    <div className="blog-user-meta">
+                      <a href="https://dev.to/viclafouch" target="_blank" rel="noreferrer">
+                        <img className="blog-author-pic" src={post.user.profile_image_90} alt={post.user.name} />
+                      </a>
                       <div className="meta-texts">
                         <span className="meta-author-name">{post.user.name}</span>
                         <a className="meta-author-date" href={post.url} target="_blank" rel="noreferrer">
@@ -42,24 +58,7 @@ function Blog({ posts }) {
                         </a>
                       </div>
                     </div>
-                    <div className="blog-meta-right">
-                      <a href={post.url} target="_blank" rel="noreferrer">
-                        <img src="/images/devto.svg" alt="Dev.to" />
-                      </a>
-                    </div>
                   </div>
-                </div>
-                <div className="blog-article-body">
-                  <h2 className="body-article-title">
-                    <a href={post.url} target="_blank" rel="noreferrer">
-                      {post.title}
-                    </a>
-                  </h2>
-                  <ul className="blog-list-tags">
-                    {post.tag_list.map((tag, index) => (
-                      <li key={index}>#{tag}</li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             </article>
