@@ -8,7 +8,6 @@ function Home() {
       <Meta
         title="Portfolio de Victor de la Fouchardiere"
         description="Victor de la Fouchardiere | Développeur front (React, Vue, Angular, etc..) chez Seald, diplomé d'un bachelor. Fan de Javascript. Découvrez mon portfolio !"
-        canonical="https://www.victor-de-la-fouchardiere.fr"
       />
       <section className="home-section">
         <div className="content-row">

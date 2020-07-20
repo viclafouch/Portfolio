@@ -10,8 +10,7 @@ function Blog({ posts }) {
     <Page>
       <Meta
         title="Blog de Victor de la Fouchardiere"
-        description="Découvrez les derniers articles de blog de Victor de la Fouchardière."
-        canonical="https://www.victor-de-la-fouchardiere.fr/blog"
+        description={`Découvrez les ${posts.length} articles de blog écrits par Victor de la Fouchardière concernant le Javascript, de l'UX design, du HTML, etc...`}
       />
       <section className="blog-section">
         <Title title="Blog" subtitle="Ce que j'écris" />

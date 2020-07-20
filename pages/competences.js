@@ -147,7 +147,6 @@ function Skills() {
       <Meta
         title="Compétences de Victor de la Fouchardiere"
         description="Découvrez les compétences de Victor de la Fouchardiere, développeur web coté front. React, Vue, ou encore Angular sont mes préférences !"
-        canonical="https://www.victor-de-la-fouchardiere.fr/competences"
       />
       <section className="skills-section">
         <Title title="Compétences" subtitle="Ce que je sais faire" />

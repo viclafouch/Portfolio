@@ -102,7 +102,6 @@ function Productions() {
       <Meta
         title="Productions de Victor de la Fouchardiere"
         description="Dernières productions, réalisations et projets personnels de Victor de la Fouchardiere, développeur front chez Seald."
-        canonical="https://www.victor-de-la-fouchardiere.fr/productions"
       />
       <section className="productions-section">
         <Title title="Portfolio" subtitle="Ce que je développe" />

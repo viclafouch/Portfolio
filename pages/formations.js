@@ -47,7 +47,6 @@ function Formations() {
       <Meta
         title="Formations de Victor de la Fouchardiere"
         description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, découvrez le cursus de Victor de la Fouchardiere, développeur web."
-        canonical="https://www.victor-de-la-fouchardiere.fr/formations"
       />
       <section className="training-section">
         <Title title="Formations" subtitle="Ce que j'apprends" />
