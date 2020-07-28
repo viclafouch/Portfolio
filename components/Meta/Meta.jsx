@@ -19,6 +19,7 @@ function Meta(props) {
   return (
     <Head>
       <title>{props.title || '404 - Not found'}</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
       <meta name="description" content={props.description} />
     </Head>
   )

@@ -8,7 +8,6 @@ export default class MyDocument extends Document {
       <html lang="fr">
         <Head>
           <meta key="charset" charSet="utf-8" />
-          <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
           <meta name="theme-color" content="#f6f6f6" />
           <meta name="msapplication-navbutton-color" content="#f6f6f6" />
           <meta name="apple-mobile-web-app-capable" content="yes" />

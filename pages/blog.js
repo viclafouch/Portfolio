@@ -72,10 +72,11 @@ export async function getStaticProps() {
   const res = await fetch('https://dev.to/api/articles?username=viclafouch')
   const posts = await res.json()
   return {
-    props: {
-      posts
-    },
-    unstable_revalidate: 10
+    props: { posts },
+    // we will attempt to re-generate the page:
+    // - when a request comes in
+    // - at most once every second
+    revalidate: 1
   }
 }
 

@@ -30,7 +30,7 @@ diskPages.forEach(page => {
 
   page = page.replace(path.join(__dirname, '..', 'pages'), '')
   page = page.replace(/.js$/, '')
-  page = `${SITE_ROOT}${page}`
+  page = `${SITE_ROOT}${page}/`
 
   if (page.match(/.*\/index$/)) {
     page = page.replace(/(.*)index$/, '$1')
