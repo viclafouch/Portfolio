@@ -4,7 +4,7 @@ module.exports = {
     GA_TRACKING_ID: 'UA-70097642-4'
   },
   // Force a trailing slash, the default value is no trailing slash (false)
-  trailingSlash: true,
+  trailingSlash: false,
   sassOptions: {
     prependData: `
       @import "scss/global/_rem.scss";
