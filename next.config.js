@@ -6,6 +6,7 @@ module.exports = {
   webpack: (config, { isServer }) => {
     if (isServer) {
       require('./tasks/build-sitemap')
+      require('./tasks/build-robotstxt')
     }
     return config
   },
