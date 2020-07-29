@@ -12,7 +12,7 @@ const SOURCE =
   process.env.SOURCE || path.join(__dirname, '..', 'pages', '/**/!(_*).js')
 
 const DESTINATION =
-  process.env.DESTINATION || path.join(__dirname, '..', 'out', 'sitemap.xml')
+  process.env.DESTINATION || path.join(__dirname, '..', 'public', 'sitemap.xml')
 
 let diskPages = glob.sync(SOURCE)
 
