@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Title from 'components/Title/Title'
 import Button from 'components/Button/Button'
 import Meta from 'components/Meta/Meta'
+import styles from 'scss/pages/training.module.scss'
 
 const pathTraining = '/images/training'
 
@@ -47,18 +48,18 @@ function Formations() {
         title="Formations de Victor de la Fouchardiere"
         description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, découvrez le cursus de Victor de la Fouchardiere, développeur web."
       />
-      <section className="training-section">
+      <div className={styles.training__page}>
         <Title title="Formations" subtitle="Ce que j'apprends" />
-        <ul className="training-list">
+        <ul className={styles.training__list}>
           {trainings.map((training, index) => (
             <li key={index}>
-              <article className="training-article">
-                <div className="training-article-thumbnail-side">
-                  <img src={training.img} alt="" />
+              <article className={styles.training__article}>
+                <div className={styles.training__article__thumbnail__side}>
+                  <img src={training.img} alt={training.title} />
                 </div>
-                <div className="training-article-description-side">
-                  <div className="training-article-top flex-me flex-align flex-justify-between">
-                    <p className="training-article-date">
+                <div className={styles.training__article__description__side}>
+                  <div className={styles.training__article__top}>
+                    <p className={styles.training__article__date}>
                       <FontAwesomeIcon icon="calendar-alt" />
                       <span>{training.date}</span>
                     </p>
@@ -66,8 +67,8 @@ function Formations() {
                       A propos
                     </Button>
                   </div>
-                  <h4 className="training-article-title">{training.title}</h4>
-                  <ul className="training-article-list-texts">
+                  <h4 className={styles.training__article__title}>{training.title}</h4>
+                  <ul className={styles.training__article__list__texts}>
                     {training.rows.map((text, i) => (
                       <li key={i}>- {text}.</li>
                     ))}
@@ -77,7 +78,7 @@ function Formations() {
             </li>
           ))}
         </ul>
-      </section>
+      </div>
     </>
   )
 }

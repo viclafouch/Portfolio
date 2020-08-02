@@ -70,7 +70,7 @@ function Nav() {
           </div>
           <ul ref={listRef} className={`${styles.nav_links_list} ${isMenuOpened ? styles.nav_links_list_active : ''}`}>
             {links.map((link, index) => (
-              <li key={index} className={styles.nav_links_list_item}>
+              <li key={index} className={styles.nav_links_list_item} onClick={() => setIsMenuOpened(false)}>
                 <ActiveLink href={link.href} activeClassName={styles.active}>
                   <a className={styles.nav_links_list_item_href}>{link.text}</a>
                 </ActiveLink>
