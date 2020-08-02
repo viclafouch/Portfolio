@@ -1,98 +1,100 @@
-import moment from 'moment'
+import { differenceInYears, differenceInMonths } from 'date-fns'
 import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
-import { convertDate } from '../utils/date'
+import styles from 'scss/pages/skills.module.scss'
 
-const pathSkills = '/images'
+const languagesImgPath = '/images/languages'
+const frameworksImgPath = '/images/frameworks'
+const technosImgPath = '/images/technos'
 
 const languages = [
   {
-    img: `${pathSkills}/languages/html-logo.png`,
-    title: 'html',
-    duration: [moment([2015, 1, 1])],
+    img: `${languagesImgPath}/html-logo.png`,
+    title: 'HTML',
+    duration: [new Date(2015, 1, 1), new Date()],
     items: ['HTML5', 'Sémantique', 'SVG']
   },
   {
-    img: `${pathSkills}/languages/css-logo.png`,
-    title: 'css',
-    duration: [moment([2015, 1, 1])],
+    img: `${languagesImgPath}/css-logo.png`,
+    title: 'CSS',
+    duration: [new Date(2015, 1, 1), new Date()],
     items: ['CSS3', 'Grid', 'SASS']
   },
   {
-    img: `${pathSkills}/languages/js-logo.png`,
-    title: 'js',
-    duration: [moment([2015, 1, 1])],
+    img: `${languagesImgPath}/js-logo.png`,
+    title: 'JS',
+    duration: [new Date(2015, 1, 1), new Date()],
     items: ['ES7/ES8', 'JSX', 'Node']
   },
   {
-    img: `${pathSkills}/languages/ts-logo.png`,
-    title: 'ts',
-    duration: [moment([2019, 1, 1])],
+    img: `${languagesImgPath}/ts-logo.png`,
+    title: 'TS',
+    duration: [new Date(2015, 1, 1), new Date()],
     items: ['ES7/ES8', 'TSX', 'Casting']
   },
   {
-    img: `${pathSkills}/languages/php-logo.png`,
-    title: 'php',
-    duration: [moment([2016, 1, 1])],
+    img: `${languagesImgPath}/php-logo.png`,
+    title: 'PHP',
+    duration: [new Date(2016, 1, 1), new Date()],
     items: ['Objet', 'MVC', 'MySql']
   }
 ]
 
 const frameworks = [
   {
-    img: `${pathSkills}/frameworks/vuejs-logo.png`,
-    title: 'vue',
-    duration: [moment([2017, 7, 1])]
+    img: `${frameworksImgPath}/vuejs-logo.png`,
+    title: 'Vue',
+    duration: [new Date(2017, 7, 1), new Date()]
   },
   {
-    img: `${pathSkills}/frameworks/react-logo.png`,
-    title: 'react',
-    duration: [moment([2017, 1, 1])]
+    img: `${frameworksImgPath}/react-logo.png`,
+    title: 'React',
+    duration: [new Date(2016, 1, 1), new Date()]
   },
   {
-    img: `${pathSkills}/frameworks/symfony-logo.svg`,
-    title: 'symfony',
-    duration: [moment([2017, 10, 1]), moment([2018, 3, 1])]
+    img: `${frameworksImgPath}/symfony-logo.svg`,
+    title: 'Symfony',
+    duration: [new Date(2017, 10, 1), new Date(2018, 3, 1)]
   },
   {
-    img: `${pathSkills}/frameworks/ror-logo.png`,
-    title: 'ruby on rails',
-    duration: [moment([2017, 10, 1]), moment([2018, 2, 1])]
+    img: `${frameworksImgPath}/ror-logo.png`,
+    title: 'Ruby on Rails',
+    duration: [new Date(2017, 10, 1), new Date(2018, 2, 1)]
   },
   {
-    img: `${pathSkills}/frameworks/angular-logo.png`,
-    title: 'angular 5',
-    duration: [moment([2017, 10, 1]), moment([2018, 3, 1])]
+    img: `${frameworksImgPath}/angular-logo.png`,
+    title: 'Angular 5',
+    duration: [new Date(2017, 10, 1), new Date(2018, 3, 1)]
   },
   {
-    img: `${pathSkills}/frameworks/expressjs-logo.svg`,
-    title: 'express',
-    duration: [moment([2018, 11, 1])]
+    img: `${frameworksImgPath}/expressjs-logo.svg`,
+    title: 'Express',
+    duration: [new Date(2018, 11, 1), new Date()]
   },
   {
-    img: `${pathSkills}/frameworks/nextjs-logo.svg`,
-    title: 'next.js',
-    duration: [moment([2018, 10, 1])]
+    img: `${frameworksImgPath}/nextjs-logo.svg`,
+    title: 'Next.js',
+    duration: [new Date(2018, 10, 1), new Date()]
   },
   {
-    img: `${pathSkills}/frameworks/material-ui.png`,
+    img: `${frameworksImgPath}/material-ui.png`,
     title: 'Material UI',
-    duration: [moment([2018, 10, 1]), moment([2019, 3, 1])]
+    duration: [new Date(2018, 10, 1), new Date(2019, 3, 1)]
   },
   {
-    img: `${pathSkills}/frameworks/jquery-logo.png`,
-    title: 'jquery',
-    duration: [moment([2015, 1, 1]), moment([2017, 1, 1])]
+    img: `${frameworksImgPath}/jquery-logo.png`,
+    title: 'Jquery',
+    duration: [new Date(2015, 1, 1), new Date(2017, 1, 1)]
   },
   {
-    img: `${pathSkills}/frameworks/bootstrap-logo.png`,
-    title: 'bootstrap',
-    duration: [moment([2016, 1, 1]), moment([2017, 1, 1])]
+    img: `${frameworksImgPath}/bootstrap-logo.png`,
+    title: 'Bootstrap',
+    duration: [new Date(2016, 1, 1), new Date(2017, 1, 1)]
   },
   {
-    img: `${pathSkills}/frameworks/materialize-logo.png`,
-    title: 'materialize',
-    duration: [moment([2017, 1, 1]), moment([2017, 9, 1])]
+    img: `${frameworksImgPath}/materialize-logo.png`,
+    title: 'Materialize',
+    duration: [new Date(2017, 1, 1), new Date(2017, 9, 1)]
   }
 ]
 
@@ -100,43 +102,43 @@ const technos = [
   {
     title: 'Git',
     type: 'Versioning',
-    img: `${pathSkills}/technos/git-logo.svg`
+    img: `${technosImgPath}/git-logo.svg`
   },
   {
     title: 'Webpack',
     type: 'Automatisation',
-    img: `${pathSkills}/technos/webpack-logo.svg`
+    img: `${technosImgPath}/webpack-logo.svg`
   },
   {
     title: 'Visual Studio Code',
     type: 'Editeur',
-    img: `${pathSkills}/technos/visual-code-studio-logo.svg`
+    img: `${technosImgPath}/visual-code-studio-logo.svg`
   },
   {
     title: 'MAC OS',
     type: 'OS',
-    img: `${pathSkills}/technos/apple-logo.png`
+    img: `${technosImgPath}/apple-logo.png`
   },
   {
     title: 'Photoshop',
     type: 'Graphisme',
-    img: `${pathSkills}/technos/photoshop-logo.png`
+    img: `${technosImgPath}/photoshop-logo.png`
   },
   {
     title: 'Parcel',
     type: 'Automatisation',
-    img: `${pathSkills}/technos/parcel-logo.png`
+    img: `${technosImgPath}/parcel-logo.png`
   },
   {
     title: 'Windows',
     type: 'OS',
-    img: `${pathSkills}/technos/windows-logo.png`
+    img: `${technosImgPath}/windows-logo.png`
   }
 ]
 
 const SkillTitle = ({ title }) => (
-  <div className="skill-title center-text">
-    <h4>{title}</h4>
+  <div className={styles.skill__container__title}>
+    <h2 className={styles.skill__title}>{title}</h2>
   </div>
 )
 
@@ -147,27 +149,34 @@ function Skills() {
         title="Compétences de Victor de la Fouchardiere"
         description="Découvrez les compétences de Victor de la Fouchardiere, développeur web coté front. React, Vue, ou encore Angular sont mes préférences !"
       />
-      <section className="skills-section">
+      <div className={styles.skills__page}>
         <Title title="Compétences" subtitle="Ce que je sais faire" />
-        <div className="skills-languages">
+        <div className={styles.skills__languages}>
           <SkillTitle title="Langages" />
-          <ul className="languages-list skills-list">
+          <ul className={`${styles.languages__list} ${styles.skills__list}`}>
             {languages.map((language, index) => (
               <li key={index}>
-                <article className="skill-article">
-                  <header className="skill-article-header">
+                <article className={styles.skill__item}>
+                  <header className={styles.skill__item__header}>
                     <img
-                      className="skills-img"
+                      className={styles.skills__img}
                       src={language.img}
-                      alt={language.title.toUpperCase()}
-                      title={language.title.toUpperCase()}
+                      alt={language.title}
+                      title={language.title}
+                      loading="lazy"
+                      width="40"
+                      height="40"
                     />
-                    <h5 className="skill-article-header-title">{language.title}</h5>
-                    <span className="skill-article-header-note note">{convertDate(language.duration)} d&apos;expérience</span>
+                    <p className={styles.skill__item__header__title}>{language.title}</p>
+                    <span className={`${styles.skill__item__header__note} note`}>
+                      {differenceInYears(language.duration[1], language.duration[0])} ans d&apos;expérience
+                    </span>
                   </header>
-                  <footer className="skill-article-footer">
-                    <ul className="skill-article-footer-list">
-                      {language.items && language.items.map((item, i) => <li key={i}>{item}</li>)}
+                  <footer className={styles.skill__item__footer}>
+                    <ul className={styles.skill__item__footer__list}>
+                      {language.items.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
                     </ul>
                   </footer>
                 </article>
@@ -175,49 +184,63 @@ function Skills() {
             ))}
           </ul>
         </div>
-        <div className="skills-frameworks">
+        <div className={styles.skills__frameworks}>
           <SkillTitle title="Frameworks" />
-          <ul className="framworks-list skills-list">
-            {frameworks.map((framework, index) => (
-              <li key={index}>
-                <article className="skill-article">
-                  <header className="skill-article-header">
-                    <img
-                      className="skills-img"
-                      src={framework.img}
-                      alt={framework.title.toUpperCase()}
-                      title={framework.title.toUpperCase()}
-                    />
-                    <h5 className="skill-article-header-title">{framework.title}</h5>
-                    <span className="skill-article-header-note note">{convertDate(framework.duration)} d&apos;expérience</span>
-                  </header>
-                </article>
-              </li>
-            ))}
+          <ul className={`${styles.frameworks__list} ${styles.skills__list}`}>
+            {frameworks.map((framework, index) => {
+              let duration = differenceInYears(framework.duration[1], framework.duration[0])
+              if (duration === 0) {
+                duration = `${differenceInMonths(framework.duration[1], framework.duration[0])} mois`
+              } else {
+                duration = duration + ' ans'
+              }
+              return (
+                <li key={index}>
+                  <div className={styles.skill__item}>
+                    <div className={styles.skill__item__header}>
+                      <img
+                        className={styles.skills__img}
+                        src={framework.img}
+                        alt={framework.title}
+                        title={framework.title}
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                      <p className={styles.skill__item__header__title}>{framework.title}</p>
+                      <span className={`${styles.skill__item__header__note} note`}>{duration} d&apos;expérience</span>
+                    </div>
+                  </div>
+                </li>
+              )
+            })}
           </ul>
         </div>
-        <div className="skills-languages">
+        <div className={styles.skills__technos}>
           <SkillTitle title="Technologies" />
-          <ul className="technos-list skills-list">
+          <ul className={`${styles.technos__list} ${styles.skills__list}`}>
             {technos.map((techno, index) => (
               <li key={index}>
-                <article className="skill-article">
-                  <header className="skill-article-header">
+                <div className={styles.skill__item}>
+                  <div className={styles.skill__item__header}>
                     <img
-                      className="skills-img"
+                      className={styles.skills__img}
                       src={techno.img}
-                      alt={techno.title.toUpperCase()}
-                      title={techno.title.toUpperCase()}
+                      alt={techno.title}
+                      title={techno.title}
+                      loading="lazy"
+                      width="40"
+                      height="40"
                     />
-                    <h5 className="skill-article-header-title">{techno.title}</h5>
-                    <span className="skill-article-header-note note">{techno.type}</span>
-                  </header>
-                </article>
+                    <h5 className={styles.skill__item__header__title}>{techno.title}</h5>
+                    <span className={`${styles.skill__item__header__note} note`}>{techno.type}</span>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
         </div>
-      </section>
+      </div>
     </>
   )
 }

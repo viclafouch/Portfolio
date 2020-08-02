@@ -1,8 +1,7 @@
-import moment from 'moment'
+import { format, formatDistance } from 'date-fns'
+import { fr } from 'date-fns/locale'
 import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
-
-moment.locale('fr')
 
 function Blog({ posts }) {
   return (
@@ -51,7 +50,8 @@ function Blog({ posts }) {
                         <span className="meta-author-name">{post.user.name}</span>
                         <a className="meta-author-date" href={post.url} target="_blank" rel="noreferrer">
                           <time>
-                            {moment(post.published_timestamp).format('D MMM YYYY')} ({moment(post.published_timestamp).fromNow()})
+                            {format(new Date(post.published_timestamp), 'd LLL yyy', { locale: fr })} (
+                            {formatDistance(new Date(post.published_timestamp), new Date(), { locale: fr, addSuffix: true })})
                           </time>
                         </a>
                       </div>

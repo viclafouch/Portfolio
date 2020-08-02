@@ -2,9 +2,11 @@ import styles from './title.module.scss'
 
 function Title({ title, subtitle }) {
   return (
-    <div className={`${styles.title} flex-me flex-vertical flex-align flex-justify-center`}>
-      <h2 className="pdi--bottom-7">{title}</h2>
-      <p>{subtitle}</p>
+    <div className={styles.container}>
+      <h1 id="title" className={styles.title}>
+        {title}
+      </h1>
+      <p className={styles.subtitle}>{subtitle}</p>
     </div>
   )
 }
