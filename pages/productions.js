@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Page from 'components/Page/Page'
 import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
 
@@ -98,7 +97,7 @@ const productions = [
 
 function Productions() {
   return (
-    <Page>
+    <>
       <Meta
         title="Productions de Victor de la Fouchardiere"
         description="Dernières productions, réalisations et projets personnels de Victor de la Fouchardiere, développeur front chez Seald."
@@ -126,7 +125,7 @@ function Productions() {
           ))}
         </ul>
       </section>
-    </Page>
+    </>
   )
 }
 

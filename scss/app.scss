@@ -33,16 +33,6 @@ html {
   }
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 1.4;
-
-  @include sm {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-}
-
 html body div#nprogress div.bar {
   position: fixed;
   top: 0;
@@ -58,68 +48,80 @@ main#main-app {
   background-color: $p-bg-color;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+body {
+  * {
+    box-sizing: border-box;
+  }
 
-body * {
-  box-sizing: border-box;
-}
+  p {
+    font-size: 1.2rem;
+    line-height: 1.4;
 
-h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  font-family: Karma, sans-serif;
-  font-weight: 500;
-}
+    @include sm {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  }
 
-h2 {
-  margin: 0;
-  font-size: 2.2rem;
-  font-weight: 500;
-  text-align: center;
-}
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: Karma, sans-serif;
+    font-weight: 500;
+  }
 
-h3 {
-  font-size: 1.75rem;
-  text-align: center;
-  font-weight: 500;
-}
+  h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: center;
+  }
 
-h4 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-align: center;
-}
+  h3 {
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: 500;
+  }
 
-h5 {
-  font-weight: 400;
-  font-size: 1.15rem;
-}
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
 
-hr.striped {
-  width: 100%;
-  height: 30px;
-  max-width: 100%;
-  border: 0;
-}
+  h5 {
+    font-weight: 400;
+    font-size: 1.15rem;
+  }
 
-.note {
-  color: lighten(#444444, 11%);
-  font-size: rem(13px);
-  font-style: italic;
-  line-height: normal;
-  font-weight: normal;
-}
+  hr.striped {
+    width: 100%;
+    height: 30px;
+    max-width: 100%;
+    border: 0;
+  }
 
-hr.striped,
-.skill-title {
-  background: url('/images/stripes.png') center left repeat-x;
-  display: flex;
-  justify-content: center;
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .note {
+    color: lighten(#444444, 11%);
+    font-size: rem(13px);
+    font-style: italic;
+    line-height: normal;
+    font-weight: normal;
+  }
+
+  hr.striped,
+  .skill-title {
+    background: url('/images/stripes.png') center left repeat-x;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .home-section {

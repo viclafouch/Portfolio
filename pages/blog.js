@@ -1,5 +1,4 @@
 import moment from 'moment'
-import Page from 'components/Page/Page'
 import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
 
@@ -7,7 +6,7 @@ moment.locale('fr')
 
 function Blog({ posts }) {
   return (
-    <Page>
+    <>
       <Meta
         title="Blog de Victor de la Fouchardiere"
         description={`Découvrez les ${posts.length} articles de blog écrits par Victor de la Fouchardière concernant le Javascript, de l'UX design, du HTML, etc...`}
@@ -64,7 +63,7 @@ function Blog({ posts }) {
           ))}
         </div>
       </section>
-    </Page>
+    </>
   )
 }
 

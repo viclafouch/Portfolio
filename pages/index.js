@@ -1,10 +1,9 @@
-import Page from 'components/Page/Page'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
 
 function Home() {
   return (
-    <Page>
+    <>
       <Meta
         title="Portfolio de Victor de la Fouchardiere"
         description="Victor de la Fouchardiere | Développeur front (React, Vue, Angular, etc..) chez Seald, diplomé d'un bachelor. Fan de Javascript. Découvrez mon portfolio !"
@@ -41,7 +40,7 @@ function Home() {
           </div>
         </div>
       </section>
-    </Page>
+    </>
   )
 }
 

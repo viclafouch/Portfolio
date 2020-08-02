@@ -1,5 +1,4 @@
 import moment from 'moment'
-import Page from 'components/Page/Page'
 import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
 import { convertDate } from '../utils/date'
@@ -143,7 +142,7 @@ const SkillTitle = ({ title }) => (
 
 function Skills() {
   return (
-    <Page>
+    <>
       <Meta
         title="Compétences de Victor de la Fouchardiere"
         description="Découvrez les compétences de Victor de la Fouchardiere, développeur web coté front. React, Vue, ou encore Angular sont mes préférences !"
@@ -219,7 +218,7 @@ function Skills() {
           </ul>
         </div>
       </section>
-    </Page>
+    </>
   )
 }
 

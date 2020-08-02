@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Page from 'components/Page/Page'
 import Title from 'components/Title/Title'
 import Button from 'components/Button/Button'
 import Meta from 'components/Meta/Meta'
@@ -43,7 +42,7 @@ const trainings = [
 
 function Formations() {
   return (
-    <Page>
+    <>
       <Meta
         title="Formations de Victor de la Fouchardiere"
         description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, découvrez le cursus de Victor de la Fouchardiere, développeur web."
@@ -79,7 +78,7 @@ function Formations() {
           ))}
         </ul>
       </section>
-    </Page>
+    </>
   )
 }
 
