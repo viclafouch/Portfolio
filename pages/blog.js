@@ -1,8 +1,8 @@
-import moment from 'moment'
+import { format, formatDistance } from 'date-fns'
+import { fr } from 'date-fns/locale'
 import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
-
-moment.locale('fr')
+import styles from 'scss/pages/blog.module.scss'
 
 function Blog({ posts }) {
   return (
@@ -11,48 +11,47 @@ function Blog({ posts }) {
         title="Blog de Victor de la Fouchardiere"
         description={`Découvrez les ${posts.length} articles de blog écrits par Victor de la Fouchardière concernant le Javascript, de l'UX design, du HTML, etc...`}
       />
-      <section className="blog-section">
+      <div className={styles.blog__page}>
         <Title title="Blog" subtitle="Ce que j'écris" />
-        <div className="blog-list">
+        <div className={styles.blog__list}>
           {posts.map(post => (
-            <article key={post.id} className="blog-list-item" data-id={post.id}>
+            <article key={post.id} className={styles.blog__list__item} data-id={post.id}>
               <div role="presentation">
-                <div className="blog-article-top">
+                <div className={styles.blog__article__top}>
                   <a href={post.url} target="_blank" rel="noreferrer">
-                    <img src="/images/devto.webp" className="source-url" alt="Dev.to" />
+                    <img src="/images/devto.webp" className={styles.source__url} alt="Dev.to" />
                     <div
-                      className="blog-article-cover"
+                      className={styles.blog__article__cover}
                       style={{
                         backgroundImage: `url(${post.cover_image})`
                       }}
                     />
                   </a>
                 </div>
-                <div className="blog-article-body">
-                  <div className="blog-article-top-metas">
-                    <h3 className="body-article-title">
+                <div className={styles.blog__article__body}>
+                  <div className={styles.blog__article__top__metas}>
+                    <h3 className={styles.body__article__title}>
                       <a href={post.url} target="_blank" rel="noreferrer">
                         {post.title}
                       </a>
                     </h3>
-                    <p className="blog-article-description">{post.description}</p>
+                    <p className={styles.blog__article__description}>{post.description}</p>
                   </div>
-                  <div className="blog-article-bottom-metas">
-                    <ul className="blog-list-tags">
+                  <div className={styles.blog__article__bottom__metas}>
+                    <ul className={styles.blog__list__tags}>
                       {post.tag_list.map((tag, index) => (
                         <li key={index}>#{tag}</li>
                       ))}
                     </ul>
-                    <div className="blog-user-meta">
+                    <div className={styles.blog__user__meta}>
                       <a href="https://dev.to/viclafouch" target="_blank" rel="noreferrer">
-                        <img className="blog-author-pic" src={post.user.profile_image_90} alt={post.user.name} />
+                        <img className={styles.blog__author__pic} src={post.user.profile_image_90} alt={post.user.name} />
                       </a>
-                      <div className="meta-texts">
-                        <span className="meta-author-name">{post.user.name}</span>
-                        <a className="meta-author-date" href={post.url} target="_blank" rel="noreferrer">
-                          <time>
-                            {moment(post.published_timestamp).format('D MMM YYYY')} ({moment(post.published_timestamp).fromNow()})
-                          </time>
+                      <div className={styles.meta__texts}>
+                        <span className={styles.meta__author__name}>{post.user.name}</span>
+                        <a className={styles.meta__author__date} href={post.url} target="_blank" rel="noreferrer">
+                          <time>{format(new Date(post.published_timestamp), 'd LLL yyy', { locale: fr })}</time> (
+                          {formatDistance(new Date(post.published_timestamp), new Date(), { locale: fr, addSuffix: true })})
                         </a>
                       </div>
                     </div>
@@ -62,7 +61,7 @@ function Blog({ posts }) {
             </article>
           ))}
         </div>
-      </section>
+      </div>
     </>
   )
 }

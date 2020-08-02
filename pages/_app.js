@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTwitter, faGit, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faGit, faCodepen, faLinkedin, faDev } from '@fortawesome/free-brands-svg-icons'
 import { faLink, faCalendarAlt, faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Nprogress from 'nprogress'
 import Router from 'next/router'
@@ -10,7 +10,7 @@ import GoogleFonts from 'next-google-fonts'
 import 'scss/app.scss'
 import 'nprogress/nprogress.css'
 
-library.add(faLinkedin, faCodepen, faGit, faTwitter, faEnvelope, faDownload, faCalendarAlt, faLink)
+library.add(faLinkedin, faCodepen, faGit, faTwitter, faEnvelope, faDownload, faCalendarAlt, faLink, faDev)
 
 Nprogress.configure({
   showSpinner: false,
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&family=Karma:wght@500&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400;700&family=Karma:wght@500&display=swap" />
       <Component {...pageProps} />
     </Layout>
   )

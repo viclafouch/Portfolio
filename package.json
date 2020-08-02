@@ -30,7 +30,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
-    "moment": "^2.27.0",
+    "date-fns": "^2.15.0",
     "next": "^9.5.1",
     "next-google-fonts": "^1.2.1",
     "nprogress": "^0.2.0",
