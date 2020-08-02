@@ -12,7 +12,7 @@ function Home() {
       <section className="home-section">
         <div className="content-row">
           <img
-            src="victordelafouchardiere.jpg"
+            src="/images/victordelafouchardiere.jpg"
             className="profile-picture"
             title="Victor de la Fouchardiere"
             alt="Victor de la Fouchardiere"
