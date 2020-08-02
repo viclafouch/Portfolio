@@ -29,7 +29,7 @@ const languages = [
   {
     img: `${languagesImgPath}/ts-logo.png`,
     title: 'TS',
-    duration: [new Date(2015, 1, 1), new Date()],
+    duration: [new Date(2019, 1, 1), new Date()],
     items: ['ES7/ES8', 'TSX', 'Casting']
   },
   {

@@ -7,6 +7,7 @@
 .title {
   color: $p-txt-color;
   padding-bottom: 7px;
+  font-size: 1.9rem;
 }
 
 .subtitle {
@@ -16,6 +17,7 @@
   font-weight: 700;
   color: $salmon;
   position: relative;
+  font-size: 1rem;
   &:after {
     @include pseudo();
     width: 100%;

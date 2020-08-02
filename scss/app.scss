@@ -24,6 +24,7 @@ html {
     background-color: $p-bg-color;
     overflow-y: auto;
     font-family: ABeeZee, sans-serif;
+    text-rendering: optimizeLegibility;
 
     #__next {
       min-height: 100vh;
@@ -53,13 +54,17 @@ body {
     box-sizing: border-box;
   }
 
+  b {
+    font-weight: 700;
+  }
+
   p {
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: 1.1rem;
+    line-height: 1.5;
 
     @include sm {
-      font-size: 1.1rem;
-      line-height: 1.5;
+      font-size: 1.05rem;
+      line-height: 1.4;
     }
   }
 
@@ -99,6 +104,9 @@ body {
     height: 30px;
     max-width: 100%;
     border: 0;
+    background: url('/images/stripes.png') center left repeat-x;
+    display: flex;
+    justify-content: center;
   }
 
   .container {
@@ -110,68 +118,9 @@ body {
 
   .note {
     color: lighten(#444444, 11%);
-    font-size: rem(13px);
+    font-size: 13px;
     font-style: italic;
     line-height: normal;
-    font-weight: normal;
-  }
-
-  hr.striped,
-  .skill-title {
-    background: url('/images/stripes.png') center left repeat-x;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.home-section {
-  .content-row {
-    text-align: center;
-    padding: 20px 10px;
-    width: 100%;
-  }
-
-  .profile-picture {
-    border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    display: block;
-    text-align: center;
-    margin: 10px auto;
-    position: relative;
-  }
-
-  h3 {
-    margin-bottom: 40px;
-  }
-
-  .title {
-    padding: 5px;
-  }
-
-  hr {
-    width: 300px;
-  }
-
-  .profile-resume {
-    text-align: center;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .experience-container {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    a {
-      display: block;
-      margin-bottom: 20px;
-    }
-
-    p b {
-      font-weight: 700;
-    }
   }
 }
 
