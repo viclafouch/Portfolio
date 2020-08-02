@@ -167,7 +167,7 @@ function Skills() {
                       width="40"
                       height="40"
                     />
-                    <p className={styles.skill__item__header__title}>{language.title}</p>
+                    <h3 className={styles.skill__item__header__title}>{language.title}</h3>
                     <span className={`${styles.skill__item__header__note} note`}>
                       {differenceInYears(language.duration[1], language.duration[0])} ans d&apos;expérience
                     </span>
@@ -207,7 +207,7 @@ function Skills() {
                         width="40"
                         height="40"
                       />
-                      <p className={styles.skill__item__header__title}>{framework.title}</p>
+                      <h3 className={styles.skill__item__header__title}>{framework.title}</h3>
                       <span className={`${styles.skill__item__header__note} note`}>{duration} d&apos;expérience</span>
                     </div>
                   </div>
@@ -232,7 +232,7 @@ function Skills() {
                       width="40"
                       height="40"
                     />
-                    <h5 className={styles.skill__item__header__title}>{techno.title}</h5>
+                    <h3 className={styles.skill__item__header__title}>{techno.title}</h3>
                     <span className={`${styles.skill__item__header__note} note`}>{techno.type}</span>
                   </div>
                 </div>

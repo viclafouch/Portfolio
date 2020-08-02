@@ -47,6 +47,7 @@
         color: #222;
         text-align: center;
         margin: 20px 0 8px;
+        font-size: 1.1rem;
         text-transform: uppercase;
       }
 
@@ -58,11 +59,13 @@
 
     &__footer {
       margin-top: 10px;
+      font-size: 1rem;
 
       &__list {
         text-align: center;
         width: 100%;
         color: $p-txt-color;
+        font-size: 0.8em;
 
         & > li {
           border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
