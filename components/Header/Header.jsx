@@ -26,6 +26,14 @@ const socialLinks = [
   {
     fontawesome: {
       prefix: 'fab',
+      name: 'dev'
+    },
+    href: 'https://dev.to/viclafouch',
+    title: 'Dev.to'
+  },
+  {
+    fontawesome: {
+      prefix: 'fab',
       name: 'codepen'
     },
     href: 'https://codepen.io/Viclafouch/',

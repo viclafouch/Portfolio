@@ -13,7 +13,6 @@ module.exports = {
   trailingSlash: true,
   sassOptions: {
     prependData: `
-      @import "scss/global/_rem.scss";
       @import "scss/global/_variables.scss";
       @import "scss/global/_mixins.scss";
     `
