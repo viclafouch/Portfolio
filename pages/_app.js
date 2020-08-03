@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400;700&family=Karma:wght@500&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400;700&family=Karma:wght@500" />
       <Component {...pageProps} />
     </Layout>
   )
