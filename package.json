@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Portfolio of Victor de la Fouchardiere",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "engines": {
     "node": "12.16.x",
     "npm": "6.13.x"
@@ -20,7 +20,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "now --prod",
+    "deploy": "vercel --prod",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
