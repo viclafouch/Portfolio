@@ -6,8 +6,8 @@ function Home() {
   return (
     <>
       <Meta
-        title="Portfolio de Victor de la Fouchardiere"
-        description="Victor de la Fouchardiere | Développeur front (React, Vue, Angular, etc..) chez Seald, diplomé d'un bachelor. Fan de Javascript. Découvrez mon portfolio !"
+        title="Portfolio of Victor de la Fouchardiere"
+        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Seald, bachelor degree. Fan of Javascript. Discover my portfolio!"
       />
       <div className={styles.home__page}>
         <div className={styles.home__block}>
@@ -21,25 +21,25 @@ function Home() {
               className={styles.profile__picture}
             />
           </picture>
-          <Title title="Victor de la Fouchardiere" subtitle="Developpeur web / Expert Produit Google" />
+          <Title title="Victor de la Fouchardiere" subtitle="🚀 Full-stack Developer JS at Seald 🏓" />
         </div>
         <hr className="striped" />
         <div className={styles.home__block}>
           <p className={styles.profile__resume}>
-            {`Etudiant entre 2015 et 2018 à l'Ecole Européenne des Métiers de l'Internet et aujourd'hui développeur web, j'ai une
-            vraie vocation pour la programmation web tout en ayant acquis des connaissances renforcées en marketing et en design.`}
+            {`As a student between 2015 and 2018 at the Ecole Européenne des Métiers de L'Internet and today a web developer, I have a
+            true vocation for web programming while having acquired a reinforced knowledge in marketing and design`}
           </p>
         </div>
         <hr className="striped" />
         <div className={`${styles.home__block} ${styles.experience__container}`}>
-          <h4 className={styles.experience__title}>Expérience actuelle</h4>
+          <h4 className={styles.experience__title}>Current Job</h4>
           <a target="_blank" href="https://www.seald.io" title="seald" rel="noreferrer noopener">
             <img src="/images/companies/seald-logo.svg" alt="Seald" />
           </a>
           <p>
-            Développeur Full-Stack chez <b>Seald</b> depuis oct. 2018.
+            Full-Stack developer at <b>Seald</b> since Oct. 2018.
             <br />
-            {`Contributions au développement des applications internes de l'entreprise (front-end et back-end).`}
+            {`Contributions to the development of the company's internal applications (front-end and back-end).`}
           </p>
         </div>
       </div>

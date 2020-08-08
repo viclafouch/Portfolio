@@ -6,10 +6,10 @@ import styles from './nav.module.scss'
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
 const links = [
-  { text: 'Accueil', href: '/' },
-  { text: 'Compétences', href: '/competences' },
+  { text: 'Home', href: '/' },
+  { text: 'Skills', href: '/skills' },
   { text: 'Productions', href: '/productions' },
-  { text: 'Formations', href: '/formations' },
+  { text: 'Trainings', href: '/trainings' },
   { text: 'Blog', href: '/blog' }
 ]
 

@@ -16,5 +16,19 @@ module.exports = {
       @import "scss/global/_variables.scss";
       @import "scss/global/_mixins.scss";
     `
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/competences/',
+        destination: '/skills/',
+        permanent: true,
+      },
+      {
+        source: '/formations/',
+        destination: '/trainings/',
+        permanent: true,
+      },
+    ]
+  },
 }

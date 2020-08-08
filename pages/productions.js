@@ -100,11 +100,11 @@ function Productions() {
   return (
     <>
       <Meta
-        title="Productions de Victor de la Fouchardiere"
-        description="Dernières productions, réalisations et projets personnels de Victor de la Fouchardiere, développeur front chez Seald."
+        title="Productions of Victor de la Fouchardiere"
+        description="Latest productions, realizations and personal projects of Victor de la Fouchardiere, front-end developer at Seald."
       />
       <section className={styles.productions__page}>
-        <Title title="Portfolio" subtitle="Ce que je développe" />
+        <Title title="Portfolio" subtitle="What I create" />
         <ul className={styles.productions__list}>
           {productions.map((production, index) => (
             <li key={index}>

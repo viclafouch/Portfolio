@@ -12,44 +12,37 @@ const trainings = [
     title: 'EEMI',
     href: 'http://www.eemi.com/',
     rows: [
-      'Spécialisation dans le web developpement',
-      'Connaissances acquises dans : Webmarketing / Communication digitale / Webdesign / Développement web / Gestion de Projet',
-      "Licence 'Chef de Projets Digitaux' obtenue"
+      'Specialization in web development',
+      'Knowledge acquired in: Webmarketing / Digital communication / Webdesign / Web development / Project management',
+      "'Digital Project Manager' license obtained"
     ],
     img: `${pathTraining}/eemi-logo.png`
   },
   {
-    date: 'Obtenu en 2016',
-    title: 'Certifications Google',
+    date: '2016',
+    title: 'Google certifications',
     href: 'https://learndigital.withgoogle.com/digitalactive/',
-    rows: ['Digital Active (Google)', 'Conception de sites mobiles (Google)', 'Développement de chaîne (YouTube)'],
+    rows: ['Digital Active (Google)', 'Mobile site design (Google)', 'Channels Development (YouTube)'],
     img: `${pathTraining}/digital-active.png`
   },
   {
-    date: 'Depuis Oct 2016',
-    title: 'Free Code Camp',
-    href: 'https://www.freecodecamp.org/',
-    rows: ['Javascript', 'Php', 'CSS/SCSS'],
-    img: `${pathTraining}/freecodecamp.png`
-  },
-  {
-    date: ' Obtenu en 2015',
+    date: '2015',
     title: 'BAC Economique et Social',
     href: 'http://www.lycee-saint-paul-lille.fr/',
-    rows: ['Diplôme du Baccalauréat Economique et Social (ES)', 'Lycée Saint Paul - Lille'],
+    rows: ['Economic and Social Baccalaureate Diploma', 'Lycée Saint Paul - Lille'],
     img: `${pathTraining}/saint-paul.png`
   }
 ]
 
-function Formations() {
+function Trainings() {
   return (
     <>
       <Meta
-        title="Formations de Victor de la Fouchardiere"
-        description="Diplomé à l'Ecole Européenne des Métiers de l'Internet, découvrez le cursus de Victor de la Fouchardiere, développeur web."
+        title="Trainings of Victor de la Fouchardiere"
+        description="Graduated from the Ecole Européenne des Métiers de l'Internet, discover the course of Victor de la Fouchardiere, web developer."
       />
       <div className={styles.training__page}>
-        <Title title="Formations" subtitle="Ce que j'apprends" />
+        <Title title="Trainings" subtitle="What I learned" />
         <ul className={styles.training__list}>
           {trainings.map((training, index) => (
             <li key={index}>
@@ -64,7 +57,7 @@ function Formations() {
                       <span>{training.date}</span>
                     </p>
                     <Button primary inverse href={training.href} target="_blank">
-                      A propos
+                      About
                     </Button>
                   </div>
                   <h4 className={styles.training__article__title}>{training.title}</h4>
@@ -83,4 +76,4 @@ function Formations() {
   )
 }
 
-export default Formations
+export default Trainings

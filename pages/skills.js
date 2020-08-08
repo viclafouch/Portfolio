@@ -106,12 +106,12 @@ const technos = [
   },
   {
     title: 'Webpack',
-    type: 'Automatisation',
+    type: 'Bundler',
     img: `${technosImgPath}/webpack-logo.svg`
   },
   {
     title: 'Visual Studio Code',
-    type: 'Editeur',
+    type: 'Editor',
     img: `${technosImgPath}/visual-code-studio-logo.svg`
   },
   {
@@ -121,12 +121,12 @@ const technos = [
   },
   {
     title: 'Photoshop',
-    type: 'Graphisme',
+    type: 'Design',
     img: `${technosImgPath}/photoshop-logo.png`
   },
   {
     title: 'Parcel',
-    type: 'Automatisation',
+    type: 'Bundler',
     img: `${technosImgPath}/parcel-logo.png`
   },
   {
@@ -146,13 +146,13 @@ function Skills() {
   return (
     <>
       <Meta
-        title="Compétences de Victor de la Fouchardiere"
-        description="Découvrez les compétences de Victor de la Fouchardiere, développeur web coté front. React, Vue, ou encore Angular sont mes préférences !"
+        title="Skills of Victor de la Fouchardiere"
+        description="Discover the skills of Victor de la Fouchardiere, front-end developer. React, Vue, or even Angular are my preferences!"
       />
       <div className={styles.skills__page}>
-        <Title title="Compétences" subtitle="Ce que je sais faire" />
+        <Title title="Skills" subtitle="What I can do" />
         <div className={styles.skills__languages}>
-          <SkillTitle title="Langages" />
+          <SkillTitle title="Languages" />
           <ul className={`${styles.languages__list} ${styles.skills__list}`}>
             {languages.map((language, index) => (
               <li key={index}>
@@ -169,7 +169,7 @@ function Skills() {
                     />
                     <h3 className={styles.skill__item__header__title}>{language.title}</h3>
                     <span className={`${styles.skill__item__header__note} note`}>
-                      {differenceInYears(language.duration[1], language.duration[0])} ans d&apos;expérience
+                      {differenceInYears(language.duration[1], language.duration[0])} years of experience
                     </span>
                   </header>
                   <footer className={styles.skill__item__footer}>
@@ -190,9 +190,16 @@ function Skills() {
             {frameworks.map((framework, index) => {
               let duration = differenceInYears(framework.duration[1], framework.duration[0])
               if (duration === 0) {
-                duration = `${differenceInMonths(framework.duration[1], framework.duration[0])} mois`
+                const monthsDifference = differenceInMonths(framework.duration[1], framework.duration[0])
+                if (monthsDifference > 1) {
+                  duration = `${monthsDifference} months`
+                } else {
+                  duration = `${monthsDifference} month`
+                }
+              } else if (duration === 1) {
+                duration = duration + ' year'
               } else {
-                duration = duration + ' ans'
+                duration = duration + ' years'
               }
               return (
                 <li key={index}>
@@ -208,7 +215,7 @@ function Skills() {
                         height="40"
                       />
                       <h3 className={styles.skill__item__header__title}>{framework.title}</h3>
-                      <span className={`${styles.skill__item__header__note} note`}>{duration} d&apos;expérience</span>
+                      <span className={`${styles.skill__item__header__note} note`}>{duration} of experience</span>
                     </div>
                   </div>
                 </li>

@@ -11,13 +11,13 @@ function Heading() {
             <img className={styles.subheading_logo} src="/images/logo.png" alt="Victor de la Fouchardiere Logo" />
           </a>
         </Link>
-        <span className={`${styles.subheading_title}`}>Besoin d&#39;un développeur web&nbsp;?</span>
+        <span className={`${styles.subheading_title}`}>Need a web developer?</span>
         <p className={`${styles.subheading_subtitle}`}>
-          Disponible pour vous aider dans le développement de votre projet, je vous invite à regarder ci-dessous l&#39;ensemble de
-          mes références pour mieux connaitre mon profil.
+          Available to help you in the development of your project, I invite you to take a look below at the set of my references
+          to get to know my profile better.
         </p>
         <Button href="/pdf/CV-Victor-de-la-Fouchardiere.pdf" icon="download" download primary>
-          Télécharger/Imprimer le CV
+          Download/Print CV
         </Button>
       </div>
     </div>

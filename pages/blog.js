@@ -1,5 +1,4 @@
 import { format, formatDistance } from 'date-fns'
-import { fr } from 'date-fns/locale'
 import Title from 'components/Title/Title'
 import Meta from 'components/Meta/Meta'
 import styles from 'scss/pages/blog.module.scss'
@@ -8,11 +7,11 @@ function Blog({ posts }) {
   return (
     <>
       <Meta
-        title="Blog de Victor de la Fouchardiere"
-        description={`Découvrez les ${posts.length} articles de blog écrits par Victor de la Fouchardière concernant le Javascript, de l'UX design, du HTML, etc...`}
+        title="Blog of Victor de la Fouchardiere"
+        description={`Discover the ${posts.length} blog articles written by Victor de la Fouchardière about Javascript, UX design, HTML, etc...`}
       />
       <div className={styles.blog__page}>
-        <Title title="Blog" subtitle="Ce que j'écris" />
+        <Title title="Blog" subtitle="What I write" />
         <div className={styles.blog__list}>
           {posts.map(post => (
             <article key={post.id} className={styles.blog__list__item} data-id={post.id}>
@@ -50,8 +49,8 @@ function Blog({ posts }) {
                       <div className={styles.meta__texts}>
                         <span className={styles.meta__author__name}>{post.user.name}</span>
                         <a className={styles.meta__author__date} href={post.url} target="_blank" rel="noreferrer">
-                          <time>{format(new Date(post.published_timestamp), 'd LLL yyy', { locale: fr })}</time> (
-                          {formatDistance(new Date(post.published_timestamp), new Date(), { locale: fr, addSuffix: true })})
+                          <time>{format(new Date(post.published_timestamp), 'd LLL yyy')}</time> (
+                          {formatDistance(new Date(post.published_timestamp), new Date(), { addSuffix: true })})
                         </a>
                       </div>
                     </div>

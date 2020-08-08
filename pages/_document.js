@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === 'production'
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="fr">
+      <html lang="en">
         <Head>
           <meta key="charset" charSet="utf-8" />
           <meta name="theme-color" content="#f6f6f6" />
@@ -15,15 +15,12 @@ export default class MyDocument extends Document {
           {/* Twitter */}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@TrustedSheriff" />
-          <meta name="twitter:title" content="Portfolio de Victor de la Fouchardiere" />
-          <meta name="twitter:description" content="Besoin d'un développeur web ?" />
+          <meta name="twitter:title" content="Portfolio of Victor de la Fouchardiere" />
+          <meta name="twitter:description" content="Need a web developer?" />
           <meta name="twitter:image" content="https://www.victor-de-la-fouchardiere.fr/victordelafouchardiere.jpg" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Portfolio de Victor de la Fouchardiere" />
-          <meta
-            property="og:description"
-            content="Besoin d'un développeur web ? Découvrez le profil de Victor de la Fouchardiere"
-          />
+          <meta property="og:title" content="Portfolio of Victor de la Fouchardiere" />
+          <meta property="og:description" content="Need a web developer? Discover the profile of Victor de la Fouchardiere" />
           <meta property="og:url" content="https://www.victor-de-la-fouchardiere.fr" />
           <meta property="og:site_name" content="Victor de la Fouchardière | Portfolio" />
           <meta property="og:image" content="https://www.victor-de-la-fouchardiere.fr/victordelafouchardiere.png" />
