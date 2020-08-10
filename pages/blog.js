@@ -69,7 +69,7 @@ export async function getStaticProps() {
   const res = await fetch('https://dev.to/api/articles?username=viclafouch')
   const posts = await res.json()
   return {
-    props: { posts },
+    props: { posts: posts.filter(post => !post.tags.includes('discuss')) },
     // we will attempt to re-generate the page:
     // - when a request comes in
     // - at most once every second
