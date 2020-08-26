@@ -1,9 +1,18 @@
-import React, { useLayoutEffect, useCallback, Children, useState, useRef, useEffect } from 'react'
+import React, {
+  Children,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState
+} from 'react'
 import Link from 'next/link'
-import { withRouter } from 'next/router'
+import { useRouter, withRouter } from 'next/router'
+
 import styles from './nav.module.scss'
 
-const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
+const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
 const links = [
   { text: 'Home', href: '/' },
@@ -34,6 +43,15 @@ function Nav() {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const listRef = useRef(null)
   const burgerRef = useRef(null)
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = () => setIsMenuOpened(false)
+    router.events.on('routeChangeStart', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange)
+    }
+  }, [router.events])
 
   const handleEscap = useCallback(event => {
     if (event.keyCode === 27) setIsMenuOpened(false)
@@ -63,21 +81,39 @@ function Nav() {
         <div>
           <div
             ref={burgerRef}
-            className={`${styles.nav_burger} ${isMenuOpened ? styles.menu_opened : ''}`}
+            onKeyPress={() => setIsMenuOpened(isMenuOpened => !isMenuOpened)}
+            className={`${styles.nav_burger} ${
+              isMenuOpened ? styles.menu_opened : ''
+            }`}
+            role="button"
+            tabIndex="0"
             onClick={() => setIsMenuOpened(isMenuOpened => !isMenuOpened)}
           >
             <span />
           </div>
-          <ul ref={listRef} className={`${styles.nav_links_list} ${isMenuOpened ? styles.nav_links_list_active : ''}`}>
+          <ul
+            ref={listRef}
+            className={`${styles.nav_links_list} ${
+              isMenuOpened ? styles.nav_links_list_active : ''
+            }`}
+          >
             {links.map((link, index) => (
-              <li key={index} className={styles.nav_links_list_item} onClick={() => setIsMenuOpened(false)}>
+              <li key={index} className={styles.nav_links_list_item}>
                 <ActiveLink href={link.href} activeClassName={styles.active}>
                   <a className={styles.nav_links_list_item_href}>{link.text}</a>
                 </ActiveLink>
               </li>
             ))}
           </ul>
-          {isMenuOpened && <div className={styles.nav_overlay} onClick={() => setIsMenuOpened(false)} />}
+          {isMenuOpened && (
+            <div
+              className={styles.nav_overlay}
+              onClick={() => setIsMenuOpened(false)}
+              onKeyPress={() => setIsMenuOpened(false)}
+              role="button"
+              tabIndex="0"
+            />
+          )}
         </div>
       </div>
     </nav>

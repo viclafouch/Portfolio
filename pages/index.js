@@ -1,6 +1,7 @@
+import styles from 'scss/pages/index.module.scss'
+
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
-import styles from 'scss/pages/index.module.scss'
 
 function Home() {
   return (
@@ -12,8 +13,14 @@ function Home() {
       <div className={styles.home__page}>
         <div className={styles.home__block}>
           <picture>
-            <source srcSet="/images/victordelafouchardiere.webp" type="image/webp" />
-            <source srcSet="/images/victordelafouchardiere.jpg" type="image/png" />
+            <source
+              srcSet="/images/victordelafouchardiere.webp"
+              type="image/webp"
+            />
+            <source
+              srcSet="/images/victordelafouchardiere.jpg"
+              type="image/png"
+            />
             <img
               src="/images/examples/meme-2.png"
               title="Victor de la Fouchardiere"
@@ -21,7 +28,10 @@ function Home() {
               className={styles.profile__picture}
             />
           </picture>
-          <Title title="Victor de la Fouchardiere" subtitle="🚀 Full-stack Developer JS at Seald 🏓" />
+          <Title
+            title="Victor de la Fouchardiere"
+            subtitle="🚀 Full-stack Developer JS at Seald 🏓"
+          />
         </div>
         <hr className="striped" />
         <div className={styles.home__block}>
@@ -31,9 +41,16 @@ function Home() {
           </p>
         </div>
         <hr className="striped" />
-        <div className={`${styles.home__block} ${styles.experience__container}`}>
+        <div
+          className={`${styles.home__block} ${styles.experience__container}`}
+        >
           <h4 className={styles.experience__title}>Current Job</h4>
-          <a target="_blank" href="https://www.seald.io" title="seald" rel="noreferrer noopener">
+          <a
+            target="_blank"
+            href="https://www.seald.io"
+            title="seald"
+            rel="noreferrer noopener"
+          >
             <img src="/images/companies/seald-logo.svg" alt="Seald" />
           </a>
           <p>

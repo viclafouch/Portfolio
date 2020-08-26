@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import styles from './button.module.scss'
 
 function Button(props) {
@@ -7,7 +8,11 @@ function Button(props) {
   if (props.inverse) classnames.push(styles.inverse)
 
   const button = (
-    <button disabled={props.disabled} className={classnames.join(' ')} tabIndex={props.href ? '-1' : '0'}>
+    <button
+      disabled={props.disabled}
+      className={classnames.join(' ')}
+      tabIndex={props.href ? '-1' : '0'}
+    >
       {props.icon && <FontAwesomeIcon icon={props.icon} />}
       {props.children}
     </button>

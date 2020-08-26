@@ -1,16 +1,39 @@
 import React, { useEffect } from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTwitter, faGit, faCodepen, faLinkedin, faDev } from '@fortawesome/free-brands-svg-icons'
-import { faLink, faCalendarAlt, faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import Nprogress from 'nprogress'
-import Router from 'next/router'
-import * as gtag from '../utils/analytics'
-import Layout from '../components/Layout/Layout'
+import {
+  faCodepen,
+  faDev,
+  faGit,
+  faLinkedin,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
+import {
+  faCalendarAlt,
+  faDownload,
+  faEnvelope,
+  faLink
+} from '@fortawesome/free-solid-svg-icons'
 import GoogleFonts from 'next-google-fonts'
+import Router from 'next/router'
+import Nprogress from 'nprogress'
+
+import Layout from '../components/Layout/Layout'
+import * as gtag from '../utils/analytics'
+
 import 'scss/app.scss'
 import 'nprogress/nprogress.css'
 
-library.add(faLinkedin, faCodepen, faGit, faTwitter, faEnvelope, faDownload, faCalendarAlt, faLink, faDev)
+library.add(
+  faLinkedin,
+  faCodepen,
+  faGit,
+  faTwitter,
+  faEnvelope,
+  faDownload,
+  faCalendarAlt,
+  faLink,
+  faDev
+)
 
 Nprogress.configure({
   showSpinner: false,

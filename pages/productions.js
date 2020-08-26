@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Title from 'components/Title/Title'
-import Meta from 'components/Meta/Meta'
 import styles from 'scss/pages/productions.module.scss'
+
+import Meta from 'components/Meta/Meta'
+import Title from 'components/Title/Title'
 
 const productionsPath = '/images/productions'
 
@@ -44,7 +45,8 @@ const productions = [
     title: 'PE Center',
     img: `${productionsPath}/pe-center.jpg`,
     type: FULLSTACK,
-    href: 'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
+    href:
+      'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
   },
   {
     title: 'Google Support Crawler',
@@ -111,15 +113,30 @@ function Productions() {
               <article className={styles.production__article}>
                 <header className={styles.production__article__header}>
                   <div className={styles.production__article__header__overlay}>
-                    <a href={production.href} target="_blank" title={production.title} rel="noreferrer noopener">
+                    <a
+                      href={production.href}
+                      target="_blank"
+                      title={production.title}
+                      rel="noreferrer noopener"
+                    >
                       <FontAwesomeIcon icon="link" />
                     </a>
                   </div>
-                  <img src={production.img} alt={production.title} className={styles.production__article__header__cover} />
+                  <img
+                    src={production.img}
+                    alt={production.title}
+                    className={styles.production__article__header__cover}
+                  />
                 </header>
                 <footer className={styles.production__article__footer}>
-                  <h3 className={styles.production__article__footer__title}>{production.title}</h3>
-                  <span className={`${styles.production__article__footersubtitle} note`}>{production.type}</span>
+                  <h3 className={styles.production__article__footer__title}>
+                    {production.title}
+                  </h3>
+                  <span
+                    className={`${styles.production__article__footersubtitle} note`}
+                  >
+                    {production.type}
+                  </span>
                 </footer>
               </article>
             </li>

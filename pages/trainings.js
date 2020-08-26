@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Title from 'components/Title/Title'
+import styles from 'scss/pages/training.module.scss'
+
 import Button from 'components/Button/Button'
 import Meta from 'components/Meta/Meta'
-import styles from 'scss/pages/training.module.scss'
+import Title from 'components/Title/Title'
 
 const pathTraining = '/images/training'
 
@@ -22,14 +23,21 @@ const trainings = [
     date: '2016',
     title: 'Google certifications',
     href: 'https://learndigital.withgoogle.com/digitalactive/',
-    rows: ['Digital Active (Google)', 'Mobile site design (Google)', 'Channels Development (YouTube)'],
+    rows: [
+      'Digital Active (Google)',
+      'Mobile site design (Google)',
+      'Channels Development (YouTube)'
+    ],
     img: `${pathTraining}/digital-active.png`
   },
   {
     date: '2015',
     title: 'BAC Economique et Social',
     href: 'http://www.lycee-saint-paul-lille.fr/',
-    rows: ['Economic and Social Baccalaureate Diploma', 'Lycée Saint Paul - Lille'],
+    rows: [
+      'Economic and Social Baccalaureate Diploma',
+      'Lycée Saint Paul - Lille'
+    ],
     img: `${pathTraining}/saint-paul.png`
   }
 ]
@@ -56,11 +64,18 @@ function Trainings() {
                       <FontAwesomeIcon icon="calendar-alt" />
                       <span>{training.date}</span>
                     </p>
-                    <Button primary inverse href={training.href} target="_blank">
+                    <Button
+                      primary
+                      inverse
+                      href={training.href}
+                      target="_blank"
+                    >
                       About
                     </Button>
                   </div>
-                  <h4 className={styles.training__article__title}>{training.title}</h4>
+                  <h4 className={styles.training__article__title}>
+                    {training.title}
+                  </h4>
                   <ul className={styles.training__article__list__texts}>
                     {training.rows.map((text, i) => (
                       <li key={i}>- {text}.</li>

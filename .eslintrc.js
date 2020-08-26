@@ -1,26 +1,16 @@
 module.exports = {
-  plugins: ['react'],
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:prettier/recommended'],
-  parser: 'babel-eslint',
-  settings: {
-    react: {
-      version: 'detect'
-    }
-  },
-  parserOptions: {
-    ecmaVersion: 7,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
+  "extends": [
+    "@viclafouch/eslint-config-viclafouch"
+  ],
   rules: {
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off'
-  },
-  env: {
-    browser: true,
-    es6: true,
-    node: true
+    'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+          components: ['Link'],
+          specialLink: ['hrefLeft', 'hrefRight'],
+          aspects: ['invalidHref', 'preferButton']
+      }
+    ]
   }
 }

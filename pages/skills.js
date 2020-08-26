@@ -1,7 +1,8 @@
-import { differenceInYears, differenceInMonths } from 'date-fns'
-import Title from 'components/Title/Title'
-import Meta from 'components/Meta/Meta'
+import { differenceInMonths, differenceInYears } from 'date-fns'
 import styles from 'scss/pages/skills.module.scss'
+
+import Meta from 'components/Meta/Meta'
+import Title from 'components/Title/Title'
 
 const languagesImgPath = '/images/languages'
 const frameworksImgPath = '/images/frameworks'
@@ -167,9 +168,17 @@ function Skills() {
                       width="40"
                       height="40"
                     />
-                    <h3 className={styles.skill__item__header__title}>{language.title}</h3>
-                    <span className={`${styles.skill__item__header__note} note`}>
-                      {differenceInYears(language.duration[1], language.duration[0])} years of experience
+                    <h3 className={styles.skill__item__header__title}>
+                      {language.title}
+                    </h3>
+                    <span
+                      className={`${styles.skill__item__header__note} note`}
+                    >
+                      {differenceInYears(
+                        language.duration[1],
+                        language.duration[0]
+                      )}{' '}
+                      years of experience
                     </span>
                   </header>
                   <footer className={styles.skill__item__footer}>
@@ -188,9 +197,15 @@ function Skills() {
           <SkillTitle title="Frameworks" />
           <ul className={`${styles.frameworks__list} ${styles.skills__list}`}>
             {frameworks.map((framework, index) => {
-              let duration = differenceInYears(framework.duration[1], framework.duration[0])
+              let duration = differenceInYears(
+                framework.duration[1],
+                framework.duration[0]
+              )
               if (duration === 0) {
-                const monthsDifference = differenceInMonths(framework.duration[1], framework.duration[0])
+                const monthsDifference = differenceInMonths(
+                  framework.duration[1],
+                  framework.duration[0]
+                )
                 if (monthsDifference > 1) {
                   duration = `${monthsDifference} months`
                 } else {
@@ -214,8 +229,14 @@ function Skills() {
                         width="40"
                         height="40"
                       />
-                      <h3 className={styles.skill__item__header__title}>{framework.title}</h3>
-                      <span className={`${styles.skill__item__header__note} note`}>{duration} of experience</span>
+                      <h3 className={styles.skill__item__header__title}>
+                        {framework.title}
+                      </h3>
+                      <span
+                        className={`${styles.skill__item__header__note} note`}
+                      >
+                        {duration} of experience
+                      </span>
                     </div>
                   </div>
                 </li>
@@ -239,8 +260,14 @@ function Skills() {
                       width="40"
                       height="40"
                     />
-                    <h3 className={styles.skill__item__header__title}>{techno.title}</h3>
-                    <span className={`${styles.skill__item__header__note} note`}>{techno.type}</span>
+                    <h3 className={styles.skill__item__header__title}>
+                      {techno.title}
+                    </h3>
+                    <span
+                      className={`${styles.skill__item__header__note} note`}
+                    >
+                      {techno.type}
+                    </span>
                   </div>
                 </div>
               </li>

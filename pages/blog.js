@@ -1,7 +1,8 @@
 import { format, formatDistance } from 'date-fns'
-import Title from 'components/Title/Title'
-import Meta from 'components/Meta/Meta'
 import styles from 'scss/pages/blog.module.scss'
+
+import Meta from 'components/Meta/Meta'
+import Title from 'components/Title/Title'
 
 function Blog({ posts }) {
   return (
@@ -14,11 +15,19 @@ function Blog({ posts }) {
         <Title title="Blog" subtitle="What I write" />
         <div className={styles.blog__list}>
           {posts.map(post => (
-            <article key={post.id} className={styles.blog__list__item} data-id={post.id}>
+            <article
+              key={post.id}
+              className={styles.blog__list__item}
+              data-id={post.id}
+            >
               <div role="presentation">
                 <div className={styles.blog__article__top}>
                   <a href={post.url} target="_blank" rel="noreferrer">
-                    <img src="/images/devto.webp" className={styles.source__url} alt="Dev.to" />
+                    <img
+                      src="/images/devto.webp"
+                      className={styles.source__url}
+                      alt="Dev.to"
+                    />
                     <div
                       className={styles.blog__article__cover}
                       style={{
@@ -34,7 +43,9 @@ function Blog({ posts }) {
                         {post.title}
                       </a>
                     </h3>
-                    <p className={styles.blog__article__description}>{post.description}</p>
+                    <p className={styles.blog__article__description}>
+                      {post.description}
+                    </p>
                   </div>
                   <div className={styles.blog__article__bottom__metas}>
                     <ul className={styles.blog__list__tags}>
@@ -43,14 +54,40 @@ function Blog({ posts }) {
                       ))}
                     </ul>
                     <div className={styles.blog__user__meta}>
-                      <a href="https://dev.to/viclafouch" target="_blank" rel="noreferrer">
-                        <img className={styles.blog__author__pic} src={post.user.profile_image_90} alt={post.user.name} />
+                      <a
+                        href="https://dev.to/viclafouch"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img
+                          className={styles.blog__author__pic}
+                          src={post.user.profile_image_90}
+                          alt={post.user.name}
+                        />
                       </a>
                       <div className={styles.meta__texts}>
-                        <span className={styles.meta__author__name}>{post.user.name}</span>
-                        <a className={styles.meta__author__date} href={post.url} target="_blank" rel="noreferrer">
-                          <time>{format(new Date(post.published_timestamp), 'd LLL yyy')}</time> (
-                          {formatDistance(new Date(post.published_timestamp), new Date(), { addSuffix: true })})
+                        <span className={styles.meta__author__name}>
+                          {post.user.name}
+                        </span>
+                        <a
+                          className={styles.meta__author__date}
+                          href={post.url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <time>
+                            {format(
+                              new Date(post.published_timestamp),
+                              'd LLL yyy'
+                            )}
+                          </time>{' '}
+                          (
+                          {formatDistance(
+                            new Date(post.published_timestamp),
+                            new Date(),
+                            { addSuffix: true }
+                          )}
+                          )
                         </a>
                       </div>
                     </div>

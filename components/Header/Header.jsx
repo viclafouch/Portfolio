@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import styles from './header.module.scss'
 
 const contactLinks = [
@@ -60,7 +61,9 @@ const socialLinks = [
 function Header() {
   return (
     <header className={styles.header}>
-      <div className={`${styles.header_links} flex-me container flex-justify-between`}>
+      <div
+        className={`${styles.header_links} flex-me container flex-justify-between`}
+      >
         <div>
           {contactLinks.map((link, index) => (
             <a
@@ -71,8 +74,12 @@ function Header() {
               className={styles.header_links_item}
               title={link.text.title}
             >
-              <FontAwesomeIcon icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]} />
-              <span className={styles.header_links_item_text}>{link.text.title}</span>
+              <FontAwesomeIcon
+                icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]}
+              />
+              <span className={styles.header_links_item_text}>
+                {link.text.title}
+              </span>
             </a>
           ))}
         </div>
@@ -86,7 +93,9 @@ function Header() {
               className={styles.header_links_item}
               title={link.title}
             >
-              <FontAwesomeIcon icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]} />
+              <FontAwesomeIcon
+                icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]}
+              />
             </a>
           ))}
         </div>
