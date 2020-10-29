@@ -1,11 +1,11 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 const isProd = process.env.NODE_ENV === 'production'
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <meta key="charset" charSet="utf-8" />
           <meta name="theme-color" content="#f6f6f6" />
@@ -86,7 +86,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }
