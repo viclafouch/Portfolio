@@ -103,7 +103,7 @@ function Productions() {
     <>
       <Meta
         title="Productions of Victor de la Fouchardiere"
-        description="Latest productions, realizations and personal projects of Victor de la Fouchardiere, front-end developer at Seald."
+        description="Latest productions, realizations and personal projects of Victor de la Fouchardiere, front-end developer at Frichti."
       />
       <section className={styles.productions__page}>
         <Title title="Portfolio" subtitle="What I create" />

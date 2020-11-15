@@ -36,9 +36,21 @@
       margin-bottom: 40px;
     }
 
-    a {
+    .experience__description {
+      font-size: 0.9rem;
+      margin: 10px auto 0;
+      display: block;
+      max-width: 750px;
+      color: lighten(#444444, 11%);
+    }
+
+    .experience_logo {
       display: block;
       margin-bottom: 20px;
+    }
+
+    p a {
+      color: #15c;
     }
   }
 }

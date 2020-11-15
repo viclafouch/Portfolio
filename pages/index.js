@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from 'scss/pages/index.module.scss'
 
 import Meta from 'components/Meta/Meta'
@@ -8,7 +9,7 @@ function Home() {
     <>
       <Meta
         title="Portfolio of Victor de la Fouchardiere"
-        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Seald, bachelor degree. Fan of Javascript. Discover my portfolio!"
+        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Frichti, bachelor degree. Fan of Javascript. Discover my portfolio!"
       />
       <div className={styles.home__page}>
         <div className={styles.home__block}>
@@ -30,7 +31,7 @@ function Home() {
           </picture>
           <Title
             title="Victor de la Fouchardiere"
-            subtitle="🚀 Full-stack Developer JS at Seald 🏓"
+            subtitle="🚀 Full-stack Developer JS at Frichti 🍋"
           />
         </div>
         <hr className="striped" />
@@ -47,16 +48,33 @@ function Home() {
           <h4 className={styles.experience__title}>Current Job</h4>
           <a
             target="_blank"
-            href="https://www.seald.io"
-            title="seald"
+            href="https://www.frichti.co"
+            title="frichti"
+            className={styles.experience_logo}
             rel="noreferrer noopener"
           >
-            <img src="/images/companies/seald-logo.svg" alt="Seald" />
+            <Image
+              width="100"
+              height="100"
+              src="/images/companies/frichti.png"
+              alt="Frichti"
+            />
           </a>
           <p>
-            Full-Stack developer at <b>Seald</b> since Oct. 2018.
+            Front-End developer at{' '}
+            <a
+              target="_blank"
+              href="https://www.frichti.co"
+              title="frichti"
+              rel="noreferrer noopener"
+            >
+              <b>Frichti</b>
+            </a>{' '}
+            since Nov. 2020.
             <br />
-            {`Contributions to the development of the company's internal applications (front-end and back-end).`}
+            <span className={styles.experience__description}>
+              {`• Develop new functionalities. • Participate in transversal technical projects within the Front guild. • Collaborate with other developers and product owners.`}
+            </span>
           </p>
         </div>
       </div>

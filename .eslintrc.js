@@ -1,5 +1,5 @@
 module.exports = {
-  "extends": [
+  extends: [
     "@viclafouch/eslint-config-viclafouch"
   ],
   rules: {

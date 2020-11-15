@@ -13,8 +13,8 @@ import {
   faEnvelope,
   faLink
 } from '@fortawesome/free-solid-svg-icons'
-import GoogleFonts from 'next-google-fonts'
 import Router from 'next/router'
+import GoogleFonts from 'next-google-fonts'
 import Nprogress from 'nprogress'
 
 import Layout from '../components/Layout/Layout'
