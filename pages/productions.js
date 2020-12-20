@@ -49,10 +49,10 @@ const productions = [
       'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
   },
   {
-    title: 'Google Support Crawler',
+    title: 'PE Crawler',
     img: `${productionsPath}/google-support-crawler.jpg`,
     type: BACKEND,
-    href: 'https://github.com/viclafouch/Google-Support-Crawler'
+    href: 'https://github.com/viclafouch/PE-Crawler'
   },
   {
     title: 'Seald.io',

@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Portfolio of Victor de la Fouchardiere",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "engines": {
     "node": "12.16.x",
     "npm": "6.13.x"
@@ -25,31 +25,31 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@babel/core": "^7.12.3",
+    "@babel/core": "^7.12.10",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.12",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "date-fns": "^2.16.1",
-    "next": "^10.0.1",
+    "next": "^10.0.3",
     "next-google-fonts": "^1.2.1",
     "nprogress": "^0.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.29.0"
+    "sass": "^1.30.0"
   },
   "devDependencies": {
-    "@viclafouch/eslint-config-viclafouch": "^2.3.1",
+    "@viclafouch/eslint-config-viclafouch": "^2.3.4",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.13.0",
-    "eslint-config-prettier": "^6.15.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^6.0.0",
-    "postcss": "^8.1.7",
-    "prettier": "^2.1.2",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "postcss": "^8.2.1",
+    "prettier": "^2.2.1",
     "robots-generator": "^2.3.6"
   },
   "babel": {

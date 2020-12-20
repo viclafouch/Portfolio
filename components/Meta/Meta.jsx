@@ -5,7 +5,7 @@ function Meta(props) {
   useEffect(() => {
     const handleChangeVisiblity = () => {
       if (document.hidden) {
-        document.title = 'Reviens moi 😢'
+        document.title = 'Back to me 😢'
       } else {
         document.title = props.title
       }
