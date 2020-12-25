@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Portfolio of Victor de la Fouchardiere",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "engines": {
     "node": "12.16.x",
     "npm": "6.13.x"
