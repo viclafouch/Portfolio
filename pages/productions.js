@@ -45,8 +45,7 @@ const productions = [
     title: 'PE Center',
     img: `${productionsPath}/pe-center.jpg`,
     type: FULLSTACK,
-    href:
-      'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
+    href: 'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
   },
   {
     title: 'PE Crawler',
