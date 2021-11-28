@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from 'scss/pages/index.module.scss'
 
 import Meta from 'components/Meta/Meta'
@@ -53,7 +52,7 @@ function Home() {
             className={styles.experience_logo}
             rel="noreferrer noopener"
           >
-            <Image
+            <img
               width="100"
               height="100"
               src="/images/companies/frichti.png"

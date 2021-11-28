@@ -12,6 +12,18 @@ const FULLSTACK = 'FullStack'
 
 const productions = [
   {
+    title: 'Frichti',
+    img: `${productionsPath}/frichti.jpg`,
+    type: FRONTEND,
+    href: 'https://www.frichti.co'
+  },
+  {
+    title: 'LinkedIn Formatter',
+    img: `${productionsPath}/linkedin-formatter.png`,
+    type: FRONTEND,
+    href: 'https://www.linkedin-formatter.app'
+  },
+  {
     title: 'Meme Studio',
     img: `${productionsPath}/meme-studio.png`,
     type: FULLSTACK,

@@ -45,7 +45,7 @@ const frameworks = [
   {
     img: `${frameworksImgPath}/vuejs-logo.png`,
     title: 'Vue',
-    duration: [new Date(2017, 7, 1), new Date()]
+    duration: [new Date(2017, 7, 1), new Date(2020, 8, 1)]
   },
   {
     img: `${frameworksImgPath}/react-logo.png`,
@@ -80,7 +80,7 @@ const frameworks = [
   {
     img: `${frameworksImgPath}/material-ui.png`,
     title: 'Material UI',
-    duration: [new Date(2018, 10, 1), new Date(2019, 3, 1)]
+    duration: [new Date(2018, 10, 1), new Date()]
   },
   {
     img: `${frameworksImgPath}/jquery-logo.png`,
@@ -134,6 +134,11 @@ const technos = [
     title: 'Windows',
     type: 'OS',
     img: `${technosImgPath}/windows-logo.png`
+  },
+  {
+    title: 'Vite',
+    type: 'Bundler',
+    img: `${technosImgPath}/vite-logo.svg`
   }
 ]
 

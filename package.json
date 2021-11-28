@@ -3,8 +3,8 @@
   "description": "Portfolio of Victor de la Fouchardiere",
   "version": "2.1.2",
   "engines": {
-    "node": "12.16.x",
-    "npm": "6.13.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "homepage": "https://www.victor-de-la-fouchardiere.fr",
   "bugs": {
@@ -19,6 +19,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next export",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "deploy": "vercel --prod",
     "lint": "eslint .",
@@ -48,6 +50,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "next-sitemap": "1.6.203",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "robots-generator": "^2.3.6"
