@@ -3,6 +3,7 @@ module.exports = {
   env: {
     GA_TRACKING_ID: 'UA-70097642-4'
   },
+  swcMinify: false,
   eslint: {
     ignoreDuringBuilds: true,
   },
