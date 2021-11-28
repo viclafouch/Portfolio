@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Router from 'next/router'
-import GoogleFonts from 'next-google-fonts'
+import Script from 'next/script'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faCodepen,
@@ -44,6 +44,9 @@ Nprogress.configure({
   parent: 'body'
 })
 
+const GA_TRACKING_ID = process.env.GA_TRACKING_ID
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+
 const getScrolled = () => {
   const navHeight = document.getElementById('navbar').offsetHeight
   const { top } = document.getElementById('main-app').getBoundingClientRect()
@@ -58,7 +61,9 @@ const MyApp = ({ Component, pageProps }) => {
       const { navHeight, betweenTopScreenAndMain } = getScrolled()
       scroll = betweenTopScreenAndMain < navHeight + 20
     })
-    Router.events.on('routeChangeError', () => Nprogress.done())
+    Router.events.on('routeChangeError', () => {
+      return Nprogress.done()
+    })
     Router.events.on('routeChangeComplete', (url) => {
       gtag.pageview(url)
       Nprogress.done()
@@ -66,14 +71,36 @@ const MyApp = ({ Component, pageProps }) => {
       if (scroll) window.scrollBy(0, betweenTopScreenAndMain - navHeight)
     })
 
-    return () => Nprogress.done()
+    return () => {
+      return Nprogress.done()
+    }
   }, [])
 
   return (
-    <Layout>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400;700&family=Karma:wght@500" />
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+              send_page_view: ${IS_PRODUCTION}
+            });
+          `
+        }}
+      />
+    </>
   )
 }
 

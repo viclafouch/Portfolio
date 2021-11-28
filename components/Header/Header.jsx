@@ -65,39 +65,49 @@ const Header = () => {
         className={`${styles.header_links} flex-me container flex-justify-between`}
       >
         <div>
-          {contactLinks.map((link, index) => (
-            <a
-              rel="noreferrer noopener"
-              href={link.href}
-              key={index}
-              target="_blank"
-              className={styles.header_links_item}
-              title={link.text.title}
-            >
-              <FontAwesomeIcon
-                icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]}
-              />
-              <span className={styles.header_links_item_text}>
-                {link.text.title}
-              </span>
-            </a>
-          ))}
+          {contactLinks.map((link, index) => {
+            return (
+              <a
+                rel="noreferrer noopener"
+                href={link.href}
+                key={index}
+                target="_blank"
+                className={styles.header_links_item}
+                title={link.text.title}
+              >
+                <FontAwesomeIcon
+                  icon={[
+                    link.fontawesome.prefix || 'fa',
+                    link.fontawesome.name
+                  ]}
+                />
+                <span className={styles.header_links_item_text}>
+                  {link.text.title}
+                </span>
+              </a>
+            )
+          })}
         </div>
         <div>
-          {socialLinks.map((link, index) => (
-            <a
-              rel="noreferrer noopener"
-              href={link.href}
-              key={index}
-              target="_blank"
-              className={styles.header_links_item}
-              title={link.title}
-            >
-              <FontAwesomeIcon
-                icon={[link.fontawesome.prefix || 'fa', link.fontawesome.name]}
-              />
-            </a>
-          ))}
+          {socialLinks.map((link, index) => {
+            return (
+              <a
+                rel="noreferrer noopener"
+                href={link.href}
+                key={index}
+                target="_blank"
+                className={styles.header_links_item}
+                title={link.title}
+              >
+                <FontAwesomeIcon
+                  icon={[
+                    link.fontawesome.prefix || 'fa',
+                    link.fontawesome.name
+                  ]}
+                />
+              </a>
+            )
+          })}
         </div>
       </div>
     </header>

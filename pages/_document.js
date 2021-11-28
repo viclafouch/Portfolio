@@ -1,7 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-const isProd = process.env.NODE_ENV === 'production'
-
 export default class MyDocument extends Document {
   render() {
     return (
@@ -66,20 +64,9 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="7_XZ1bK94NNQLjHFdKXCa9FjsNaOZGx76uQgQzDPIIw"
           />
-
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
-          />
-          <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('config', '${process.env.GA_TRACKING_ID}', { 'send_page_view': ${isProd} });
-          `
-            }}
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400;700&family=Karma:wght@500&display=swap"
           />
         </Head>
         <body>

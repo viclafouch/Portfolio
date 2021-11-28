@@ -119,39 +119,43 @@ const Productions = () => {
       <section className={styles.productions__page}>
         <Title title="Portfolio" subtitle="What I create" />
         <ul className={styles.productions__list}>
-          {productions.map((production, index) => (
-            <li key={index}>
-              <article className={styles.production__article}>
-                <header className={styles.production__article__header}>
-                  <div className={styles.production__article__header__overlay}>
-                    <a
-                      href={production.href}
-                      target="_blank"
-                      title={production.title}
-                      rel="noreferrer noopener"
+          {productions.map((production, index) => {
+            return (
+              <li key={index}>
+                <article className={styles.production__article}>
+                  <header className={styles.production__article__header}>
+                    <div
+                      className={styles.production__article__header__overlay}
                     >
-                      <FontAwesomeIcon icon="link" />
-                    </a>
-                  </div>
-                  <img
-                    src={production.img}
-                    alt={production.title}
-                    className={styles.production__article__header__cover}
-                  />
-                </header>
-                <footer className={styles.production__article__footer}>
-                  <h3 className={styles.production__article__footer__title}>
-                    {production.title}
-                  </h3>
-                  <span
-                    className={`${styles.production__article__footersubtitle} note`}
-                  >
-                    {production.type}
-                  </span>
-                </footer>
-              </article>
-            </li>
-          ))}
+                      <a
+                        href={production.href}
+                        target="_blank"
+                        title={production.title}
+                        rel="noreferrer noopener"
+                      >
+                        <FontAwesomeIcon icon="link" />
+                      </a>
+                    </div>
+                    <img
+                      src={production.img}
+                      alt={production.title}
+                      className={styles.production__article__header__cover}
+                    />
+                  </header>
+                  <footer className={styles.production__article__footer}>
+                    <h3 className={styles.production__article__footer__title}>
+                      {production.title}
+                    </h3>
+                    <span
+                      className={`${styles.production__article__footersubtitle} note`}
+                    >
+                      {production.type}
+                    </span>
+                  </footer>
+                </article>
+              </li>
+            )
+          })}
         </ul>
       </section>
     </>

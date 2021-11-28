@@ -142,11 +142,13 @@ const technos = [
   }
 ]
 
-const SkillTitle = ({ title }) => (
-  <div className={styles.skill__container__title}>
-    <h2 className={styles.skill__title}>{title}</h2>
-  </div>
-)
+const SkillTitle = ({ title }) => {
+  return (
+    <div className={styles.skill__container__title}>
+      <h2 className={styles.skill__title}>{title}</h2>
+    </div>
+  )
+}
 
 const Skills = () => {
   return (
@@ -160,42 +162,44 @@ const Skills = () => {
         <div className={styles.skills__languages}>
           <SkillTitle title="Languages" />
           <ul className={`${styles.languages__list} ${styles.skills__list}`}>
-            {languages.map((language, index) => (
-              <li key={index}>
-                <article className={styles.skill__item}>
-                  <header className={styles.skill__item__header}>
-                    <img
-                      className={styles.skills__img}
-                      src={language.img}
-                      alt={language.title}
-                      title={language.title}
-                      loading="lazy"
-                      width="40"
-                      height="40"
-                    />
-                    <h3 className={styles.skill__item__header__title}>
-                      {language.title}
-                    </h3>
-                    <span
-                      className={`${styles.skill__item__header__note} note`}
-                    >
-                      {differenceInYears(
-                        language.duration[1],
-                        language.duration[0]
-                      )}{' '}
-                      years of experience
-                    </span>
-                  </header>
-                  <footer className={styles.skill__item__footer}>
-                    <ul className={styles.skill__item__footer__list}>
-                      {language.items.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </footer>
-                </article>
-              </li>
-            ))}
+            {languages.map((language, index) => {
+              return (
+                <li key={index}>
+                  <article className={styles.skill__item}>
+                    <header className={styles.skill__item__header}>
+                      <img
+                        className={styles.skills__img}
+                        src={language.img}
+                        alt={language.title}
+                        title={language.title}
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                      <h3 className={styles.skill__item__header__title}>
+                        {language.title}
+                      </h3>
+                      <span
+                        className={`${styles.skill__item__header__note} note`}
+                      >
+                        {differenceInYears(
+                          language.duration[1],
+                          language.duration[0]
+                        )}{' '}
+                        years of experience
+                      </span>
+                    </header>
+                    <footer className={styles.skill__item__footer}>
+                      <ul className={styles.skill__item__footer__list}>
+                        {language.items.map((item, i) => {
+                          return <li key={i}>{item}</li>
+                        })}
+                      </ul>
+                    </footer>
+                  </article>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <div className={styles.skills__frameworks}>
@@ -252,31 +256,33 @@ const Skills = () => {
         <div className={styles.skills__technos}>
           <SkillTitle title="Technologies" />
           <ul className={`${styles.technos__list} ${styles.skills__list}`}>
-            {technos.map((techno, index) => (
-              <li key={index}>
-                <div className={styles.skill__item}>
-                  <div className={styles.skill__item__header}>
-                    <img
-                      className={styles.skills__img}
-                      src={techno.img}
-                      alt={techno.title}
-                      title={techno.title}
-                      loading="lazy"
-                      width="40"
-                      height="40"
-                    />
-                    <h3 className={styles.skill__item__header__title}>
-                      {techno.title}
-                    </h3>
-                    <span
-                      className={`${styles.skill__item__header__note} note`}
-                    >
-                      {techno.type}
-                    </span>
+            {technos.map((techno, index) => {
+              return (
+                <li key={index}>
+                  <div className={styles.skill__item}>
+                    <div className={styles.skill__item__header}>
+                      <img
+                        className={styles.skills__img}
+                        src={techno.img}
+                        alt={techno.title}
+                        title={techno.title}
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                      <h3 className={styles.skill__item__header__title}>
+                        {techno.title}
+                      </h3>
+                      <span
+                        className={`${styles.skill__item__header__note} note`}
+                      >
+                        {techno.type}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </li>
-            ))}
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>

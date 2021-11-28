@@ -52,39 +52,41 @@ const Trainings = () => {
       <div className={styles.training__page}>
         <Title title="Trainings" subtitle="What I learned" />
         <ul className={styles.training__list}>
-          {trainings.map((training, index) => (
-            <li key={index}>
-              <article className={styles.training__article}>
-                <div className={styles.training__article__thumbnail__side}>
-                  <img src={training.img} alt={training.title} />
-                </div>
-                <div className={styles.training__article__description__side}>
-                  <div className={styles.training__article__top}>
-                    <p className={styles.training__article__date}>
-                      <FontAwesomeIcon icon="calendar-alt" />
-                      <span>{training.date}</span>
-                    </p>
-                    <Button
-                      primary
-                      inverse
-                      href={training.href}
-                      target="_blank"
-                    >
-                      About
-                    </Button>
+          {trainings.map((training, index) => {
+            return (
+              <li key={index}>
+                <article className={styles.training__article}>
+                  <div className={styles.training__article__thumbnail__side}>
+                    <img src={training.img} alt={training.title} />
                   </div>
-                  <h4 className={styles.training__article__title}>
-                    {training.title}
-                  </h4>
-                  <ul className={styles.training__article__list__texts}>
-                    {training.rows.map((text, i) => (
-                      <li key={i}>- {text}.</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            </li>
-          ))}
+                  <div className={styles.training__article__description__side}>
+                    <div className={styles.training__article__top}>
+                      <p className={styles.training__article__date}>
+                        <FontAwesomeIcon icon="calendar-alt" />
+                        <span>{training.date}</span>
+                      </p>
+                      <Button
+                        primary
+                        inverse
+                        href={training.href}
+                        target="_blank"
+                      >
+                        About
+                      </Button>
+                    </div>
+                    <h4 className={styles.training__article__title}>
+                      {training.title}
+                    </h4>
+                    <ul className={styles.training__article__list__texts}>
+                      {training.rows.map((text, i) => {
+                        return <li key={i}>- {text}.</li>
+                      })}
+                    </ul>
+                  </div>
+                </article>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </>
