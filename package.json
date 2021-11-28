@@ -3,7 +3,7 @@
   "description": "Portfolio of Victor de la Fouchardiere",
   "version": "2.1.2",
   "engines": {
-    "node": "16.x",
+    "node": ">=14.x",
     "npm": "8.x"
   },
   "homepage": "https://www.victor-de-la-fouchardiere.fr",
