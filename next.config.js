@@ -4,6 +4,7 @@ module.exports = {
     GA_TRACKING_ID: 'UA-70097642-4'
   },
   swcMinify: false,
+  presets: ["next/babel"],
   eslint: {
     ignoreDuringBuilds: true,
   },
