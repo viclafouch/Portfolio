@@ -2,10 +2,6 @@
   "name": "portfolio",
   "description": "Portfolio of Victor de la Fouchardiere",
   "version": "2.1.2",
-  "engines": {
-    "node": ">=14.x",
-    "npm": "8.x"
-  },
   "homepage": "https://www.victor-de-la-fouchardiere.fr",
   "bugs": {
     "url": "https://github.com/viclafouch/Portfolio/issues",
@@ -19,6 +15,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "prebuild": "npm run lint",
     "export": "next export",
     "postbuild": "next-sitemap",
     "start": "next start",

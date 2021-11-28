@@ -3,6 +3,9 @@ module.exports = {
   env: {
     GA_TRACKING_ID: 'UA-70097642-4'
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   trailingSlash: true,
   sassOptions: {
     prependData: `
