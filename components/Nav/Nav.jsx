@@ -39,7 +39,7 @@ const ActiveLink = withRouter(({ router, children, ...props }) => {
   )
 })
 
-function Nav() {
+const Nav = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const listRef = useRef(null)
   const burgerRef = useRef(null)
@@ -53,7 +53,7 @@ function Nav() {
     }
   }, [router.events])
 
-  const handleEscap = useCallback(event => {
+  const handleEscap = useCallback((event) => {
     if (event.keyCode === 27) setIsMenuOpened(false)
   }, [])
 
@@ -81,13 +81,13 @@ function Nav() {
         <div>
           <div
             ref={burgerRef}
-            onKeyPress={() => setIsMenuOpened(isMenuOpened => !isMenuOpened)}
+            onKeyPress={() => setIsMenuOpened((isMenuOpened) => !isMenuOpened)}
             className={`${styles.nav_burger} ${
               isMenuOpened ? styles.menu_opened : ''
             }`}
             role="button"
             tabIndex="0"
-            onClick={() => setIsMenuOpened(isMenuOpened => !isMenuOpened)}
+            onClick={() => setIsMenuOpened((isMenuOpened) => !isMenuOpened)}
           >
             <span />
           </div>

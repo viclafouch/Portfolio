@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import Router from 'next/router'
+import GoogleFonts from 'next-google-fonts'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faCodepen,
@@ -13,8 +15,6 @@ import {
   faEnvelope,
   faLink
 } from '@fortawesome/free-solid-svg-icons'
-import Router from 'next/router'
-import GoogleFonts from 'next-google-fonts'
 import Nprogress from 'nprogress'
 
 import Layout from '../components/Layout/Layout'
@@ -50,7 +50,7 @@ const getScrolled = () => {
   return { navHeight, betweenTopScreenAndMain: top }
 }
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
     let scroll = false
     Router.events.on('routeChangeStart', () => {
@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }) {
       scroll = betweenTopScreenAndMain < navHeight + 20
     })
     Router.events.on('routeChangeError', () => Nprogress.done())
-    Router.events.on('routeChangeComplete', url => {
+    Router.events.on('routeChangeComplete', (url) => {
       gtag.pageview(url)
       Nprogress.done()
       const { navHeight, betweenTopScreenAndMain } = getScrolled()

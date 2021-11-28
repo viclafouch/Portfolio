@@ -4,7 +4,7 @@ import styles from 'scss/pages/blog.module.scss'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
 
-function Blog({ posts }) {
+const Blog = ({ posts }) => {
   return (
     <>
       <Meta
@@ -14,7 +14,7 @@ function Blog({ posts }) {
       <div className={styles.blog__page}>
         <Title title="Blog" subtitle="What I write" />
         <div className={styles.blog__list}>
-          {posts.map(post => (
+          {posts.map((post) => (
             <article
               key={post.id}
               className={styles.blog__list__item}
@@ -106,7 +106,7 @@ export async function getStaticProps() {
   const res = await fetch('https://dev.to/api/articles?username=viclafouch')
   const posts = await res.json()
   return {
-    props: { posts: posts.filter(post => !post.tags.includes('discuss')) },
+    props: { posts: posts.filter((post) => !post.tags.includes('discuss')) },
     // we will attempt to re-generate the page:
     // - when a request comes in
     // - at most once every second

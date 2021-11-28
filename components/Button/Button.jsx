@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './button.module.scss'
 
-function Button(props) {
+const Button = (props) => {
   const classnames = [styles.button]
   if (props.primary) classnames.push(styles.primary)
   if (props.inverse) classnames.push(styles.inverse)

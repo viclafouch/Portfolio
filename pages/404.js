@@ -1,6 +1,7 @@
+import React from 'react'
 import styles from 'scss/pages/404.module.scss'
 
-export default function Custom404() {
+const Custom404 = () => {
   return (
     <div className={styles.notFound__page}>
       <div className={styles.notFound__block}>
@@ -9,3 +10,5 @@ export default function Custom404() {
     </div>
   )
 }
+
+export default Custom404

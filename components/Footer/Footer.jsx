@@ -1,6 +1,6 @@
 import styles from './footer.module.scss'
 
-function Footer() {
+const Footer = () => {
   return (
     <footer
       className={`${styles.footer} flex-me flex-vertical flex-align flex-justify-center`}

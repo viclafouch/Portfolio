@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Button from '../Button/Button'
 import styles from './heading.module.scss'
 
-function Heading() {
+const Heading = () => {
   return (
     <div className={styles.subheading}>
       <div className="container">

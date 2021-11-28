@@ -148,7 +148,7 @@ const SkillTitle = ({ title }) => (
   </div>
 )
 
-function Skills() {
+const Skills = () => {
   return (
     <>
       <Meta

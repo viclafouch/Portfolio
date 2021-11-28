@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
-function Meta(props) {
+const Meta = (props) => {
   useEffect(() => {
     const handleChangeVisiblity = () => {
       if (document.hidden) {

@@ -58,7 +58,7 @@ const socialLinks = [
   }
 ]
 
-function Header() {
+const Header = () => {
   return (
     <header className={styles.header}>
       <div

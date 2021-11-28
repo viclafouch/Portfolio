@@ -42,7 +42,7 @@ const trainings = [
   }
 ]
 
-function Trainings() {
+const Trainings = () => {
   return (
     <>
       <Meta

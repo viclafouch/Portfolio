@@ -109,7 +109,7 @@ const productions = [
   }
 ]
 
-function Productions() {
+const Productions = () => {
   return (
     <>
       <Meta

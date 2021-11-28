@@ -3,7 +3,7 @@ import Header from '../Header/Header'
 import Heading from '../Heading/Heading'
 import Nav from '../Nav/Nav'
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <div className="page-layout">
       <a
