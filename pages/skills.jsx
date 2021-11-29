@@ -164,7 +164,7 @@ const Skills = () => {
           <ul className={`${styles.languages__list} ${styles.skills__list}`}>
             {languages.map((language, index) => {
               return (
-                <li key={index}>
+                <li key={String(index)}>
                   <article className={styles.skill__item}>
                     <header className={styles.skill__item__header}>
                       <img
@@ -192,7 +192,7 @@ const Skills = () => {
                     <footer className={styles.skill__item__footer}>
                       <ul className={styles.skill__item__footer__list}>
                         {language.items.map((item, i) => {
-                          return <li key={i}>{item}</li>
+                          return <li key={String(i)}>{item}</li>
                         })}
                       </ul>
                     </footer>
@@ -221,12 +221,12 @@ const Skills = () => {
                   duration = `${monthsDifference} month`
                 }
               } else if (duration === 1) {
-                duration = duration + ' year'
+                duration += ' year'
               } else {
-                duration = duration + ' years'
+                duration += ' years'
               }
               return (
-                <li key={index}>
+                <li key={String(index)}>
                   <div className={styles.skill__item}>
                     <div className={styles.skill__item__header}>
                       <img
@@ -258,7 +258,7 @@ const Skills = () => {
           <ul className={`${styles.technos__list} ${styles.skills__list}`}>
             {technos.map((techno, index) => {
               return (
-                <li key={index}>
+                <li key={String(index)}>
                   <div className={styles.skill__item}>
                     <div className={styles.skill__item__header}>
                       <img

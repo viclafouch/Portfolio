@@ -72,7 +72,9 @@ const Home = () => {
             since Nov. 2020.
             <br />
             <span className={styles.experience__description}>
-              {`• Develop new functionalities. • Participate in transversal technical projects within the Front guild. • Collaborate with other developers and product owners.`}
+              • Develop new functionalities. • Participate in transversal
+              technical projects within the Front guild. • Collaborate with
+              other developers and product owners.
             </span>
           </p>
         </div>

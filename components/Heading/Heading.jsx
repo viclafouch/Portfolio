@@ -28,6 +28,7 @@ const Heading = () => {
           href="/pdf/CV-Victor-de-la-Fouchardiere.pdf"
           icon="download"
           download
+          id="download-cv"
           primary
         >
           Download/Print CV

@@ -44,7 +44,7 @@ Nprogress.configure({
   parent: 'body'
 })
 
-const GA_TRACKING_ID = process.env.GA_TRACKING_ID
+const { GA_TRACKING_ID } = process.env
 const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 
 const getScrolled = () => {

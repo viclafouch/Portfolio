@@ -22,22 +22,22 @@ const links = [
   { text: 'Blog', href: '/blog' }
 ]
 
-const ActiveLink = withRouter(({ router, children, ...props }) => {
-  const child = Children.only(children)
+const ActiveLink = withRouter(
+  ({ router, children, activeClassName, ...props }) => {
+    const child = Children.only(children)
 
-  let className = child.props.className || ''
-  if (router.pathname === props.href && props.activeClassName) {
-    className = `${className} ${props.activeClassName}`
+    let className = child.props.className || ''
+    if (router.pathname === props.href && activeClassName) {
+      className = `${className} ${activeClassName}`
+    }
+
+    return (
+      <Link {...props} scroll={false}>
+        {React.cloneElement(child, { className })}
+      </Link>
+    )
   }
-
-  delete props.activeClassName
-
-  return (
-    <Link {...props} scroll={false}>
-      {React.cloneElement(child, { className })}
-    </Link>
-  )
-})
+)
 
 const Nav = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
@@ -84,8 +84,8 @@ const Nav = () => {
           <div
             ref={burgerRef}
             onKeyPress={() => {
-              return setIsMenuOpened((isMenuOpened) => {
-                return !isMenuOpened
+              return setIsMenuOpened((prevState) => {
+                return !prevState
               })
             }}
             className={`${styles.nav_burger} ${
@@ -94,8 +94,8 @@ const Nav = () => {
             role="button"
             tabIndex="0"
             onClick={() => {
-              return setIsMenuOpened((isMenuOpened) => {
-                return !isMenuOpened
+              return setIsMenuOpened((prevState) => {
+                return !prevState
               })
             }}
           >
@@ -109,7 +109,7 @@ const Nav = () => {
           >
             {links.map((link, index) => {
               return (
-                <li key={index} className={styles.nav_links_list_item}>
+                <li key={String(index)} className={styles.nav_links_list_item}>
                   <ActiveLink href={link.href} activeClassName={styles.active}>
                     <a className={styles.nav_links_list_item_href}>
                       {link.text}
@@ -128,6 +128,7 @@ const Nav = () => {
               onKeyPress={() => {
                 return setIsMenuOpened(false)
               }}
+              aria-label="overlay"
               role="button"
               tabIndex="0"
             />

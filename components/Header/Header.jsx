@@ -70,7 +70,7 @@ const Header = () => {
               <a
                 rel="noreferrer noopener"
                 href={link.href}
-                key={index}
+                key={String(index)}
                 target="_blank"
                 className={styles.header_links_item}
                 title={link.text.title}
@@ -94,7 +94,7 @@ const Header = () => {
               <a
                 rel="noreferrer noopener"
                 href={link.href}
-                key={index}
+                key={String(index)}
                 target="_blank"
                 className={styles.header_links_item}
                 title={link.title}

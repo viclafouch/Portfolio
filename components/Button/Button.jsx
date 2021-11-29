@@ -3,39 +3,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './button.module.scss'
 
 const Button = (props) => {
+  const {
+    primary,
+    inverse,
+    disabled,
+    children,
+    icon,
+    href,
+    target,
+    download,
+    ...rest
+  } = props
   const classnames = [styles.button]
-  if (props.primary) classnames.push(styles.primary)
-  if (props.inverse) classnames.push(styles.inverse)
+  if (primary) classnames.push(styles.primary)
+  if (inverse) classnames.push(styles.inverse)
 
-  const button = (
-    <button
-      disabled={props.disabled}
-      className={classnames.join(' ')}
-      tabIndex={props.href ? '-1' : '0'}
-    >
-      {props.icon && <FontAwesomeIcon icon={props.icon} />}
-      {props.children}
-    </button>
-  )
-
-  return props.href ? (
+  return href ? (
     <a
-      href={props.href}
-      rel={props.target ? 'noreferrer noopener' : ''}
-      target={props.target || ''}
-      download={props.download || 'false'}
+      href={href}
+      rel={target ? 'noreferrer noopener' : ''}
+      target={target || ''}
+      className={classnames.join(' ')}
+      download={download || false}
+      {...rest}
     >
-      <style jsx>{`
-        a {
-          display: block;
-          outline: none;
-          text-decoration: none;
-        }
-      `}</style>
-      {button}
+      {icon && <FontAwesomeIcon icon={icon} />}
+      {children}
     </a>
   ) : (
-    button
+    <button
+      disabled={disabled}
+      type="button"
+      className={classnames.join(' ')}
+      {...rest}
+    >
+      {icon && <FontAwesomeIcon icon={icon} />}
+      {children}
+    </button>
   )
 }
 

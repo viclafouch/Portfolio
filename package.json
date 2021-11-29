@@ -38,9 +38,11 @@
   "devDependencies": {
     "@babel/core": "7.16.0",
     "@babel/eslint-parser": "7.16.3",
-    "@viclafouch/eslint-config-viclafouch": "3.2.0",
+    "@viclafouch/eslint-config-viclafouch": "3.3.2",
     "eslint": "8.3.0",
+    "eslint-config-airbnb": "19.0.1",
     "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.3",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.27.1",

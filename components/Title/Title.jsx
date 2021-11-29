@@ -1,6 +1,7 @@
 import styles from './title.module.scss'
 
-const Title = ({ title, subtitle }) => {
+const Title = (props) => {
+  const { title, subtitle } = props
   return (
     <div className={styles.container}>
       <h1 id="title" className={styles.title}>

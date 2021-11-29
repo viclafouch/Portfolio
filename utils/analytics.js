@@ -1,4 +1,4 @@
-const GA_TRACKING_ID = process.env.GA_TRACKING_ID
+const { GA_TRACKING_ID } = process.env
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url) => {

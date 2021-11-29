@@ -54,7 +54,7 @@ const Trainings = () => {
         <ul className={styles.training__list}>
           {trainings.map((training, index) => {
             return (
-              <li key={index}>
+              <li key={String(index)}>
                 <article className={styles.training__article}>
                   <div className={styles.training__article__thumbnail__side}>
                     <img src={training.img} alt={training.title} />
@@ -79,7 +79,7 @@ const Trainings = () => {
                     </h4>
                     <ul className={styles.training__article__list__texts}>
                       {training.rows.map((text, i) => {
-                        return <li key={i}>- {text}.</li>
+                        return <li key={String(i)}>- {text}.</li>
                       })}
                     </ul>
                   </div>

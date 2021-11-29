@@ -48,11 +48,7 @@ export default class MyDocument extends Document {
           />
           <meta property="fb:app_id" content="124333614845929" />
           <link rel="icon" type="image/png" href="/favicon.png" />
-          <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="/favicon-16x16.png"
-          />
+          <link rel="icon" type="image/x-icon" href="/favicon-16x16.png" />
           <link rel="apple-touch-icon" href="/icon-iphone.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/icon-ipad.png" />
           <link

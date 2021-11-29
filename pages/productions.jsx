@@ -121,7 +121,7 @@ const Productions = () => {
         <ul className={styles.productions__list}>
           {productions.map((production, index) => {
             return (
-              <li key={index}>
+              <li key={String(index)}>
                 <article className={styles.production__article}>
                   <header className={styles.production__article__header}>
                     <div

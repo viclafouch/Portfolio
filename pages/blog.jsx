@@ -51,7 +51,7 @@ const Blog = ({ posts }) => {
                     <div className={styles.blog__article__bottom__metas}>
                       <ul className={styles.blog__list__tags}>
                         {post.tag_list.map((tag, index) => {
-                          return <li key={index}>#{tag}</li>
+                          return <li key={String(index)}>#{tag}</li>
                         })}
                       </ul>
                       <div className={styles.blog__user__meta}>
