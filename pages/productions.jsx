@@ -12,16 +12,22 @@ const FULLSTACK = 'FullStack'
 
 const productions = [
   {
+    title: 'Mui Tel Input',
+    img: `${productionsPath}/mui-tel-input.png`,
+    type: FRONTEND,
+    href: 'https://www.npmjs.com/package/mui-tel-input'
+  },
+  {
     title: 'Frichti',
     img: `${productionsPath}/frichti.jpg`,
     type: FRONTEND,
     href: 'https://www.frichti.co'
   },
   {
-    title: 'LinkedIn Formatter',
-    img: `${productionsPath}/linkedin-formatter.png`,
+    title: 'Beautify Post',
+    img: `${productionsPath}/beautify-post.png`,
     type: FRONTEND,
-    href: 'https://www.linkedin-formatter.app'
+    href: 'https://www.beautify-post.app'
   },
   {
     title: 'Meme Studio',
@@ -119,9 +125,9 @@ const Productions = () => {
       <section className={styles.productions__page}>
         <Title title="Portfolio" subtitle="What I create" />
         <ul className={styles.productions__list}>
-          {productions.map((production, index) => {
+          {productions.map((production) => {
             return (
-              <li key={String(index)}>
+              <li key={production.title}>
                 <article className={styles.production__article}>
                   <header className={styles.production__article__header}>
                     <div
