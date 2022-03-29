@@ -52,9 +52,9 @@ const Trainings = () => {
       <div className={styles.training__page}>
         <Title title="Trainings" subtitle="What I learned" />
         <ul className={styles.training__list}>
-          {trainings.map((training, index) => {
+          {trainings.map((training) => {
             return (
-              <li key={String(index)}>
+              <li key={training.title}>
                 <article className={styles.training__article}>
                   <div className={styles.training__article__thumbnail__side}>
                     <img src={training.img} alt={training.title} />
@@ -78,8 +78,8 @@ const Trainings = () => {
                       {training.title}
                     </h4>
                     <ul className={styles.training__article__list__texts}>
-                      {training.rows.map((text, i) => {
-                        return <li key={String(i)}>- {text}.</li>
+                      {training.rows.map((text) => {
+                        return <li key={text}>- {text}.</li>
                       })}
                     </ul>
                   </div>

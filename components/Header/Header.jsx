@@ -65,12 +65,12 @@ const Header = () => {
         className={`${styles.header_links} flex-me container flex-justify-between`}
       >
         <div>
-          {contactLinks.map((link, index) => {
+          {contactLinks.map((link) => {
             return (
               <a
                 rel="noreferrer noopener"
                 href={link.href}
-                key={String(index)}
+                key={link.text.title}
                 target="_blank"
                 className={styles.header_links_item}
                 title={link.text.title}
@@ -89,12 +89,12 @@ const Header = () => {
           })}
         </div>
         <div>
-          {socialLinks.map((link, index) => {
+          {socialLinks.map((link) => {
             return (
               <a
                 rel="noreferrer noopener"
                 href={link.href}
-                key={String(index)}
+                key={link.title}
                 target="_blank"
                 className={styles.header_links_item}
                 title={link.title}

@@ -162,9 +162,9 @@ const Skills = () => {
         <div className={styles.skills__languages}>
           <SkillTitle title="Languages" />
           <ul className={`${styles.languages__list} ${styles.skills__list}`}>
-            {languages.map((language, index) => {
+            {languages.map((language) => {
               return (
-                <li key={String(index)}>
+                <li key={language.title}>
                   <article className={styles.skill__item}>
                     <header className={styles.skill__item__header}>
                       <img
@@ -191,8 +191,8 @@ const Skills = () => {
                     </header>
                     <footer className={styles.skill__item__footer}>
                       <ul className={styles.skill__item__footer__list}>
-                        {language.items.map((item, i) => {
-                          return <li key={String(i)}>{item}</li>
+                        {language.items.map((item) => {
+                          return <li key={item}>{item}</li>
                         })}
                       </ul>
                     </footer>
@@ -205,7 +205,7 @@ const Skills = () => {
         <div className={styles.skills__frameworks}>
           <SkillTitle title="Frameworks" />
           <ul className={`${styles.frameworks__list} ${styles.skills__list}`}>
-            {frameworks.map((framework, index) => {
+            {frameworks.map((framework) => {
               let duration = differenceInYears(
                 framework.duration[1],
                 framework.duration[0]
@@ -226,7 +226,7 @@ const Skills = () => {
                 duration += ' years'
               }
               return (
-                <li key={String(index)}>
+                <li key={framework.title}>
                   <div className={styles.skill__item}>
                     <div className={styles.skill__item__header}>
                       <img
@@ -256,9 +256,9 @@ const Skills = () => {
         <div className={styles.skills__technos}>
           <SkillTitle title="Technologies" />
           <ul className={`${styles.technos__list} ${styles.skills__list}`}>
-            {technos.map((techno, index) => {
+            {technos.map((techno) => {
               return (
-                <li key={String(index)}>
+                <li key={techno.title}>
                   <div className={styles.skill__item}>
                     <div className={styles.skill__item__header}>
                       <img

@@ -50,8 +50,8 @@ const Blog = ({ posts }) => {
                     </div>
                     <div className={styles.blog__article__bottom__metas}>
                       <ul className={styles.blog__list__tags}>
-                        {post.tag_list.map((tag, index) => {
-                          return <li key={String(index)}>#{tag}</li>
+                        {post.tag_list.map((tag) => {
+                          return <li key={tag}>#{tag}</li>
                         })}
                       </ul>
                       <div className={styles.blog__user__meta}>
@@ -105,8 +105,10 @@ const Blog = ({ posts }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://dev.to/api/articles?username=viclafouch')
-  const posts = await res.json()
+  const response = await fetch(
+    'https://dev.to/api/articles?username=viclafouch'
+  )
+  const posts = await response.json()
   return {
     props: {
       posts: posts.filter((post) => {
