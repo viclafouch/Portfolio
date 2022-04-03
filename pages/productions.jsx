@@ -51,7 +51,7 @@ const productions = [
     title: 'Seald Dashboard',
     img: `${productionsPath}/dashboard-seald.jpg`,
     type: FRONTEND,
-    href: 'https://dashboard.seald.io/dashboard/v2/#'
+    href: 'https://dashboard.seald.io'
   },
   {
     title: 'Pokemon battle',
@@ -123,7 +123,7 @@ const Productions = () => {
         description="Latest productions, realizations and personal projects of Victor de la Fouchardiere, front-end developer at Frichti."
       />
       <section className={styles.productions__page}>
-        <Title title="Portfolio" subtitle="What I create" />
+        <Title title="Portfolio" subtitle="What I work on" />
         <ul className={styles.productions__list}>
           {productions.map((production) => {
             return (
