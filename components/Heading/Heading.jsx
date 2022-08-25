@@ -33,6 +33,14 @@ const Heading = () => {
         >
           Download/Print CV
         </Button>
+        <a
+          className={`${styles.libutton}`}
+          href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=victordelafouchardiere"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Follow on LinkedIn
+        </a>
       </div>
     </div>
   )
