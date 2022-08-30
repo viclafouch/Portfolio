@@ -12,10 +12,16 @@ const FULLSTACK = 'FullStack'
 
 const productions = [
   {
-    title: 'Mui Tel Input',
+    title: 'MUI Color Input',
+    img: `${productionsPath}/mui-color-input.png`,
+    type: FRONTEND,
+    href: 'https://viclafouch.github.io/mui-color-input'
+  },
+  {
+    title: 'MUI Tel Input',
     img: `${productionsPath}/mui-tel-input.png`,
     type: FRONTEND,
-    href: 'https://www.npmjs.com/package/mui-tel-input'
+    href: 'https://viclafouch.github.io/mui-tel-input'
   },
   {
     title: 'Frichti',
