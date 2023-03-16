@@ -1,8 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from 'scss/pages/productions.module.scss'
-
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
+import styles from 'scss/pages/productions.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const productionsPath = '/images/productions'
 

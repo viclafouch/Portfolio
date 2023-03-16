@@ -1,8 +1,7 @@
-import { format, formatDistance } from 'date-fns'
-import styles from 'scss/pages/blog.module.scss'
-
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
+import { format, formatDistance } from 'date-fns'
+import styles from 'scss/pages/blog.module.scss'
 
 const Blog = ({ posts }) => {
   return (

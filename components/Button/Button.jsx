@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './button.module.scss'
 
 const Button = (props) => {
@@ -27,7 +26,7 @@ const Button = (props) => {
       download={download || false}
       {...rest}
     >
-      {icon && <FontAwesomeIcon icon={icon} />}
+      {icon ? <FontAwesomeIcon icon={icon} /> : null}
       {children}
     </a>
   ) : (
@@ -37,7 +36,7 @@ const Button = (props) => {
       className={classnames.join(' ')}
       {...rest}
     >
-      {icon && <FontAwesomeIcon icon={icon} />}
+      {icon ? <FontAwesomeIcon icon={icon} /> : null}
       {children}
     </button>
   )

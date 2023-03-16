@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styles from './header.module.scss'
 
 const contactLinks = [

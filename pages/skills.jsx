@@ -1,8 +1,7 @@
-import { differenceInMonths, differenceInYears } from 'date-fns'
-import styles from 'scss/pages/skills.module.scss'
-
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
+import { differenceInMonths, differenceInYears } from 'date-fns'
+import styles from 'scss/pages/skills.module.scss'
 
 const languagesImgPath = '/images/languages'
 const frameworksImgPath = '/images/frameworks'

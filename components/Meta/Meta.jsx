@@ -20,6 +20,7 @@ const Meta = (props) => {
 
   return (
     <Head>
+      {/* eslint-disable-next-line no-restricted-syntax */}
       <title>{title || '404 - Not found'}</title>
       <meta
         name="viewport"

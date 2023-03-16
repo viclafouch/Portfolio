@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Router from 'next/router'
 import Script from 'next/script'
+import Nprogress from 'nprogress'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faCodepen,
@@ -15,11 +16,8 @@ import {
   faEnvelope,
   faLink
 } from '@fortawesome/free-solid-svg-icons'
-import Nprogress from 'nprogress'
-
 import Layout from '../components/Layout/Layout'
 import * as gtag from '../utils/analytics'
-
 import 'scss/app.scss'
 import 'nprogress/nprogress.css'
 

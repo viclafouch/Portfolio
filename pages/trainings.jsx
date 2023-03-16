@@ -1,9 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from 'scss/pages/training.module.scss'
-
 import Button from 'components/Button/Button'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
+import styles from 'scss/pages/training.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const pathTraining = '/images/training'
 

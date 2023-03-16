@@ -8,7 +8,6 @@ import React, {
 } from 'react'
 import Link from 'next/link'
 import { useRouter, withRouter } from 'next/router'
-
 import styles from './nav.module.scss'
 
 const useIsomorphicLayoutEffect =
@@ -119,7 +118,7 @@ const Nav = () => {
               )
             })}
           </ul>
-          {isMenuOpened && (
+          {isMenuOpened ? (
             <div
               className={styles.nav_overlay}
               onClick={() => {
@@ -132,7 +131,7 @@ const Nav = () => {
               role="button"
               tabIndex="0"
             />
-          )}
+          ) : null}
         </div>
       </div>
     </nav>

@@ -1,7 +1,6 @@
-import styles from 'scss/pages/index.module.scss'
-
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
+import styles from 'scss/pages/index.module.scss'
 
 const Home = () => {
   return (
