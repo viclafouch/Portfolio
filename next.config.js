@@ -3,6 +3,7 @@ module.exports = {
     GA_TRACKING_ID: 'UA-70097642-4'
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
