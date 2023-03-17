@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import Router from 'next/router'
 import Script from 'next/script'
 import Nprogress from 'nprogress'
-import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faCodepen,
   faDev,
@@ -20,6 +19,9 @@ import Layout from '../components/Layout/Layout'
 import * as gtag from '../utils/analytics'
 import 'scss/app.scss'
 import 'nprogress/nprogress.css'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+const { library } = require('@fortawesome/fontawesome-svg-core')
 
 library.add(
   faLinkedin,

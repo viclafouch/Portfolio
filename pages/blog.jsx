@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
 import { format, formatDistance } from 'date-fns'
@@ -23,10 +24,13 @@ const Blog = ({ posts }) => {
                 <div role="presentation">
                   <div className={styles.blog__article__top}>
                     <a href={post.url} target="_blank" rel="noreferrer">
-                      <img
+                      <Image
                         src="/images/devto.webp"
                         className={styles.source__url}
                         alt="Dev.to"
+                        width={30}
+                        height={30}
+                        loading="lazy"
                       />
                       <div
                         className={styles.blog__article__cover}
@@ -59,10 +63,12 @@ const Blog = ({ posts }) => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <img
+                          <Image
                             className={styles.blog__author__pic}
                             src={post.user.profile_image_90}
                             alt={post.user.name}
+                            height={38}
+                            width={38}
                           />
                         </a>
                         <div className={styles.meta__texts}>

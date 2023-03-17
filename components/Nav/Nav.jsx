@@ -109,10 +109,12 @@ const Nav = () => {
             {links.map((link) => {
               return (
                 <li key={link.text} className={styles.nav_links_list_item}>
-                  <ActiveLink href={link.href} activeClassName={styles.active}>
-                    <a className={styles.nav_links_list_item_href}>
-                      {link.text}
-                    </a>
+                  <ActiveLink
+                    href={link.href}
+                    className={styles.nav_links_list_item_href}
+                    activeClassName={styles.active}
+                  >
+                    <span>{link.text}</span>
                   </ActiveLink>
                 </li>
               )

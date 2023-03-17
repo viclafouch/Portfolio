@@ -56,7 +56,11 @@ const Trainings = () => {
               <li key={training.title}>
                 <article className={styles.training__article}>
                   <div className={styles.training__article__thumbnail__side}>
-                    <img src={training.img} alt={training.title} />
+                    <img
+                      src={training.img}
+                      alt={training.title}
+                      loading="lazy"
+                    />
                   </div>
                   <div className={styles.training__article__description__side}>
                     <div className={styles.training__article__top}>

@@ -150,6 +150,7 @@ const Productions = () => {
                     <img
                       src={production.img}
                       alt={production.title}
+                      loading="lazy"
                       className={styles.production__article__header__cover}
                     />
                   </header>

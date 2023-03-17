@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
 import styles from 'scss/pages/index.module.scss'
@@ -11,22 +12,14 @@ const Home = () => {
       />
       <div className={styles.home__page}>
         <div className={styles.home__block}>
-          <picture>
-            <source
-              srcSet="/images/victordelafouchardiere.webp"
-              type="image/webp"
-            />
-            <source
-              srcSet="/images/victordelafouchardiere.jpg"
-              type="image/png"
-            />
-            <img
-              src="/images/examples/meme-2.png"
-              title="Victor de la Fouchardiere"
-              alt="Victor de la Fouchardiere"
-              className={styles.profile__picture}
-            />
-          </picture>
+          <Image
+            width={100}
+            height={100}
+            src="/images/victordelafouchardiere.webp"
+            title="Victor de la Fouchardiere"
+            alt="Victor de la Fouchardiere"
+            className={styles.profile__picture}
+          />
           <Title
             title="Victor de la Fouchardiere"
             subtitle="🚀 Full-stack Developer JS at Frichti 🍋"
@@ -51,9 +44,9 @@ const Home = () => {
             className={styles.experience_logo}
             rel="noreferrer noopener"
           >
-            <img
-              width="100"
-              height="100"
+            <Image
+              width={100}
+              height={100}
               src="/images/companies/frichti.png"
               alt="Frichti"
             />

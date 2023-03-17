@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import styles from './heading.module.scss'
@@ -7,13 +8,13 @@ const Heading = () => {
     <div className={styles.subheading}>
       <div className="container">
         <Link href="/">
-          <a>
-            <img
-              className={styles.subheading_logo}
-              src="/images/logo.png"
-              alt="Victor de la Fouchardiere Logo"
-            />
-          </a>
+          <Image
+            className={styles.subheading_logo}
+            src="/images/logo.png"
+            width={100}
+            height={100}
+            alt="Victor de la Fouchardiere Logo"
+          />
         </Link>
         <span className={`${styles.subheading_title}`}>
           Need a web developer?

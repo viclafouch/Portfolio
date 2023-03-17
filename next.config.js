@@ -1,10 +1,15 @@
 module.exports = {
-  plugins: ['postcss-plugin'],
   env: {
     GA_TRACKING_ID: 'UA-70097642-4'
   },
-  eslint: {
-    ignoreDuringBuilds: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: ''
+      },
+    ],
   },
   trailingSlash: true,
   sassOptions: {
