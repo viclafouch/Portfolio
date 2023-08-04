@@ -12,7 +12,9 @@ const Meta = (props) => {
         document.title = title
       }
     }
+
     document.addEventListener('visibilitychange', handleChangeVisiblity)
+
     return () => {
       document.removeEventListener('visibilitychange', handleChangeVisiblity)
     }

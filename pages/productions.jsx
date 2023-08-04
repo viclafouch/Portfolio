@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
 import styles from 'scss/pages/productions.module.scss'
@@ -10,6 +11,30 @@ const BACKEND = 'BackEnd'
 const FULLSTACK = 'FullStack'
 
 const productions = [
+  {
+    title: 'Frichti at Work',
+    img: `${productionsPath}/frichti-at-work.png`,
+    type: FULLSTACK,
+    href: 'https://atwork.frichti.co'
+  },
+  {
+    title: 'MUI Chips Input',
+    img: `${productionsPath}/mui-chips-input.png`,
+    type: FRONTEND,
+    href: 'https://viclafouch.github.io/mui-chips-input'
+  },
+  {
+    title: 'MUI File Input',
+    img: `${productionsPath}/mui-file-input.png`,
+    type: FRONTEND,
+    href: 'https://viclafouch.github.io/mui-file-input'
+  },
+  {
+    title: 'MUI OTP Input',
+    img: `${productionsPath}/mui-otp-input.png`,
+    type: FRONTEND,
+    href: 'https://viclafouch.github.io/mui-otp-input'
+  },
   {
     title: 'MUI Color Input',
     img: `${productionsPath}/mui-color-input.png`,
@@ -44,19 +69,13 @@ const productions = [
     title: 'Minesweeper',
     img: `${productionsPath}/minesweeper.jpg`,
     type: FRONTEND,
-    href: 'https://github.com/viclafouch/Minesweeper'
+    href: 'https://admiring-davinci-96f9e2.netlify.app'
   },
   {
     title: 'Fetch Crawler',
     img: `${productionsPath}/fetch-crawler.jpg`,
     type: BACKEND,
     href: 'https://github.com/viclafouch/fetch-crawler'
-  },
-  {
-    title: 'Seald Dashboard',
-    img: `${productionsPath}/dashboard-seald.jpg`,
-    type: FRONTEND,
-    href: 'https://dashboard.seald.io'
   },
   {
     title: 'Pokemon battle',
@@ -71,52 +90,16 @@ const productions = [
     href: 'https://chrome.google.com/webstore/detail/pe-center/hanknpkmjbfhcalmipokkfplndkohgdm'
   },
   {
-    title: 'PE Crawler',
-    img: `${productionsPath}/google-support-crawler.jpg`,
-    type: BACKEND,
-    href: 'https://github.com/viclafouch/PE-Crawler'
-  },
-  {
     title: 'Seald.io',
     img: `${productionsPath}/seald.io.jpg`,
     type: FRONTEND,
     href: 'https://www.seald.io/'
   },
   {
-    title: 'uScroll',
-    img: `${productionsPath}/uscroll.jpg`,
-    type: FRONTEND,
-    href: 'https://viclafouch.github.io/uscroll/demo.html'
-  },
-  {
     title: 'TutoBwim.fr',
     img: `${productionsPath}/tutobwim.fr.jpg`,
     type: FULLSTACK,
     href: 'https://www.tutobwim.fr/'
-  },
-  {
-    title: 'Bubblesee',
-    img: `${productionsPath}/bubblesee.jpg`,
-    type: FRONTEND,
-    href: 'https://viclafouch.github.io/bubblesee/demo.html'
-  },
-  {
-    title: 'WP Informations',
-    img: `${productionsPath}/wpinformations.jpg`,
-    type: BACKEND,
-    href: 'https://viclafouch.github.io/WP_Informations/'
-  },
-  {
-    title: 'React Template Form',
-    img: `${productionsPath}/react-template-form.jpg`,
-    type: FRONTEND,
-    href: 'https://viclafouch.github.io/react-template-form/'
-  },
-  {
-    title: 'Github Profile',
-    img: `${productionsPath}/github-profil.jpg`,
-    type: FRONTEND,
-    href: 'https://viclafouch.github.io/github-profile/'
   }
 ]
 
@@ -147,10 +130,11 @@ const Productions = () => {
                         <FontAwesomeIcon icon="link" />
                       </a>
                     </div>
-                    <img
+                    <Image
                       src={production.img}
                       alt={production.title}
                       loading="lazy"
+                      fill
                       className={styles.production__article__header__cover}
                     />
                   </header>

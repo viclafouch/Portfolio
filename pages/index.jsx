@@ -16,6 +16,7 @@ const Home = () => {
             width={100}
             height={100}
             src="/images/victordelafouchardiere.webp"
+            priority
             title="Victor de la Fouchardiere"
             alt="Victor de la Fouchardiere"
             className={styles.profile__picture}
@@ -24,13 +25,6 @@ const Home = () => {
             title="Victor de la Fouchardiere"
             subtitle="🚀 Full-stack Developer JS at Frichti 🍋"
           />
-        </div>
-        <hr className="striped" />
-        <div className={styles.home__block}>
-          <p className={styles.profile__resume}>
-            {`As a student between 2015 and 2018 at the Ecole Européenne des Métiers de L'Internet and today a web developer, I have a
-            true vocation for web programming while having acquired a reinforced knowledge in marketing and design`}
-          </p>
         </div>
         <hr className="striped" />
         <div
@@ -52,7 +46,7 @@ const Home = () => {
             />
           </a>
           <p>
-            Front-End developer at{' '}
+            <b>Senior Front-End developer</b> at{' '}
             <a
               target="_blank"
               href="https://www.frichti.co"

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
 import { differenceInMonths, differenceInYears } from 'date-fns'
@@ -31,12 +32,6 @@ const languages = [
     title: 'TS',
     duration: [new Date(2019, 1, 1), new Date()],
     items: ['ES7/ES8', 'TSX', 'Casting']
-  },
-  {
-    img: `${languagesImgPath}/php-logo.png`,
-    title: 'PHP',
-    duration: [new Date(2016, 1, 1), new Date()],
-    items: ['Objet', 'MVC', 'MySql']
   }
 ]
 
@@ -80,21 +75,6 @@ const frameworks = [
     img: `${frameworksImgPath}/material-ui.png`,
     title: 'Material UI',
     duration: [new Date(2018, 10, 1), new Date()]
-  },
-  {
-    img: `${frameworksImgPath}/jquery-logo.png`,
-    title: 'Jquery',
-    duration: [new Date(2015, 1, 1), new Date(2017, 1, 1)]
-  },
-  {
-    img: `${frameworksImgPath}/bootstrap-logo.png`,
-    title: 'Bootstrap',
-    duration: [new Date(2016, 1, 1), new Date(2017, 1, 1)]
-  },
-  {
-    img: `${frameworksImgPath}/materialize-logo.png`,
-    title: 'Materialize',
-    duration: [new Date(2017, 1, 1), new Date(2017, 9, 1)]
   }
 ]
 
@@ -166,14 +146,13 @@ const Skills = () => {
                 <li key={language.title}>
                   <article className={styles.skill__item}>
                     <header className={styles.skill__item__header}>
-                      <img
+                      <Image
                         className={styles.skills__img}
                         src={language.img}
                         alt={language.title}
                         title={language.title}
-                        loading="lazy"
-                        width="40"
-                        height="40"
+                        width={40}
+                        height={40}
                       />
                       <h3 className={styles.skill__item__header__title}>
                         {language.title}
@@ -209,11 +188,13 @@ const Skills = () => {
                 framework.duration[1],
                 framework.duration[0]
               )
+
               if (duration === 0) {
                 const monthsDifference = differenceInMonths(
                   framework.duration[1],
                   framework.duration[0]
                 )
+
                 if (monthsDifference > 1) {
                   duration = `${monthsDifference} months`
                 } else {
@@ -224,18 +205,18 @@ const Skills = () => {
               } else {
                 duration += ' years'
               }
+
               return (
                 <li key={framework.title}>
                   <div className={styles.skill__item}>
                     <div className={styles.skill__item__header}>
-                      <img
+                      <Image
                         className={styles.skills__img}
                         src={framework.img}
                         alt={framework.title}
                         title={framework.title}
-                        loading="lazy"
-                        width="40"
-                        height="40"
+                        width={40}
+                        height={40}
                       />
                       <h3 className={styles.skill__item__header__title}>
                         {framework.title}
@@ -260,14 +241,13 @@ const Skills = () => {
                 <li key={techno.title}>
                   <div className={styles.skill__item}>
                     <div className={styles.skill__item__header}>
-                      <img
+                      <Image
                         className={styles.skills__img}
                         src={techno.img}
                         alt={techno.title}
                         title={techno.title}
-                        loading="lazy"
-                        width="40"
-                        height="40"
+                        width={40}
+                        height={40}
                       />
                       <h3 className={styles.skill__item__header__title}>
                         {techno.title}

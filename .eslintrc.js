@@ -1,18 +1,16 @@
+const {
+  sortImports
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+} = require('@viclafouch/eslint-config-viclafouch/rules/sort-imports')
+
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
-  root: true,
   extends: [
-    "@viclafouch/eslint-config-viclafouch"
+    "@viclafouch/eslint-config-viclafouch",
+    "@viclafouch/eslint-config-viclafouch/next",
+    "@viclafouch/eslint-config-viclafouch/prettier",
   ],
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    'import/no-unresolved': 0,
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-          components: ['Link'],
-          specialLink: ['hrefLeft', 'hrefRight'],
-          aspects: ['invalidHref', 'preferButton']
-      }
-    ]
-  }
+  overrides: [sortImports(__dirname)]
 }

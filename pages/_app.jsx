@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Router from 'next/router'
 import Script from 'next/script'
 import Nprogress from 'nprogress'
@@ -50,6 +50,7 @@ const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 const getScrolled = () => {
   const navHeight = document.getElementById('navbar').offsetHeight
   const { top } = document.getElementById('main-app').getBoundingClientRect()
+
   return { navHeight, betweenTopScreenAndMain: top }
 }
 

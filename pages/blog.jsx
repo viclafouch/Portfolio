@@ -114,6 +114,7 @@ export async function getStaticProps() {
     'https://dev.to/api/articles?username=viclafouch'
   )
   const posts = await response.json()
+
   return {
     props: {
       posts: posts.filter((post) => {

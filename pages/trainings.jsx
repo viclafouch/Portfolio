@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Button from 'components/Button/Button'
 import Meta from 'components/Meta/Meta'
 import Title from 'components/Title/Title'
@@ -56,10 +57,11 @@ const Trainings = () => {
               <li key={training.title}>
                 <article className={styles.training__article}>
                   <div className={styles.training__article__thumbnail__side}>
-                    <img
+                    <Image
                       src={training.img}
                       alt={training.title}
-                      loading="lazy"
+                      width={350}
+                      height={200}
                     />
                   </div>
                   <div className={styles.training__article__description__side}>

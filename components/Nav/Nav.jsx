@@ -1,13 +1,14 @@
-import React, {
-  Children,
+import {
   useCallback,
   useEffect,
   useLayoutEffect,
   useRef,
   useState
 } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter, withRouter } from 'next/router'
+import clsx from 'clsx'
 import styles from './nav.module.scss'
 
 const useIsomorphicLayoutEffect =
@@ -22,17 +23,17 @@ const links = [
 ]
 
 const ActiveLink = withRouter(
-  ({ router, children, activeClassName, ...props }) => {
-    const child = Children.only(children)
-
-    let className = child.props.className || ''
-    if (router.pathname === props.href && activeClassName) {
-      className = `${className} ${activeClassName}`
-    }
-
+  ({ router, children, className, activeClassName, ...props }) => {
     return (
-      <Link {...props} scroll={false}>
-        {React.cloneElement(child, { className })}
+      <Link
+        {...props}
+        scroll={false}
+        className={clsx({
+          [className]: true,
+          [activeClassName]: router.pathname === props.href
+        })}
+      >
+        {children}
       </Link>
     )
   }
@@ -48,7 +49,9 @@ const Nav = () => {
     const handleRouteChange = () => {
       return setIsMenuOpened(false)
     }
+
     router.events.on('routeChangeStart', handleRouteChange)
+
     return () => {
       router.events.off('routeChangeStart', handleRouteChange)
     }
@@ -68,6 +71,7 @@ const Nav = () => {
     } else {
       burgerRef.current.style.transform = 'translateX(0px)'
     }
+
     return () => {
       document.removeEventListener('keydown', handleEscap, false)
     }
@@ -76,9 +80,15 @@ const Nav = () => {
   return (
     <nav className={styles.navigation} id="navbar">
       <div className="container flex-me flex-align">
-        <a href="/">
-          <img src="/images/logo.png" alt="Logo Victor de la Fouchardière" />
-        </a>
+        <Link href="/">
+          <Image
+            width={50}
+            height={70}
+            priority
+            src="/images/logo.png"
+            alt="Logo Victor de la Fouchardière"
+          />
+        </Link>
         <div>
           <div
             ref={burgerRef}

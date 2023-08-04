@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from 'scss/pages/404.module.scss'
 
 const Custom404 = () => {
