@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Meta
         title="Portfolio of Victor de la Fouchardiere"
-        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Frichti, bachelor degree. Fan of Javascript. Discover my portfolio!"
+        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Frichti. Fan of Javascript. Discover my portfolio!"
       />
       <div className={styles.home__page}>
         <div className={styles.home__block}>
@@ -23,7 +23,7 @@ const Home = () => {
           />
           <Title
             title="Victor de la Fouchardiere"
-            subtitle="🚀 Full-stack Developer JS at Frichti 🍋"
+            subtitle="🚀 Front-end Developer JS at Frichti 🍋"
           />
         </div>
         <hr className="striped" />
