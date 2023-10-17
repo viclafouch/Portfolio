@@ -44,7 +44,8 @@ Nprogress.configure({
   parent: 'body'
 })
 
-const { GA_TRACKING_ID } = process.env
+// eslint-disable-next-line prefer-destructuring
+const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 
 const getScrolled = () => {
