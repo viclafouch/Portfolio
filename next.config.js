@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    GA_TRACKING_ID: 'UA-70097642-4'
+    GA_TRACKING_ID: 'G-YC3QF9CJNN'
   },
   images: {
     remotePatterns: [
