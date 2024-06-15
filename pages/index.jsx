@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Meta
         title="Portfolio of Victor de la Fouchardiere"
-        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Frichti. Fan of Javascript. Discover my portfolio!"
+        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Zoī. Fan of Javascript. Discover my portfolio!"
       />
       <div className={styles.home__page}>
         <div className={styles.home__block}>
@@ -23,7 +23,7 @@ const Home = () => {
           />
           <Title
             title="Victor de la Fouchardiere"
-            subtitle="🚀 Front-end Developer JS at Frichti 🍋"
+            subtitle="🚀 Front-end Developer JS at Zoī"
           />
         </div>
         <hr className="striped" />
@@ -33,29 +33,29 @@ const Home = () => {
           <h4 className={styles.experience__title}>Current Job</h4>
           <a
             target="_blank"
-            href="https://www.frichti.co"
-            title="frichti"
+            href="https://www.zoi.com"
+            title="zoi"
             className={styles.experience_logo}
             rel="noreferrer noopener"
           >
             <Image
-              width={100}
-              height={100}
-              src="/images/companies/frichti.png"
-              alt="Frichti"
+              width={60}
+              height={60}
+              src="/images/companies/zoi.jpeg"
+              alt="Zoi"
             />
           </a>
           <p>
             <b>Senior Front-End developer</b> at{' '}
             <a
               target="_blank"
-              href="https://www.frichti.co"
-              title="frichti"
+              href="https://www.zoi.com"
+              title="zoi"
               rel="noreferrer noopener"
             >
-              <b>Frichti</b>
+              <b>Zoī</b>
             </a>{' '}
-            since Nov. 2020.
+            since May. 2024.
             <br />
             <span className={styles.experience__description}>
               • Develop new functionalities. • Participate in transversal
