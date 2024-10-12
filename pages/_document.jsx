@@ -42,10 +42,6 @@ export default class MyDocument extends Document {
             property="og:site_name"
             content="Victor de la Fouchardière | Portfolio"
           />
-          <meta
-            property="og:image"
-            content="https://www.victor-de-la-fouchardiere.fr/victordelafouchardiere.png"
-          />
           <meta property="fb:app_id" content="124333614845929" />
           <link rel="icon" type="image/png" href="/favicon.png" />
           <link rel="icon" type="image/x-icon" href="/favicon-16x16.png" />

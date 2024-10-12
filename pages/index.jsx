@@ -15,7 +15,7 @@ const Home = () => {
           <Image
             width={100}
             height={100}
-            src="/images/victordelafouchardiere.webp"
+            src="/images/victordelafouchardiere.jpg"
             priority
             title="Victor de la Fouchardiere"
             alt="Victor de la Fouchardiere"

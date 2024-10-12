@@ -12,6 +12,12 @@ const FULLSTACK = 'FullStack'
 
 const productions = [
   {
+    title: 'Zoī',
+    img: `${productionsPath}/zoi.png`,
+    type: FRONTEND,
+    href: 'https://zoi.com'
+  },
+  {
     title: 'Frichti at Work',
     img: `${productionsPath}/frichti-at-work.png`,
     type: FULLSTACK,
