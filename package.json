@@ -20,8 +20,8 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "deploy": "vercel --prod",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -30,8 +30,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "clsx": "^2.1.1",
-    "date-fns": "^2.30.0",
-    "next": "^13.5.4",
+    "date-fns": "^4.1.0",
+    "next": "^14.2.15",
     "nprogress": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
