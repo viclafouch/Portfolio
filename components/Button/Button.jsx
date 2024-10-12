@@ -14,8 +14,14 @@ const Button = (props) => {
     ...rest
   } = props
   const classnames = [styles.button]
-  if (primary) classnames.push(styles.primary)
-  if (inverse) classnames.push(styles.inverse)
+
+  if (primary) {
+    classnames.push(styles.primary)
+  }
+
+  if (inverse) {
+    classnames.push(styles.inverse)
+  }
 
   return href ? (
     <a

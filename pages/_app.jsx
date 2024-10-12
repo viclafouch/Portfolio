@@ -70,7 +70,10 @@ const MyApp = ({ Component, pageProps }) => {
       gtag.pageview(url)
       Nprogress.done()
       const { navHeight, betweenTopScreenAndMain } = getScrolled()
-      if (scroll) window.scrollBy(0, betweenTopScreenAndMain - navHeight)
+
+      if (scroll) {
+        window.scrollBy(0, betweenTopScreenAndMain - navHeight)
+      }
     })
 
     return () => {

@@ -58,7 +58,9 @@ const Nav = () => {
   }, [router.events])
 
   const handleEscap = useCallback((event) => {
-    if (event.keyCode === 27) setIsMenuOpened(false)
+    if (event.keyCode === 27) {
+      setIsMenuOpened(false)
+    }
   }, [])
 
   useIsomorphicLayoutEffect(() => {
