@@ -23,7 +23,7 @@ const Home = () => {
           />
           <Title
             title="Victor de la Fouchardiere"
-            subtitle="🚀 Front-end Developer JS at Zoī"
+            subtitle="🚀 Senior Front-end Developer at Zoī"
           />
         </div>
         <hr className="striped" />
