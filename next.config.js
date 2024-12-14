@@ -13,8 +13,8 @@ module.exports = {
         protocol: 'https',
         hostname: 'media2.dev.to',
         port: ''
-      },
-    ],
+      }
+    ]
   },
   trailingSlash: true,
   sassOptions: {

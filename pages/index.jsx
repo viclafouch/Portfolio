@@ -46,7 +46,8 @@ const Home = () => {
             />
           </a>
           <p>
-            <b>Senior Front-End developer</b> at{' '}
+            <b>Senior Front-End developer</b>
+            at{' '}
             <a
               target="_blank"
               href="https://www.zoi.com"

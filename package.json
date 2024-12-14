@@ -20,7 +20,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "deploy": "vercel --prod",
-    "lint": "eslint . --ext .js,.jsx",
+    "lint": "eslint",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
@@ -40,8 +40,8 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/eslint-parser": "^7.25.9",
-    "@viclafouch/eslint-config-viclafouch": "^4.17.0",
-    "eslint": "^8.51.0",
+    "@viclafouch/eslint-config-viclafouch": "4.17.1-beta.4",
+    "eslint": "^9.17.0",
     "next-sitemap": "4.2.3",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",

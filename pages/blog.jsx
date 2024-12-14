@@ -121,7 +121,7 @@ export async function getStaticProps() {
         return !post.tags.includes('discuss')
       })
     },
-    // we will attempt to re-generate the page:
+    // We will attempt to re-generate the page:
     // - when a request comes in
     // - at most once every second
     revalidate: 1

@@ -1,6 +1,0 @@
-node_modules/
-build/
-out/
-tasks/
-.eslintrc.js
-next.config.js
