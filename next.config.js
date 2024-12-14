@@ -9,6 +9,11 @@ module.exports = {
         hostname: 'media.dev.to',
         port: ''
       },
+      {
+        protocol: 'https',
+        hostname: 'media2.dev.to',
+        port: ''
+      },
     ],
   },
   trailingSlash: true,

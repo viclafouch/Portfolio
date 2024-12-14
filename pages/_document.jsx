@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
           <meta key="charset" charSet="utf-8" />
           <meta name="theme-color" content="#f6f6f6" />
           <meta name="msapplication-navbutton-color" content="#f6f6f6" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
