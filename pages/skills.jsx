@@ -25,13 +25,13 @@ const languages = [
     img: `${languagesImgPath}/js-logo.png`,
     title: 'JS',
     duration: [new Date(2015, 1, 1), new Date()],
-    items: ['ES7/ES8', 'JSX', 'Node']
+    items: ['ES10/ES11', 'JSX', 'Node']
   },
   {
     img: `${languagesImgPath}/ts-logo.png`,
     title: 'TS',
     duration: [new Date(2019, 1, 1), new Date()],
-    items: ['ES7/ES8', 'TSX', 'Casting']
+    items: ['ES10/ES11', 'TSX', 'Casting']
   }
 ]
 
@@ -47,24 +47,9 @@ const frameworks = [
     duration: [new Date(2016, 1, 1), new Date()]
   },
   {
-    img: `${frameworksImgPath}/symfony-logo.svg`,
-    title: 'Symfony',
-    duration: [new Date(2017, 10, 1), new Date(2018, 3, 1)]
-  },
-  {
-    img: `${frameworksImgPath}/ror-logo.png`,
-    title: 'Ruby on Rails',
-    duration: [new Date(2017, 10, 1), new Date(2018, 2, 1)]
-  },
-  {
     img: `${frameworksImgPath}/angular-logo.png`,
     title: 'Angular 5',
     duration: [new Date(2017, 10, 1), new Date(2018, 3, 1)]
-  },
-  {
-    img: `${frameworksImgPath}/expressjs-logo.svg`,
-    title: 'Express',
-    duration: [new Date(2018, 11, 1), new Date()]
   },
   {
     img: `${frameworksImgPath}/nextjs-logo.svg`,
@@ -72,9 +57,14 @@ const frameworks = [
     duration: [new Date(2018, 10, 1), new Date()]
   },
   {
-    img: `${frameworksImgPath}/material-ui.png`,
-    title: 'Material UI',
-    duration: [new Date(2018, 10, 1), new Date()]
+    img: `${frameworksImgPath}/remix.svg`,
+    title: 'Remix',
+    duration: [new Date(2024, 2, 1), new Date()]
+  },
+  {
+    img: `${frameworksImgPath}/tanstack.png`,
+    title: 'Tanstack start',
+    duration: [new Date(2024, 2, 1), new Date()]
   }
 ]
 
@@ -83,11 +73,6 @@ const technos = [
     title: 'Git',
     type: 'Versioning',
     img: `${technosImgPath}/git-logo.svg`
-  },
-  {
-    title: 'Webpack',
-    type: 'Bundler',
-    img: `${technosImgPath}/webpack-logo.svg`
   },
   {
     title: 'Visual Studio Code',
@@ -105,19 +90,24 @@ const technos = [
     img: `${technosImgPath}/photoshop-logo.png`
   },
   {
-    title: 'Parcel',
-    type: 'Bundler',
-    img: `${technosImgPath}/parcel-logo.png`
-  },
-  {
-    title: 'Windows',
-    type: 'OS',
-    img: `${technosImgPath}/windows-logo.png`
+    title: 'AI Code Completion',
+    type: 'AI',
+    img: `${technosImgPath}/supermaven.png`
   },
   {
     title: 'Vite',
     type: 'Bundler',
     img: `${technosImgPath}/vite-logo.svg`
+  },
+  {
+    title: 'Eslint',
+    type: 'Linter',
+    img: `${technosImgPath}/eslint.png`
+  },
+  {
+    title: 'Prettier',
+    type: 'Formatter',
+    img: `${technosImgPath}/prettier.png`
   }
 ]
 
@@ -181,7 +171,7 @@ const Skills = () => {
           </ul>
         </div>
         <div className={styles.skills__frameworks}>
-          <SkillTitle title="Frameworks" />
+          <SkillTitle title="Frontend Frameworks" />
           <ul className={`${styles.frameworks__list} ${styles.skills__list}`}>
             {frameworks.map((framework) => {
               let duration = differenceInYears(
