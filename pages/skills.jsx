@@ -31,7 +31,7 @@ const languages = [
     img: `${languagesImgPath}/ts-logo.png`,
     title: 'TS',
     duration: [new Date(2019, 1, 1), new Date()],
-    items: ['ES10/ES11', 'TSX', 'Casting']
+    items: ['ES10/ES11', 'TSX', 'Strict']
   }
 ]
 
