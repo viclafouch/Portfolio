@@ -90,8 +90,8 @@ const technos = [
     img: `${technosImgPath}/photoshop-logo.png`
   },
   {
-    title: 'AI Code Completion',
-    type: 'AI',
+    title: 'Supermaven',
+    type: 'AI Completion',
     img: `${technosImgPath}/supermaven.png`
   },
   {
