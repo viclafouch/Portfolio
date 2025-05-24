@@ -31,22 +31,22 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
-    "next": "^15.1.6",
+    "next": "^15.1.8",
     "nprogress": "^0.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "^1.84.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sass": "^1.89.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.8",
-    "@babel/eslint-parser": "^7.26.8",
-    "@viclafouch/eslint-config-viclafouch": "4.18.0",
-    "eslint": "^9.20.0",
+    "@babel/core": "^7.27.1",
+    "@babel/eslint-parser": "^7.27.1",
+    "@viclafouch/eslint-config-viclafouch": "4.22.0",
+    "eslint": "^9.27.0",
     "next-sitemap": "4.2.3",
-    "postcss": "^8.5.1",
-    "prettier": "^3.4.2",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
     "robots-generator": "^2.3.6",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   },
   "babel": {
     "presets": [
