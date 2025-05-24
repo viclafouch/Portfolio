@@ -25,13 +25,13 @@ const languages = [
     img: `${languagesImgPath}/js-logo.png`,
     title: 'JS',
     duration: [new Date(2015, 1, 1), new Date()],
-    items: ['ES10/ES11', 'JSX', 'Node']
+    items: ['ES15', 'JSX', 'Node']
   },
   {
     img: `${languagesImgPath}/ts-logo.png`,
     title: 'TS',
     duration: [new Date(2019, 1, 1), new Date()],
-    items: ['ES10/ES11', 'TSX', 'Strict']
+    items: ['ES15', 'TSX', 'Strict']
   }
 ]
 
