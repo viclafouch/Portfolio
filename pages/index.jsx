@@ -31,7 +31,7 @@ const Home = () => {
         <div
           className={`${styles.home__block} ${styles.experience__container}`}
         >
-          <h4 className={styles.experience__title}>Last Job</h4>
+          <h4 className={styles.experience__title}>Latest Job</h4>
           <a
             target="_blank"
             href="https://www.zoi.com"
