@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Meta
         title="Portfolio of Victor de la Fouchardiere"
-        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...) at Zoī. Fan of Javascript. Discover my portfolio!"
+        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...). Fan of Javascript. Discover my portfolio!"
       />
       <div className={styles.home__page}>
         <div className={styles.home__block}>
@@ -24,14 +24,14 @@ const Home = () => {
           />
           <Title
             title="Victor de la Fouchardiere"
-            subtitle="🚀 Senior Front-end Developer at Zoī"
+            subtitle="🚀 Senior Front-end Developer"
           />
         </div>
         <hr className="striped" />
         <div
           className={`${styles.home__block} ${styles.experience__container}`}
         >
-          <h4 className={styles.experience__title}>Current Job</h4>
+          <h4 className={styles.experience__title}>Last Job</h4>
           <a
             target="_blank"
             href="https://www.zoi.com"
@@ -57,7 +57,7 @@ const Home = () => {
             >
               <b>Zoī</b>
             </a>{' '}
-            since May. 2024.
+            between May 2024 - August 2025.
             <br />
             <span className={styles.experience__description}>
               • Develop new functionalities. • Participate in transversal
