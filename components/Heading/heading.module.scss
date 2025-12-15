@@ -1,8 +1,10 @@
+@use '../../scss/global/theme';
+
 .subheading {
   width: 100%;
   height: auto;
   padding: 50px 0;
-  background-color: $s-bg-color;
+  background-color: theme.$s-bg-color;
   position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   text-align: center;
@@ -18,7 +20,7 @@
     display: none;
     margin-bottom: 30px;
 
-    @include sm {
+    @include theme.sm {
       display: block;
     }
   }
@@ -32,12 +34,12 @@
   }
 
   &_subtitle {
-    color: $p-txt-color;
+    color: theme.$p-txt-color;
     padding: 10px 5px;
     margin: 0 auto;
     font-size: 1.1rem;
     max-width: none;
-    @include sm {
+    @include theme.sm {
       max-width: 75%;
     }
   }

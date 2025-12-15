@@ -1,3 +1,5 @@
+@use '../../scss/global/theme';
+
 .training__page {
   .training__list {
     display: grid;
@@ -39,8 +41,8 @@
         }
 
         .training__article__date {
-          color: $p-txt-color;
-          @include truncate(100%);
+          color: theme.$p-txt-color;
+          @include theme.truncate(100%);
           span {
             display: inline-block;
             vertical-align: middle;
@@ -54,7 +56,7 @@
 
         .training__article__title {
           padding: 15px 0;
-          color: $p-txt-color;
+          color: theme.$p-txt-color;
           text-align: left;
         }
 

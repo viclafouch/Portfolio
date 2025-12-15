@@ -1,7 +1,10 @@
+@use 'sass:color';
+@use '../../scss/global/theme';
+
 .navigation {
   width: 100%;
-  background-color: $p-bg-color;
-  color: $p-txt-color;
+  background-color: theme.$p-bg-color;
+  color: theme.$p-txt-color;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -28,8 +31,8 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    background-color: transparentize($s-bg-color, 0.1);
-    padding-top: calc(#{$nav-height} + #{$header-height});
+    background-color: color.scale(theme.$s-bg-color, $alpha: -10%);
+    padding-top: calc(#{theme.$nav-height} + #{theme.$header-height});
     visibility: hidden;
     opacity: 0;
     z-index: 99;
@@ -74,13 +77,13 @@ $sizeBurger: 32px;
   &::before,
   &::after,
   & > span {
-    background-color: $p-txt-color;
+    background-color: theme.$p-txt-color;
     height: 2px;
     width: calc(100% - calc(#{$sizeBurger} / 4));
     margin: 0 auto;
     left: 0;
     right: 0;
-    @include pseudo();
+    @include theme.pseudo();
     transition-property: opacity, margin-top, transform;
     transition-duration: 0.2s;
     transition-timing-function: ease;
@@ -119,7 +122,7 @@ $sizeBurger: 32px;
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: transparentize(#000000, 0.65);
+  background-color: color.adjust(#000000, $alpha: -0.65);
   top: 0;
   left: 0;
   right: 0;
@@ -143,7 +146,7 @@ $sizeBurger: 32px;
       justify-content: center;
       align-items: center;
       height: 70px;
-      color: $p-txt-color;
+      color: theme.$p-txt-color;
       padding-top: 0;
       visibility: visible;
       opacity: 1;
@@ -163,15 +166,15 @@ $sizeBurger: 32px;
         position: relative;
 
         &:hover {
-          color: $salmon;
+          color: theme.$salmon;
         }
 
         &::after {
-          @include pseudo();
+          @include theme.pseudo();
           bottom: 0;
           width: 0;
           height: 2px;
-          background-color: $salmon;
+          background-color: theme.$salmon;
           left: 50%;
           opacity: 0;
           transition: opacity 0.5s, width 0.5s;
@@ -194,6 +197,6 @@ $sizeBurger: 32px;
 
 .nav_links_list {
   &-item-href.active {
-    color: $salmon;
+    color: theme.$salmon;
   }
 }

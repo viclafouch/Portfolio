@@ -1,3 +1,19 @@
+@use "sass:color";
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+$p-bg-color: #f6f6f6;
+$s-bg-color: #ffffff;
+$p-txt-color: #444444;
+$salmon: color.scale(#cc181e, $lightness: -5%, $space: oklch);
+
+$nav-height: 70px;
+$header-height: 50px;
+$rem-baseline: 14px;
+
 @mixin truncate($truncation-boundary) {
   max-width: $truncation-boundary;
   white-space: nowrap;
@@ -12,10 +28,6 @@
 }
 
 // Small devices
-$screen-sm-min: 576px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
 
 // Small devices
 @mixin sm {

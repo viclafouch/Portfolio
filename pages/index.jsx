@@ -19,7 +19,7 @@ const Home = () => {
             priority
             title="Victor de la Fouchardiere"
             alt="Victor de la Fouchardiere"
-            objectFit="cover"
+            style={{ objectFit: 'cover' }}
             className={styles.profile__picture}
           />
           <Title

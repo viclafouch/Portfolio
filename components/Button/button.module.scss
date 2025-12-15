@@ -1,3 +1,5 @@
+@use '../../scss/global/theme';
+
 .button {
   border: 2px solid #f0f0f0;
   display: block;
@@ -29,20 +31,20 @@
 
   &.primary {
     color: #fff;
-    background-color: $salmon;
+    background-color: theme.$salmon;
     border-color: #fff;
     &:not(:disabled):hover {
-      color: $salmon;
+      color: theme.$salmon;
       background-color: #fff;
-      border-color: $salmon;
+      border-color: theme.$salmon;
     }
     &.inverse {
-      color: $salmon;
+      color: theme.$salmon;
       background-color: #fff;
-      border-color: $salmon;
+      border-color: theme.$salmon;
       &:not(:disabled):hover {
         color: #fff;
-        background-color: $salmon;
+        background-color: theme.$salmon;
         border-color: #fff;
       }
     }
@@ -51,6 +53,6 @@
   &:disabled {
     cursor: not-allowed !important;
     background-color: #f0f0f0;
-    color: $p-txt-color;
+    color: theme.$p-txt-color;
   }
 }

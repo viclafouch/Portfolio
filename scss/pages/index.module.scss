@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .home__page {
   .home__block {
     text-align: center;
@@ -41,7 +43,7 @@
       margin: 10px auto 0;
       display: block;
       max-width: 750px;
-      color: lighten(#444444, 11%);
+      color: color.scale(#444444, $lightness: 11%, $space: oklch);
     }
 
     .experience_logo {
