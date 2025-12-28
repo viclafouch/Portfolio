@@ -29,16 +29,6 @@ const trainings = [
       'Channels Development (YouTube)'
     ],
     img: `${pathTraining}/digital-active.png`
-  },
-  {
-    date: '2015',
-    title: 'BAC Economique et Social',
-    href: 'http://www.lycee-saint-paul-lille.fr/',
-    rows: [
-      'Economic and Social Baccalaureate Diploma',
-      'Lycée Saint Paul - Lille'
-    ],
-    img: `${pathTraining}/saint-paul.png`
   }
 ]
 

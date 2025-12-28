@@ -12,6 +12,12 @@ const FULLSTACK = 'FullStack'
 
 const productions = [
   {
+    title: 'Petit Meme',
+    img: `${productionsPath}/petit-meme.png`,
+    type: FULLSTACK,
+    href: 'https://petit-meme.io'
+  },
+  {
     title: 'Zoī',
     img: `${productionsPath}/zoi.png`,
     type: FRONTEND,
