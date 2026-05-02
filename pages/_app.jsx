@@ -1,39 +1,12 @@
-import { useEffect } from 'react'
+import React from 'react'
 import Router from 'next/router'
 import Script from 'next/script'
 import Nprogress from 'nprogress'
-import {
-  faCodepen,
-  faDev,
-  faGit,
-  faLinkedin,
-  faTwitter
-} from '@fortawesome/free-brands-svg-icons'
-import {
-  faCalendarAlt,
-  faDownload,
-  faEnvelope,
-  faLink
-} from '@fortawesome/free-solid-svg-icons'
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/Layout/layout'
 import * as gtag from '../utils/analytics'
 import 'scss/app.scss'
 import 'nprogress/nprogress.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-
-const { library } = require('@fortawesome/fontawesome-svg-core')
-
-library.add(
-  faLinkedin,
-  faCodepen,
-  faGit,
-  faTwitter,
-  faEnvelope,
-  faDownload,
-  faCalendarAlt,
-  faLink,
-  faDev
-)
 
 Nprogress.configure({
   showSpinner: false,
@@ -44,7 +17,7 @@ Nprogress.configure({
   parent: 'body'
 })
 
-// eslint-disable-next-line prefer-destructuring
+// oxlint-disable-next-line prefer-destructuring
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 
@@ -56,7 +29,7 @@ const getScrolled = () => {
 }
 
 const MyApp = ({ Component, pageProps }) => {
-  useEffect(() => {
+  React.useEffect(() => {
     let scroll = false
     Router.events.on('routeChangeStart', () => {
       Nprogress.start()
@@ -90,21 +63,17 @@ const MyApp = ({ Component, pageProps }) => {
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       />
-      <Script
-        id="gtag-init"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-              send_page_view: ${IS_PRODUCTION}
-            });
-          `
-        }}
-      />
+      <Script id="gtag-init" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_TRACKING_ID}', {
+            page_path: window.location.pathname,
+            send_page_view: ${IS_PRODUCTION}
+          });
+        `}
+      </Script>
     </>
   )
 }

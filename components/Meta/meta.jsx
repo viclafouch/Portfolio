@@ -1,10 +1,10 @@
-import { useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head'
 
 const Meta = (props) => {
   const { title, description } = props
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleChangeVisiblity = () => {
       if (document.hidden) {
         document.title = 'Back to me 😢'

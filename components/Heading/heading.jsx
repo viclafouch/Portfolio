@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Button from '../Button/Button'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import Button from '../Button/button'
 import styles from './heading.module.scss'
 
 const Heading = () => {
@@ -26,7 +27,7 @@ const Heading = () => {
         </p>
         <Button
           href="/pdf/CV-Victor-de-la-Fouchardiere.pdf"
-          icon="download"
+          icon={faDownload}
           download
           id="download-cv"
           primary

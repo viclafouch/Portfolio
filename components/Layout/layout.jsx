@@ -1,8 +1,8 @@
-/* eslint-disable react/no-unknown-property */
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
-import Heading from '../Heading/Heading'
-import Nav from '../Nav/Nav'
+/* oxlint-disable react/no-unknown-property */
+import Footer from '../Footer/footer'
+import Header from '../Header/header'
+import Heading from '../Heading/heading'
+import Nav from '../Nav/nav'
 
 const Layout = (props) => {
   const { children } = props

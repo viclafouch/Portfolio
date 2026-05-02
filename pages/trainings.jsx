@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import Button from 'components/Button/Button'
-import Meta from 'components/Meta/Meta'
-import Title from 'components/Title/Title'
+import Button from 'components/Button/button'
+import Meta from 'components/Meta/meta'
+import Title from 'components/Title/title'
 import styles from 'scss/pages/training.module.scss'
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const pathTraining = '/images/training'
@@ -57,7 +58,7 @@ const Trainings = () => {
                   <div className={styles.training__article__description__side}>
                     <div className={styles.training__article__top}>
                       <p className={styles.training__article__date}>
-                        <FontAwesomeIcon icon="calendar-alt" />
+                        <FontAwesomeIcon icon={faCalendarAlt} />
                         <span>{training.date}</span>
                       </p>
                       <Button

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   env: {
     GA_TRACKING_ID: 'G-YC3QF9CJNN'
   },

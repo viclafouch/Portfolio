@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import Meta from 'components/Meta/Meta'
-import Title from 'components/Title/Title'
+import Meta from 'components/Meta/meta'
+import Title from 'components/Title/title'
 import styles from 'scss/pages/productions.module.scss'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const productionsPath = '/images/productions'
@@ -139,7 +140,7 @@ const Productions = () => {
                         title={production.title}
                         rel="noreferrer noopener"
                       >
-                        <FontAwesomeIcon icon="link" />
+                        <FontAwesomeIcon icon={faLink} />
                       </a>
                     </div>
                     <Image

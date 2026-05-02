@@ -1,10 +1,4 @@
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState
-} from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter, withRouter } from 'next/router'
@@ -12,7 +6,7 @@ import clsx from 'clsx'
 import styles from './nav.module.scss'
 
 const useIsomorphicLayoutEffect =
-  typeof window !== 'undefined' ? useLayoutEffect : useEffect
+  typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect
 
 const links = [
   { text: 'Home', href: '/' },
@@ -40,12 +34,12 @@ const ActiveLink = withRouter(
 )
 
 const Nav = () => {
-  const [isMenuOpened, setIsMenuOpened] = useState(false)
-  const listRef = useRef(null)
-  const burgerRef = useRef(null)
+  const [isMenuOpened, setIsMenuOpened] = React.useState(false)
+  const listRef = React.useRef(null)
+  const burgerRef = React.useRef(null)
   const router = useRouter()
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleRouteChange = () => {
       return setIsMenuOpened(false)
     }
@@ -57,7 +51,7 @@ const Nav = () => {
     }
   }, [router.events])
 
-  const handleEscap = useCallback((event) => {
+  const handleEscap = React.useCallback((event) => {
     if (event.keyCode === 27) {
       setIsMenuOpened(false)
     }
@@ -92,18 +86,12 @@ const Nav = () => {
           />
         </Link>
         <div>
-          <div
+          <button
+            type="button"
             ref={burgerRef}
-            onKeyPress={() => {
-              return setIsMenuOpened((prevState) => {
-                return !prevState
-              })
-            }}
             className={`${styles.nav_burger} ${
               isMenuOpened ? styles.menu_opened : ''
             }`}
-            role="button"
-            tabIndex="0"
             onClick={() => {
               return setIsMenuOpened((prevState) => {
                 return !prevState
@@ -111,7 +99,7 @@ const Nav = () => {
             }}
           >
             <span />
-          </div>
+          </button>
           <ul
             ref={listRef}
             className={`${styles.nav_links_list} ${
@@ -133,17 +121,13 @@ const Nav = () => {
             })}
           </ul>
           {isMenuOpened ? (
-            <div
+            <button
+              type="button"
               className={styles.nav_overlay}
               onClick={() => {
                 return setIsMenuOpened(false)
               }}
-              onKeyPress={() => {
-                return setIsMenuOpened(false)
-              }}
               aria-label="overlay"
-              role="button"
-              tabIndex="0"
             />
           ) : null}
         </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Meta from 'components/Meta/Meta'
-import Title from 'components/Title/Title'
+import Meta from 'components/Meta/meta'
+import Title from 'components/Title/title'
 import { format, formatDistance } from 'date-fns'
 import styles from 'scss/pages/blog.module.scss'
 

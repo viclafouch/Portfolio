@@ -1,3 +1,11 @@
+import {
+  faCodepen,
+  faDev,
+  faGit,
+  faLinkedin,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from './header.module.scss'
 
@@ -6,9 +14,7 @@ const contactLinks = [
     text: {
       title: 'victor.delafouchardiere@gmail.com'
     },
-    fontawesome: {
-      name: 'envelope'
-    },
+    icon: faEnvelope,
     href: 'mailto:victor.delafouchardiere@gmail.com',
     title: ''
   }
@@ -16,42 +22,27 @@ const contactLinks = [
 
 const socialLinks = [
   {
-    fontawesome: {
-      prefix: 'fab',
-      name: 'linkedin'
-    },
+    icon: faLinkedin,
     href: 'https://www.linkedin.com/in/victordelafouchardiere/',
     title: 'Linkedin'
   },
   {
-    fontawesome: {
-      prefix: 'fab',
-      name: 'dev'
-    },
+    icon: faDev,
     href: 'https://dev.to/viclafouch',
     title: 'Dev.to'
   },
   {
-    fontawesome: {
-      prefix: 'fab',
-      name: 'codepen'
-    },
+    icon: faCodepen,
     href: 'https://codepen.io/Viclafouch/',
     title: 'Codepen'
   },
   {
-    fontawesome: {
-      prefix: 'fab',
-      name: 'git'
-    },
+    icon: faGit,
     href: 'https://github.com/viclafouch',
     title: 'Github'
   },
   {
-    fontawesome: {
-      prefix: 'fab',
-      name: 'twitter'
-    },
+    icon: faTwitter,
     href: 'https://twitter.com/TrustedSheriff',
     title: 'Twitter'
   }
@@ -74,12 +65,7 @@ const Header = () => {
                 className={styles.header_links_item}
                 title={link.text.title}
               >
-                <FontAwesomeIcon
-                  icon={[
-                    link.fontawesome.prefix || 'fa',
-                    link.fontawesome.name
-                  ]}
-                />
+                <FontAwesomeIcon icon={link.icon} />
                 <span className={styles.header_links_item_text}>
                   {link.text.title}
                 </span>
@@ -98,12 +84,7 @@ const Header = () => {
                 className={styles.header_links_item}
                 title={link.title}
               >
-                <FontAwesomeIcon
-                  icon={[
-                    link.fontawesome.prefix || 'fa',
-                    link.fontawesome.name
-                  ]}
-                />
+                <FontAwesomeIcon icon={link.icon} />
               </a>
             )
           })}
