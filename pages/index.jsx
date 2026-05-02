@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Meta
         title="Portfolio of Victor de la Fouchardiere"
-        description="Victor de la Fouchardiere | Front-end developer (React, Vue, Angular, etc...). Fan of Javascript. Discover my portfolio!"
+        description="Senior Fullstack Developer specializing in TypeScript, React, TanStack, and Next.js. Discover my portfolio!"
       />
       <div className={styles.home__page}>
         <div className={styles.home__block}>
@@ -31,38 +31,39 @@ const Home = () => {
         <div
           className={`${styles.home__block} ${styles.experience__container}`}
         >
-          <h4 className={styles.experience__title}>Latest Job</h4>
+          <h4 className={styles.experience__title}>Current Job</h4>
           <a
             target="_blank"
-            href="https://www.zoi.com"
-            title="zoi"
+            href="https://www.naboo.app"
+            title="Naboo"
             className={styles.experience_logo}
             rel="noreferrer noopener"
           >
             <Image
               width={60}
               height={60}
-              src="/images/companies/zoi.jpeg"
-              alt="Zoi"
+              src="/images/companies/naboo.webp"
+              alt="Naboo"
+              style={{ objectFit: 'cover' }}
             />
           </a>
           <p>
-            <b>Senior Front-End developer</b>
-            at{' '}
+            <b>Senior Front-End developer</b> at{' '}
             <a
               target="_blank"
-              href="https://www.zoi.com"
-              title="zoi"
+              href="https://www.naboo.app"
+              title="Naboo"
               rel="noreferrer noopener"
             >
-              <b>Zoī</b>
+              <b>Naboo</b>
             </a>{' '}
-            between May 2024 - August 2025.
+            since April 2025.
             <br />
             <span className={styles.experience__description}>
-              • Develop new functionalities. • Participate in transversal
-              technical projects within the Front guild. • Collaborate with
-              other developers and product owners.
+              Co-responsible for frontend DX (~40 fullstack developers) with the
+              Staff Frontend Lead. Driving ESLint to Oxlint migration and
+              frontend practices standardization. Frontend performance
+              optimization on Naboo apps.
             </span>
           </p>
         </div>
