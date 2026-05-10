@@ -57,7 +57,7 @@ const Home = () => {
             >
               <b>Naboo</b>
             </a>{' '}
-            since April 2025.
+            since April 2026.
             <br />
             <span className={styles.experience__description}>
               Co-responsible for frontend DX (~40 fullstack developers) with the
